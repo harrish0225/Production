@@ -6,3 +6,11 @@ E:\ChenYe\Application\Production\AuthorCustmization\AuthorCustmization\bin\Debug
 E:\ChenYe\Application\Production\AuthorCustmization\AuthorCustmization\obj\Debug\AuthorCustmization.exe
 E:\ChenYe\Application\Production\AuthorCustmization\AuthorCustmization\obj\Debug\AuthorCustmization.pdb
 E:\ChenYe\Application\Production\AuthorCustmization\AuthorCustmization\obj\Debug\AuthorCustmization.csprojResolveAssemblyReference.cache
+E:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\AuthorCustmization.exe.config
+E:\gitrep\Production\AuthorCustmization\AuthorCustmization\obj\Debug\AuthorCustmization.exe
+E:\gitrep\Production\AuthorCustmization\AuthorCustmization\obj\Debug\AuthorCustmization.pdb
+E:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\AuthorCustmization.exe
+E:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\AuthorCustmization.pdb
+E:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\Newtonsoft.Json.dll
+E:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\Newtonsoft.Json.xml
+E:\gitrep\Production\AuthorCustmization\AuthorCustmization\obj\Debug\AuthorCustmization.csprojResolveAssemblyReference.cache

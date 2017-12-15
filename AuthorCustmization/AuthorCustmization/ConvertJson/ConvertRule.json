@@ -20,6 +20,7 @@
       "mooncake": "ms.author: v-yeche",
       "comments": "modify the ms.author in mooncake"
     }
+    
 
   ],
 
@@ -33,8 +34,33 @@
       "mooncake": "trial account"
     },
     {
+      "global": "management\\.azure\\.com",
+      "mooncake": "management.chinacloudapi.cn"
+    },
+    {
+      "global": "\"\\$schema\": \"http://schema.management.chinacloudapi.cn/schemas/",
+      "mooncake": "\"$schema\": \"http://schema.management.azure.com/schemas/",
+      "comments": "revoke the wrong replace for https://schema.management.azure.com/schemas/"
+    },
+    {
+      "global": "https://aka\\.ms/skurestriction",
+      "mooncake": "https://support.windowsazure.cn/support/support-azure"
+    },
+    {
+      "global": "\\(http://azure\\.microsoft\\.com/\\)",
+      "mooncake": "(https://www.azure.cn/)"
+    },
+    {
       "global": "\\(/templates/\\)",
       "mooncake": "(https://docs.microsoft.com/en-us/azure/templates/)"
+    },
+    {
+      "global": "https://aka\\.ms/asr-deployment-planner-doc",
+      "mooncake": "/site-recovery/site-recovery-deployment-planner"
+    },
+    {
+      "global": "https://aka\\.ms/servicetags",
+      "mooncake": "/virtual-network/security-overview#service-tags"
     },
     {
       "global": "https://azure\\.microsoft\\.com/pricing/member-offers/msdn-benefits-details/",
@@ -58,6 +84,10 @@
     {
       "global": "https://azure\\.microsoft\\.com/",
       "mooncake": "https://www.azure.cn/"
+    },
+    {
+      "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkId=544801",
+      "mooncake": "https://github.com/Azure/azure-quickstart-templates/tree/master/201-2-vms-loadbalancer-natrules"
     },
     {
       "global": "https://azure\\.microsoft\\.com/regions/?",
@@ -90,6 +120,10 @@
       "mooncake": "..//service-fabric/index.yml"
     },
     {
+      "global": "Login-AzureRmAccount",
+      "mooncake": "Login-AzureRmAccount -EnvironmentName AzureChinaCloud"
+    },
+    {
       "global": "^([\\s]*)(```[\\s\\S]*)(az login)([\\s\\S]*```)",
       "mooncake": "$1$2az cloud set -n AzureChinaCloud\n$1az login\n$1#az cloud set -n AzureCloud\n$1#return to global azure$4"
     },
@@ -98,7 +132,7 @@
       "mooncake": "cloudapp.chinacloudapi.cn"
     },
     {
-      "global": "\\(\\s*\\/?(dotnet|powershell|cli|rest|java|sql|api)(\\/\\S+)\\)",
+      "global": "\\(\\s*\\/?(dotnet|powershell|cli|rest|java|sql|api|biztalk)(\\/\\S+)\\)",
       "mooncake": "(https://docs.microsoft.com/$1$2)",
       "comment": "replace the relative URL with global full URL format - Step 1"
     },
@@ -108,9 +142,19 @@
       "comment": "replace the relative URL with global full URL format - Step 2"
     },
     {
-      "global": "\\(https://docs\\.microsoft\\.com/(zh-cn/|en-us/|)cli/(azure/)?([^#]*)([#]?)([\\S]*)\\)",
+      "global": "\\(https://docs\\.microsoft\\.com/(zh-cn/|en-us/|)?cli/(azure/)?([^#)]*)([#]{0,1})([^#)]*)\\)",
       "mooncake": "(https://docs.azure.cn/zh-cn/cli/$3?view=azure-cli-latest$4$5)",
-      "comment": "replace the relative URL with global full URL format - Step 2"
+      "comment": "replace the relative URL with global full URL format - Step 2, update successfully "
+    },
+    {
+      "global": "https://aka\\.ms/skurestriction",
+      "mooncake": "https://support.windowsazure.cn/support/support-azure"
+    },
+    {
+      "global": "\\[([^\\]]*)\\]\\((\\.\\.\\/){1,2}azure-subscription-service-limits(\\.md)?([^)]*)\\)",
+      //"global": "([^.\\n]*)\\[([\\S\\s]*)\\]\\((\\.\\.\\/){1,2}azure-subscription-service-limits(\\.md)?([^)]*)\\)([^.]*)\\.",
+      "mooncake": "",
+      "comments": "azure-subscription-service-limits are not suitable for Azure.cn"
     },
     {
       "global": "\\?view=azure-cli-latest\\?view=azure-cli-latest",
@@ -156,8 +200,17 @@
       "mooncake": "$1.core.chinacloudapi.cn$3"
     },
     {
-      "global": "yoursetting",
-      "mooncake": "yoursetting"
+      "global": "armclient login",
+      "mooncake": "armclient login \"MOONCAKE\""
+    },
+    {
+      "global": "https://servicefabricdownloads\\.blob\\.core\\.chinacloudapi\\.cn/jenkins/serviceFabric.hpi",
+      "mooncake": "https://servicefabricdownloads.blob.core.windows.net/jenkins/serviceFabric.hpi",
+      "comments":  "Service Fabric download link "
+    },
+    {
+      "global": "WestCentralUS",
+      "mooncake": "chinaeast"
     },
     {
       "global": "yoursetting",
@@ -169,6 +222,10 @@
     {
       "global": "https://docs\\.azure\\.cn/java/azure/",
       "mooncake": "https://docs.azure.cn/java/"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/pricing/details/storage/blobs/",
+      "mooncake": "https://www.azure.cn/pricing/details/storage/"
     },
     {
       "global": "https://www\\.azure\\.cn/support/service-dashboard/services/",
@@ -248,8 +305,12 @@
       "mooncake": "https://www.azure.cn/pricing/1rmb-trial/"
     },
     {
+      "global": "https://www\\.azure\\.cn/pricing/1rmb-trial/\\?WT\\.mc_id=A261C142F",
+      "mooncake": "https://www.azure.cn/pricing/1rmb-trial"
+    },
+    {
       "global": "https://www\\.azure\\.cn/blog/",
-      "mooncake": "https://azure.microsoft.com/blog"
+      "mooncake": "https://azure.microsoft.com/blog/"
     },
     {
       "global": "chinacloudapp\\.cn",
@@ -258,6 +319,10 @@
     {
       "global": "https://www\\.azure\\.cn/blog",
       "mooncake": "https://azure.microsoft.com/blog/"
+    },
+    {
+      "global": "https://azure\\.microsoft\\.com/blog([^/]*)",
+      "mooncake": "https://azure.microsoft.com/blog/$1"
     },
     {
       "global": "https://mva\\.microsoft\\.com/(en-us/)?training-courses/",
@@ -279,25 +344,56 @@
       "comment": "Correction of Last Step, the Regular can not over all the aspect"
     },
     {
+      "global": "https://portal\\.azure\\.cn/#create/Microsoft.Support",
+      "mooncake": "https://www.azure.cn/support/support-ticket-form",
+      "comment": "Replace the Create Microsoft.Support billing link"
+    },
+    {
+      "global": "\"\\$schema\": \"http://schema.management.chinacloudapi.cn/schemas/",
+      "mooncake": "\"$schema\": \"http://schema.management.azure.com/schemas/",
+      "comments": "revoke the wrong replace for https://schema.management.azure.com/schemas/"
+    },
+    {
+      "global": "https://docs\\.azure\\.cn/zh-cn/azure-subscription-service-limits",
+      "mooncake": " ",
+      "comments": "azure-subscription-service-limits are not suitable for Azure.cn"
+    },
+    {
+      "global": "\\[([\\S\\s]*)\\]\\(\\.{2}\\/azure-subscription-service-limits(\\.md\\?\\S*){0,1}\\)",
+      "mooncake": "$1",
+      "comments": "azure-subscription-service-limits are not suitable for Azure.cn"
+    },
+    {
+      "global": "\\[MSDN and the Stack Overflow\\]\\(https://azure\\.microsoft\\.com/support/forums/\\)",
+      "mooncake": "[MSDN and CSDN](https://www.azure.cn/support/contact/)"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/pricing/details/virtual-machines/((windows)|(linux)|(sql-server-standard))/?",
+      "mooncake": "https://www\\.azure\\.cn/pricing/details/virtual-machines/"
+    },
+    {
       "global": "yoursetting",
       "mooncake": "yoursetting"
     }
+
   ],
   "CLIReplacement": [
     {
-      "global": "\\(https://docs\\.microsoft\\.com/(zh-cn/|en-us/|)cli/(azure/)?([^#]*)([#]?)([\\S]*)\\)",
+      "global": "\\(https://docs\\.microsoft\\.com/(zh-cn/|en-us/|)?cli/(azure/)?([^#)]*)([#]{0,1})([^#)]*)\\)",
       "mooncake": "(https://docs.azure.cn/zh-cn/cli/$3?view=azure-cli-latest$4$5)",
-      "comment": "replace the relative URL with global full URL format - Step 2"
-    },
-    {
-      "global": "\\?view=azure-cli-latest\\?view=azure-cli-latest",
-      "mooncake": "?view=azure-cli-latest",
-      "comment": "Correction of Next Step"
+      "comment": "replace the relative URL with global full URL format - Step 2, update successfully "
     },
     {
       "global": "\\(https://docs.microsoft.com/cli/azure/",
       "mooncake": "(https://docs.azure.cn/zh-cn/cli/",
       "comment": "Correction of Last Step, the Regular can not over all the aspect"
+    },
+    {
+      "global": "([^.\\n]*)\\[([\\S\\s]*)\\]\\((\\.\\.\\/){1,2}azure-subscription-service-limits(\\.md)?([^)]*)\\)([^.]*)\\.",
+      "mooncake": "",
+      "comments": "azure-subscription-service-limits are not suitable for Azure.cn"
     }
+
+
   ]
 }

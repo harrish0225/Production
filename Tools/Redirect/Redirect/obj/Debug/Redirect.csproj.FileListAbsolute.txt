@@ -1,0 +1,9 @@
+E:\gitrep\Production\Tools\Redirect\Redirect\bin\Debug\AuthorCustmization.exe
+E:\gitrep\Production\Tools\Redirect\Redirect\bin\Debug\Newtonsoft.Json.dll
+E:\gitrep\Production\Tools\Redirect\Redirect\bin\Debug\Newtonsoft.Json.xml
+E:\gitrep\Production\Tools\Redirect\Redirect\bin\Debug\Redirect.exe.config
+E:\gitrep\Production\Tools\Redirect\Redirect\bin\Debug\Redirect.exe
+E:\gitrep\Production\Tools\Redirect\Redirect\bin\Debug\Redirect.pdb
+E:\gitrep\Production\Tools\Redirect\Redirect\obj\Debug\Redirect.csprojResolveAssemblyReference.cache
+E:\gitrep\Production\Tools\Redirect\Redirect\obj\Debug\Redirect.exe
+E:\gitrep\Production\Tools\Redirect\Redirect\obj\Debug\Redirect.pdb
