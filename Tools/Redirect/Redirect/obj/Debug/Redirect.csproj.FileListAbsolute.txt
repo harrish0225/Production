@@ -1,4 +1,3 @@
-E:\gitrep\Production\Tools\Redirect\Redirect\bin\Debug\AuthorCustmization.exe
 E:\gitrep\Production\Tools\Redirect\Redirect\bin\Debug\Newtonsoft.Json.dll
 E:\gitrep\Production\Tools\Redirect\Redirect\bin\Debug\Newtonsoft.Json.xml
 E:\gitrep\Production\Tools\Redirect\Redirect\bin\Debug\Redirect.exe.config

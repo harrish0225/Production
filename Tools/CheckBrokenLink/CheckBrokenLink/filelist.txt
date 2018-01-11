@@ -1,0 +1,4 @@
+resource-manager-audit-limitations.md	includes	12/15/2017
+event-hubs-api-overview.md	articles/event-hubs	01/15/2017
+event-hubs-availability-and-consistency.md	articles/event-hubs	01/15/2017
+event-hubs-c-getstarted-send.md	articles/event-hubs	01/15/2017

@@ -1,0 +1,14 @@
+design-guidance-for-replicated-tables.md	articles/sql-data-warehouse	12/11/2017
+index.md	articles/sql-data-warehouse	12/11/2017
+sql-data-warehouse-backups.md	articles/sql-data-warehouse	12/11/2017
+sql-data-warehouse-best-practices.md	articles/sql-data-warehouse	12/11/2017
+sql-data-warehouse-get-started-load-with-polybase.md	articles/sql-data-warehouse	12/11/2017
+sql-data-warehouse-get-started-tutorial.md	articles/sql-data-warehouse	12/11/2017
+sql-data-warehouse-load-from-azure-blob-storage-with-polybase.md	articles/sql-data-warehouse	12/11/2017
+sql-data-warehouse-load-from-sql-server-with-polybase.md	articles/sql-data-warehouse	12/11/2017
+sql-data-warehouse-manage-compute-overview.md	articles/sql-data-warehouse	12/11/2017
+sql-data-warehouse-memory-optimizations-for-columnstore-compression.md	articles/sql-data-warehouse	12/11/2017
+sql-data-warehouse-overview-what-is.md	articles/sql-data-warehouse	12/11/2017
+sql-data-warehouse-service-capacity-limits.md	articles/sql-data-warehouse	12/11/2017
+TOC.md	articles/sql-data-warehouse	12/11/2017
+tutorial-elastic-query-with-sql-datababase-and-sql-data-warehouse.md	articles/sql-data-warehouse	12/11/2017

@@ -111,7 +111,8 @@ namespace AuthorCustmization
                 newThreads[threadIdx] = new Thread(new ThreadStart(curtFile.ProcessFileCustomize));
                 newThreads[threadIdx].Start();
                 Console.WriteLine(string.Format("Start the Thread[{0}] in application", threadIdx));
-                //newThreads[threadIdx].Join();
+                newThreads[threadIdx].Join();
+
                // Console.WriteLine(string.Format("Join the {0} thread in application", threadIdx));
                 row = sr.ReadLine();
                 threadIdx += 1;

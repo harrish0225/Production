@@ -170,19 +170,19 @@ namespace CLIReplacement.ProcessLibrary
 
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("\t{");
-            sb.AppendLine(string.Format("\t\t\"source_path\": \"{0}\",", sourcepath));
+            sb.AppendLine(string.Format("\t\"source_path\": \"{0}\",", sourcepath));
             if(redirecturl.Substring(0, 6)=="/azure")
             {
-                sb.AppendLine(string.Format("\t\t\"redirect_url\": \"{0}\",", redirecturl.Substring(6)));
+                sb.AppendLine(string.Format("\t\"redirect_url\": \"{0}\",", redirecturl.Substring(6)));
             }
             else
             {
-                sb.AppendLine(string.Format("\t\t\"redirect_url\": \"{0}\",", redirecturl));
+                sb.AppendLine(string.Format("\t\"redirect_url\": \"{0}\",", redirecturl));
             }
 
             //sb.AppendLine(string.Format("\t\t\t\"redirect_url\": \"{0}\",", redirecturl));
 
-            sb.AppendLine(string.Format("\t\t\"redirect_document_id\": \"{0}\"", redirect_document_id));
+            sb.AppendLine(string.Format("\t\"redirect_document_id\": \"{0}\"", redirect_document_id));
             sb.AppendLine("\t},");
 
             return sb.ToString();

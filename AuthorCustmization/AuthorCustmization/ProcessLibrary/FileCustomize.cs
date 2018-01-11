@@ -15,7 +15,8 @@ namespace AuthorCustmization.ProcessLibrary
 {
     public enum ConvertItem {
         global,
-        mooncake
+        mooncake,
+        validservice,
     }
     public enum ConvertCategory
     {
@@ -197,6 +198,8 @@ namespace AuthorCustmization.ProcessLibrary
             string urlMooncake = string.Empty;
             bool bGlobal = false;
             bool bMooncake = false;
+            bool bValidService = false;
+
             Regex reg = null;
 
             //AuthorReplacement Section
@@ -237,7 +240,8 @@ namespace AuthorCustmization.ProcessLibrary
                 {
                     bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.global, ref urlGlobal);
                     bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.mooncake, ref urlMooncake);
-                    if (bGlobal && bMooncake)
+                    
+                    if (bGlobal && bMooncake )
                     {
                         reg = new Regex(urlGlobal);
                         articleContent = reg.Replace(articleContent, urlMooncake);
@@ -255,7 +259,8 @@ namespace AuthorCustmization.ProcessLibrary
                 {
                     bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.URLCorrection, i, ConvertItem.global, ref urlGlobal);
                     bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.URLCorrection, i, ConvertItem.mooncake, ref urlMooncake);
-                    if (bGlobal && bMooncake)
+                    //bValidService = this.GetProcessConvertRuleValidService(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.validservice, this.Fullpath);
+                    if (bGlobal && bMooncake )
                     {
                         reg = new Regex(urlGlobal);
                         articleContent = reg.Replace(articleContent, urlMooncake);
@@ -462,7 +467,7 @@ namespace AuthorCustmization.ProcessLibrary
                             if (reg.IsMatch(filecontent))
                             {
                                 sw = new StreamWriter(curtFile, false);
-                                filecontent += string.Format("\n<!--Not Available the parent file of includes file of {0}-->", this.File);
+                                filecontent += string.Format("\n<!--The parent file of includes file of {0}-->", this.File);
                                 filecontent += string.Format("\n<!--ms.date:{0}-->", this.CustomizedDate);
                                 sw.Write(filecontent);
                                 sw.Flush();
@@ -526,6 +531,37 @@ namespace AuthorCustmization.ProcessLibrary
             return bProcess;
 
         }
+
+
+        public bool GetProcessConvertRuleValidService(ref JObject JConvert, ConvertCategory category, int iIndex, ConvertItem key, string filePath)
+        {
+            bool bProcess = false;
+            string valReturn = string.Empty;
+            string[] validKey = null;
+
+            try
+            {
+                valReturn = JConvert[category.ToString()][iIndex][key.ToString()].ToString();
+                validKey = valReturn.Split(':');
+                foreach(string curtVal in validKey)
+                {
+                    if (filePath.Contains(curtVal) == true)
+                    {
+                        bProcess = true;
+                        break;
+                    }
+                }
+                bProcess = false;
+            }
+            catch (Exception ex)
+            {
+                bProcess = true;
+            }
+
+            return bProcess;
+
+        }
+
         public void ProcessFileCustomize()
         {
             this.Status = ProcessStatus.Start;
