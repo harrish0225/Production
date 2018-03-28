@@ -5,4 +5,3 @@ E:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\bin\Debug\Newtonsoft.Json.dl
 E:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\bin\Debug\Newtonsoft.Json.xml
 E:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\obj\Debug\H1TOTITLE.exe
 E:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\obj\Debug\H1TOTITLE.pdb
-E:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\obj\Debug\H1ToTitle.csprojResolveAssemblyReference.cache

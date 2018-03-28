@@ -64,6 +64,12 @@ namespace CLIReplacement
                 return;
             }
 
+            string mooncakeSite = CommonFun.GetConfigurationValue("MooncakeSite", ref error);
+            if (error.Length > 0)
+            {
+                return;
+            }
+
 
             ////Get the redirect file content(both global and mooncake repository)
             string fileGlobalContent = string.Empty;
@@ -107,7 +113,7 @@ namespace CLIReplacement
                 filename = para[0];
                 directory = para[1];
                 customizedate = para[2];
-                CollectRedirectFileByArticle curtFile = new CollectRedirectFileByArticle(threadIdx, filename, directory, customizedate, category, fileGlobalContent, fileMooncakeContent);
+                CollectRedirectFileByArticle curtFile = new CollectRedirectFileByArticle(threadIdx, filename, directory, customizedate, category, mooncakeSite, fileGlobalContent, fileMooncakeContent);
                 fileList.Add(curtFile);
                 newThreads[threadIdx] = new Thread(new ThreadStart(curtFile.ProcessFileCustomize));
                 newThreads[threadIdx].Start();

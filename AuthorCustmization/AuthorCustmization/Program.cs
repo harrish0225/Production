@@ -29,32 +29,52 @@ namespace AuthorCustmization
 
             }else if (iCount==1)
             {
-                switch (args[0].TrimStart('-'))
+                string sParam = args[0].TrimStart('-').ToUpper();
+                int iParamCount = sParam.Trim().Length;
+
+
+                if (iParamCount== 1)
                 {
-                    case "A":
-                    case "a":
-                        category = ConvertCategory.AuthorReplacement;
-                        break;
-                    case "U":
-                    case "u":
-                        category = ConvertCategory.URLReplacement;
-                        break;
-                    case "C":
-                    case "c":
-                        category = ConvertCategory.URLCorrection;
-                        break;
-                    case "F":
-                    case "f":
-                        category = ConvertCategory.FindArticle;
-                        break;
-                    case "I":
-                    case "i":
-                        category = ConvertCategory.IncludeParentFile;
-                        break;
-                    default:
-                        ShowUseageTip();
-                        return;
+                    switch (sParam)
+                    {
+                        case "A":
+                            category = ConvertCategory.AuthorReplacement;
+                            break;
+                        case "U":
+                            category = ConvertCategory.URLReplacement;
+                            break;
+                        case "C":
+                            category = ConvertCategory.URLCorrection;
+                            break;
+                        case "F":
+                            category = ConvertCategory.FindArticle;
+                            break;
+                        case "I":
+                            category = ConvertCategory.IncludeParentFile;
+                            break;
+                        case "H":
+                        default:
+                            ShowUseageTip();
+                            return;
+                    }
                 }
+                else
+                {
+                    switch(sParam)
+                    {
+                        case "HELP":
+                            ShowUseageTip();
+                            return;
+                        default:
+                            Console.WriteLine("You type the wrong command:");
+                            ShowUseageTip();
+                            return;
+                    }
+                    
+                }
+
+              
+                
             }
             
 
@@ -110,10 +130,15 @@ namespace AuthorCustmization
                 fileList.Add(curtFile);
                 newThreads[threadIdx] = new Thread(new ThreadStart(curtFile.ProcessFileCustomize));
                 newThreads[threadIdx].Start();
-                Console.WriteLine(string.Format("Start the Thread[{0}] in application", threadIdx));
-                newThreads[threadIdx].Join();
+                Console.WriteLine(string.Format("Start the Thread[{0}] in application...", threadIdx));
 
-               // Console.WriteLine(string.Format("Join the {0} thread in application", threadIdx));
+
+                // Console.WriteLine(string.Format("Join the {0} thread in application", threadIdx));
+#if debug
+                newThreads[threadIdx].Join();
+#endif
+
+
                 row = sr.ReadLine();
                 threadIdx += 1;
             }
@@ -130,7 +155,7 @@ namespace AuthorCustmization
                     if (newThreads[i].ThreadState != ThreadState.Stopped)
                     {
                         allThreadOver = false;
-                        Console.WriteLine(string.Format("Checking status of the Thread[{0}] : {1} ", i, newThreads[i].ThreadState.ToString()));
+                        Console.WriteLine(string.Format("Checking status of the Thread[{0}] \t : \t {1} ", i, newThreads[i].ThreadState.ToString()));
                         break;
                     }
                 }
@@ -139,15 +164,39 @@ namespace AuthorCustmization
 
             if(category==ConvertCategory.ALL || category== ConvertCategory.IncludeParentFile )
             {
+                //Display the Parent of Include file in Console. 
                 foreach(FileCustomize curtFile in fileList)
                 {
                     if (curtFile.ArticleCategory == FileCategory.Includes)
                     {
-                        Console.WriteLine("The parent file of {0} is {1}", curtFile.File, curtFile.ParentFile);
+                        Console.WriteLine(string.Format("The parent file of\t{0}\tis\t{1}\t.", curtFile.File, curtFile.ParentFile));
                     }   
                 }
+
+
+                //Save the download file for the parent of Include file in text file.
+                StringBuilder sbText = new StringBuilder();
+
+                Console.WriteLine();
+                sbText.AppendLine(String.Format("**********************Check Process Result({0})**********************", ConvertCategory.IncludeParentFile.ToString()));
+                //Console.WriteLine(String.Format("**********************Check Process Result({0})**********************", category.ToString()));
+
+                foreach (FileCustomize curtFile in fileList)
+                {
+                    if (curtFile.ArticleCategory == FileCategory.Includes)
+                    {
+                        //if (!string.IsNullOrEmpty(curtFile.ParentFile))
+                        //{
+                            sbText.AppendLine(string.Format("The parent file of\t{0}\tis\t{1}\t.", curtFile.File, curtFile.ParentFile));
+                        //}
+                    }
+                        
+                }
+
+                CommonFun.GenerateDownloadFile(category, ref sbText);
             }
 
+            Thread.Sleep(5000);
             Console.WriteLine("Program run finished, Press <Enter> to exit....");
 
             ExitWithUserConfirm();

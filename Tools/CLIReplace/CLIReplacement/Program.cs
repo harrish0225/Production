@@ -30,10 +30,10 @@ namespace CLIReplacement
 
             }else if (iCount==1)
             {
-                switch (args[0].TrimStart('-'))
+                string sParam = args[0].TrimStart('-').ToUpper();
+                switch (sParam)
                 {
                     case "CLI":
-                    case "cli":
                         category = ConvertCategory.CLIReplacement;
                         break;
                     default:
@@ -90,9 +90,12 @@ namespace CLIReplacement
                 newThreads[i] = new Thread(new ThreadStart(curtFile.ProcessFileCustomize));
                 newThreads[i].Start();
 
-                //newThreads[i].Join();
+#if debug
+                newThreads[i].Join();
+#endif
+
             }
-            
+
 
             bool allThreadOver = false;
             while (allThreadOver == false)

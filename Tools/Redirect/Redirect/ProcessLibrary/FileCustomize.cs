@@ -118,6 +118,10 @@ namespace CLIReplacement.ProcessLibrary
         public string redirectGContent = string.Empty;
         public string RedirectGContent { get; set; }
 
+        public string redirectTableContent = string.Empty;
+        public string RedirectTableContent { get; set; }
+
+
         public string redirectMContent = string.Empty;
         public string RedirectMContent { get; set; }
 
@@ -126,12 +130,14 @@ namespace CLIReplacement.ProcessLibrary
 
         }
 
-        public CollectRedirectFileByArticle(int id, string filename, string directory, string customizedate, ConvertCategory category, string globalContent, string mooncakeContent): base(id, filename, directory, customizedate,  category)
+        public CollectRedirectFileByArticle(int id, string filename, string directory, string customizedate, ConvertCategory category, string mooncakeSite,  string globalContent, string mooncakeContent ) : base(id, filename, directory, customizedate,  category, mooncakeSite)
         {
             this.GlobalContent = globalContent;
             this.MooncakeContent = mooncakeContent;
             this.RedirectGContent = string.Empty;
             this.RedirectMContent = string.Empty;
+            this.RedirectTableContent = string.Empty;
+ 
         }
 
         public override void ProcessFileCustomize() 
@@ -162,6 +168,31 @@ namespace CLIReplacement.ProcessLibrary
             this.Status = ProcessStatus.Complete;
             Console.WriteLine("Check Status of the Thread[{0}] : {1}", this.Id, this.Status.ToString());
 
+
+        }
+
+        public string GenerateTableRedirectJson(string MCsite, string sourcepath, string redirecturl, string redirect_document_id)
+        {
+
+            StringBuilder sb = new StringBuilder();
+            string rowContent = string.Empty;
+
+            rowContent = string.Format("{0}{1}:", MCsite, sourcepath.Replace("articles/", ""));
+
+            if (redirecturl.Substring(0, 6) == "/azure")
+            {
+                rowContent=string.Format("{0}:{1}{2}",rowContent,MCsite, redirecturl.Substring(6).TrimStart('/'));
+            }
+            else
+            {
+                rowContent = string.Format("{0}:{1}{2}", rowContent, MCsite, redirecturl.TrimStart('/'));
+            }
+
+            //sb.AppendLine(string.Format("\t\t\t\"redirect_url\": \"{0}\",", redirecturl));
+
+            sb.AppendLine(rowContent);
+
+            return sb.ToString();
 
         }
 
@@ -236,7 +267,6 @@ namespace CLIReplacement.ProcessLibrary
                 bool bMoonFetch = false;
                 bool bFetch = false;
 
-
                 for(int i= 0; i < iGCount; i++)
                 {
                     bFetch = this.GetProcessConvertRule(ref JGlobal, ConvertCategory.redirections, i, ConvertItem.source_path, ref sourcePath);
@@ -249,6 +279,7 @@ namespace CLIReplacement.ProcessLibrary
                             if (bFetch == true)
                             {
                                 this.RedirectGContent += this.GenerateRedirectJson(sourcePath, redirectUrl, redirectDocumentid);
+                                this.RedirectTableContent += this.GenerateTableRedirectJson(this.MooncakeSite, sourcePath, redirectUrl, redirectDocumentid);
                                 bGlobalFetch = true;
                                 //break;
                             }
@@ -332,6 +363,10 @@ namespace CLIReplacement.ProcessLibrary
         ConvertCategory processCategory = ConvertCategory.AuthorReplacement;
         public ConvertCategory ProcessCategory { get; set; }
 
+
+        public string mooncakeSite = string.Empty;
+        public string MooncakeSite { get; set; }
+
         public static Object ObjJason = new Object();
 
 
@@ -383,10 +418,11 @@ namespace CLIReplacement.ProcessLibrary
             this.CheckFileList = new ArrayList();
         }
 
-        public FileCustomize(int id,string filename,string directory,string customizedate, ConvertCategory category)
+        public FileCustomize(int id,string filename,string directory,string customizedate, ConvertCategory category, string mooncakeSite)
         {
             this.Id = id;
             this.File = filename;
+            this.MooncakeSite = mooncakeSite;
             string[] para = directory.Split('/');
 
             this.SetFullPathName(para);

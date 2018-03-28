@@ -1,0 +1,7 @@
+E:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Redirect.exe.config
+E:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Redirect.exe
+E:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Redirect.pdb
+E:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Newtonsoft.Json.dll
+E:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Newtonsoft.Json.xml
+E:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.exe
+E:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.pdb

@@ -20,4 +20,3 @@ E:\gitrep\Production\Tools\CLIReplace\CLIReplacement\bin\Debug\CLIReplace.exe
 E:\gitrep\Production\Tools\CLIReplace\CLIReplacement\bin\Debug\CLIReplace.pdb
 E:\gitrep\Production\Tools\CLIReplace\CLIReplacement\bin\Debug\Newtonsoft.Json.dll
 E:\gitrep\Production\Tools\CLIReplace\CLIReplacement\bin\Debug\Newtonsoft.Json.xml
-E:\gitrep\Production\Tools\CLIReplace\CLIReplacement\obj\Debug\CLIReplacement.csprojResolveAssemblyReference.cache

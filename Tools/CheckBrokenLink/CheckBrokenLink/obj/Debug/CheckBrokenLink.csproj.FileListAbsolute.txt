@@ -14,4 +14,3 @@ E:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Debug\Newtonsoft.
 E:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Debug\Newtonsoft.Json.xml
 E:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Debug\CheckBrokenLink.exe
 E:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Debug\CheckBrokenLink.pdb
-E:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Debug\CheckBrokenLink.csprojResolveAssemblyReference.cache

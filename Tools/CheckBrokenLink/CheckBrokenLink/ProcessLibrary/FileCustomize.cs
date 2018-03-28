@@ -14,7 +14,8 @@ using System.Net;
 
 namespace CheckBrokenLink.ProcessLibrary
 {
-    public enum ConvertItem {
+    public enum ConvertItem
+    {
         global,
         mooncake,
         H1,
@@ -65,6 +66,7 @@ namespace CheckBrokenLink.ProcessLibrary
         event_hubs,
         load_balancer,
         resiliency,
+        network_watcher,
         service_fabric,
         site_recovery,
         sql_data_warehouse,
@@ -73,6 +75,7 @@ namespace CheckBrokenLink.ProcessLibrary
         traffic_manager,
         virtual_machines,
         virtual_network,
+        includes,
     }
 
     //public enum InvolvedService
@@ -108,12 +111,19 @@ namespace CheckBrokenLink.ProcessLibrary
 
             foreach (InvolvedService curtService in Enum.GetValues(typeof(InvolvedService)))
             {
-                diskpath = CommonFun.GetConfigurationValue("RepositoryZHCNArticleDir", ref message);
-
-                parentpath = string.Format("{0}\\{1}", diskpath, curtService.ToString().Replace('_', '-'));
+                if (curtService.ToString().ToLower() == InvolvedService.includes.ToString().ToLower())
+                {
+                    diskpath = CommonFun.GetConfigurationValue("RepositoryENUSIncludeDir", ref message);
+                    parentpath = string.Format("{0}", diskpath);
+                }
+                else
+                {
+                    diskpath = CommonFun.GetConfigurationValue("RepositoryENUSArticleDir", ref message);
+                    parentpath = string.Format("{0}\\{1}", diskpath, curtService.ToString().Replace('_', '-'));
+                }
 
                 this.GetAllFilesInDirectory(parentpath);
-                
+
             }
 
             fileList = this.CheckFileList;
@@ -122,7 +132,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
     }
 
-   
+
 
     public class FileCustomize
     {
@@ -136,7 +146,7 @@ namespace CheckBrokenLink.ProcessLibrary
         public string Directory { get; set; }
 
         string fullpath = "";
-        public string Fullpath { get; set; }
+        public string FullPath { get; set; }
 
         string customizedDate = "";
         public string CustomizedDate { get; set; }
@@ -163,11 +173,24 @@ namespace CheckBrokenLink.ProcessLibrary
         string brokenLink = "";
         public string BrokenLink { get; set; }
 
+        //bool forceTerminate = false;
+        //public bool ForceTerminate { get; set; }
+
+        int checkRound = 0;
+        public int CheckRound { get; set; }
+
+        private Mutex fileMutex = null;
+        public Mutex FileMutex { get; set; }
+
+
         ConvertCategory processCategory = ConvertCategory.AuthorReplacement;
         public ConvertCategory ProcessCategory { get; set; }
 
         ConvertProcess showHistory = ConvertProcess.ShowResult;
         public ConvertProcess ShowHistory { get; set; }
+
+        //CancellationTokenSource cancelToken;
+        //public CancellationTokenSource CancelToken { get; set; }
 
         public static Object ObjJason = new Object();
 
@@ -176,7 +199,7 @@ namespace CheckBrokenLink.ProcessLibrary
         public string GetRightFileName(string[] para)
         {
             string rightname = "";
-            for (int i =1; i <= para.Length - 1; i++)
+            for (int i = 1; i <= para.Length - 1; i++)
             {
                 rightname = string.Format(@"{0}\{1}", rightname, para[i]);
             }
@@ -196,7 +219,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
                 diskpath = CommonFun.GetConfigurationValue("RepositoryENUSArticleDir", ref message);
                 relativefile = GetRightFileName(para);
-                this.Fullpath = string.Format(@"{0}\{1}\{2}", diskpath, relativefile, this.File);
+                this.FullPath = string.Format(@"{0}\{1}\{2}", diskpath, relativefile, this.File);
                 this.ArticleCategory = FileCategory.Article;
 
             }
@@ -206,19 +229,19 @@ namespace CheckBrokenLink.ProcessLibrary
 
                 diskpath = CommonFun.GetConfigurationValue("RepositoryENUSIncludeDir", ref message);
                 relativefile = GetRightFileName(para);
-                this.Fullpath = string.Format(@"{0}\{2}", diskpath, relativefile, this.File);
+                this.FullPath = string.Format(@"{0}\{2}", diskpath, relativefile, this.File);
                 this.ArticleCategory = FileCategory.Includes;
 
             }
 
         }
-       
+
         public FileCustomize()
         {
             this.CheckFileList = new ArrayList();
         }
 
-        public FileCustomize(int id,string filename,string directory,string customizedate, ConvertCategory category)
+        public FileCustomize(int id, string filename, string directory, string customizedate, ConvertCategory category)
         {
             this.Id = id;
             this.File = filename;
@@ -230,6 +253,25 @@ namespace CheckBrokenLink.ProcessLibrary
             this.WarningMessage = string.Empty;
 
             this.CheckFileList = new ArrayList();
+
+        }
+
+        public FileCustomize(int id, string filename, string directory, string customizedate, ConvertCategory category, ConvertProcess process, CancellationTokenSource cancelToken)
+        {
+            this.Id = id;
+            this.File = filename;
+            string[] para = directory.Split('/');
+
+            this.SetFullPathName(para);
+            this.CustomizedDate = customizedate;
+            this.ProcessCategory = category;
+            this.WarningMessage = string.Empty;
+
+            this.ShowHistory = process;
+            //this.ForceTerminate = false;
+            this.CheckRound = 0;
+            this.CheckFileList = new ArrayList();
+            //this.CancelToken = cancelToken;
 
         }
 
@@ -245,9 +287,10 @@ namespace CheckBrokenLink.ProcessLibrary
             this.WarningMessage = string.Empty;
 
             this.ShowHistory = process;
-
+            //this.ForceTerminate = false;
+            this.CheckRound = 0;
             this.CheckFileList = new ArrayList();
-
+            //this.CancelToke = cancelToke;
 
         }
 
@@ -261,14 +304,26 @@ namespace CheckBrokenLink.ProcessLibrary
 
         }
 
+        public string RemoveJsonPostfixinFileName(string fileName)
+        {
+            string correctName = string.Empty;
+            string josnPat = "\\?toc=[\\S*]*\\.json";
+            //Replace the INCLUDE link 
+            Regex reg = new Regex(josnPat, RegexOptions.IgnoreCase);
+            correctName = reg.Replace(fileName, "");
+
+            return correctName;
+        }
+
         public void CheckMatches(MatchCollection matches, ref List<string> lstURL, ref string articleContent)
         {
             string filename = string.Empty;
+            string lablename = string.Empty;
             string checkdirectory = string.Empty;
             string checkfile = string.Empty;
             string error = string.Empty;
 
-            Match existMath = null;
+            //Match existMath = null;
 
             string localpath = CommonFun.GetConfigurationValue("RepositoryENUSArticleDir", ref error);
 
@@ -276,15 +331,46 @@ namespace CheckBrokenLink.ProcessLibrary
             {
 
                 //First remove the current directory ./ when exists.
+                lablename = matches[i].Groups["labelname"].ToString().ToLower().Trim();
+                switch(lablename)
+                {
+                    case "binary":
+                    case "nvarchar":
+                        continue;
+                }
+               
+
                 filename = matches[i].Groups["mdfilename"].ToString().Trim();
+
+                // When we find that the filename is string.empty, we will discard it and go the check next round. 
+                switch(filename)
+                {
+                    case "":
+                    case "#":
+                    case "http://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/Explorer/":
+                    case "SSDT":
+                        continue;
+                        
+                }
+               
+
+                // the lenght of --> is 3
+                if (filename.Length>=3 && filename.Substring(filename.Length - 3) == "-->")
+                {
+                    continue;
+                }
+
+                // When the filename is normal item, we will continue to check the following decode. 
                 if (filename.Substring(0, 2) == "./")
                 {
                     filename = filename.Substring(2);
                 }
+
+
                 //Get the current parent directory. 
-                if (this.Fullpath.LastIndexOf("\\") > -1)
+                if (this.FullPath.LastIndexOf("\\") > -1)
                 {
-                    checkdirectory = this.Fullpath.Substring(0, this.Fullpath.LastIndexOf("\\"));
+                    checkdirectory = this.FullPath.Substring(0, this.FullPath.LastIndexOf("\\"));
                 }
 
 
@@ -308,13 +394,33 @@ namespace CheckBrokenLink.ProcessLibrary
 
                 }
 
+                string sPostfix = string.Empty;
+
+                //Step 3: Sample of ../virtual-machines/windows/sizes.md?toc=%2fvirtual-machines%2fwindows%2ftoc.json
+                if (filename.Contains(".md") == true)
+                {
+                    sPostfix = filename.Substring(filename.IndexOf(".md") + 3);
+                    if (sPostfix.Trim().Length>0 && sPostfix.Contains("#")==true)
+                    {
+                        string[] menuAndAnchor = sPostfix.Split('#');
+                        sPostfix = "#" + menuAndAnchor[menuAndAnchor.Length - 1];   // Remove the ?toc=XXXX#AnchorName
+                    }else
+                    {
+                        sPostfix = "";
+                    }
+                    
+
+                    filename = filename.Substring(0, filename.IndexOf(".md") + 3) + sPostfix;
+                }
+
 
                 //Step 4: Check the md and image file.
-                if (filename.Substring(filename.Length - 3).ToLower().ToString() == ".md" ||
-                   filename.Substring(filename.Length - 4).ToLower().ToString() == ".jpg" ||
+                //The filename is larger than 4 charactors
+                if (filename.Length >= 4 &&
+                    (filename.Substring(filename.Length - 4).ToLower().ToString() == ".jpg" ||
                    filename.Substring(filename.Length - 4).ToLower().ToString() == ".svg" ||
                    filename.Substring(filename.Length - 4).ToLower().ToString() == ".png" ||
-                   filename.Substring(filename.Length - 4).ToLower().ToString() == ".gif")
+                   filename.Substring(filename.Length - 4).ToLower().ToString() == ".gif"))
 
                 {
 
@@ -325,10 +431,88 @@ namespace CheckBrokenLink.ProcessLibrary
                         checkdirectory = checkdirectory.Substring(0, checkdirectory.LastIndexOf("\\"));
                     }
 
-                    checkfile = string.Format("{0}\\{1}", checkdirectory, filename.Replace("/", "\\"));
+                    // images file should add \\ in the following code
+                    if (filename.StartsWith("/") == true)
+                    {
+                        checkfile = string.Format("{0}\\{1}", localpath, filename.Replace("/", "\\"));
+                    }
+                    else
+                    {
+                        checkfile = string.Format("{0}\\{1}", checkdirectory, filename.Replace("/", "\\"));
+                    }
+
+                        
+
+                    // Replace some case which the file path contains \\\\.
+                    checkfile = checkfile.Replace("\\\\", "\\");
                     if (System.IO.File.Exists(checkfile) == false)
                     {
+
                         this.BrokenLink += string.Format("{0} : missing.\n", checkfile);
+                    }
+                    else
+                    {
+                        if (this.ShowHistory == ConvertProcess.ShowHistory)
+                        {
+                            this.BrokenLink += string.Format("{0} : correct.\n", checkfile);
+                        }
+                    }
+
+                    continue;
+                }
+
+                //The filename should be 3 characters at least.
+                if (filename.Length >= 3 && filename.Substring(filename.Length - 3).ToLower().ToString() == ".md")
+                {
+
+                    //reward to parent directory when exists the ../
+                    while (filename.IndexOf("../") > -1)
+                    {
+                        filename = filename.Substring(filename.IndexOf("../") + 3);
+                        checkdirectory = checkdirectory.Substring(0, checkdirectory.LastIndexOf("\\"));
+                    }
+
+                    if (filename.StartsWith("/") == true)
+                    {
+                        // forexample /azure-resource-manager/XXXX.md
+                        checkfile = string.Format("{0}{1}", localpath, filename.Replace("/", "\\"));
+                    }
+                    else
+                    {
+                        // for example include/XXX.md, we should add the \\ to connect correct path.
+                        checkfile = string.Format("{0}\\{1}", checkdirectory, filename.Replace("/", "\\"));
+                    }
+
+                    if (System.IO.File.Exists(checkfile) == false)
+                    {
+                        //We will check whether contains redirection URL
+                        checkdirectory = checkdirectory.Replace(localpath, "").Replace("\\", "/").TrimStart('/');
+
+                        if (filename.StartsWith("articles/") == true)
+                        {
+                            // filename = "articles/XXXX.md"
+                            // this choise match the sample of /article/XXXX.md
+                            filename = filename.Substring("articles/".Length);
+                            filename = string.Format("https://docs.azure.cn/zh-cn/{0}", filename.Substring(0, filename.IndexOf(".md")));
+                        }
+
+                        if (filename.StartsWith("/") == true)
+                        {
+                            // filename = "/XXXX.md"
+                            // this choise match the sample of /article/event-hubs/XXXX.md 
+                            filename = filename.Substring(1);
+                            filename = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, filename.Substring(0, filename.IndexOf(".md")));
+                        }
+                        else
+                        {
+                            // filename = "XXXX.md"
+                            // this choise match the sample of /article/event-hubs/XXXX.md 
+                            filename = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, filename.Substring(0, filename.IndexOf(".md")));
+                        }
+
+
+
+                        lstURL.Add(filename);
                     }
                     else
                     {
@@ -345,99 +529,161 @@ namespace CheckBrokenLink.ProcessLibrary
                 // Check the local path. 
                 while (filename.IndexOf("../") > -1)
                 {
-                    filename = filename.Substring(filename.IndexOf("../") + 1);
-                    checkdirectory = checkdirectory.Substring(0, checkdirectory.LastIndexOf("/"));
-                }
-                
-                checkfile = string.Format("{0}\\{1}", checkdirectory, filename);
-                if(checkfile.Contains("#"))    //we have check the .md file in preceding logical .
-                {
-                    string localfile = checkfile.Substring(0,checkfile.IndexOf("#")-1) + ".md";
-                    string localarchor = checkfile.Substring(checkfile.IndexOf("#"));
-                    this.CheckArchorInFile(localfile, localarchor);
-                    continue;
+                    filename = filename.Substring(filename.IndexOf("../") + 3);
+                    checkdirectory = checkdirectory.Substring(0, checkdirectory.LastIndexOf("\\"));
                 }
 
-                //checkfile = checkfile.Replace(localpath, "https://docs.azure.cn/zh-cn/");
+
+                if (filename.StartsWith("/") == true)
+                {
+                    // forexample /azure-resource-manager/XXXX.md
+                    checkfile = string.Format("{0}{1}", localpath, filename.Replace("/", "\\"));
+                }
+                else
+                {
+                    checkfile = string.Format("{0}\\{1}", checkdirectory, filename.Replace("/", "\\"));
+                }
+
+                bool isRedirect = false;
+                if (checkfile.Contains("#"))    //we have check the .md file in preceding logical .
+                {
+
+                    checkfile = checkfile.ToLower().Replace(".md", "");
+
+                    string localfile = checkfile.Substring(0, checkfile.IndexOf("#")) + ".md";
+                    string localarchor = checkfile.Substring(checkfile.IndexOf("#"));
+
+                    // isRedirect return flag to confirem the file is redirection or not.
+                    bool isNeedRedirect = false;
+                    this.CheckArchorInFile(isRedirect, localfile, localarchor, ref isNeedRedirect);
+                    if (isNeedRedirect == false)
+                    {
+                        continue;
+                    }
+                }
+                else
+                {
+
+
+                }
+
+                // The Link style like [](../service-name/XXXX.md) 
+                if (filename.ToLower().Contains(".md") == true)
+                {
+                    filename = filename.Replace(".md", "").Replace(".MD", "");
+                }
+
+                if (filename.Substring(0, 1) == "/")
+                {
+                    filename = filename.Substring(1);
+                    filename = string.Format("https://docs.azure.cn/zh-cn/{0}", filename);
+                }
+                else
+                {
+                    checkdirectory = checkdirectory.Replace(localpath, "").Replace("\\", "/").TrimStart('/');
+                    filename = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, filename);
+                }
+
                 lstURL.Add(filename);
 
 
             }
         }
 
-        public void CheckArchorInFile(string filename, string archor)
+        public void CheckArchorInFile(bool isRedirect, string filename, string archor, ref bool isNeedRedirect)
         {
-            
-           
-            
+
+
+
             try
             {
-                Mutex fileMutex = null;
-                string articleContent = string.Empty;
 
-                fileMutex = new Mutex(true, GetMetuxFileName(filename));
-                fileMutex.WaitOne();
-                FileStream fs = new FileStream(filename, FileMode.Open);
-                StreamReader sr = new StreamReader(fs);
-                articleContent = sr.ReadToEnd();
-                sr.Close();
+                filename = RemoveJsonPostfixinFileName(filename);
+
+                bool needLog = isRedirect; // Notice: isRedirect is 
+
+                string articleContent = this.ReadArticleContent(filename, needLog);
+
+                this.ReplaceIncludeLinkWithContent(filename, ref articleContent);
 
                 bool matchOK = false;
 
-                string archPat = string.Format("<a[\\s]*(id|name)=(\'|\"){0}(\'|\")[\\s]*></a>", archor.TrimStart('#'));
-                Match existMath = Regex.Match(articleContent, archPat);
+                //string archPat = string.Format("<a[\\s]*(id|name)=(\'|\"){0}(\'|\")[\\s]*></a>", archor.TrimStart('#'));
+                string archPat = string.Format("<a[\\s]*(id|name)\\s*=\\s*(\'|\"){0}(\'|\")[\\s]*>[^<>/]*</a>", archor.TrimStart('#'));
+                Match existMath = Regex.Match(articleContent, archPat, RegexOptions.IgnoreCase);
 
                 if (existMath.Length > 0)
                 {
                     matchOK = true;
                 }
 
-                if(matchOK==false)
+                if (matchOK == false)
                 {
-                    archPat = string.Format("<a[\\s]*(id|name)=(\'|\"){0}(\'|\")[\\s]*/>", archor.TrimStart('#'));
-                    existMath = Regex.Match(articleContent, archPat);
+                    //archPat = string.Format("<a[\\s]*(id|name)=(\'|\"){0}(\'|\")[\\s]*/>", archor.TrimStart('#'));
+                    archPat = string.Format("<a[\\s]*(id|name)\\s*=\\s*(\'|\"){0}(\'|\")[\\s]*/>", archor.TrimStart('#'));
+                    existMath = Regex.Match(articleContent, archPat, RegexOptions.IgnoreCase);
                     if (existMath.Length > 0)
                     {
                         matchOK = true;
                     }
                 }
 
-                if (matchOK == true )
+                if (matchOK == true)
                 {
                     if (this.ShowHistory == ConvertProcess.ShowHistory)
                     {
-                        this.BrokenLink += string.Format("{0}{1} : exist.\n", filename,archor);
+                        this.BrokenLink += string.Format("{0}{1} : exist.\n", filename, archor);
                     }
                 }
                 else
                 {
-                    this.BrokenLink += string.Format("{0}{1} : missing.\n", filename,archor);
+                    if(isRedirect ==false )
+                    {
+                        isNeedRedirect = true;
+                    }else
+                    {
+                        this.BrokenLink += string.Format("{0}{1} : missing.\n", filename, archor);
+                    }
+                    //
                 }
+
             }
 
             catch (Exception ex)
             {
-                this.BrokenLink += string.Format("Error : {0}{1} ->  {2}\n", filename,archor, ex.Message.ToString() );
+                //if (isRedirect == false)
+                //{
+                //    string sParam = ex.Message.ToString();
+                //    if (sParam.Contains("Could not find file") == true)
+                //    {
+                //        isNeedRedirect = true;
+                //    }
+                //}
+                //else
+                //{
+                //    this.BrokenLink += string.Format("{0}{1} : missing.\n", filename, archor);
+                //}
+
             }
             finally
             {
 
             }
 
-            
+
         }
 
 
         public void CheckArchorInFile(ref string articleContent, string archor)
         {
-            
+
             try
             {
 
                 bool matchOK = false;
 
                 string archPat = string.Format("<a[\\s]*(id|name)=(\'|\"){0}(\'|\")[\\s]*></a>", archor.TrimStart('#'));
-                Match existMath = Regex.Match(articleContent, archPat);
+                Match existMath = Regex.Match(articleContent, archPat, RegexOptions.IgnoreCase);
 
                 if (existMath.Length > 0)
                 {
@@ -447,7 +693,7 @@ namespace CheckBrokenLink.ProcessLibrary
                 if (matchOK == false)
                 {
                     archPat = string.Format("<a[\\s]*(id|name)=(\'|\"){0}(\'|\")[\\s]*/>", archor.TrimStart('#'));
-                    existMath = Regex.Match(articleContent, archPat);
+                    existMath = Regex.Match(articleContent, archPat, RegexOptions.IgnoreCase);
                     if (existMath.Length > 0)
                     {
                         matchOK = true;
@@ -469,7 +715,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
             catch (Exception ex)
             {
-                this.BrokenLink += string.Format("Error : {0} ->  {1}\n",  archor, ex.Message.ToString());
+                this.BrokenLink += string.Format("Error : {0} ->  {1}\n", archor, ex.Message.ToString());
             }
             finally
             {
@@ -496,13 +742,14 @@ namespace CheckBrokenLink.ProcessLibrary
             }
 
             JObject JUrl = (JObject)JsonConvert.DeserializeObject(ruleJson);
-            
+
             string urlGlobal = string.Empty;
             string urlMooncake = string.Empty;
 
             ConvertCategory category = this.ProcessCategory;
+            string filePostfix = string.Empty;
 
-            if (category == ConvertCategory.CheckBrokenLinkByFile || category== ConvertCategory.CheckBrokenLinkByService)
+            if (category == ConvertCategory.CheckBrokenLinkByFile || category == ConvertCategory.CheckBrokenLinkByService)
             {
 
 
@@ -510,28 +757,136 @@ namespace CheckBrokenLink.ProcessLibrary
 
                 MatchCollection matches;
 
+                filePostfix = this.FullPath.Trim().Substring(this.FullPath.Length - 3).ToLower();
 
-                //string mdfilePatFirst = "[^(<!--)]\\[([^\\[\\]])*\\]([\\s]*)\\((?<mdfilename>[^\\(\\)]*)\\)";
-                string mdfilePatFirst = "\\[([^\\[\\]])*\\]([\\s]*)\\((?<mdfilename>[^\\(\\)]*)\\)";
-                matches = Regex.Matches(articleContent, mdfilePatFirst);
+                if(filePostfix ==".md")
+                {
+                    // Part I for Links of .md file.
+                    //string mdfilePatFirst = "[^(<!--)]\\[([^\\[\\]])*\\]([\\s]*)\\((?<mdfilename>[^\\(\\)]*)\\)";
+                    //string mdfilePatFirst = "(?!(<!--[\\s\\S]*))\\[([^\\[\\]])*\\]([\\s]*)\\((?<mdfilename>[^\\(\\)\\[\\]]*)\\)(?!(\\s*-->))";
+                    string mdfilePatFirst = "(?!(<!--[\\s\\S]*))\\[(?<labelname>[^\\[\\]]*)\\]([\\s]*)\\((?<mdfilename>[^\\(\\)\\[\\]]*)\\)(?!(\\s*-->))";
+                    matches = Regex.Matches(articleContent, mdfilePatFirst);
 
-                this.CheckMatches(matches, ref lstURL, ref articleContent);
+                    this.CheckMatches(matches, ref lstURL, ref articleContent);
 
-                string mdfilePatSecond = "\\[([^\\[\\]]*)\\]([\\s]*)\\:([\\s]*)(?<mdfilename>[^\\s]*)([\\s]*)";
-                //string mdfilePatSecond = "[^(<!--)]\\[([^\\[\\]]*)\\]([\\s]*)\\:([\\s]*)(?<mdfilename>[^\\s]*)([\\s]*)";
+                    // Exception the C++ method style -->  [XXX]::MethodName
+                    // Invloved Sample 
+                    // 1.[XXX]: XXXXX 
+                    // 2.[XXX]: http(s)://XXXX
+                    // 3.[XXX]: XXX
+                    // 4.[XXX]: XXXXXX -->   '--> will show us it is link no need to verify in later process. 
 
-                matches = Regex.Matches(articleContent, mdfilePatSecond);
+                    //string mdfilePatSecond = "(?!(<!--[\\s\\S]*))\\[([^\\[\\]]*)\\]([\\s]*)\\:([\\s]*)(?<mdfilename>(https?:)?[^:\\s]*)(?!(\\s*-->))";
+                    //string mdfilePatSecond = "(?!(<!--[\\s\\S]*))\\[([^\\[\\]])*\\]([\\s]*)\\:([\\s]*)(?<mdfilename>(http(s)?:)?[^:\\s\\[\\]]+(\\s*-->)?)";
+                    string mdfilePatSecond = "(?!(<!--[\\s\\S]*))\\[(?<labelname>[^\\[\\]]*)\\]([\\s]*)\\:([\\s]*)(?<mdfilename>(http(s)?:)?[^:\\s\\[\\]]+(\\s*-->)?)";
 
-                this.CheckMatches(matches, ref lstURL, ref articleContent);
+                    matches = Regex.Matches(articleContent, mdfilePatSecond);
+
+                    this.CheckMatches(matches, ref lstURL, ref articleContent);
+
+                }
+
+                filePostfix = this.FullPath.Trim().Substring(this.FullPath.Length - 4).ToLower();
+                if(filePostfix==".yml")
+                {
+                    // Part II for Links of .yml file.
+                    string ymlfilePatFirst = "src:([\\s| ]*)([\\'|\\\"| ]{1})(?<mdfilename>[^ \\'\\\"]*)(\\2)";
+
+                    matches = Regex.Matches(articleContent, ymlfilePatFirst);
+
+                    this.CheckMatches(matches, ref lstURL, ref articleContent);
+
+                    string ymlfilePatSecond = "href(\\:|\\=)([\\s| ]*)([\\'|\\\"| ]?)(?<mdfilename>[^ \\'\\\"]*)(\\3)";     // (\\3) implement of ([\\'|\\\"| ]?) equal the 3rd element of groups 
+                    matches = Regex.Matches(articleContent, ymlfilePatSecond);
+
+                    this.CheckMatches(matches, ref lstURL, ref articleContent);
+                }
+
 
 
                 this.CheckAllLinks(lstURL);
-               
-                
+
+
 
             }
 
 
+        }
+
+        public void CheckArchorInRedirectionFile(string sURL, ref HttpWebResponse resp)
+        {
+
+            string[] Param = sURL.Split('#');
+
+            string fileName = resp.ResponseUri.OriginalString;
+            string errProcess = "";
+            string sRepalce = CommonFun.GetConfigurationValue("RepositoryENUSArticleDir", ref errProcess);
+            fileName = fileName.Replace("https://docs.azure.cn/zh-cn", sRepalce).Replace("/", "\\").Trim();
+            if (fileName.Substring(fileName.Length - 3).ToLower() != ".md")
+            {
+                fileName = string.Format("{0}.md", fileName);
+            }
+
+            string sArchor = string.Format("#{0}", Param[1]);
+
+            bool isRedirection = true;
+            bool isNeedRedirect = false;
+            CheckArchorInFile(isRedirection, fileName, sArchor, ref isNeedRedirect);
+
+        }
+
+        public bool NeedToCheckArchorInRespostory(string sURL)
+        {
+            bool needCheckArchor = false;
+
+            //Except the webpage which not belong to https://docs.azure.cn/zh-cn/
+            if (sURL.StartsWith("https://docs.azure.cn/zh-cn/cli/") == true ||
+                sURL.StartsWith("https://docs.azure.cn/zh-cn/dotnet/") == true ||
+                sURL.StartsWith("https://docs.azure.cn/zh-cn/java/") == true ||
+                sURL.StartsWith("https://docs.azure.cn/zh-cn/") == false) // the last check is "https://docs.azure.cn/zh-cn/"
+            {
+                return needCheckArchor;
+            }
+
+            string errProcess = string.Empty;
+            string sRepositoryRoot = CommonFun.GetConfigurationValue("RepositoryENUSArticleDir", ref errProcess);
+            string CurtDirectory = string.Empty;
+
+            if (errProcess.Length == 0)
+            {
+                CurtDirectory = sURL.Replace("https://docs.azure.cn/zh-cn/", "");
+            }
+
+            string[] param = CurtDirectory.Split('/');
+            string nextDirectory = string.Empty;
+            string checkDirectory = string.Empty;
+            string nextItem = string.Empty;
+
+            checkDirectory = sRepositoryRoot;
+            for (int i =0; i<param.Length;i++)
+            {
+                nextItem = param[i];
+                if (i!=param.Length-1)
+                {
+                    checkDirectory = string.Format("{0}\\{1}", checkDirectory, nextItem);
+                    if (System.IO.Directory.Exists(checkDirectory) == false)
+                    {
+                        needCheckArchor = true;
+                        return needCheckArchor;
+                    }
+                }
+                else
+                {
+                    nextItem = nextItem.Split('#')[0];
+                    if (System.IO.File.Exists(string.Format("{0}\\{1}.md", checkDirectory, nextItem)) == false)
+                    {
+                        needCheckArchor = true;
+                        return needCheckArchor;
+                    }
+                }
+            }
+
+            return needCheckArchor;
         }
 
         public void CheckAllLinks(List<string> urlList)
@@ -545,29 +900,60 @@ namespace CheckBrokenLink.ProcessLibrary
 
             }
             int iConCount = 0;
-            bool converFlag = int.TryParse(sValue, out  iConCount);
+            bool converFlag = int.TryParse(sValue, out iConCount);
 
-            if(converFlag == false)
+            if (converFlag == false)
             {
-                Console.WriteLine(string.Format("MaxHttpConnectionCount {0} is not a valid interge." , sValue));
+                Console.WriteLine(string.Format("MaxHttpConnectionCount {0} is not a valid interge.", sValue));
                 return;
             }
 
             System.Net.ServicePointManager.DefaultConnectionLimit = iConCount;
-            
+            //ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
 
-            HttpWebRequest req= null;
+
+            HttpWebRequest req = null;
             HttpWebResponse resp = null;
+            string sURL = string.Empty;
+            string sLowCaseURL = string.Empty;
 
             for (int i = 0; i < urlList.Count; i++)
             {
                 try
                 {
-                    req = (HttpWebRequest)WebRequest.Create(urlList[i].ToString());
-                    req.Method = "Get";
-                    req.ContentType= "application/x-www-form-urlencoded; charset=UTF-8";
+                    sURL = urlList[i].ToString().Trim();
+
+                    //Check the localhost URL in source code.
+                    sLowCaseURL = sURL.ToLower();
+                    if (sLowCaseURL.StartsWith("http://127.0.0.1")  || sLowCaseURL.StartsWith("https://127.0.0.1") ||
+                        sLowCaseURL.StartsWith("http://localhost") || sLowCaseURL.StartsWith("https://localhost") ||
+                        sLowCaseURL.StartsWith("http://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/Explorer") || 
+                        sLowCaseURL.StartsWith("https://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/Explorer") )
+                    {
+                        if (this.ShowHistory == ConvertProcess.ShowHistory)
+                        {
+                            this.BrokenLink += string.Format("{0} : {1}.\n", sURL, "OK, Discard to check link of source code.");
+                        }
+                        continue;
+                    }
+
+                    //Check the hide URL in source code. Sample : XXXX --> , We will discard the URL which no need to verify. 
+                    if (sLowCaseURL.EndsWith("-->"))
+                    {
+                        if (this.ShowHistory == ConvertProcess.ShowHistory)
+                        {
+                            this.BrokenLink += string.Format("{0} : {1}.\n", sURL.Substring(0, sURL.IndexOf("-->")), "OK, Discard to check link of HIDE in document");
+                        }
+                        continue;
+                    }
+
+
+                    req = (HttpWebRequest)WebRequest.Create(sURL);
+                    req.Method = "GET";
+                    //req.KeepAlive = true;
+                    req.ContentType = "application/x-www-form-urlencoded; charset=UTF-8";
                     req.UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36";
-                    req.Timeout = 2000;
+                    req.Timeout = 20000;
                     req.AllowAutoRedirect = true;
 
 
@@ -575,25 +961,55 @@ namespace CheckBrokenLink.ProcessLibrary
                     //Console.WriteLine("checking " + urlList[i].ToString());
                     switch (resp.StatusCode)
                     {
-                        case HttpStatusCode.OK:
-                            if(this.ShowHistory== ConvertProcess.ShowHistory)
+                        case HttpStatusCode.OK:             //200
+                        case HttpStatusCode.Accepted:       //202
+                        case HttpStatusCode.Forbidden:      //403
+                        case HttpStatusCode.RequestTimeout: //408
+                        case HttpStatusCode.NonAuthoritativeInformation: //203
+
+                            if (sURL.Contains("#") == true && NeedToCheckArchorInRespostory(sURL) == true)
                             {
-                                this.BrokenLink += string.Format("{0}:{1}\n", urlList[i].ToString(), resp.StatusCode.ToString());
+                                CheckArchorInRedirectionFile(sURL, ref resp);
+
                             }
+                            else
+                            {
+                                if (this.ShowHistory == ConvertProcess.ShowHistory)
+                                {
+                                    this.BrokenLink += string.Format("{0} : {1}\n", urlList[i].ToString(), resp.StatusCode.ToString());
+                                }
+                            }
+
+
+
+
                             break;
                         default:
-                            this.BrokenLink += string.Format("{0}:{1}\n", urlList[i].ToString(), resp.StatusCode.ToString());
+                            this.BrokenLink += string.Format("{0} : {1}\n", urlList[i].ToString(), resp.StatusCode.ToString());
                             break;
                     }
                 }
                 catch (Exception ex)
                 {
                     //Console.WriteLine(string.Format("{0}:{1}\n", urlList[i].ToString(), ex.Message.ToString()));
-                    this.BrokenLink += string.Format("Error: {0} -> {1}\n", urlList[i].ToString(), ex.Message.ToString());
+                    string exMsg = ex.Message.ToString();
+                    if (exMsg.Contains("(403) Forbidden") == false &&
+                        exMsg.Contains("The request was aborted: Could not create SSL/ TLS secure channel") == false &&
+                        exMsg.Contains("The request was aborted") == false &&
+                        exMsg.Contains("The operation has timed out") == false &&
+                        exMsg.Contains("Too many automatic redirections were attempted") == false &&
+                        exMsg.Contains("The underlying connection was closed") == false &&
+                        exMsg.Contains("NonAuthoritativeInformation") == false &&
+                        exMsg.Contains("Internal Server Error") == false &&
+                        exMsg.Contains("The Authority/Host could not be parsed") == false)
+                    {
+                        this.BrokenLink += string.Format("Error : {0} -> {1}\n", urlList[i].ToString(), ex.Message.ToString());
+                    }
+
                 }
                 finally
                 {
-                    if(req!=null)
+                    if (req != null)
                     {
                         req.Abort();
                     }
@@ -604,7 +1020,7 @@ namespace CheckBrokenLink.ProcessLibrary
                 }
             }
 
-            if(req!=null)
+            if (req != null)
             {
                 req = null;
             }
@@ -613,15 +1029,18 @@ namespace CheckBrokenLink.ProcessLibrary
                 resp.Close();
                 resp = null;
             }
+
         }
 
         public void GetAllFilesInDirectory(string parentPath)
         {
             string[] curtFiles = System.IO.Directory.GetFiles(parentPath, "*.md");
             this.CheckFileList.AddRange(curtFiles);
+            string[] curtymlFiles = System.IO.Directory.GetFiles(parentPath, "*.yml");
+            this.CheckFileList.AddRange(curtymlFiles);
             string[] curtDirList = System.IO.Directory.GetDirectories(parentPath);
 
-            for(int i=0; i<curtDirList.Length;i++)
+            for (int i = 0; i < curtDirList.Length; i++)
             {
                 this.GetAllFilesInDirectory(curtDirList[i]);
             }
@@ -631,219 +1050,12 @@ namespace CheckBrokenLink.ProcessLibrary
         public string GetMetuxFileName(string filepath)
         {
             string fileName = string.Empty;
-            fileName = filepath.Replace(":", "_").Replace(@"\", "_").Replace("/", "_");
+            fileName = filepath.Replace(":", "_").Replace(@"\", "_").Replace("/", "_").ToUpper();
             return fileName;
         }
 
-        //public string GetParentIncludeFileOfIncludeFile()
-        //{
-        //    string parentInclude = string.Empty;
-        //    string message = string.Empty;
-        //    string parentpath = CommonFun.GetConfigurationValue("RepositoryZHCNIncludeDir", ref message);
 
-        //    string filecontent = string.Empty;
-        //    string regRule = "\\[\\!INCLUDE \\[([\\S|\\s]+)(\\.md)?\\]\\(((\\.\\.\\/)*)includes\\/{0}\\)\\]";
-        //    string curtCheckFile = string.Empty;
-
-        //    Regex reg;
-
-        //    FileStream fs;
-        //    StreamReader sr;
-        //    StreamWriter sw;
-        //    bool findFile = false;
-
-        //    if (this.CheckFileList != null && this.CheckFileList.Count > 0)
-        //    {
-        //        this.CheckFileList = new ArrayList();
-        //    }
-
-
-        //    this.GetAllFilesInDirectory(parentpath);
-        //    ArrayList fileList = this.CheckFileList;
-
-        //    int idx = 1;
-        //    parentInclude = this.Fullpath;
-
-        //    while(parentInclude!=string.Empty )
-        //    {
-        //        foreach (string curtFile in fileList)
-        //        {
-        //            //Console.WriteLine(string.Format("Tread[{0}] checking {1}", this.Id, curtFile));
-        //            try
-        //            {
-        //                curtCheckFile = curtFile;
-                        
-        //                Mutex fileMutex = new Mutex(true, GetMetuxFileName(curtCheckFile));
-        //                fileMutex.WaitOne();
-        //                fs = new FileStream(curtCheckFile, FileMode.Open);
-
-        //                try
-        //                {
-        //                    sr = new StreamReader(fs);
-        //                    filecontent = sr.ReadToEnd();
-        //                    sr.Close();
-
-        //                    reg = new Regex(string.Format(regRule, Path.GetFileName(parentInclude).Replace(".", "\\.")));
-
-        //                    if (reg.IsMatch(filecontent))
-        //                    {
-        //                        sw = new StreamWriter(curtCheckFile, false);
-        //                        filecontent += string.Format("\n<!--Not Available the {0} parent file {1} of includes file of {2}-->",idx, Path.GetFileName(curtCheckFile), Path.GetFileName(parentInclude));
-        //                        filecontent += string.Format("\n<!--ms.date:{0}-->", this.CustomizedDate);
-        //                        sw.Write(filecontent);
-        //                        sw.Flush();
-        //                        sw.Close();
-        //                        parentInclude = curtCheckFile;
-        //                        this.ParentIncludeFile = Path.GetFileName(parentInclude);
-
-        //                        findFile = true;
-        //                    }
-        //                }
-        //                catch (Exception ex)
-        //                {
-        //                    Console.WriteLine(ex.Message.ToString());
-        //                }
-        //                finally
-        //                {
-        //                    fileMutex.ReleaseMutex();
-        //                    if (fs != null)
-        //                    {
-        //                        fs.Close();
-        //                        fs = null;
-
-        //                    }
-        //                }
-        //                if (findFile == true)
-        //                {
-        //                    break;
-        //                }
-        //            }
-        //            catch (Exception ex)
-        //            {
-
-        //            }
-
-        //        }
-
-        //        if (findFile == false)
-        //        {
-        //            parentInclude = string.Empty;
-        //        }
-
-        //    }
-
-        //    if (this.ParentIncludeFile == string.Empty)
-        //    {
-        //        parentInclude = this.File;
-        //    }else
-        //    {
-        //        parentInclude = this.ParentIncludeFile;
-        //    }
-
-        //    return parentInclude;
-        //}
-
-        //public string FindParentOfIncludeFile() 
-        //{
-
-        //    string parentFile = string.Empty;
-        //    //string parentFile = this.GetParentIncludeFileOfIncludeFile();
-
-        //    string message = string.Empty;
-        //    string diskpath = CommonFun.GetConfigurationValue("GlobalArticleDir", ref message);
-        //    string parentpath = string.Empty;
-        //    string filecontent = string.Empty;
-        //    string regRule = "\\[\\!INCLUDE \\[([\\S|\\s]+)(\\.md)?\\]\\(((\\.\\.\\/)*)includes\\/{0}\\)\\]";
-        //    //string regRule = "\\[\\!INCLUDE \\[(\\S+)(\\.md)?\\]\\(((\\.\\.\\/)*)includes\\/{0}\\)\\]";
-        //    Regex reg;
-
-        //    FileStream fs ;
-        //    StreamReader sr;
-        //    StreamWriter sw;
-        //    bool findFile = false;
-
-
-        //    foreach (InvolvedService curtService in Enum.GetValues(typeof(InvolvedService)))
-        //    {
-        //        if (this.CheckFileList != null && this.CheckFileList.Count > 0)
-        //        {
-        //            this.CheckFileList = new ArrayList();
-        //        }
-
-        //        findFile = false;
-        //        parentpath = string.Format("{0}\\{1}", diskpath, curtService.ToString().Replace('_', '-'));
-
-        //        this.GetAllFilesInDirectory(parentpath);
-        //        ArrayList fileList = this.CheckFileList;
-
-        //        foreach (string curtFile in fileList)
-        //        {
-        //            //Console.WriteLine(string.Format("Tread[{0}] checking {1}", this.Id, curtFile));
-        //            try
-        //            {
-        //                Mutex fileMutex = new Mutex(true, GetMetuxFileName(curtFile));
-        //                fileMutex.WaitOne();
-        //                fs = new FileStream(curtFile, FileMode.Open);
-
-        //                try
-        //                {
-        //                    sr = new StreamReader(fs);
-        //                    filecontent = sr.ReadToEnd();
-        //                    sr.Close();
-
-        //                    reg = new Regex(string.Format(regRule, this.File.Replace(".", "\\.")));
-
-        //                    if (reg.IsMatch(filecontent))
-        //                    {
-        //                        sw = new StreamWriter(curtFile, false);
-        //                        filecontent += string.Format("\n<!--Not Available the parent file of includes file of {0}-->", this.File);
-        //                        filecontent += string.Format("\n<!--ms.date:{0}-->", this.CustomizedDate);
-        //                        sw.Write(filecontent);
-        //                        sw.Flush();
-        //                        sw.Close();
-        //                        parentFile = curtFile;
-        //                        findFile = true;
-        //                    }
-        //                }
-        //                catch (Exception ex)
-        //                {
-        //                    Console.WriteLine(ex.Message.ToString());
-        //                }
-        //                finally
-        //                {
-        //                    fileMutex.ReleaseMutex();
-        //                    if (fs != null)
-        //                    {
-        //                        fs.Close();
-        //                        fs = null;
-
-        //                    }
-        //                }
-        //                if (findFile == true)
-        //                {
-        //                    break;
-        //                }
-        //            }
-        //            catch(Exception ex)
-        //            {
-
-        //            }
-                   
-        //        }
-               
-        //        if (findFile == true)
-        //        {
-        //            break;
-        //        }
-        //    }
-
-        //    return parentFile;
-
-        //}
-
-
-
-        public bool GetProcessConvertRule(ref JObject JConvert, ConvertCategory category, int iIndex, ConvertItem key,ref string valReturn)
+        public bool GetProcessConvertRule(ref JObject JConvert, ConvertCategory category, int iIndex, ConvertItem key, ref string valReturn)
         {
             bool bProcess = false;
 
@@ -852,44 +1064,88 @@ namespace CheckBrokenLink.ProcessLibrary
                 valReturn = JConvert[category.ToString()][iIndex][key.ToString()].ToString();
                 bProcess = true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-
+                string error = ex.Message.ToString();
             }
 
             return bProcess;
 
         }
-        public void ProcessFileCustomize()
+
+        public void ReplaceIncludeLinkWithContent(string articlePath, ref string articleContent)
         {
-            this.Status = ProcessStatus.Start;
+            MatchCollection matches;
+            string filename = string.Empty;
+            string error = string.Empty;
 
-            FileStream fs = null;
-            StreamReader sr = null;
-            string error = "";
-            try
+            string mdfilePatFirst = "\\[\\!(INCLUDE|include)\\s*\\[[^\\[\\]]*\\]\\s*\\((?<mdfilename>[^\\[\\]\\(\\)]*)\\)\\]";
+            matches = Regex.Matches(articleContent, mdfilePatFirst);
+            string checkDirectory = string.Empty;
+
+            string localpath = CommonFun.GetConfigurationValue("RepositoryENUSArticleDir", ref error);
+            //string curtDirectory = string.Empty;
+            string curtIncludePath = string.Empty;
+            string includeContent = string.Empty;
+            string mdfilePatSecond = string.Empty;
+
+            Regex reg = null;
+            for (int i = 0; i < matches.Count; i++)
             {
-                fs = new FileStream(this.Fullpath, FileMode.Open);
+                //First remove the current directory ./ when exists.
+                filename = matches[i].Groups["mdfilename"].ToString().Trim();
+                mdfilePatSecond = "\\[!(INCLUDE|include)\\s*\\[[^\\[\\]]*\\]\\s*\\(" + filename + "[^\\[\\]\\(\\)]*\\)\\]";
 
-                sr = new StreamReader(fs);
-                string fullcontent = sr.ReadToEnd();
+                if (filename.Length > 0)
+                {
+                    checkDirectory = articlePath.Substring(0, articlePath.LastIndexOf("\\"));
+                }
 
-                sr.Close();
+                while (filename.IndexOf("../") > -1)
+                {
+                    filename = filename.Substring(filename.IndexOf("../") + 3);
+                    checkDirectory = checkDirectory.Substring(0, checkDirectory.LastIndexOf("\\"));
+                }
 
-                ConvertCategory category = this.ProcessCategory;
-                Console.WriteLine(string.Format("Processing Thread[{0}] : {1}", this.Id, this.Fullpath));
+                curtIncludePath = string.Format("{0}\\{1}", checkDirectory, filename);
+                curtIncludePath = curtIncludePath.Replace("/", "\\");
 
-                this.ProcessConvertJson(ref fullcontent);
-                
-                //Check Broken Link No need to modified the content.
-                //sw = new StreamWriter(this.Fullpath,false);
-                //sw.Write(fullcontent);
-                //sw.Flush();
+                bool needLog = true;
+                includeContent = this.ReadArticleContent(curtIncludePath, needLog);
+
+                //Replace the INCLUDE link 
+                reg = new Regex(mdfilePatSecond, RegexOptions.Multiline | RegexOptions.IgnoreCase);
+                articleContent = reg.Replace(articleContent, includeContent);
 
             }
-            catch(Exception ex)
+        }
+
+        public string ReadArticleContent(string filePath, bool needLog)
+        {
+            string fullContent = string.Empty;
+            FileStream fs = null;
+            StreamReader sr = null;
+            //string error = "";
+            
+
+            try
             {
-                this.BrokenLink += string.Format("Error : {0}", ex.Message.ToString());
+                this.FileMutex = new Mutex(false, GetMetuxFileName(filePath));
+                this.FileMutex.WaitOne();
+
+                fs = new FileStream(filePath, FileMode.Open);
+                sr = new StreamReader(fs);
+                fullContent = sr.ReadToEnd();
+
+                sr.Close();
+            }
+            catch (Exception ex)
+            {
+                if(needLog == true)
+                {
+                    this.BrokenLink += string.Format("Error : {0}\n", ex.Message.ToString());
+                }
+                
             }
             finally
             {
@@ -907,6 +1163,53 @@ namespace CheckBrokenLink.ProcessLibrary
                 {
                     fs.Close();
                 }
+
+                this.FileMutex.ReleaseMutex();
+
+                //if (fileMutex != null)
+                //{
+                //    fileMutex = null;
+                //}
+
+            }
+
+            return fullContent;
+        }
+
+        public void ProcessFileCustomize()
+        {
+            this.Status = ProcessStatus.Start;
+
+            string fullContent = string.Empty;
+
+            bool needLog = true;
+            fullContent = this.ReadArticleContent(this.FullPath, needLog);
+
+            // If we involve the ReplaceLink function. It will cause the images file missing. 
+            // images function will reference the include file check itself. 
+            //this.ReplaceIncludeLinkWithContent(this.FullPath, ref fullContent);
+
+            try
+            {
+                
+                ConvertCategory category = this.ProcessCategory;
+                Console.WriteLine(string.Format("Processing Thread[{0}] : {1}", this.Id, this.FullPath));
+
+                this.ProcessConvertJson(ref fullContent);
+
+                //Check Broken Link No need to modified the content.
+                //sw = new StreamWriter(this.Fullpath,false);
+                //sw.Write(fullcontent);
+                //sw.Flush();
+
+            }
+            catch (Exception ex)
+            {
+                this.BrokenLink += string.Format("Error : {0}\n", ex.Message.ToString());
+            }
+            finally
+            {
+               
             }
 
             this.Status = ProcessStatus.Complete;
@@ -915,7 +1218,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
         }
 
-       
+
 
     }
 

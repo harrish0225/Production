@@ -25,7 +25,12 @@ namespace CheckBrokenLink
             ConvertCategory category = ConvertCategory.CheckBrokenLinkByService;
             ConvertProcess process = ConvertProcess.ShowResult;
 
-            if (iCount > 2)
+            DateTime timeStart = DateTime.Now;
+            //TimeSpan runTime = new TimeSpan();
+            //DateTime timeEnd = new DateTime();
+            
+
+            if (iCount != 2)
             {
                 ShowUseageTip();
                 return;
@@ -74,14 +79,46 @@ namespace CheckBrokenLink
             string fileprefix= CommonFun.GetConfigurationValue("GlobalRepository", ref error);
             if (error.Length > 0)
             {
+                Console.WriteLine(error);
+                ExitWithUserConfirm();
                 return;
             }
 
             string customizedate = CommonFun.GetConfigurationValue("CustomizeDate", ref error);
             if (error.Length > 0)
             {
+                Console.WriteLine(error);
+                ExitWithUserConfirm();
                 return;
             }
+
+            bool successFlag = false;
+            int MaxCheckRound = 0;
+            string configValue = CommonFun.GetConfigurationValue("CheckRound", ref error);
+            if (error.Length > 0)
+            {
+                Console.WriteLine(error);
+                ExitWithUserConfirm();
+                return;
+            }else
+            {
+                successFlag = int.TryParse(configValue, out MaxCheckRound);
+                if (successFlag == true)
+                {
+
+                }
+                else
+                {
+                    Console.WriteLine("Convert {0} to int failed!",configValue );
+                    ExitWithUserConfirm();
+                    return;
+                }
+            }
+
+            
+           
+            
+
 
             string filename = "";
             string directory = "";
@@ -106,21 +143,26 @@ namespace CheckBrokenLink
 
             threadCount = arrFile.Count;
             Thread[] newThreads = new Thread[threadCount];
-
+            //CancellationTokenSource[] threadCancel = new CancellationTokenSource[threadCount];
+            
             for (int i=0; i < threadCount; i++)
             {
                 curtFullName = arrFile[i].ToString();
                 filename = Path.GetFileName(curtFullName);
                 directory = curtFullName.Substring(fileprefix.Length,curtFullName.Length- fileprefix.Length- filename.Length-1).Replace("\\","/");
-               
+
+                //threadCancel[i] = new CancellationTokenSource();
 
                 FileCustomize curtFile = new FileCustomize(i, filename, directory, customizedate, category, process);
                 fileList.Add(curtFile);
                 newThreads[i] = new Thread(new ThreadStart(curtFile.ProcessFileCustomize));
+                
+
                 newThreads[i].Start();
 
-
-                //newThreads[i].Join();
+#if DEBUG
+                newThreads[i].Join();
+#endif
             }
             
 
@@ -131,11 +173,30 @@ namespace CheckBrokenLink
                 allThreadOver = true;
                 for (int i = 0; i < threadCount; i++)
                 {
-                    if (newThreads[i].ThreadState != ThreadState.Stopped)
+                    if (newThreads[i].ThreadState != ThreadState.Stopped && newThreads[i].ThreadState != ThreadState.Aborted)
                     {
                         allThreadOver = false;
                         Console.WriteLine(string.Format("Checking status of the Thread[{0}] : {1} ", i, newThreads[i].ThreadState.ToString()));
+                        fileList[i].CheckRound += 1;
+
+                       
+
+                        if (fileList[i].CheckRound == MaxCheckRound)
+                        {
+                            newThreads[i].Priority = ThreadPriority.AboveNormal;
+                            Console.WriteLine(string.Format("Levelrage the porior of Thread[{0}] to {1} ", i, newThreads[i].Priority.ToString()));
+                        }
+                        
+
+                        if (fileList[i].CheckRound > MaxCheckRound*2)
+                        {
+                            fileList[i].BrokenLink += string.Format("Error : The Check Round({0}) Exceed the limit of {1}", fileList[i].CheckRound, MaxCheckRound);
+                            Console.WriteLine(string.Format("Abort the Thread[{0}] to {1} ", i, newThreads[i].Priority.ToString()));
+                            newThreads[i].Abort();
+                        }
+
                         break;
+
                     }
                 }
             }
@@ -164,8 +225,8 @@ namespace CheckBrokenLink
                 {
                     if (!string.IsNullOrEmpty(curtFile.WarningMessage))
                     {
-                        Console.WriteLine(curtFile.Fullpath);
-                        Console.WriteLine("File: \t{0} \tMessage: \t{1}",curtFile.Fullpath, curtFile.WarningMessage);
+                        Console.WriteLine(curtFile.FullPath);
+                        Console.WriteLine("File: \t{0} \tMessage: \t{1}",curtFile.FullPath, curtFile.WarningMessage);
                     }
                 }
             }
@@ -186,7 +247,7 @@ namespace CheckBrokenLink
                     {
                         //Console.WriteLine("{0} : {1} ",iIdx++,  curtFile.File);
                         //Console.WriteLine(curtFile.BrokenLink);
-                        sbText.AppendLine(string.Format("{0} : {1} ", iIdx++, curtFile.File));
+                        sbText.AppendLine(string.Format("{0} : {1}", iIdx++, curtFile.FullPath.Replace(fileprefix, "").Replace("/","\\")));
                         string[] param = curtFile.BrokenLink.Split('\n');
                         foreach(string curtText in param)
                         {
@@ -196,12 +257,23 @@ namespace CheckBrokenLink
                     }
                 }
 
+
+                sbText.AppendLine(string.Format("--------------Abort List in this round of Check Broken Link--------------"));
+                iIdx = 1; 
+                foreach (FileCustomize curtFile in fileList)
+                {
+                    if (curtFile.CheckRound > MaxCheckRound * 2)
+                    {
+                        sbText.AppendLine(string.Format("{0} : {1}", iIdx++, curtFile.FullPath.Replace(fileprefix, "").Replace("/", "\\")));
+                    }
+                }
+
+                sbText.AppendLine(string.Format("Total {0} abourt thread in the round of Check Broken List.", --iIdx));
                 CommonFun.GenerateDownloadFile(category, ref sbText);
 
 
             }
 
-            Console.WriteLine("Program run finished, Press <Enter> to exit....");
 
             ExitWithUserConfirm();
 
@@ -278,13 +350,14 @@ namespace CheckBrokenLink
             Console.WriteLine("-H means display all result which include successfully ");
             Console.WriteLine("-R means display the result ");
             Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-            Console.WriteLine("Press <Enter> to exit....");
 
             ExitWithUserConfirm();
         }
 
         static void ExitWithUserConfirm()
         {
+
+            Console.WriteLine("Press <Enter> to exit the application....");
             while (Console.ReadKey().Key != ConsoleKey.Enter)
             {
 

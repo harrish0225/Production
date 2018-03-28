@@ -283,15 +283,46 @@
     }
   ],
   "CLIReplacement": [
-    
+    //{
+    //  "global": "\\(https://docs\\.microsoft\\.com/(zh-cn/|en-us/|)?cli/(azure/)?([^#)]*)([#]{0,1})([^#)]*)\\)",
+    //  "mooncake": "(https://docs.azure.cn/zh-cn/cli/$3?view=azure-cli-latest$4$5)",
+    //  "comment": "replace the relative URL with global full URL format - Step 2, update successfully "
+    //},
+    //{
+    //  "global": "\\(https://docs.microsoft.com/cli/azure/",
+    //  "mooncake": "(https://docs.azure.cn/zh-cn/cli/",
+    //  "comment": "Correction of Last Step, the Regular can not over all the aspect"
+    //},
+    //{
+    //  "global": "https://aka\\.ms/skurestriction",
+    //  "mooncake": "https://support.windowsazure.cn/support/support-azure"
+    //},
+    //{
+    //  "global": "([^.\\n\\r]*)\\[([\\S\\s]*)\\]\\((\\.\\.\\/){1,2}azure-subscription-service-limits(\\.md)?([^)]*)\\)([^.]*)\\.",
+    //  "mooncake": "",
+    //  "comments": "azure-subscription-service-limits are not suitable for Azure.cn"
+    //},
     {
-      "global": "https://aka\\.ms/skurestriction",
-      "mooncake": "https://support.windowsazure.cn/support/support-azure"
+      "global": "([\\(|\\'|\\\"| ]{1})(https://docs\\.microsoft\\.com)?/(zh-cn/|en-us/|)?dotnet/(azure/)([^\\#\\?)]*)(\\?view=azure-dotnet)?([#]{0,1})([^\\#\\)\\'\\\" ]*)([\\)|\\'|\\\"| ]{1})",
+        "mooncake": "$1https://docs.azure.cn/zh-cn/dotnet/$5?view=azure-dotnet$7$8$9",
+        "comment": "replace the relative URL for dotnet "
     },
     {
-      "global": "([^.\\n\\r]*)\\[([\\S\\s]*)\\]\\((\\.\\.\\/){1,2}azure-subscription-service-limits(\\.md)?([^)]*)\\)([^.]*)\\.",
-      "mooncake": "",
-      "comments": "azure-subscription-service-limits are not suitable for Azure.cn"
+      "global": "([\\(|\\'|\\\"| ]{1})(https://docs\\.microsoft\\.com)?/(zh-cn/|en-us/|)?dotnet/(?!(articles/standard/frameworks|articles/standard/library))([^\\#\\?)]*)(\\?view=azure-dotnet)?([#]{0,1})([^\\#\\)\\'\\\" ]*)([\\)|\\'|\\\"| ]{1})",
+      "mooncake": "$1https://docs.azure.cn/zh-cn/dotnet/$5?view=azure-dotnet$7$8$9",
+      "comment": "replace the relative URL for dotnet "
+    },
+    {
+      "global": "([\\(|\\'|\\\"| ]{1})https://docs\\.azure\\.cn/zh-cn/dotnet/(api/overview/){1}azure/([^\\)|\\'|\\\"| ]*)([\\)|\\'|\\\"| ]{1})",
+      "mooncake": "$1https://docs.azure.cn/zh-cn/dotnet/$2$3$4"
+    },
+    {
+      "global": "([\\(|\\'|\\\"| ]{1})https://docs\\.azure\\.cn/zh-cn/dotnet/azure/([^\\)|\\'|\\\"| ]*)([\\)|\\'|\\\"| ]{1})",
+      "mooncake": "$1https://docs.azure.cn/zh-cn/dotnet/$2$3"
+    },
+    {
+      "global": "https://docs\\.azure\\.cn/zh-cn/dotnet/framework",
+      "mooncake": "https://docs.microsoft.com/dotnet/framework"
     }
   ]
 }

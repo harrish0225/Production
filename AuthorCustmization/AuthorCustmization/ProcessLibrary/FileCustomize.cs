@@ -44,6 +44,7 @@ namespace AuthorCustmization.ProcessLibrary
         cosmos_db,
         event_hubs,
         load_balancer,
+        network_watcher,
         resiliency,
         service_fabric,
         site_recovery,
@@ -53,7 +54,7 @@ namespace AuthorCustmization.ProcessLibrary
         traffic_manager,
         virtual_machines,
         virtual_network,
-        network_watcher,
+        
     }
 
 
@@ -290,6 +291,9 @@ namespace AuthorCustmization.ProcessLibrary
         {
             string[] curtFiles = System.IO.Directory.GetFiles(parentPath, "*.md");
             this.CheckFileList.AddRange(curtFiles);
+            string[] curtymlFiles = System.IO.Directory.GetFiles(parentPath, "*.yml");
+            this.CheckFileList.AddRange(curtymlFiles);
+
             string[] curtDirList = System.IO.Directory.GetDirectories(parentPath);
 
             for(int i=0; i<curtDirList.Length;i++)
@@ -344,7 +348,7 @@ namespace AuthorCustmization.ProcessLibrary
                     {
                         curtCheckFile = curtFile;
                         
-                        Mutex fileMutex = new Mutex(true, GetMetuxFileName(curtCheckFile));
+                        Mutex fileMutex = new Mutex(false, GetMetuxFileName(curtCheckFile));
                         fileMutex.WaitOne();
                         fs = new FileStream(curtCheckFile, FileMode.OpenOrCreate);
 
@@ -452,7 +456,7 @@ namespace AuthorCustmization.ProcessLibrary
                     //Console.WriteLine(string.Format("Tread[{0}] checking {1}", this.Id, curtFile));
                     try
                     {
-                        Mutex fileMutex = new Mutex(true, GetMetuxFileName(curtFile));
+                        Mutex fileMutex = new Mutex(false, GetMetuxFileName(curtFile));
                         fileMutex.WaitOne();
                         fs = new FileStream(curtFile, FileMode.OpenOrCreate);
 

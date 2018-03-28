@@ -1,0 +1,8 @@
+E:\gitrep\Production\Tools\CLIReplace\CLIReplacement\bin\Release\CLIReplace.exe.config
+E:\gitrep\Production\Tools\CLIReplace\CLIReplacement\bin\Release\CLIReplace.exe
+E:\gitrep\Production\Tools\CLIReplace\CLIReplacement\bin\Release\CLIReplace.pdb
+E:\gitrep\Production\Tools\CLIReplace\CLIReplacement\bin\Release\Newtonsoft.Json.dll
+E:\gitrep\Production\Tools\CLIReplace\CLIReplacement\bin\Release\Newtonsoft.Json.xml
+E:\gitrep\Production\Tools\CLIReplace\CLIReplacement\obj\Release\CLIReplace.exe
+E:\gitrep\Production\Tools\CLIReplace\CLIReplacement\obj\Release\CLIReplace.pdb
+E:\gitrep\Production\Tools\CLIReplace\CLIReplacement\obj\Release\CLIReplacement.csprojResolveAssemblyReference.cache

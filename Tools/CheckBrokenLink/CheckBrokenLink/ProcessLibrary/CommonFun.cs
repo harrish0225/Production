@@ -20,7 +20,8 @@ namespace CheckBrokenLink.ProcessLibrary
             }
             catch (Exception ex)
             {
-                error = string.Format("Get the appsetting of {0} failed!", key);
+                error = string.Format("Get the appsetting of {0} failed! {1}", key, ex.Message.ToString());
+
                 Console.WriteLine(error);
             }
 

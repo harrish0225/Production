@@ -1,0 +1,50 @@
+**********************Check Process Result(IncludeParentFile)**********************
+The parent file of	resource-manager-governance-intro.md	is		.
+The parent file of	resource-manager-governance-locks.md	is	E:\gitrep\azure_content_pr\articles\azure-resource-manager\powershell-azure-resource-manager.md	.
+The parent file of	resource-manager-governance-policy.md	is	E:\gitrep\azure_content_pr\articles\azure-resource-manager\powershell-azure-resource-manager.md	.
+The parent file of	resource-manager-governance-rbac.md	is	E:\gitrep\azure_content_pr\articles\azure-resource-manager\powershell-azure-resource-manager.md	.
+The parent file of	resource-manager-governance-scope.md	is	E:\gitrep\azure_content_pr\articles\azure-resource-manager\powershell-azure-resource-manager.md	.
+The parent file of	resource-manager-governance-tags.md	is	E:\gitrep\azure_content_pr\articles\azure-resource-manager\powershell-azure-resource-manager.md	.
+The parent file of	resource-manager-governance-tags-billing.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\tutorial-govern-resources.md	.
+The parent file of	resource-manager-governance-tags-cli.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\tutorial-govern-resources.md	.
+The parent file of	resource-manager-governance-tags-powershell.md	is	E:\gitrep\azure_content_pr\articles\azure-resource-manager\powershell-azure-resource-manager.md	.
+The parent file of	resource-manager-tag-introduction.md	is	E:\gitrep\azure_content_pr\articles\azure-resource-manager\resource-group-using-tags.md	.
+The parent file of	cloud-shell-try-it.md	is	E:\gitrep\azure_content_pr\articles\azure-resource-manager\xplat-cli-azure-resource-manager.md	.
+The parent file of	cosmos-db-create-dbaccount-cassandra.md	is	E:\gitrep\azure_content_pr\articles\cosmos-db\create-cassandra-dotnet.md	.
+The parent file of	cosmos-db-create-dbaccount-mongodb.md	is	E:\gitrep\azure_content_pr\articles\cosmos-db\create-mongodb-dotnet.md	.
+The parent file of	cosmos-db-create-dbaccount.md	is	E:\gitrep\azure_content_pr\articles\cosmos-db\create-sql-api-dotnet.md	.
+The parent file of	cosmos-db-emulator-docdb-api.md	is	E:\gitrep\azure_content_pr\articles\cosmos-db\create-sql-api-dotnet.md	.
+The parent file of	cosmos-db-create-dbaccount-table.md	is	E:\gitrep\azure_content_pr\articles\cosmos-db\create-table-dotnet.md	.
+The parent file of	cosmos-db-keys.md	is	E:\gitrep\azure_content_pr\articles\cosmos-db\sql-api-dotnet-application.md	.
+The parent file of	storage-table-concepts-include.md	is	E:\gitrep\azure_content_pr\articles\cosmos-db\table-storage-how-to-use-c-plus.md	.
+The parent file of	storage-dotnet-client-library-version-include.md	is	E:\gitrep\azure_content_pr\articles\cosmos-db\table-storage-how-to-use-dotnet.md	.
+The parent file of	site-recovery-create-vault.md	is	E:\gitrep\azure_content_pr\articles\site-recovery\hyper-v-vmm-disaster-recovery.md	.
+The parent file of	site-recovery-configuration-and-scaleout-process-server-requirements.md	is	E:\gitrep\azure_content_pr\articles\site-recovery\how-to-deploy-configuration-server.md	.
+The parent file of	site-recovery-install-mob-svc-gui.md	is	E:\gitrep\azure_content_pr\articles\site-recovery\site-recovery-vmware-to-azure-install-mob-svc.md	.
+The parent file of	site-recovery-install-mob-svc-lin-cmd.md	is	E:\gitrep\azure_content_pr\articles\site-recovery\site-recovery-vmware-to-azure-install-mob-svc.md	.
+The parent file of	site-recovery-install-mob-svc-win-cmd.md	is	E:\gitrep\azure_content_pr\articles\site-recovery\site-recovery-vmware-to-azure-install-mob-svc.md	.
+The parent file of	site-recovery-prepare-push-install-mob-svc-lin.md	is	E:\gitrep\azure_content_pr\articles\site-recovery\site-recovery-vmware-to-azure-install-mob-svc.md	.
+The parent file of	site-recovery-prepare-push-install-mob-svc-win.md	is	E:\gitrep\azure_content_pr\articles\site-recovery\site-recovery-vmware-to-azure-install-mob-svc.md	.
+The parent file of	azure-virtual-network-limits.md	is		.
+The parent file of	virtual-networks-create-vnet-classic-pportal-include.md	is	E:\gitrep\azure_content_pr\articles\virtual-network\virtual-networks-create-vnet-classic-pportal.md	.
+The parent file of	virtual-machines-common-accelerated-maintenance.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\accelerated-maintenance.md	.
+The parent file of	virtual-machines-common-allocation-failure.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\allocation-failure.md	.
+The parent file of	virtual-machines-common-backup-recovery.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\backup-recovery.md	.
+The parent file of	virtual-machines-common-classic-configure-availability.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\classic\configure-availability-classic.md	.
+The parent file of	howto-detach-disk-linux.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\classic\detach-disk-classic.md	.
+The parent file of	virtual-machines-common-classic-faq.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\classic\faq-classic.md	.
+The parent file of	virtual-machines-classic-recovery-disks-portal.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\classic\troubleshoot-recovery-disks-portal.md	.
+The parent file of	virtual-machines-common-manage-availability.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\manage-availability.md	.
+The parent file of	virtual-machines-managed-disks-overview.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\managed-disks-overview.md	.
+The parent file of	virtual-machines-common-mitigate-se.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\mitigate-se.md	.
+The parent file of	virtual-machines-common-premium-storage.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\premium-storage.md	.
+The parent file of	virtual-machines-common-sizes-compute.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\sizes-compute.md	.
+The parent file of	virtual-machines-common-sizes-memory.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\sizes-memory.md	.
+The parent file of	support-disclaimer.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\troubleshoot-deployment-new-vm.md	.
+The parent file of	virtual-machines-common-classic-connect-vms.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\windows\classic\connect-vms-classic.md	.
+The parent file of	virtual-machines-common-expand-os-disk.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\windows\expand-os-disk.md	.
+The parent file of	virtual-machines-create-windowsvm.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\windows\classic\createportal-classic.md	.
+The parent file of	virtual-machines-n-series-considerations.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\sizes-gpu.md	.
+The parent file of	virtual-machines-n-series-linux-support.md	is	E:\gitrep\azure_content_pr\articles\virtual-machines\linux\n-series-driver-setup.md	.
+The parent file of	azure-virtual-machines-limits.md	is		.
+

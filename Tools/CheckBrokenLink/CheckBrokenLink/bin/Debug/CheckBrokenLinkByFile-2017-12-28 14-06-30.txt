@@ -1,5 +1,0 @@
-**********************Check Process Result(CheckBrokenLinkByFile)**********************
-1 : resource-manager-audit-limitations.md 
-E:\gitrep\mc-docs-pr.en-us\articles\active-directory\role-based-access-control-resource-provider-operations.md : correct.
-
-
