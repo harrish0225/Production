@@ -121,6 +121,9 @@ namespace CLIReplacement.ProcessLibrary
         public string redirectTableContent = string.Empty;
         public string RedirectTableContent { get; set; }
 
+        public string redirectExcelContent = string.Empty;
+        public string RedirectExcelContent { get; set; }
+
 
         public string redirectMContent = string.Empty;
         public string RedirectMContent { get; set; }
@@ -137,7 +140,8 @@ namespace CLIReplacement.ProcessLibrary
             this.RedirectGContent = string.Empty;
             this.RedirectMContent = string.Empty;
             this.RedirectTableContent = string.Empty;
- 
+            this.RedirectExcelContent = string.Empty;
+
         }
 
         public override void ProcessFileCustomize() 
@@ -220,6 +224,24 @@ namespace CLIReplacement.ProcessLibrary
 
         }
 
+        public string GenerateExcelRedirectJson(string sourcepath, string redirecturl, string redirect_document_id)
+        {
+
+            StringBuilder sb = new StringBuilder();
+
+            if (redirecturl.Substring(0, 6) == "/azure")
+            {
+                sb.AppendLine(string.Format("{0}\t{1}", sourcepath, redirecturl.Substring(6)));
+            }
+            else
+            {
+                sb.AppendLine(string.Format("{0}\t{1}", sourcepath, redirecturl));
+            }
+
+            return sb.ToString();
+
+        }
+
         public void ProcessConvertJson(ref string globalContent, ref string mooncakeContent)
         {
 
@@ -280,6 +302,7 @@ namespace CLIReplacement.ProcessLibrary
                             {
                                 this.RedirectGContent += this.GenerateRedirectJson(sourcePath, redirectUrl, redirectDocumentid);
                                 this.RedirectTableContent += this.GenerateTableRedirectJson(this.MooncakeSite, sourcePath, redirectUrl, redirectDocumentid);
+                                this.RedirectExcelContent += this.GenerateExcelRedirectJson(sourcePath, redirectUrl, redirectDocumentid);
                                 bGlobalFetch = true;
                                 //break;
                             }

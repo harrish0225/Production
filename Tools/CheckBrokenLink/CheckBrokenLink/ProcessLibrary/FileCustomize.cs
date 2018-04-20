@@ -69,7 +69,6 @@ namespace CheckBrokenLink.ProcessLibrary
         network_watcher,
         service_fabric,
         site_recovery,
-        sql_data_warehouse,
         sql_server_stretch_database,
         stream_analytics,
         traffic_manager,
@@ -340,25 +339,40 @@ namespace CheckBrokenLink.ProcessLibrary
                 }
                
 
-                filename = matches[i].Groups["mdfilename"].ToString().Trim();
+                filename = matches[i].Groups["mdfilename"].ToString().ToLower().Trim();
+
+                // the lenght of --> is 3 and exclude at first.
+                if (filename.Length >= 3 && filename.Substring(filename.Length - 3) == "-->")
+                {
+                    continue;
+                }
+
+                //Exclude the following sample
+                //[Azure 门户](http://portal.azure.cn "Azure 门户")
+
+                if(filename.IndexOf(' ')>0)
+                {
+                    filename = filename.Substring(0, filename.IndexOf(' ')-1);
+                }
 
                 // When we find that the filename is string.empty, we will discard it and go the check next round. 
-                switch(filename)
+                switch (filename)
                 {
                     case "":
                     case "#":
-                    case "http://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/Explorer/":
-                    case "SSDT":
+                    case "http://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/explorer/":
+                    case "ssdt":
+                    case "response.data":
+                    case "https://configuration-server-name/ip:44315":
+                    case "eventid=evt":
+                    case "print":
+                    case "4222":
                         continue;
                         
                 }
                
 
-                // the lenght of --> is 3
-                if (filename.Length>=3 && filename.Substring(filename.Length - 3) == "-->")
-                {
-                    continue;
-                }
+                
 
                 // When the filename is normal item, we will continue to check the following decode. 
                 if (filename.Substring(0, 2) == "./")
@@ -494,20 +508,24 @@ namespace CheckBrokenLink.ProcessLibrary
                             // this choise match the sample of /article/XXXX.md
                             filename = filename.Substring("articles/".Length);
                             filename = string.Format("https://docs.azure.cn/zh-cn/{0}", filename.Substring(0, filename.IndexOf(".md")));
-                        }
+                        }else
+                        {
 
-                        if (filename.StartsWith("/") == true)
-                        {
-                            // filename = "/XXXX.md"
-                            // this choise match the sample of /article/event-hubs/XXXX.md 
-                            filename = filename.Substring(1);
-                            filename = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, filename.Substring(0, filename.IndexOf(".md")));
-                        }
-                        else
-                        {
-                            // filename = "XXXX.md"
-                            // this choise match the sample of /article/event-hubs/XXXX.md 
-                            filename = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, filename.Substring(0, filename.IndexOf(".md")));
+                            if (filename.StartsWith("/") == true)
+                            {
+                                // filename = "/XXXX.md"
+                                // this choise match the sample of /article/event-hubs/XXXX.md 
+                                filename = filename.Substring(1);
+                                filename = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, filename.Substring(0, filename.IndexOf(".md")));
+
+                            }
+                            else
+                            {
+                                // filename = "XXXX.md"
+                                // this choise match the sample of /article/event-hubs/XXXX.md 
+                                filename = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, filename.Substring(0, filename.IndexOf(".md")));
+                            }
+
                         }
 
 
@@ -790,13 +808,14 @@ namespace CheckBrokenLink.ProcessLibrary
                 if(filePostfix==".yml")
                 {
                     // Part II for Links of .yml file.
-                    string ymlfilePatFirst = "src:([\\s| ]*)([\\'|\\\"| ]{1})(?<mdfilename>[^ \\'\\\"]*)(\\2)";
+                    string ymlfilePatFirst = "src:([\\s| ]*)([\\'|\\\"| ]{1})(?<mdfilename>[^ \\'\\\"\\r\\n]*)(\\2)";
 
                     matches = Regex.Matches(articleContent, ymlfilePatFirst);
 
                     this.CheckMatches(matches, ref lstURL, ref articleContent);
 
-                    string ymlfilePatSecond = "href(\\:|\\=)([\\s| ]*)([\\'|\\\"| ]?)(?<mdfilename>[^ \\'\\\"]*)(\\3)";     // (\\3) implement of ([\\'|\\\"| ]?) equal the 3rd element of groups 
+                    string ymlfilePatSecond = "href(\\:|\\=)([\\s| ]*)([\\'|\\\"| ]?)(?<mdfilename>[^ \\'\\\"\\r\\n]*)(\\3)";     // (\\3) implement of ([\\'|\\\"| ]?) equal the 3rd element of groups 
+                    // mdfilename should also not be equal to \r\n, or will be append \r\n and next row's character.
                     matches = Regex.Matches(articleContent, ymlfilePatSecond);
 
                     this.CheckMatches(matches, ref lstURL, ref articleContent);
@@ -927,8 +946,10 @@ namespace CheckBrokenLink.ProcessLibrary
                     sLowCaseURL = sURL.ToLower();
                     if (sLowCaseURL.StartsWith("http://127.0.0.1")  || sLowCaseURL.StartsWith("https://127.0.0.1") ||
                         sLowCaseURL.StartsWith("http://localhost") || sLowCaseURL.StartsWith("https://localhost") ||
-                        sLowCaseURL.StartsWith("http://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/Explorer") || 
-                        sLowCaseURL.StartsWith("https://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/Explorer") )
+                        sLowCaseURL.StartsWith("http://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/explorer") || 
+                        sLowCaseURL.StartsWith("https://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/explorer") ||
+                        sLowCaseURL.StartsWith("https://github.com/Azure/azure-quickstart-templates/") ||
+                        sLowCaseURL.StartsWith("https://vortex.data.microsoft.com/collect/v1")
                     {
                         if (this.ShowHistory == ConvertProcess.ShowHistory)
                         {

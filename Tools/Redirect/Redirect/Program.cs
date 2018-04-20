@@ -155,7 +155,7 @@ namespace CLIReplacement
                     Console.WriteLine(curtFile.RedirectMContent);
                 }
 
-                Console.WriteLine("************Result Start**************");
+                Console.WriteLine("************Result Start for Json**************");
                 foreach (CollectRedirectFileByArticle curtFile in fileList)
                 {
                     if(curtFile.RedirectGContent.Length>0 && curtFile.RedirectMContent.Length==0)
@@ -163,7 +163,17 @@ namespace CLIReplacement
                         Console.WriteLine(curtFile.RedirectGContent);
                     }
                 }
-                Console.WriteLine("************Result End**************");
+                Console.WriteLine("************Result End for Json**************");
+
+                Console.WriteLine("************Result Start for Excel**************");
+                foreach (CollectRedirectFileByArticle curtFile in fileList)
+                {
+                    if (curtFile.RedirectGContent.Length > 0 && curtFile.RedirectMContent.Length == 0)
+                    {
+                        Console.WriteLine(curtFile.RedirectExcelContent);
+                    }
+                }
+                Console.WriteLine("************Result End for Excel**************");
 
             }
 

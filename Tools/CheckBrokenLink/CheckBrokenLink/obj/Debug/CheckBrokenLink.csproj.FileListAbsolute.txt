@@ -14,3 +14,10 @@ E:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Debug\Newtonsoft.
 E:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Debug\Newtonsoft.Json.xml
 E:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Debug\CheckBrokenLink.exe
 E:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Debug\CheckBrokenLink.pdb
+D:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Debug\CheckBrokenLink.exe.config
+D:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Debug\CheckBrokenLink.exe
+D:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Debug\CheckBrokenLink.pdb
+D:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Debug\CheckBrokenLink.exe
+D:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Debug\CheckBrokenLink.pdb
+D:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Debug\Newtonsoft.Json.dll
+D:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Debug\Newtonsoft.Json.xml

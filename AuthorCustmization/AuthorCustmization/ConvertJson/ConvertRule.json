@@ -17,8 +17,8 @@
       "comments": "change the ms.date(global) to origin.date(mooncake)"
     },
     {
-      "global": "^ms.author: .*",
-      "mooncake": "ms.author: v-yeche",
+      "global": "^([\\s]*)ms.author:([\\s ]*)(.*)",
+      "mooncake": "$1ms.author: v-yeche",
       "comments": "modify the ms.author in mooncake"
     }
   ],
@@ -42,16 +42,20 @@
       "mooncake": ""
     },
     {
+      "global": "https://www\\.cve\\.mitre\\.org/",
+      "mooncake": "https://cve.mitre.org/"
+    },
+    {
       "global": "The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article\\. It has common Azure tools preinstalled and configured to use with your account\\.",
       "mooncake": ""
     },
     {
-      "global": "\\(\\s*/(visualstudio|virtualization|system-center|vsts)/([^\\s)]*)\\)",
-      "mooncake": "(https://docs.microsoft.com/zh-cn/$1/$2)"
+      "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(visualstudio|virtualization|system-center|vsts)/([^\\s)]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/zh-cn/$2/$3)"
     },
     {
-      "global": "\\(\\s*/(visual-studio)/([^\\s)]*)\\)",
-      "mooncake": "(https://docs.microsoft.com/zh-cn/visualstudio/$2)"
+      "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(visual-studio)/([^\\s)]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/zh-cn/visualstudio/$3)"
     },
     {
       "global": "management\\.azure\\.com",
@@ -92,13 +96,13 @@
       "comment": "repalce (/architecture/XXXX) Format URL"
     },
     {
-      "global": "\\[\\!INCLUDE \\[cloud-shell-try-it(\\.md)?\\]\\(((\\.\\.\\/)*)includes\\/cloud-shell-try-it\\.md\\)\\]",
+      "global": "\\[\\!INCLUDE \\[cloud-shell-try-it(\\.md)?\\]\\(((\\.\\.\\/){1,})includes\\/cloud-shell-try-it\\.md\\)\\]",
       "mooncake": "[!INCLUDE [azure-cli-2-azurechinacloud-environment-parameter]($2includes/azure-cli-2-azurechinacloud-environment-parameter.md)]",
       "comment": "replace [!INCLUDE [cloud-shell-try-it.md](../../../includes/cloud-shell-try-it.md)] "
     },
     {
-      "global": "\\[\\!INCLUDE \\[(cloud-shell-try-it|cloud-shell-powershell)(\\.md)?\\]\\(((\\.\\.\\/)*)includes\\/cloud-shell-powershell\\.md\\)\\]",
-      "mooncake": "",
+      "global": "\\[\\!INCLUDE \\[(cloud-shell-try-it|cloud-shell-powershell)(\\.md)?\\]\\(((\\.\\.\\/){1,})includes\\/cloud-shell-powershell\\.md\\)\\]",
+      "mooncake": "<!--[!INCLUDE [cloud-shell-try-it.md|cloud-shell-powershell](../../../includes/cloud-shell-powershell.md)]-->",
       "comment": "replace [!INCLUDE [cloud-shell-try-it.md](../../../includes/cloud-shell-powershell.md)] "
     },
     {
@@ -173,6 +177,11 @@
     {
       "global": "https://docs\\.azure\\.cn/zh-cn/cli/azure\\?view=azure-cli-latest",
       "mooncake": "https://docs.azure.cn/zh-cn/cli/overview?view=azure-cli-latest"
+    },
+    {
+      "global": "https://docs\\.azure\\.cn/zh-cn/cli(/){2,}azure/",
+      "mooncake": "https://docs.azure.cn/zh-cn/cli/",
+      "commnet": "Remove the azure words in mooncake"
     },
     {
       "global": "(\\?view=azure-cli-latest){2,}",
@@ -281,6 +290,15 @@
     {
       "global": "https://msdn\\.microsoft\\.com/library/azure/dn782250.aspx",
       "mooncake": "../cosmos-db/sql-api-sql-query-reference.md"
+    },
+    {
+      "global": "https://docs\\.microsoft\\.com/powershell/",
+      "mooncake": "https://docs.microsoft.com/zh-cn/powershell/"
+    },
+    {
+      "global": "\\?ref\\=microsoft\\.com\\&utm_source\\=microsoft\\.com\\&utm_medium\\=docs\\&utm_campaign\\=visualstudio",
+      "mooncake": "",
+      "comments": "Remove the unnecessary postfix in URLs"
     },
     {
       "global": "yoursetting",
@@ -434,6 +452,10 @@
       "mooncake": "[MSDN and CSDN](https://www.azure.cn/support/contact/)"
     },
     {
+      "global": "http://feedback\\.azure\\.com ",
+      "mooncake": "https://www.azure.cn/support/contact/ "
+    },
+    {
       "global": "https://www\\.azure\\.cn/pricing/details/virtual-machines/((windows)|(linux)|(sql-server-standard)|(\\#Sql))/?",
       "mooncake": "https://www.azure.cn/pricing/details/virtual-machines/"
     },
@@ -577,24 +599,40 @@
       "mooncake": "https://www.azure.cn/support/support-azure/"
     },
     {
+      "global": "https://feedback\\.azure\\.com",
+      "mooncake": "https://www.azure.cn/support/support-azure/"
+    },
+    {
       "global": "https://www\\.azure\\.cn/support/service-dashboard/services/",
       "mooncake": "https://www.azure.cn/support/service-dashboard/"
     },
+     {
+      "global": "world-wide",
+      "mooncake": "across china"
+    },
     {
-      "global": "globally[ \\s]*(distributed|access)",
-      "mooncake": "multiple-region $1"
+      "global": "(globally|Globally|global)[ \\s]*(distributed|access|ambition|database replication)",
+      "mooncake": "multiple-region $2"
+    },
+     {
+      "global": "global[ \\s]*replication",
+      "mooncake": "multiple-region replication"
     },
     {
       "global": "(Global|global)[ \\s]*distribution",
       "mooncake": "multiple-region distribution"
     },
     {
-      "global": "planet-scale",
+      "global": "(planet-scale |global scale)",
       "mooncake": "multiple-region scale"
     },
     {
-      "global": "(#+)[ \\s]*(<a[ \\s]+name=\\\"[ _-\\S]*\\\"></a>)",
-      "mooncake": "$2\n$1 ",
+      "global": "(G|g)lobally replicates",
+      "mooncake": "multiple data-center replicates"
+    },
+    {
+      "global": "(\\#{1,})[ \\s]*(\\<a[ \\s]+name\\=\\\")(\\S*)(\\\"\\>\\<\\/a\\>)",
+      "mooncake": "$2$3$4\n$1 ",
       "comments": "Convert ###<a name='XXX'></a> Title TO <a name='XXX'></a>\n ### Title"
     },
     {
@@ -609,11 +647,6 @@
       "global": "([\\ |\\'|\\\"|\\(])http(s)?://([^\\ |\\'|\\\"|\\(|\\)]*)\\.(md|MD)([\\ |\\'|\\\"|\\)])",
       "mooncake": "$1http$2://$3$5",
       "comments": "Remove the .md or .MD on link of https://XXXX.XXXX.XXXX.md"
-    },
-    {
-      "global": "([\\s]{2,})(?=[a-z])",
-      "mooncake": " ",
-      "comment": "Replace the multiple blank with only one blank"
     },
     {
       "global": "https://www\\.azure\\.cn/regions",
@@ -632,12 +665,24 @@
       "mooncake": "https://www.azure.cn/pricing/details/data-transfer/"
     },
     {
-      "global": "yoursetting",
-      "mooncake": "yoursetting"
+      "global": "Expected network bandwidth (MBps)",
+      "mooncake": "Expected network bandwidth (Mbps)"
     },
     {
-      "global": "yoursetting",
-      "mooncake": "yoursetting"
+      "global": "http://servicefabricsdkstorage\\.blob\\.core\\.chinacloudapi.cn/publicrelease",
+      "mooncake": "https://servicefabricsdkstorage.blob.core.windows.net/publicrelease"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/campaigns/",
+      "mooncake": "https://azure.microsoft.com/campaigns/"
+    },
+    {
+      "global": "https://cosmosdbportalstorage\\.blob\\.core\\.chinacloudapi\\.cn/datamigrationtool/",
+      "mooncake": "https://cosmosdbportalstorage.blob.core.windows.net/datamigrationtool"
+    },
+    {
+      "global": "https://community\\.powerbi\\.cn/",
+      "mooncake": "https://community.powerbi.com/"
     },
     {
       "global": "yoursetting",
@@ -655,7 +700,7 @@
     {
       "global": "([\\s]{2,})(?=[a-z])",
       "mooncake": " ",
-      "comment":  "Replace the multiple blank with only one blank"
+      "comment":  "Replace the multiple blank with only one blank, NOT SUIT FOR YML AND META PROPERTIES", 
     }
   ]
 }

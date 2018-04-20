@@ -111,7 +111,7 @@ namespace AuthorCustmization
                 row = sr.ReadLine();
             }
 
-            //ThreadPool.SetMinThreads(1000, 1000);
+            ThreadPool.SetMinThreads(1000, 1000);
 
             // Declare the application thread.
             Thread[] newThreads = new Thread[threadCount];
@@ -129,6 +129,7 @@ namespace AuthorCustmization
                 FileCustomize curtFile = new FileCustomize(threadIdx,filename, directory, customizedate,category);
                 fileList.Add(curtFile);
                 newThreads[threadIdx] = new Thread(new ThreadStart(curtFile.ProcessFileCustomize));
+                newThreads[threadIdx].Name = string.Format("{0}/{1}", directory, filename);
                 newThreads[threadIdx].Start();
                 Console.WriteLine(string.Format("Start the Thread[{0}] in application...", threadIdx));
 
@@ -148,14 +149,14 @@ namespace AuthorCustmization
             bool allThreadOver = false;
             while (allThreadOver == false)
             {
-                Thread.Sleep(10000);
+                Thread.Sleep(20000);
                 allThreadOver = true;
                 for (int i = 0; i < threadCount; i++)
                 {
                     if (newThreads[i].ThreadState != ThreadState.Stopped)
                     {
                         allThreadOver = false;
-                        Console.WriteLine(string.Format("Checking status of the Thread[{0}] \t : \t {1} ", i, newThreads[i].ThreadState.ToString()));
+                        Console.WriteLine(string.Format("Checking status of the Thread[{0}] \t : \t {1} -> \t {2}", i, newThreads[i].ThreadState.ToString(), newThreads[i].Name.ToString()));
                         break;
                     }
                 }
@@ -196,7 +197,7 @@ namespace AuthorCustmization
                 CommonFun.GenerateDownloadFile(category, ref sbText);
             }
 
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
             Console.WriteLine("Program run finished, Press <Enter> to exit....");
 
             ExitWithUserConfirm();

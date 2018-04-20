@@ -5,3 +5,10 @@ E:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Newtonsoft.Json.dll
 E:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Newtonsoft.Json.xml
 E:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.exe
 E:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.pdb
+D:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Redirect.exe.config
+D:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.exe
+D:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.pdb
+D:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Redirect.exe
+D:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Redirect.pdb
+D:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Newtonsoft.Json.dll
+D:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Newtonsoft.Json.xml

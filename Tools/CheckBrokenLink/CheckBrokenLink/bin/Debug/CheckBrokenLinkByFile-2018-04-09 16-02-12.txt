@@ -1,0 +1,9 @@
+**********************Check Process Result(CheckBrokenLinkByFile)**********************
+1 : includes\app-service-api-get-started-selector.md
+https://docs.azure.cn/zh-cn/app-service-api/app-service-api-dotnet-get-started : OK
+https://docs.azure.cn/zh-cn/app-service-api/app-service-api-nodejs-api-app : OK
+https://docs.azure.cn/zh-cn/app-service-api/app-service-api-java-api-app : OK
+
+--------------Abort List in this round of Check Broken Link--------------
+Total 0 abourt thread in the round of Check Broken List.
+

@@ -1,0 +1,59 @@
+**********************Check Process Result(IncludeParentFile)**********************
+The parent file of	cosmos-db-create-azure-service-account.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\table-storage-cloud-service-nodejs.md	.
+The parent file of	cosmos-db-create-sql-api-add-sample-data.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\create-sql-api-dotnet.md	.
+The parent file of	cosmos-db-create-sql-api-query-data.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\create-sql-api-dotnet.md	.
+The parent file of	cosmos-db-create-storage-account.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\table-storage-cloud-service-nodejs.md	.
+The parent file of	virtual-machines-common-allocation-failure-classic.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\allocation-failure-classic.md	.
+The parent file of	cosmos-db-create-collection.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\create-mongodb-java.md	.
+The parent file of	cosmos-db-create-dbaccount.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\create-sql-api-dotnet.md	.
+The parent file of	cosmos-db-create-dbaccount-mongodb.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\create-mongodb-dotnet.md	.
+The parent file of	cosmos-db-create-dbaccount-table.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\create-table-dotnet.md	.
+The parent file of	cosmos-db-create-table.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\create-table-dotnet.md	.
+The parent file of	cosmos-db-delete-resource-group.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\create-cassandra-dotnet.md	.
+The parent file of	cosmos-db-emulator-docdb-api.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\create-sql-api-dotnet.md	.
+The parent file of	cosmos-db-tutorial-global-distribution-portal.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\tutorial-global-distribution-graph.md	.
+The parent file of	resource-manager-governance-rbac.md	is	D:\gitrep\azure-docs-pr\articles\azure-resource-manager\powershell-azure-resource-manager.md	.
+The parent file of	load-balancer-basic-sku-include.md	is	D:\gitrep\azure-docs-pr\articles\load-balancer\load-balancer-multivip.md	.
+The parent file of	site-recovery-configuration-and-scaleout-process-server-requirements.md	is	D:\gitrep\azure-docs-pr\articles\site-recovery\physical-azure-set-up-source.md	.
+The parent file of	traffic-manager-limits.md	is		.
+The parent file of	virtual-network-create-udr-scenario-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-network-create-udr-classic-cli.md	.
+The parent file of	virtual-network-deploy-multinic-arm-selectors-include.md	is		.
+The parent file of	virtual-network-deploy-multinic-classic-selectors-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-network-deploy-multinic-classic-cli.md	.
+The parent file of	virtual-network-deploy-multinic-scenario-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-network-deploy-multinic-classic-cli.md	.
+The parent file of	virtual-network-multiple-ip-addresses-intro.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-network-multiple-ip-addresses-cli.md	.
+The parent file of	virtual-network-multiple-ip-addresses-os-config.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-network-multiple-ip-addresses-cli.md	.
+The parent file of	virtual-networks-create-nsg-intro-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-networks-create-nsg-arm-pportal.md	.
+The parent file of	virtual-networks-create-nsg-scenario-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-networks-create-nsg-arm-pportal.md	.
+The parent file of	virtual-networks-create-nsg-selectors-arm-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-networks-create-nsg-arm-pportal.md	.
+The parent file of	virtual-networks-create-nsg-selectors-classic-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-networks-create-nsg-classic-cli.md	.
+The parent file of	virtual-networks-create-vnet-classic-cli-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-networks-create-vnet-classic-cli.md	.
+The parent file of	virtual-networks-create-vnet-classic-netcfg-ps-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-networks-create-vnet-classic-netcfg-ps.md	.
+The parent file of	virtual-networks-create-vnet-classic-pportal-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-networks-create-vnet-classic-pportal.md	.
+The parent file of	virtual-networks-create-vnet-intro-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-networks-create-vnet-classic-cli.md	.
+The parent file of	virtual-networks-create-vnet-scenario-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-networks-create-vnet-classic-cli.md	.
+The parent file of	virtual-networks-static-private-ip-selectors-classic-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network\virtual-networks-static-private-ip-classic-cli.md	.
+The parent file of	azure-virtual-network-limits.md	is		.
+The parent file of	virtual-machines-ag-listener-configure.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\windows\sql\virtual-machines-windows-portal-sql-alwayson-int-listener.md	.
+The parent file of	virtual-machines-common-allocation-failure.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\allocation-failure.md	.
+The parent file of	virtual-machines-common-backup-and-disaster-recovery-for-azure-iaas-disks.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\backup-and-disaster-recovery-for-azure-iaas-disks.md	.
+The parent file of	virtual-machines-common-classic-resource-manager-migration-overview.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\migration-classic-resource-manager-overview.md	.
+The parent file of	virtual-machines-common-convert-disks-considerations.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\convert-unmanaged-to-managed-disks.md	.
+The parent file of	virtual-machines-common-manage-availability.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\manage-availability.md	.
+The parent file of	virtual-machines-common-mitigate-se.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\mitigate-se.md	.
+The parent file of	virtual-machines-common-network-overview.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\network-overview.md	.
+The parent file of	virtual-machines-common-planned-maintenance.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\maintenance-and-updates.md	.
+The parent file of	virtual-machines-common-premium-storage.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\premium-storage.md	.
+The parent file of	virtual-machines-common-premium-storage-performance.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\premium-storage-performance.md	.
+The parent file of	virtual-machines-common-regions-and-availability.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\regions-and-availability.md	.
+The parent file of	virtual-machines-common-sizes-compute.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\sizes-compute.md	.
+The parent file of	virtual-machines-common-sizes-general.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\sizes-general.md	.
+The parent file of	virtual-machines-common-sizes-gpu.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\sizes-gpu.md	.
+The parent file of	virtual-machines-faq-for-disks.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\faq-for-disks.md	.
+The parent file of	virtual-machines-managed-disks-overview.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\managed-disks-overview.md	.
+The parent file of	virtual-machines-n-series-considerations.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\sizes-gpu.md	.
+The parent file of	virtual-machines-n-series-linux-support.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\n-series-driver-setup.md	.
+The parent file of	virtual-machines-n-series-windows-support.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\windows\n-series-driver-setup.md	.
+The parent file of	virtual-machines-security-policy.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux\security-policy.md	.
+The parent file of	virtual-machines-sql-server-akv-next-steps.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\windows\sql\virtual-machines-windows-ps-sql-keyvault.md	.
+The parent file of	virtual-machines-sql-server-akv-prepare.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\windows\sql\virtual-machines-windows-ps-sql-keyvault.md	.
+
