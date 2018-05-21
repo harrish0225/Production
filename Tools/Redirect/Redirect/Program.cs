@@ -150,9 +150,9 @@ namespace CLIReplacement
                     Console.WriteLine("------------------------");
                     Console.WriteLine(curtFile.RelativeFile);
                     Console.WriteLine("Global Redirections");
-                    Console.WriteLine(curtFile.RedirectGContent);
+                    Console.Write(curtFile.RedirectGContent);
                     Console.WriteLine("Mooncake Redirections");
-                    Console.WriteLine(curtFile.RedirectMContent);
+                    Console.Write(curtFile.RedirectMContent);
                 }
 
                 Console.WriteLine("************Result Start for Json**************");
@@ -170,10 +170,20 @@ namespace CLIReplacement
                 {
                     if (curtFile.RedirectGContent.Length > 0 && curtFile.RedirectMContent.Length == 0)
                     {
-                        Console.WriteLine(curtFile.RedirectExcelContent);
+                        Console.Write(curtFile.RedirectExcelContent);
                     }
                 }
                 Console.WriteLine("************Result End for Excel**************");
+
+                Console.WriteLine("************Delete File List Start for Excel**************");
+                foreach (CollectRedirectFileByArticle curtFile in fileList)
+                {
+                    if (curtFile.RedirectGContent.Length == 0 && curtFile.RedirectMContent.Length == 0)
+                    {
+                        Console.WriteLine(curtFile.FullPath);
+                    }
+                }
+                Console.WriteLine("************Delete File List End for Excel**************");
 
             }
 

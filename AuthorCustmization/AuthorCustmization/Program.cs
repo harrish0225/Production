@@ -52,6 +52,10 @@ namespace AuthorCustmization
                         case "I":
                             category = ConvertCategory.IncludeParentFile;
                             break;
+                        case "T":
+                            category = ConvertCategory.ToolReplacement;
+                            break;
+
                         case "H":
                         default:
                             ShowUseageTip();
@@ -207,13 +211,14 @@ namespace AuthorCustmization
         static void ShowUseageTip()
         {
             Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-            Console.WriteLine("Useage: AuthorCustmization [-A|-U|-C|-F|-I]");
+            Console.WriteLine("Useage: AuthorCustmization [-A|-U|-C|-F|-I|-T]");
             Console.WriteLine("without parameter means replace the AuthorReplacement,URLRepalcement,URLCorrection");
             Console.WriteLine("-A means replace the AuthorReplacement");
             Console.WriteLine("-U means replace the URLReplacement");
             Console.WriteLine("-C means replace the URLCorrection");
             Console.WriteLine("-F means find and mark the invloved articles");
             Console.WriteLine("-I means find the one refrenced parent's articles");
+            Console.WriteLine("-T means replace the Tool");
             Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             Console.WriteLine("Press <Enter> to exit....");
 

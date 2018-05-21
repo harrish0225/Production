@@ -316,7 +316,10 @@ namespace CheckBrokenLink.ProcessLibrary
 
         public void CheckMatches(MatchCollection matches, ref List<string> lstURL, ref string articleContent)
         {
+            string originalFileName = string.Empty;
+
             string filename = string.Empty;
+            int idxSeq = 0;
             string lablename = string.Empty;
             string checkdirectory = string.Empty;
             string checkfile = string.Empty;
@@ -333,13 +336,14 @@ namespace CheckBrokenLink.ProcessLibrary
                 lablename = matches[i].Groups["labelname"].ToString().ToLower().Trim();
                 switch(lablename)
                 {
+                    case "401":
                     case "binary":
                     case "nvarchar":
                         continue;
                 }
-               
 
-                filename = matches[i].Groups["mdfilename"].ToString().ToLower().Trim();
+                originalFileName = matches[i].Groups["mdfilename"].ToString().Trim();
+                filename = originalFileName.ToLower();
 
                 // the lenght of --> is 3 and exclude at first.
                 if (filename.Length >= 3 && filename.Substring(filename.Length - 3) == "-->")
@@ -352,21 +356,29 @@ namespace CheckBrokenLink.ProcessLibrary
 
                 if(filename.IndexOf(' ')>0)
                 {
-                    filename = filename.Substring(0, filename.IndexOf(' ')-1);
+                    //idxSeq = filename.IndexOf(' ') - 1;   Correct the Sequence of Sample.
+                    idxSeq = filename.IndexOf(' ');    
+                    filename = filename.Substring(0, idxSeq);
+                    originalFileName= originalFileName.Substring(0, idxSeq);
                 }
 
                 // When we find that the filename is string.empty, we will discard it and go the check next round. 
-                switch (filename)
+                switch (filename.ToLower())
                 {
                     case "":
+                    case "401":
                     case "#":
                     case "http://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/explorer/":
+                    case "http://mycluster.region.cloudapp.chinacloudapi.cn:19080/explorer":
                     case "ssdt":
                     case "response.data":
                     case "https://configuration-server-name/ip:44315":
                     case "eventid=evt":
                     case "print":
                     case "4222":
+                    case "mailto:cosmosdbtooling@microsoft.com":
+                    case "index.yml":
+                    case "deviceFile.write(\",":
                         continue;
                         
                 }
@@ -378,6 +390,7 @@ namespace CheckBrokenLink.ProcessLibrary
                 if (filename.Substring(0, 2) == "./")
                 {
                     filename = filename.Substring(2);
+                    originalFileName = originalFileName.Substring(2);
                 }
 
 
@@ -391,14 +404,15 @@ namespace CheckBrokenLink.ProcessLibrary
                 //Step 1:  Select Http(s):// link 
                 if (filename.StartsWith("http://") || filename.StartsWith("https://"))
                 {
-                    lstURL.Add(filename);
+                    //lstURL.Add(filename);
+                    lstURL.Add(originalFileName);
                     continue;
                 }
 
                 //Step 2: Select inner Archor tag
                 if (filename.StartsWith("#") == true)
                 {
-                    this.CheckArchorInFile(ref articleContent, filename);
+                    this.CheckArchorInFile(ref articleContent, originalFileName);
                     continue;
                 }
 
@@ -413,7 +427,7 @@ namespace CheckBrokenLink.ProcessLibrary
                 //Step 3: Sample of ../virtual-machines/windows/sizes.md?toc=%2fvirtual-machines%2fwindows%2ftoc.json
                 if (filename.Contains(".md") == true)
                 {
-                    sPostfix = filename.Substring(filename.IndexOf(".md") + 3);
+                    sPostfix = originalFileName.Substring(filename.IndexOf(".md") + 3);
                     if (sPostfix.Trim().Length>0 && sPostfix.Contains("#")==true)
                     {
                         string[] menuAndAnchor = sPostfix.Split('#');
@@ -422,9 +436,10 @@ namespace CheckBrokenLink.ProcessLibrary
                     {
                         sPostfix = "";
                     }
-                    
 
-                    filename = filename.Substring(0, filename.IndexOf(".md") + 3) + sPostfix;
+                    idxSeq = filename.IndexOf(".md") + 3;
+                    filename = filename.Substring(0, idxSeq) + sPostfix;
+                    originalFileName = originalFileName.Substring(0, idxSeq) + sPostfix;
                 }
 
 
@@ -441,18 +456,20 @@ namespace CheckBrokenLink.ProcessLibrary
                     //reward to parent directory when exists the ../
                     while (filename.IndexOf("../") > -1)
                     {
-                        filename = filename.Substring(filename.IndexOf("../") + 3);
+                        idxSeq = filename.IndexOf("../") + 3;
+                        filename = filename.Substring(idxSeq);
+                        originalFileName = originalFileName.Substring(idxSeq);
                         checkdirectory = checkdirectory.Substring(0, checkdirectory.LastIndexOf("\\"));
                     }
 
                     // images file should add \\ in the following code
                     if (filename.StartsWith("/") == true)
                     {
-                        checkfile = string.Format("{0}\\{1}", localpath, filename.Replace("/", "\\"));
+                        checkfile = string.Format("{0}\\{1}", localpath, originalFileName.Replace("/", "\\"));
                     }
                     else
                     {
-                        checkfile = string.Format("{0}\\{1}", checkdirectory, filename.Replace("/", "\\"));
+                        checkfile = string.Format("{0}\\{1}", checkdirectory, originalFileName.Replace("/", "\\"));
                     }
 
                         
@@ -482,19 +499,21 @@ namespace CheckBrokenLink.ProcessLibrary
                     //reward to parent directory when exists the ../
                     while (filename.IndexOf("../") > -1)
                     {
-                        filename = filename.Substring(filename.IndexOf("../") + 3);
+                        idxSeq = filename.IndexOf("../") + 3;
+                        filename = filename.Substring(idxSeq);
+                        originalFileName = originalFileName.Substring(idxSeq);
                         checkdirectory = checkdirectory.Substring(0, checkdirectory.LastIndexOf("\\"));
                     }
 
                     if (filename.StartsWith("/") == true)
                     {
                         // forexample /azure-resource-manager/XXXX.md
-                        checkfile = string.Format("{0}{1}", localpath, filename.Replace("/", "\\"));
+                        checkfile = string.Format("{0}{1}", localpath, originalFileName.Replace("/", "\\"));
                     }
                     else
                     {
                         // for example include/XXX.md, we should add the \\ to connect correct path.
-                        checkfile = string.Format("{0}\\{1}", checkdirectory, filename.Replace("/", "\\"));
+                        checkfile = string.Format("{0}\\{1}", checkdirectory, originalFileName.Replace("/", "\\"));
                     }
 
                     if (System.IO.File.Exists(checkfile) == false)
@@ -507,8 +526,12 @@ namespace CheckBrokenLink.ProcessLibrary
                             // filename = "articles/XXXX.md"
                             // this choise match the sample of /article/XXXX.md
                             filename = filename.Substring("articles/".Length);
-                            filename = string.Format("https://docs.azure.cn/zh-cn/{0}", filename.Substring(0, filename.IndexOf(".md")));
-                        }else
+                            originalFileName = originalFileName.Substring("articles/".Length);
+                            idxSeq = filename.IndexOf(".md");
+                            filename = string.Format("https://docs.azure.cn/zh-cn/{0}", filename.Substring(0,idxSeq ));
+                            originalFileName = string.Format("https://docs.azure.cn/zh-cn/{0}", originalFileName.Substring(0, idxSeq));
+                        }
+                        else
                         {
 
                             if (filename.StartsWith("/") == true)
@@ -516,21 +539,26 @@ namespace CheckBrokenLink.ProcessLibrary
                                 // filename = "/XXXX.md"
                                 // this choise match the sample of /article/event-hubs/XXXX.md 
                                 filename = filename.Substring(1);
-                                filename = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, filename.Substring(0, filename.IndexOf(".md")));
+                                originalFileName = originalFileName.Substring(1);
+                                idxSeq = filename.IndexOf(".md");
+                                filename = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, filename.Substring(0, idxSeq));
+                                originalFileName = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, originalFileName.Substring(0, idxSeq));
 
                             }
                             else
                             {
                                 // filename = "XXXX.md"
                                 // this choise match the sample of /article/event-hubs/XXXX.md 
-                                filename = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, filename.Substring(0, filename.IndexOf(".md")));
+                                idxSeq = filename.IndexOf(".md");
+                                filename = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, filename.Substring(0,idxSeq ));
+                                originalFileName = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, originalFileName.Substring(0, idxSeq));
                             }
 
                         }
 
 
 
-                        lstURL.Add(filename);
+                        lstURL.Add(originalFileName);
                     }
                     else
                     {
@@ -547,7 +575,9 @@ namespace CheckBrokenLink.ProcessLibrary
                 // Check the local path. 
                 while (filename.IndexOf("../") > -1)
                 {
-                    filename = filename.Substring(filename.IndexOf("../") + 3);
+                    idxSeq = filename.IndexOf("../") + 3;
+                    filename = filename.Substring(idxSeq);
+                    originalFileName = originalFileName.Substring(idxSeq);
                     checkdirectory = checkdirectory.Substring(0, checkdirectory.LastIndexOf("\\"));
                 }
 
@@ -567,9 +597,9 @@ namespace CheckBrokenLink.ProcessLibrary
                 {
 
                     checkfile = checkfile.ToLower().Replace(".md", "");
-
-                    string localfile = checkfile.Substring(0, checkfile.IndexOf("#")) + ".md";
-                    string localarchor = checkfile.Substring(checkfile.IndexOf("#"));
+                    idxSeq = checkfile.IndexOf("#");
+                    string localfile = checkfile.Substring(0, idxSeq) + ".md";
+                    string localarchor = checkfile.Substring(idxSeq);
 
                     // isRedirect return flag to confirem the file is redirection or not.
                     bool isNeedRedirect = false;
@@ -589,20 +619,24 @@ namespace CheckBrokenLink.ProcessLibrary
                 if (filename.ToLower().Contains(".md") == true)
                 {
                     filename = filename.Replace(".md", "").Replace(".MD", "");
+                    originalFileName = originalFileName.Replace(".md", "").Replace(".MD", "");
                 }
 
                 if (filename.Substring(0, 1) == "/")
                 {
                     filename = filename.Substring(1);
+                    originalFileName = originalFileName.Substring(1);
                     filename = string.Format("https://docs.azure.cn/zh-cn/{0}", filename);
+                    originalFileName = string.Format("https://docs.azure.cn/zh-cn/{0}", originalFileName);
                 }
                 else
                 {
                     checkdirectory = checkdirectory.Replace(localpath, "").Replace("\\", "/").TrimStart('/');
                     filename = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, filename);
+                    originalFileName = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, originalFileName);
                 }
 
-                lstURL.Add(filename);
+                lstURL.Add(originalFileName);
 
 
             }
@@ -627,7 +661,7 @@ namespace CheckBrokenLink.ProcessLibrary
                 bool matchOK = false;
 
                 //string archPat = string.Format("<a[\\s]*(id|name)=(\'|\"){0}(\'|\")[\\s]*></a>", archor.TrimStart('#'));
-                string archPat = string.Format("<a[\\s]*(id|name)\\s*=\\s*(\'|\"){0}(\'|\")[\\s]*>[^<>/]*</a>", archor.TrimStart('#'));
+                string archPat = string.Format("<a[\\s]*(id|name)[\\s]*=[\\s]*(\'|\"){0}(\'|\")[\\s]*></a>", archor.TrimStart('#'));
                 Match existMath = Regex.Match(articleContent, archPat, RegexOptions.IgnoreCase);
 
                 if (existMath.Length > 0)
@@ -638,7 +672,7 @@ namespace CheckBrokenLink.ProcessLibrary
                 if (matchOK == false)
                 {
                     //archPat = string.Format("<a[\\s]*(id|name)=(\'|\"){0}(\'|\")[\\s]*/>", archor.TrimStart('#'));
-                    archPat = string.Format("<a[\\s]*(id|name)\\s*=\\s*(\'|\"){0}(\'|\")[\\s]*/>", archor.TrimStart('#'));
+                    archPat = string.Format("<a[\\s]*(id|name)[\\s]*=[\\s]*(\'|\"){0}(\'|\")[\\s]*/>", archor.TrimStart('#'));
                     existMath = Regex.Match(articleContent, archPat, RegexOptions.IgnoreCase);
                     if (existMath.Length > 0)
                     {
@@ -766,6 +800,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
             ConvertCategory category = this.ProcessCategory;
             string filePostfix = string.Empty;
+            string orignalFilePostfix = string.Empty;
 
             if (category == ConvertCategory.CheckBrokenLinkByFile || category == ConvertCategory.CheckBrokenLinkByService)
             {
@@ -775,6 +810,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
                 MatchCollection matches;
 
+                orignalFilePostfix = this.FullPath.Trim().Substring(this.FullPath.Length - 3);
                 filePostfix = this.FullPath.Trim().Substring(this.FullPath.Length - 3).ToLower();
 
                 if(filePostfix ==".md")
@@ -814,7 +850,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
                     this.CheckMatches(matches, ref lstURL, ref articleContent);
 
-                    string ymlfilePatSecond = "href(\\:|\\=)([\\s| ]*)([\\'|\\\"| ]?)(?<mdfilename>[^ \\'\\\"\\r\\n]*)(\\3)";     // (\\3) implement of ([\\'|\\\"| ]?) equal the 3rd element of groups 
+                    string ymlfilePatSecond = "href(\\:|\\=)([\\s| ]*)([\\'|\\\"| ]?)(?<mdfilename>[^ \\'\\\"\\r\\n]*)(\\3)[\\s]*(-->)*";     // (\\3) implement of ([\\'|\\\"| ]?) equal the 3rd element of groups 
                     // mdfilename should also not be equal to \r\n, or will be append \r\n and next row's character.
                     matches = Regex.Matches(articleContent, ymlfilePatSecond);
 
@@ -949,7 +985,7 @@ namespace CheckBrokenLink.ProcessLibrary
                         sLowCaseURL.StartsWith("http://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/explorer") || 
                         sLowCaseURL.StartsWith("https://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/explorer") ||
                         sLowCaseURL.StartsWith("https://github.com/Azure/azure-quickstart-templates/") ||
-                        sLowCaseURL.StartsWith("https://vortex.data.microsoft.com/collect/v1")
+                        sLowCaseURL.StartsWith("https://vortex.data.microsoft.com/collect/v1"))
                     {
                         if (this.ShowHistory == ConvertProcess.ShowHistory)
                         {
@@ -1227,6 +1263,7 @@ namespace CheckBrokenLink.ProcessLibrary
             catch (Exception ex)
             {
                 this.BrokenLink += string.Format("Error : {0}\n", ex.Message.ToString());
+                Console.WriteLine(string.Format("Thread[{0}]({1}) occure error with {2}. ", this.Id, this.FullPath, ex.Message.ToString()));
             }
             finally
             {

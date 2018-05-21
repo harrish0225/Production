@@ -27,6 +27,9 @@ namespace AuthorCustmization.ProcessLibrary
         FindArticle,
         IncludeParentFile,
         CLIReplacement,
+        ToolReplacement,
+        MDFileCorrection,
+        YMLFileCorrection
     }
 
     public enum ProcessStatus
@@ -262,6 +265,67 @@ namespace AuthorCustmization.ProcessLibrary
                     bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.URLCorrection, i, ConvertItem.mooncake, ref urlMooncake);
                     //bValidService = this.GetProcessConvertRuleValidService(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.validservice, this.Fullpath);
                     if (bGlobal && bMooncake )
+                    {
+                        reg = new Regex(urlGlobal);
+                        articleContent = reg.Replace(articleContent, urlMooncake);
+                    }
+                }
+
+                //For only md File
+
+                string filePostfix = this.File.Trim().Substring(this.File.Trim().Length - 3).ToLower();
+                
+                if (filePostfix==".md")
+                {
+                    iCount = JUrl[ConvertCategory.MDFileCorrection.ToString()].Count();
+
+                    for (int i = 0; i < iCount; i++)
+                    {
+                        bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.MDFileCorrection, i, ConvertItem.global, ref urlGlobal);
+                        bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.MDFileCorrection, i, ConvertItem.mooncake, ref urlMooncake);
+                        //bValidService = this.GetProcessConvertRuleValidService(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.validservice, this.Fullpath);
+                        if (bGlobal && bMooncake)
+                        {
+                            reg = new Regex(urlGlobal);
+                            articleContent = reg.Replace(articleContent, urlMooncake);
+                        }
+                    }
+
+                }
+
+                if (filePostfix == "yml")
+                {
+                    //For only yml File
+                    iCount = JUrl[ConvertCategory.YMLFileCorrection.ToString()].Count();
+
+                    for (int i = 0; i < iCount; i++)
+                    {
+                        bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.YMLFileCorrection, i, ConvertItem.global, ref urlGlobal);
+                        bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.YMLFileCorrection, i, ConvertItem.mooncake, ref urlMooncake);
+                        //bValidService = this.GetProcessConvertRuleValidService(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.validservice, this.Fullpath);
+                        if (bGlobal && bMooncake)
+                        {
+                            reg = new Regex(urlGlobal);
+                            articleContent = reg.Replace(articleContent, urlMooncake);
+                        }
+                    }
+
+                }
+
+                    
+
+            }
+
+            //ToolReplacement Section
+            if (category == ConvertCategory.ALL || category == ConvertCategory.ToolReplacement)
+            {
+                iCount = JUrl[ConvertCategory.ToolReplacement.ToString()].Count();
+
+                for (int i = 0; i < iCount; i++)
+                {
+                    bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.ToolReplacement, i, ConvertItem.global, ref urlGlobal);
+                    bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.ToolReplacement, i, ConvertItem.mooncake, ref urlMooncake);
+                    if (bGlobal && bMooncake)
                     {
                         reg = new Regex(urlGlobal);
                         articleContent = reg.Replace(articleContent, urlMooncake);
@@ -522,9 +586,14 @@ namespace AuthorCustmization.ProcessLibrary
         {
             bool bProcess = false;
 
+
             try
             {
                 valReturn = JConvert[category.ToString()][iIndex][key.ToString()].ToString();
+                if (valReturn== "mysetting")
+                {
+                    return bProcess;
+                }
                 bProcess = true;
             }
             catch(Exception ex)
