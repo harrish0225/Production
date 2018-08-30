@@ -50,6 +50,7 @@ namespace CLIReplacement.ProcessLibrary
         cosmos_db,
         event_hubs,
         load_balancer,
+        network_watcher,
         resiliency,
         service_fabric,
         site_recovery,

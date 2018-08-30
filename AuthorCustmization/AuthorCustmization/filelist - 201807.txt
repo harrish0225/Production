@@ -1,0 +1,1 @@
+stream-analytics-quick-create-portal.md	articles/stream-analytics	07/02/2018

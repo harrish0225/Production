@@ -52,6 +52,7 @@ namespace CLIReplacement.ProcessLibrary
         analysis_services,
         azure_resource_manager,
         cosmos_db,
+        container_registry,
         event_hubs,
         load_balancer,
         resiliency,
@@ -204,7 +205,7 @@ namespace CLIReplacement.ProcessLibrary
         {
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("\t{");
+            sb.AppendLine("    {");
             sb.AppendLine(string.Format("\t\"source_path\": \"{0}\",", sourcepath));
             if(redirecturl.Substring(0, 6)=="/azure")
             {
@@ -218,7 +219,7 @@ namespace CLIReplacement.ProcessLibrary
             //sb.AppendLine(string.Format("\t\t\t\"redirect_url\": \"{0}\",", redirecturl));
 
             sb.AppendLine(string.Format("\t\"redirect_document_id\": \"{0}\"", redirect_document_id));
-            sb.AppendLine("\t},");
+            sb.AppendLine("    },");
 
             return sb.ToString();
 

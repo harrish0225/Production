@@ -62,6 +62,7 @@ namespace CheckBrokenLink.ProcessLibrary
     {
         analysis_services,
         azure_resource_manager,
+        container_registry,
         cosmos_db,
         event_hubs,
         load_balancer,
@@ -373,12 +374,17 @@ namespace CheckBrokenLink.ProcessLibrary
                     case "ssdt":
                     case "response.data":
                     case "https://configuration-server-name/ip:44315":
+                    case "eventid":
                     case "eventid=evt":
                     case "print":
                     case "4222":
+                    case "4222)`":
+                    case "4222,":
+                    case "4222`":
                     case "mailto:cosmosdbtooling@microsoft.com":
                     case "index.yml":
                     case "deviceFile.write(\",":
+                    case "PS":
                         continue;
                         
                 }
@@ -734,7 +740,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
                 bool matchOK = false;
 
-                string archPat = string.Format("<a[\\s]*(id|name)=(\'|\"){0}(\'|\")[\\s]*></a>", archor.TrimStart('#'));
+                string archPat = string.Format("<a[\\s]*(id|name)[\\s]*=[\\s]*(\'|\"){0}(\'|\")[\\s]*>[\\s]*</a>", archor.TrimStart('#'));
                 Match existMath = Regex.Match(articleContent, archPat, RegexOptions.IgnoreCase);
 
                 if (existMath.Length > 0)
@@ -744,7 +750,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
                 if (matchOK == false)
                 {
-                    archPat = string.Format("<a[\\s]*(id|name)=(\'|\"){0}(\'|\")[\\s]*/>", archor.TrimStart('#'));
+                    archPat = string.Format("<a[\\s]*(id|name)[\\s]*=[\\s]*(\'|\"){0}(\'|\")[\\s]*/>", archor.TrimStart('#'));
                     existMath = Regex.Match(articleContent, archPat, RegexOptions.IgnoreCase);
                     if (existMath.Length > 0)
                     {

@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Threading;
 
+
 namespace AuthorCustmization.ProcessLibrary
 {
     public enum ConvertItem {
@@ -45,6 +46,7 @@ namespace AuthorCustmization.ProcessLibrary
         analysis_services,
         azure_resource_manager,
         cosmos_db,
+        container_registry,
         event_hubs,
         load_balancer,
         network_watcher,
@@ -217,9 +219,19 @@ namespace AuthorCustmization.ProcessLibrary
                 articleContent += "\n";
             }
 
+#if DEBUG
+            DateTime dStart = DateTime.Now;
+            DateTime dEnd = DateTime.Now;
+            string sTakeTime = string.Empty;
+#endif
+
+
             if (category==ConvertCategory.ALL || category==ConvertCategory.AuthorReplacement)
             {
                 iCount = JUrl[ConvertCategory.AuthorReplacement.ToString()].Count();
+
+
+
                 for (int i = 0; i < iCount; i++)
                 {
                     bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.AuthorReplacement, i, ConvertItem.global, ref urlGlobal);
@@ -230,6 +242,12 @@ namespace AuthorCustmization.ProcessLibrary
                         reg = new Regex(urlGlobal, RegexOptions.Multiline);
                         articleContent = reg.Replace(articleContent, urlMooncake);
                     }
+
+#if DEBUG
+                    dEnd = DateTime.Now;
+                    sTakeTime= CommonFun.DateDiff(ref dEnd, ref dStart);
+                    Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.AuthorReplacement.ToString(),i, urlGlobal, urlMooncake, sTakeTime));
+#endif
                 }
             }
 
@@ -250,6 +268,11 @@ namespace AuthorCustmization.ProcessLibrary
                         reg = new Regex(urlGlobal);
                         articleContent = reg.Replace(articleContent, urlMooncake);
                     }
+#if DEBUG
+                    dEnd = DateTime.Now;
+                    sTakeTime= CommonFun.DateDiff(ref dEnd, ref dStart);
+                    Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.URLReplacement.ToString(),i, urlGlobal, urlMooncake, sTakeTime));
+#endif
                 }
             }
 
@@ -269,6 +292,11 @@ namespace AuthorCustmization.ProcessLibrary
                         reg = new Regex(urlGlobal);
                         articleContent = reg.Replace(articleContent, urlMooncake);
                     }
+#if DEBUG
+                    dEnd = DateTime.Now;
+                    sTakeTime= CommonFun.DateDiff(ref dEnd, ref dStart);
+                    Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.URLCorrection.ToString(),i, urlGlobal, urlMooncake, sTakeTime));
+#endif
                 }
 
                 //For only md File
@@ -289,6 +317,11 @@ namespace AuthorCustmization.ProcessLibrary
                             reg = new Regex(urlGlobal);
                             articleContent = reg.Replace(articleContent, urlMooncake);
                         }
+#if DEBUG
+                        dEnd = DateTime.Now;
+                        sTakeTime= CommonFun.DateDiff(ref dEnd, ref dStart);
+                        Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.MDFileCorrection.ToString(),i, urlGlobal, urlMooncake, sTakeTime));
+#endif               
                     }
 
                 }
@@ -308,6 +341,11 @@ namespace AuthorCustmization.ProcessLibrary
                             reg = new Regex(urlGlobal);
                             articleContent = reg.Replace(articleContent, urlMooncake);
                         }
+#if DEBUG
+                        dEnd = DateTime.Now;
+                        sTakeTime= CommonFun.DateDiff(ref dEnd, ref dStart);
+                        Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.YMLFileCorrection.ToString(),i, urlGlobal, urlMooncake, sTakeTime));
+#endif
                     }
 
                 }
@@ -330,6 +368,11 @@ namespace AuthorCustmization.ProcessLibrary
                         reg = new Regex(urlGlobal);
                         articleContent = reg.Replace(articleContent, urlMooncake);
                     }
+#if DEBUG
+                    dEnd = DateTime.Now;
+                    sTakeTime= CommonFun.DateDiff(ref dEnd, ref dStart);
+                    Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.ToolReplacement.ToString(),i, urlGlobal, urlMooncake, sTakeTime));
+#endif
                 }
             }
 
@@ -664,6 +707,8 @@ namespace AuthorCustmization.ProcessLibrary
             catch(Exception ex)
             {
                 error = ex.Message.ToString();
+                CommonFun.GenerateErrorDownloadFile(ref error);
+
             }
             finally
             {

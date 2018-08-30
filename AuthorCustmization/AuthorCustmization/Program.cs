@@ -139,7 +139,7 @@ namespace AuthorCustmization
 
 
                 // Console.WriteLine(string.Format("Join the {0} thread in application", threadIdx));
-#if debug
+#if DEBUG
                 newThreads[threadIdx].Join();
 #endif
 
@@ -170,11 +170,29 @@ namespace AuthorCustmization
             if(category==ConvertCategory.ALL || category== ConvertCategory.IncludeParentFile )
             {
                 //Display the Parent of Include file in Console. 
+                string sPath = string.Empty;
+                string sFileName = string.Empty;
+                int idxLastDash = 0;
+
                 foreach(FileCustomize curtFile in fileList)
                 {
+                    
                     if (curtFile.ArticleCategory == FileCategory.Includes)
                     {
-                        Console.WriteLine(string.Format("The parent file of\t{0}\tis\t{1}\t.", curtFile.File, curtFile.ParentFile));
+
+                        idxLastDash= curtFile.ParentFile.LastIndexOf(@"\");
+                        if (idxLastDash >= 0)
+                        {
+                            sPath = curtFile.ParentFile.Substring(0, idxLastDash);
+                            sFileName = curtFile.ParentFile.Substring(idxLastDash + 1);
+                        }
+                        else
+                        {
+                            sPath = "";
+                            sFileName = "";
+                        }
+                        
+                        Console.WriteLine(string.Format("The parent file of\t{0}\tis\t{1}\t{2}\t.", curtFile.File, sPath,sFileName));
                     }   
                 }
 
@@ -192,7 +210,18 @@ namespace AuthorCustmization
                     {
                         //if (!string.IsNullOrEmpty(curtFile.ParentFile))
                         //{
-                            sbText.AppendLine(string.Format("The parent file of\t{0}\tis\t{1}\t.", curtFile.File, curtFile.ParentFile));
+                        idxLastDash = curtFile.ParentFile.LastIndexOf(@"\");
+                        if (idxLastDash >= 0)
+                        {
+                            sPath = curtFile.ParentFile.Substring(0, idxLastDash);
+                            sFileName = curtFile.ParentFile.Substring(idxLastDash + 1);
+                        }
+                        else
+                        {
+                            sPath = "";
+                            sFileName = "";
+                        }
+                        sbText.AppendLine(string.Format("The parent file of\t{0}\tis\t{1}\t{2}\t.", curtFile.File, sPath, sFileName));
                         //}
                     }
                         

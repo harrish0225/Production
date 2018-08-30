@@ -160,7 +160,7 @@ namespace CLIReplacement
                 {
                     if(curtFile.RedirectGContent.Length>0 && curtFile.RedirectMContent.Length==0)
                     {
-                        Console.WriteLine(curtFile.RedirectGContent);
+                        Console.Write(curtFile.RedirectGContent);
                     }
                 }
                 Console.WriteLine("************Result End for Json**************");

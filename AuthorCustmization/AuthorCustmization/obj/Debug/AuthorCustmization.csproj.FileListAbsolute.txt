@@ -21,3 +21,6 @@ D:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\AuthorCustm
 D:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\AuthorCustmization.pdb
 D:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\Newtonsoft.Json.dll
 D:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\Newtonsoft.Json.xml
+D:\gitrep\Production\AuthorCustmization\AuthorCustmization\obj\Debug\AuthorCustmization.csprojResolveAssemblyReference.cache
+D:\gitrep\Production\AuthorCustmization\AuthorCustmization\obj\Debug\AuthorCustmization.csproj.CoreCompileInputs.cache
+D:\gitrep\Production\AuthorCustmization\AuthorCustmization\obj\Debug\AuthorCustmization.csproj.CopyComplete
