@@ -27,8 +27,32 @@
       "mooncake": "21Vianet Azure"
     },
     {
+      "global": "Microsoft globally distributed multimodel database",
+      "mooncake": "21Vianet globally distributed multimodel database"
+    },
+    {
       "global": "managed by Microsoft\\.",
       "mooncake": "managed by 21Vianet."
+    },
+    {
+      "global": " To further make it clear\\, consider the following example - with Geographic routing you can make uncommon mappings such as send all traffic from Asia to endpoints in the US and all US traffic to endpoints in Asia\\.",
+      "mooncake": ""
+    },
+    {
+      "global": " For example\\, you can set up a parent profile with geographic routing where you send all traffic from North America to a nested profile that has endpoints in the US and use performance routing to send those traffic to the best endpoint within that set\\.",
+      "mooncake": ""
+    },
+    {
+      "global": "For example\\, an endpoint in US\\-Central Azure region can have all users from India directed to it\\.",
+      "mooncake": ""
+    },
+    {
+      "global": "(\\()?(f|F)or example\\, if an endpoint that has region Spain goes unhealthy\\, we do not failover to another endpoint that has the region Europe assigned to it(\\))?",
+      "mooncake": ""
+    },
+    {
+      "global": "For an approximate comparison\\, calls to Azure Cosmos DB within the same region complete within 1\\-2 ms\\, but the latency between the West and East coast of the US is >50 ms\\.",
+      "mooncake": ""
     },
     {
       "global": "Party clusters offer an easy way to quickly create a Service Fabric cluster\\. Party clusters are free\\, limited-time Service Fabric clusters hosted on Azure and run by the Service Fabric team\\.",
@@ -304,27 +328,27 @@
     },
     {
       "global": "Microsoft engineering teams",
-      "mooncake": "our engineering teams"
+      "mooncake": "Azure engineering teams"
     },
     {
       "global": "over the world",
-      "mooncake": "over China",
+      "mooncake": "over multiple-region",
       "comments": "Cosmos DB the world issue change to China or multiple-region"
     },
     {
       "global": "(world-wide|across the world|across the globe)",
-      "mooncake": "across China",
-      "comments": "Cosmos DB the world issue change to China or multiple-region"
+      "mooncake": "across multiple-region",
+      "comments": "Cosmos DB the world issue change to China or multiple-region(priority)"
     },
     {
       "global": "(around the world|worldwide|around the globe)",
-      "mooncake": "around China",
-      "comments": "Cosmos DB the world issue change to China or multiple-region"
+      "mooncake": "around multiple-region",
+      "comments": "Cosmos DB the world issue change to China or multiple-region(priority)"
     },
     {
       "global": "With its worldwide presence",
       "mooncake": "With its china-wide presence",
-      "comments": "Cosmos DB the world issue change to China or multiple-region"
+      "comments": "Cosmos DB the world issue change to China or multiple-region(priority)"
     },
     {
       "global": "(Globally|Global)[ \\s]*(distributed|distribution|access|ambition|database|databases|replication|replicated)",
