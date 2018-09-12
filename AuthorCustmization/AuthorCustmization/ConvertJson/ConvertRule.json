@@ -27,12 +27,48 @@
       "mooncake": "21Vianet Azure"
     },
     {
+      "global": "US West",
+      "mooncake": "China East"
+    },
+    {
       "global": "Microsoft globally distributed multimodel database",
       "mooncake": "21Vianet globally distributed multimodel database"
     },
     {
       "global": "managed by Microsoft\\.",
       "mooncake": "managed by 21Vianet."
+    },
+    {
+      "global": "For national clouds (Azure Government, Azure China, Azure Germany)",
+      "mooncake": "For Azure China cloud"
+    },
+    {
+      "global": "in the same region and (across|different) regions \\(also known as Global VNet Peering\\)",
+      "mooncake": "in the same region",
+      "comments": "Global VNet peering not available on MC"
+    },
+    {
+      "global": "Peering virtual networks in different regions is also referred to as \\*global peering\\*\\.",
+      "mooncake": ""
+    },
+    {
+      "global": "You can select a virtual network in the same region or in a different region\\.",
+      "mooncake": "You can select a virtual network in the same region.",
+      "comments": "Global VNet peering not available on MC"
+    },
+    {
+      "global": "You can download the list of ranges \\(prefixes\\) for the Azure \\[Public\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx\\?id=56519\\)\\, \\[US government\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx?id=57063\\)\\, \\[China\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx\\?id=57062\\)\\, and \\[Germany\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx\\?id=57064\\) clouds\\.",
+      "mooncake": "You can download the list of ranges (prefixes) for the Azure [China](https://www.microsoft.com/download/details.aspx?id=57062) clouds."
+    },
+    {
+      "global": " or by using the Azure Cloud Shell\\.",
+      "mooncake": ".",
+      "comments": "Azure Cloud Shell on available on MC"
+    },
+    {
+      "global": "To use the Azure Cloud Shell\\, select (\\*)*Try It(\\*)* in the top right corner of any command box that follows\\. The Cloud Shell signs you into Azure\\.",
+      "mooncake": "",
+      "comments": ""
     },
     {
       "global": " To further make it clear\\, consider the following example - with Geographic routing you can make uncommon mappings such as send all traffic from Asia to endpoints in the US and all US traffic to endpoints in Asia\\.",
@@ -104,7 +140,7 @@
       "comments": "classic web site has been obsolete now"
     },
     {
-      "global": "(\\s{1,})Microsoft([\\s{1,}|\\.{1,}])(?!(Excel|Office|Word|Account|client applications like|OLE DB Provider|\\.Net|Visual C\\+\\+|SQL server|MVP|DX|Visual Studio|Corporation|Security Essentials|Forefront Endpoint Protection|System Center Endpoint|Antimalware for Azure|Antimalware Client|Antimalware extension|Team Foundation Server|Distributed Transaction Coordinator|Root Certificate Program|Certificate Services|SQL Server|HPC Pack|Management Console|Script Center|\\.NET))",
+      "global": "(\\s{1,})Microsoft([\\s{1,}|\\.{1,}])(?!(Excel|Office|Word|Account|client applications like|OLE DB Provider|\\.Net|Visual C\\+\\+|SQL server|MVP|DX|Visual Studio|Corporation|Security Essentials|Forefront Endpoint Protection|System Center Endpoint|Antimalware for Azure|Antimalware Client|Antimalware extension|Team Foundation Server|Distributed Transaction Coordinator|Root Certificate Program|Certificate Services|SQL Server|HPC Pack|Management Console|Script Center|\\.NET|Windows Server Active Directory|Software License Terms))",
       "mooncake": "$1Azure$2",
       "comments": "Update Microsoft to Azure except Excel/Officer/Word etc."
     },
@@ -659,6 +695,10 @@
     {
       "global": "\\(mailto:askcosmosdb@microsoft\\.com\\)",
       "mooncake": "(https://www.azure.cn/support/contact/)"
+    },
+    {
+      "global": "managementgroups@microsoft.com",
+      "mooncake": "https://www.azure.cn/support/contact/"
     },
     {
       "global": "http://aka.ms/vmspecs",

@@ -1,0 +1,35 @@
+**********************Check Process Result(IncludeParentFile)**********************
+The parent file of	azure-virtual-network-limits.md	is			.
+The parent file of	container-registry-service-principal.md	is	D:\gitrep\azure-docs-pr\articles\container-registry	container-registry-auth-aci.md	.
+The parent file of	container-registry-build-preview-note.md	is	D:\gitrep\azure-docs-pr\articles\container-registry	container-registry-build-overview.md	.
+The parent file of	event-grid-register-provider-cli.md	is	D:\gitrep\azure-docs-pr\articles\container-registry	container-registry-event-grid-quickstart.md	.
+The parent file of	load-balancer-comparison-table.md	is	D:\gitrep\azure-docs-pr\articles\load-balancer	load-balancer-overview.md	.
+The parent file of	site-recovery-configuration-and-scaleout-process-server-requirements.md	is	D:\gitrep\azure-docs-pr\articles\site-recovery	physical-azure-set-up-source.md	.
+The parent file of	site-recovery-prepare-push-install-mob-svc-lin.md	is	D:\gitrep\azure-docs-pr\articles\site-recovery	vmware-azure-install-mobility-service.md	.
+The parent file of	site-recovery-prepare-push-install-mob-svc-win.md	is	D:\gitrep\azure-docs-pr\articles\site-recovery	vmware-azure-install-mobility-service.md	.
+The parent file of	site-recovery-vmware-unregister-process-server.md	is	D:\gitrep\azure-docs-pr\articles\site-recovery	vmware-azure-manage-process-server.md	.
+The parent file of	virtual-machines-common-acu.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	acu.md	.
+The parent file of	virtual-machines-common-allocation-failure.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	allocation-failure.md	.
+The parent file of	ansible-create-resource-group.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	ansible-install-configure.md	.
+The parent file of	virtual-machines-common-backup-and-disaster-recovery-for-azure-iaas-disks.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	backup-and-disaster-recovery-for-azure-iaas-disks.md	.
+The parent file of	virtual-machines-common-b-series-burstable.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	b-series-burstable.md	.
+The parent file of	azure-storage-limits-vm-disks-managed.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	disk-scalability-targets.md	.
+The parent file of	virtual-machines-disks-standard-ssd.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	disks-standard-ssd.md	.
+The parent file of	virtual-machines-faq-for-disks.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	faq-for-disks.md	.
+The parent file of	virtual-machines-common-how-to-enable-write-accelerator.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	how-to-enable-write-accelerator.md	.
+The parent file of	virtual-machines-common-infrastructure-automation.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	infrastructure-automation.md	.
+The parent file of	virtual-machines-common-maintenance-notifications.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	maintenance-notifications.md	.
+The parent file of	virtual-machines-common-mitigate-se.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	mitigate-se.md	.
+The parent file of	virtual-machines-common-network-overview.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	network-overview.md	.
+The parent file of	virtual-machines-common-portal-create-fqdn.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	portal-create-fqdn.md	.
+The parent file of	virtual-machines-common-premium-storage.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	premium-storage.md	.
+The parent file of	virtual-machines-common-premium-storage-performance.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	premium-storage-performance.md	.
+The parent file of	virtual-machines-common-prepay-reserved-vm-instances.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	prepay-reserved-vm-instances.md	.
+The parent file of	virtual-machines-common-reserved-vm-instance-size-flexibility.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	reserved-vm-instance-size-flexibility.md	.
+The parent file of	virtual-machines-common-sizes-general.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	sizes-general.md	.
+The parent file of	virtual-machines-common-sizes-memory.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	sizes-memory.md	.
+The parent file of	virtual-machines-common-standard-storage.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	standard-storage.md	.
+The parent file of	virtual-machines-common-states-lifecycle.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	states-lifecycle.md	.
+The parent file of	sql-vm-powershell.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\windows\sql	virtual-machines-windows-portal-sql-ps-alwayson-int-listener.md	.
+The parent file of	virtual-machines-sql-server-akv-prepare.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\windows\sql	virtual-machines-windows-ps-sql-keyvault.md	.
+
