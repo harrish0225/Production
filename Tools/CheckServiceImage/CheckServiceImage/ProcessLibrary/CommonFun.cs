@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.IO;
 
-namespace CheckBrokenLink.ProcessLibrary
+namespace CheckImageService.ProcessLibrary
 {
     class CommonFun
     {

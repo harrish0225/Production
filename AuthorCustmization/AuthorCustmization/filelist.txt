@@ -1,2 +1,1 @@
-service-fabric-production-readiness-checklist.md	articles/service-fabric	09/10/2018
-stream-analytics-edge.md	articles/stream-analytics	09/10/2018
+event-hubs-metrics-azure-monitor.md	articles/event-hubs	09/17/2018

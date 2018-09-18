@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.IO;
 using System.Text.RegularExpressions;
-using CheckBrokenLink.ProcessLibrary;
+using CheckImageService.ProcessLibrary;
 using System.Threading;
 using System.Collections;
 
-namespace CheckBrokenLink
+namespace CheckImageService
 {
 
     class Program
@@ -114,10 +114,6 @@ namespace CheckBrokenLink
                     return;
                 }
             }
-
-            
-           
-            
 
 
             string filename = "";
@@ -243,13 +239,13 @@ namespace CheckBrokenLink
 
                 int iIdx = 1;
 
-                sbText.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}\t{4}", "Index", "Service","File Path", "Total Screenshots", "Adapted Screenshots"));
+                sbText.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}", "Index", "Service","File Path", "Total Screenshots", "Adapted Screenshots","Image File Name"));
                 foreach (FileCustomize curtFile in fileList)
                 {
 
                         //Console.WriteLine("{0} : {1} ",iIdx++,  curtFile.File);
                         //Console.WriteLine(curtFile.BrokenLink);
-                        sbText.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}\t{4}", iIdx++, curtFile.ServiceName,curtFile.File,curtFile.TotalImageCount,curtFile.ModifyImageCount));
+                        sbText.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}", iIdx++, curtFile.ServiceName,curtFile.File,curtFile.TotalImageCount,curtFile.ModifyImageCount,curtFile.ModifyImageName ));
 
                 }
 
@@ -266,7 +262,30 @@ namespace CheckBrokenLink
 
         public static ArrayList GetFileListByService()
         {
+
             CollectAllImageByService fileByService = new CollectAllImageByService();
+            Hashtable htbKey = new Hashtable();
+            string sPrefixService = string.Empty;
+
+            foreach (InvolvedService curtService in Enum.GetValues(typeof(InvolvedService)))
+            {
+                sPrefixService = curtService.ToString().Replace("_","-").ToLower();
+                switch (sPrefixService)
+                {
+                    case "includes":
+                        break;
+                    default:
+                        if (htbKey.ContainsKey(sPrefixService) == false)
+                        {
+                            htbKey.Add(sPrefixService, sPrefixService);
+                        }
+                        break;
+                }
+                
+            }
+
+            fileByService.HTBService = htbKey;
+
             ArrayList arrFile = new ArrayList();
             arrFile = fileByService.GetAllFileByService();
 
@@ -339,8 +358,8 @@ namespace CheckBrokenLink
         {
             Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             Console.WriteLine("Useage: CheckServiceImage -S|-F -H|-R");
-            Console.WriteLine("-S means Check broken link by service ");
-            Console.WriteLine("-F means Check broken link by filelist ");
+            Console.WriteLine("-S means Check Modified Image by service ");
+            Console.WriteLine("-F means Check Modified Image by filelist ");
             Console.WriteLine("-H means display all result which include successfully ");
             Console.WriteLine("-R means display the result ");
             Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");

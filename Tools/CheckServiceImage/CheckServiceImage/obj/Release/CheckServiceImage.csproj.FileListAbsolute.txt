@@ -1,0 +1,7 @@
+D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\bin\Release\Newtonsoft.Json.dll
+D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\bin\Release\Newtonsoft.Json.xml
+D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\bin\Release\CheckServiceImage.exe.config
+D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\bin\Release\CheckServiceImage.exe
+D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\bin\Release\CheckServiceImage.pdb
+D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\obj\Release\CheckServiceImage.exe
+D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\obj\Release\CheckServiceImage.pdb

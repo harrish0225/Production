@@ -27,6 +27,14 @@
       "mooncake": "21Vianet Azure"
     },
     {
+      "global": "myIISVMWEurope",
+      "mooncake": "myIISVMChinaNorth"
+    },
+    {
+      "global": "myWestEuropeEndpoint",
+      "mooncake": "myChinaNorthEndpoint"
+    },
+    {
       "global": "US West",
       "mooncake": "China East"
     },
@@ -140,7 +148,7 @@
       "comments": "classic web site has been obsolete now"
     },
     {
-      "global": "(\\s{1,})Microsoft([\\s{1,}|\\.{1,}])(?!(Excel|Office|Word|Account|client applications like|OLE DB Provider|\\.Net|Visual C\\+\\+|SQL server|MVP|DX|Visual Studio|Corporation|Security Essentials|Forefront Endpoint Protection|System Center Endpoint|Antimalware for Azure|Antimalware Client|Antimalware extension|Team Foundation Server|Distributed Transaction Coordinator|Root Certificate Program|Certificate Services|SQL Server|HPC Pack|Management Console|Script Center|\\.NET|Windows Server Active Directory|Software License Terms))",
+      "global": "(\\s{1,})Microsoft([\\s{1,}|\\.{1,}])(?!(Excel|Office|Word|Account|client applications like|OLE DB Provider|\\.Net|Visual C\\+\\+|SQL server|MVP|DX|Visual Studio|Corporation|Security Essentials|Forefront Endpoint Protection|System Center Endpoint|Antimalware for Azure|Antimalware Client|Antimalware extension|Team Foundation Server|Distributed Transaction Coordinator|Root Certificate Program|Certificate Services|SQL Server|HPC Pack|Management Console|Script Center|\\.NET|Windows Server Active Directory|Software License Terms|Hyper-V Server|DSM|applications))",
       "mooncake": "$1Azure$2",
       "comments": "Update Microsoft to Azure except Excel/Officer/Word etc."
     },
@@ -1227,8 +1235,8 @@
       "mooncake": "$1https://www.azure.cn/support/contact/$2"
     },
     {
-      "global": "([\\*|\\`]{1,2})Connect -AzureRmAccount -Environment AzureChinaCloud([\\*|\\`]{1,2})",
-      "mooncake": "$1Connect -AzureRmAccount$2"
+      "global": "([\\*|\\`]{1,2})Connect\\-AzureRmAccount \\-Environment AzureChinaCloud([\\*|\\`]{1,2})",
+      "mooncake": "$1Connect-AzureRmAccount$2"
     },
     {
       "global": "([\\*|\\s]{1})EastUs([\\*|\\s]{1})",

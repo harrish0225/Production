@@ -12,7 +12,7 @@ using Newtonsoft.Json.Linq;
 using System.Threading;
 using System.Net;
 
-namespace CheckBrokenLink.ProcessLibrary
+namespace CheckImageService.ProcessLibrary
 {
     public enum ConvertItem
     {
@@ -56,8 +56,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
     //public enum InvolvedService
     //{
-    //    virtual_machines,
-    //    virtual_network,
+    //    includes,
     //}
 
 
@@ -66,6 +65,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
     public enum InvolvedService
     {
+        includes,
         analysis_services,
         azure_resource_manager,
         container_registry,
@@ -81,7 +81,6 @@ namespace CheckBrokenLink.ProcessLibrary
         traffic_manager,
         virtual_machines,
         virtual_network,
-        includes,
     }
 
     //public enum InvolvedService
@@ -102,7 +101,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
     public class CollectAllImageByService : FileCustomize
     {
-
+       
         public ArrayList GetAllFileByService()
         {
             ArrayList fileList = new ArrayList();
@@ -133,7 +132,7 @@ namespace CheckBrokenLink.ProcessLibrary
                     parentpath = string.Format("{0}\\{1}", diskpath, curtService.ToString().Replace('_', '-'));
                 }
 
-                this.GetAllFilesInDirectory(parentpath,medianame);
+                this.GetAllFilesInDirectory( curtService,parentpath, medianame);
 
             }
 
@@ -186,6 +185,9 @@ namespace CheckBrokenLink.ProcessLibrary
         int modifyimagecount = 0;
         public int ModifyImageCount { get; set; }
 
+        string modifyimagename = "";
+        public string ModifyImageName { get; set; }
+
         string imagepath = "";
         public string ImagePath { get; set; }
 
@@ -229,6 +231,12 @@ namespace CheckBrokenLink.ProcessLibrary
 
         public static Object ObjJason = new Object();
 
+        private Hashtable htbSevice = new Hashtable();
+        public Hashtable HTBService
+        {
+            get { return this.htbSevice; }
+            set { this.htbSevice = value; }
+        }
 
 
         public string GetRightFileName(string[] para)
@@ -395,16 +403,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
 
 
-
-
-
-
-
-
-
-
-
-        public void GetAllFilesInDirectory(string parentPath, string medianame)
+        public void GetAllFilesInDirectory(InvolvedService curtService,string parentPath, string medianame)
         {
             
 
@@ -417,25 +416,61 @@ namespace CheckBrokenLink.ProcessLibrary
                 curtDirName = vDir.Substring(vDir.Length - medianame.Length, medianame.Length);
                 if(curtDirName==medianame)
                 {
-                    this.GetAllDirinMediaDirectory(vDir);
+                    this.GetAllDirinMediaDirectory(curtService,vDir);
                 }
                 else
                 {
-                    this.GetAllFilesInDirectory(vDir, medianame);
+                    this.GetAllFilesInDirectory(curtService,vDir, medianame);
                 }
             }
 
 
         }
 
+        public bool isCheckInvolveSpecService(string checkfile)
+        {
+            bool bExist = false;
+            Console.WriteLine(checkfile);
+          
+            checkfile =checkfile.Substring(checkfile.LastIndexOf(@"\")+1);
+            
+            foreach (string vKey in this.HTBService.Keys)
+            {
+                if(checkfile.Length>vKey.Length && vKey.Trim().ToLower()==checkfile.Substring(0,vKey.Length))
+                {
+                    bExist = true;
+                    break;
+                }
+            }
+            Console.WriteLine(bExist.ToString());
+            return bExist;
+        }
 
-        public void GetAllDirinMediaDirectory(string parentPath)
+
+        public void GetAllDirinMediaDirectory(InvolvedService curtService,string parentPath)
         {
             string[] curtFiles = System.IO.Directory.GetDirectories(parentPath);
-            foreach(string vFile in curtFiles)
+
+            switch (curtService)
             {
-                this.CheckFileList.Add(vFile.ToString());
+                case InvolvedService.includes:
+                    foreach (string vFile in curtFiles)
+                    {
+                        if (isCheckInvolveSpecService(vFile))
+                        {
+                            this.CheckFileList.Add(vFile.ToString());
+                        }
+                    }
+                    break;
+
+                default:
+                    foreach (string vFile in curtFiles)
+                    {
+                        this.CheckFileList.Add(vFile.ToString());
+                    }
+                    break;
             }
+            
         }
 
         public string GetMetuxFileName(string filepath)
@@ -448,7 +483,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
 
 
-        public void CuntOriginAndModifyImageCount(string imagefilepath, string globalpath, string mooncakepath)
+        public void CountOriginAndModifyImageCount(string imagefilepath, string globalpath, string mooncakepath)
         {
 
             FileStream fs = null;
@@ -469,10 +504,17 @@ namespace CheckBrokenLink.ProcessLibrary
                 {
                     DirectoryInfo mooncakeFolder = new DirectoryInfo(mooncakeFolderPath);
                     this.ModifyImageCount = mooncakeFolder.GetFiles().Length;
+                    FileInfo[] files = mooncakeFolder.GetFiles();
+                    foreach(FileInfo vfile in files)
+                    {
+                        this.ModifyImageName += string.Format(";{0}", vfile.Name);
+                    };
+                    this.ModifyImageName= this.ModifyImageName.Trim(';');
                 }
                 else
                 {
                     this.ModifyImageCount = 0;
+                    this.ModifyImageName = string.Empty;
                 }
                 
             }
@@ -534,7 +576,7 @@ namespace CheckBrokenLink.ProcessLibrary
                 ConvertCategory category = this.ProcessCategory;
                 Console.WriteLine(string.Format("Processing Thread[{0}] : {1}", this.Id, this.FullPath));
 
-                this.CuntOriginAndModifyImageCount(this.ImagePath, globalprefix, mooncakeprefix);
+                this.CountOriginAndModifyImageCount(this.ImagePath, globalprefix, mooncakeprefix);
 
 
                 //Check Broken Link No need to modified the content.

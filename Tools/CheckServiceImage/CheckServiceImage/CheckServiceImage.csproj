@@ -7,8 +7,8 @@
     <ProjectGuid>{B825332A-8262-4567-B571-3C5F11A04C46}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CheckBrokenLink</RootNamespace>
-    <AssemblyName>CheckBrokenLink</AssemblyName>
+    <RootNamespace>CheckServiceImage</RootNamespace>
+    <AssemblyName>CheckServiceImage</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
