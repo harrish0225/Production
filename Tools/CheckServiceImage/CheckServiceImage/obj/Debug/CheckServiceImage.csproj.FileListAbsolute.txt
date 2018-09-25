@@ -5,3 +5,4 @@ D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\bin\Debug\CheckSe
 D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\bin\Debug\CheckServiceImage.pdb
 D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\obj\Debug\CheckServiceImage.exe
 D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\obj\Debug\CheckServiceImage.pdb
+D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\obj\Debug\CheckServiceImage.csprojResolveAssemblyReference.cache

@@ -239,13 +239,13 @@ namespace CheckImageService
 
                 int iIdx = 1;
 
-                sbText.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}", "Index", "Service","File Path", "Total Screenshots", "Adapted Screenshots","Image File Name"));
+                sbText.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}", "Index", "Service","File Path", "Total Screenshots", "Adapted Screenshots","Image Status","Image File Name"));
                 foreach (FileCustomize curtFile in fileList)
                 {
 
                         //Console.WriteLine("{0} : {1} ",iIdx++,  curtFile.File);
                         //Console.WriteLine(curtFile.BrokenLink);
-                        sbText.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}", iIdx++, curtFile.ServiceName,curtFile.File,curtFile.TotalImageCount,curtFile.ModifyImageCount,curtFile.ModifyImageName ));
+                        sbText.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}", iIdx++, curtFile.ServiceName,curtFile.File,curtFile.TotalImageCount,curtFile.ModifyImageCount,curtFile.ReviewImageStatus,curtFile.ModifyImageName ));
 
                 }
 

@@ -44,6 +44,12 @@ namespace CheckImageService.ProcessLibrary
         ShowResult,
         ShowHistory,
     }
+    
+    public enum ImageStatus
+    {
+        Reviewed,
+        Pending,
+    }
 
     public enum ProcessStatus
     {
@@ -182,8 +188,12 @@ namespace CheckImageService.ProcessLibrary
         int totalimagecount = 0;
         public int TotalImageCount { get; set; }
 
+
         int modifyimagecount = 0;
         public int ModifyImageCount { get; set; }
+
+        string reviewimagestatus = "";
+        public string ReviewImageStatus { get; set; }
 
         string modifyimagename = "";
         public string ModifyImageName { get; set; }
@@ -504,6 +514,8 @@ namespace CheckImageService.ProcessLibrary
                 {
                     DirectoryInfo mooncakeFolder = new DirectoryInfo(mooncakeFolderPath);
                     this.ModifyImageCount = mooncakeFolder.GetFiles().Length;
+                    this.ReviewImageStatus = ImageStatus.Reviewed.ToString();
+
                     FileInfo[] files = mooncakeFolder.GetFiles();
                     foreach(FileInfo vfile in files)
                     {
@@ -515,6 +527,7 @@ namespace CheckImageService.ProcessLibrary
                 {
                     this.ModifyImageCount = 0;
                     this.ModifyImageName = string.Empty;
+                    this.ReviewImageStatus = ImageStatus.Pending.ToString();
                 }
                 
             }

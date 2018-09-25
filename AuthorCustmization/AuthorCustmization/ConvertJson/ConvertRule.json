@@ -148,7 +148,7 @@
       "comments": "classic web site has been obsolete now"
     },
     {
-      "global": "(\\s{1,})Microsoft([\\s{1,}|\\.{1,}])(?!(Excel|Office|Word|Account|client applications like|OLE DB Provider|\\.Net|Visual C\\+\\+|SQL server|MVP|DX|Visual Studio|Corporation|Security Essentials|Forefront Endpoint Protection|System Center Endpoint|Antimalware for Azure|Antimalware Client|Antimalware extension|Team Foundation Server|Distributed Transaction Coordinator|Root Certificate Program|Certificate Services|SQL Server|HPC Pack|Management Console|Script Center|\\.NET|Windows Server Active Directory|Software License Terms|Hyper-V Server|DSM|applications))",
+      "global": "(\\s{1,})Microsoft([\\s{1,}])(?!(Computer|Batch|Script Center|Excel|Office|Word|Account|client applications|client applications like|OLE DB Provider|\\.Net|Visual C\\+\\+|SQL server|MVP|DX|Visual Studio|Corporation|Security Essentials|Forefront Endpoint Protection|System Center Endpoint|Antimalware for Azure|Antimalware Client|Antimalware extension|Team Foundation Server|Distributed Transaction Coordinator|Root Certificate Program|Certificate Services|SQL Server|HPC Pack|Management Console|Script Center|\\.NET|Windows Server Active Directory|Software License Terms|Hyper-V Server|DSM|applications))",
       "mooncake": "$1Azure$2",
       "comments": "Update Microsoft to Azure except Excel/Officer/Word etc."
     },
@@ -1245,6 +1245,10 @@
     {
       "global": "https://(analytics|doctorwho)\\.documents\\.azure\\.cn",
       "mooncake": "https://$1.documents.azure.com"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/support/community/",
+      "mooncake": "https://www.azure.cn/support/contact/"
     }
   ],
   "CLIReplacement": [

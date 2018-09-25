@@ -1,4 +1,0 @@
-**********************Check Process Result(CheckImageByFile)**********************
-Index	Service	File Path	Total Screenshots	Adapted Screenshots	Image File Name
-1	includes	includes/app-service-api-get-started-selector.md.md	0	0	
-
