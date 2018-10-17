@@ -23,12 +23,36 @@
   ],
   "URLReplacement": [
     {
+      "global": "Azure Government",
+      "mooncake": "Azure China Cloud"
+    },
+    {
+      "global": "Party clusters are free\\, limited-time Service Fabric clusters hosted on Azure and run by the Service Fabric team\\. You can use party clusters to deploy applications and learn about the platform\\. The cluster uses a single\\, self-signed certificate for node-to-node and client-to-node security\\.",
+      "mooncake": ""
+    },
+    {
+      "global": "https://(login\\.windows\\.net|login\\.microsoftonline\\.us)",
+      "mooncake": "https://login.chinacloudapi.cn"
+    },
+    {
+      "global": "or leave a comment at the end of this document",
+      "mooncake": ""
+    },
+    {
       "global": "(M|m)icrosoft (A|a)zure",
       "mooncake": "21Vianet Azure"
     },
     {
       "global": "myIISVMWEurope",
       "mooncake": "myIISVMChinaNorth"
+    },
+    {
+      "global": "Australia Southeast or Australia East",
+      "mooncake": "China North or China East"
+    },
+    {
+      "global": "Australia",
+      "mooncake": "China"
     },
     {
       "global": "myWestEuropeEndpoint",
@@ -39,15 +63,19 @@
       "mooncake": "China East"
     },
     {
+      "global": "Central India",
+      "mooncake": "China East 2"
+    },
+    {
       "global": "Microsoft globally distributed multimodel database",
       "mooncake": "21Vianet globally distributed multimodel database"
     },
     {
-      "global": "managed by Microsoft\\.",
-      "mooncake": "managed by 21Vianet."
+      "global": "(managed by|from) Microsoft\\.",
+      "mooncake": "$1 21Vianet."
     },
     {
-      "global": "For national clouds (Azure Government, Azure China, Azure Germany)",
+      "global": "For national clouds \\(Azure Government, Azure China, Azure Germany\\)",
       "mooncake": "For Azure China cloud"
     },
     {
@@ -148,7 +176,7 @@
       "comments": "classic web site has been obsolete now"
     },
     {
-      "global": "(\\s{1,})Microsoft([\\s{1,}])(?!(Computer|Batch|Script Center|Excel|Office|Word|Account|client applications|client applications like|OLE DB Provider|\\.Net|Visual C\\+\\+|SQL server|MVP|DX|Visual Studio|Corporation|Security Essentials|Forefront Endpoint Protection|System Center Endpoint|Antimalware for Azure|Antimalware Client|Antimalware extension|Team Foundation Server|Distributed Transaction Coordinator|Root Certificate Program|Certificate Services|SQL Server|HPC Pack|Management Console|Script Center|\\.NET|Windows Server Active Directory|Software License Terms|Hyper-V Server|DSM|applications))",
+      "global": "(\\s{1,})Microsoft([\\s{1,}])(?!(Excel|Office|Edge|Word|Corporation|Visual Studio|SQL Server|Script Center|Account|client applications|client applications like|OLE DB Provider|\\.Net|Visual C\\+\\+|SQL server|MVP|DX|Visual Studio|Corporation|Security Essentials|Forefront Endpoint Protection|System Center Endpoint|Antimalware for Azure|Antimalware Client|Antimalware extension|Team Foundation Server|Distributed Transaction Coordinator|Root Certificate Program|Certificate Services|SQL Server|HPC Pack|Management Console|Script Center|\\.NET|Windows Server Active Directory|Software License Terms|Hyper-V Server|DSM|applications))",
       "mooncake": "$1Azure$2",
       "comments": "Update Microsoft to Azure except Excel/Officer/Word etc."
     },
@@ -393,6 +421,10 @@
       "global": "With its worldwide presence",
       "mooncake": "With its china-wide presence",
       "comments": "Cosmos DB the world issue change to China or multiple-region(priority)"
+    },
+    {
+      "glboal": "globally(,)",
+      "mooncake": "multiple-region$1"
     },
     {
       "global": "(Globally|Global)[ \\s]*(distributed|distribution|access|ambition|database|databases|replication|replicated)",
@@ -759,11 +791,15 @@
     },
     {
       "global": "\\(\\.\\./\\.\\./azure-supportability/resource-manager-core-quotas-request\\.md\\)",
-      "mooncake": "(https://www.azure.cn/support/support-ticket-form)"
+      "mooncake": "(https://support.azure.cn/zh-cn/support/support-azure/)"
     },
     {
       "global": "\\.azurecr\\.io",
       "mooncake": ".azurecr.cn"
+    },
+    {
+      "global": "https://docs\\.microsoft\\.com/(zh\\-cn/|en\\-us/)?visualstudio/subscriptions/subscriber\\-benefits",
+      "mooncake": "https://www.azure.cn/offers/ms-mc-arz-msdn/"
     },
     {
       "global": "yoursetting",
@@ -771,6 +807,10 @@
     }
   ],
   "URLCorrection": [
+    {
+      "global": "https://www\\.azure\\.cn/documentation/articles/powershell-install-configure(/|\\s){1}",
+      "mooncake":  "https://docs.azure.cn/zh-cn/powershell-install-configure"
+    },
     {
       "global": "However\\, other regions such as China North can be under maintenance at the same time as China East\\.",
       "mooncake": "",
@@ -830,12 +870,12 @@
     },
     {
       "global": "https://www\\.azure\\.cn/support/support-azure/{1,2}overview",
-      "mooncake": "https://www.azure.cn/support/support-ticket-form",
+      "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/",
       "comments": "there are two variant /overview and //overview"
     },
     {
       "global": "http://support\\.microsoft\\.com/oas/default.aspx\\?prid=16146",
-      "mooncake": "https://www.azure.cn/support/support-ticket-form"
+      "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/"
     },
     {
       "global": "https://www\\.azure\\.cn/support/trust-center/",
@@ -906,7 +946,7 @@
     },
     {
       "global": "https://portal\\.azure\\.cn/#create/Microsoft.Support",
-      "mooncake": "https://www.azure.cn/support/support-ticket-form",
+      "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/",
       "comments": "Replace the Create Microsoft.Support billing link"
     },
     {
@@ -1115,7 +1155,7 @@
     },
     {
       "global": "Microsoft 信任中心",
-      "mooncake": "信任中心"
+      "mooncake": "Azure 信任中心"
     },
     {
       "global": "https://www\\.azure\\.cn/overview/what-is-azure/",

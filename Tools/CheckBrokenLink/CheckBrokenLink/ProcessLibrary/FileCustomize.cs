@@ -972,6 +972,23 @@ namespace CheckBrokenLink.ProcessLibrary
             System.Net.ServicePointManager.DefaultConnectionLimit = iConCount;
             //ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
 
+            string sTimeOut = CommonFun.GetConfigurationValue("HTTPTIMEOUT", ref error);
+            if (error.Length > 0)
+            {
+                Console.WriteLine(error);
+                return;
+
+            }
+            int iTimeOut = 0;
+            converFlag = int.TryParse(sTimeOut, out iTimeOut);
+
+            if (converFlag == false)
+            {
+                Console.WriteLine(string.Format("HTTPTIMEOUT {0} is not a valid interge.", sTimeOut));
+                return;
+            }
+
+
 
             HttpWebRequest req = null;
             HttpWebResponse resp = null;
@@ -1016,7 +1033,7 @@ namespace CheckBrokenLink.ProcessLibrary
                     //req.KeepAlive = true;
                     req.ContentType = "application/x-www-form-urlencoded; charset=UTF-8";
                     req.UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36";
-                    req.Timeout = 20000;
+                    req.Timeout = iTimeOut;
                     req.AllowAutoRedirect = true;
 
 

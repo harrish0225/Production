@@ -47,19 +47,12 @@ namespace AuthorCustmization.ProcessLibrary
         azure_resource_manager,
         cosmos_db,
         container_registry,
-        event_hubs,
-        load_balancer,
-        network_watcher,
-        resiliency,
         service_fabric,
         site_recovery,
-        sql_data_warehouse,
         sql_server_stretch_database,
-        stream_analytics,
         traffic_manager,
         virtual_machines,
         virtual_network,
-        
     }
 
 
