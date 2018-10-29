@@ -23,6 +23,34 @@
   ],
   "URLReplacement": [
     {
+      "global": "(c|C)reate the file in the (C|c)loud (S|s)hell not on your local machine",
+      "mooncake": "$1reate the file on your local machine"
+    },
+    {
+      "global": "You can now connect to the VM with SSH in the Azure (C|c)loud (S|s)hell or from your local computer",
+      "mooncake": "You can now connect to the VM with SSH from your local computer"
+    },
+    {
+      "global": "https://aka\\.ms/cosmosdbfeedback\\?subject=Cosmos%20DB%20More%20Throughput%20Request",
+      "mooncake": ""
+    },
+    {
+      "global": "\\, or different regions\\. Peering virtual networks in different regions is also referred to as global peering\\.",
+      "mooncake": "."
+    },
+    {
+      "global": "When creating a global peering\\, the peered virtual networks can exist in any Azure public cloud region\\, but not in Azure national clouds\\.",
+      "mooncake": ""
+    },
+    {
+      "global": "You can only peer virtual networks in the same region in national clouds\\.",
+      "mooncake": "You can only peer virtual networks in the same region in Azure China Cloud."
+    },
+    {
+      "global": "Resources in one virtual network cannot communicate with the front-end IP address of an Azure internal load balancer in a global peered virtual network\\.",
+      "mooncake": ""
+    },
+    {
       "global": "Azure Government",
       "mooncake": "Azure China Cloud"
     },
@@ -360,7 +388,7 @@
     },
     {
       "global": "```(azure|azure-)?(cli)-interactive",
-      "mooncake": "```CLI"
+      "mooncake": "```Azure CLI"
     },
     {
       "global": "-Central-US",
@@ -389,10 +417,6 @@
     {
       "global": "hk-c-svc-west",
       "mooncake": "hk-c-svc-north"
-    },
-    {
-      "global": "https://aka\\.ms/azureasgateway",
-      "mooncake": "https://aka.ms/azureasgateway-mc"
     },
     {
       "global": "hk-c-svc-east",
@@ -491,7 +515,7 @@
       "mooncake": ""
     },
     {
-      "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(visualstudio|virtualization|system-center|vsts|windows|power-bi|xamarin)/([^\\s)]*)\\)",
+      "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(visualstudio|virtualization|system-center|vsts|windows|power-bi|xamarin|message-passing-interface)/([^\\s)]*)\\)",
       "mooncake": "(https://docs.microsoft.com/zh-cn/$2/$3)"
     },
     {
@@ -602,7 +626,7 @@
     },
     {
       "global": "((Get-AzurePublishSettingsFile)|(Add-AzureAccount)|(New-AzureStorageContext)|(Connect-AzureRmAccount))([ \\f\\t\\v]*)(-Environment AzureChinaCloud)?",
-      "mooncake": "$1 -Environment AzureChinaCloud$2"
+      "mooncake": "$1 -Environment AzureChinaCloud"
     },
     {
       "global": "^([\\s]*)(```[\\s\\S]*)(az login)([\\s\\S]*```)",
@@ -802,14 +826,26 @@
       "mooncake": "https://www.azure.cn/offers/ms-mc-arz-msdn/"
     },
     {
+      "global": "https://aka\\.ms/vmbackupmigration",
+      "mooncake": "https://docs.azure.cn/virtual-machines/windows/migration-classic-resource-manager-faq#vault"
+    },
+    {
+      "global": "You can also use \\[Cloud Shell\\]\\(/cloud\\-shell/quickstart\\) from your browser",
+      "mooncake": ""
+    },
+    {
       "global": "yoursetting",
       "mooncake": "yoursetting"
     }
   ],
   "URLCorrection": [
+     {
+      "global": "https://support\\.azure\\.cn/support/support\\-ticket\\-form",
+      "mooncake": "https://support.azure.cn/zh-cn/support/support-azure"
+    },
     {
       "global": "https://www\\.azure\\.cn/documentation/articles/powershell-install-configure(/|\\s){1}",
-      "mooncake":  "https://docs.azure.cn/zh-cn/powershell-install-configure"
+      "mooncake": "https://docs.azure.cn/zh-cn/powershell-install-configure"
     },
     {
       "global": "However\\, other regions such as China North can be under maintenance at the same time as China East\\.",
@@ -1275,7 +1311,7 @@
       "mooncake": "$1https://www.azure.cn/support/contact/$2"
     },
     {
-      "global": "([\\*|\\`]{1,2})Connect\\-AzureRmAccount \\-Environment AzureChinaCloud([\\*|\\`]{1,2})",
+      "global": "([\\*|\\`|\\[]{1,2})Connect\\-AzureRmAccount \\-Environment AzureChinaCloud([\\*|\\`|\\]]{1,2})",
       "mooncake": "$1Connect-AzureRmAccount$2"
     },
     {
