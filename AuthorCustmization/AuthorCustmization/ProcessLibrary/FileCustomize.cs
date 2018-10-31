@@ -17,7 +17,7 @@ namespace AuthorCustmization.ProcessLibrary
     public enum ConvertItem {
         global,
         mooncake,
-        validservice,
+        service,
     }
     public enum ConvertCategory
     {
@@ -218,15 +218,33 @@ namespace AuthorCustmization.ProcessLibrary
             string sTakeTime = string.Empty;
 #endif
 
+            string[] fileKey= this.Fullpath.Split('\\');
+            int iCheckStart = 0;
+            for(int i=0;i<=fileKey.Length-1;i++)
+            {
+                switch(fileKey[i].ToLower())
+                {
+                    case "articles":
+                    case "includes":
+                        iCheckStart = i;
+                        break;
+                    
+                }
+            }
+
 
             if (category==ConvertCategory.ALL || category==ConvertCategory.AuthorReplacement)
             {
                 iCount = JUrl[ConvertCategory.AuthorReplacement.ToString()].Count();
 
-
-
                 for (int i = 0; i < iCount; i++)
                 {
+                    bValidService = this.GetProcessValidService(ref JUrl, ConvertCategory.AuthorReplacement, i, ConvertItem.service, fileKey, iCheckStart,this.File);
+                    if (bValidService == false)
+                    {
+                        continue;
+                    }
+
                     bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.AuthorReplacement, i, ConvertItem.global, ref urlGlobal);
                     bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.AuthorReplacement, i, ConvertItem.mooncake, ref urlMooncake);
                     if (bGlobal && bMooncake)
@@ -621,8 +639,6 @@ namespace AuthorCustmization.ProcessLibrary
         public bool GetProcessConvertRule(ref JObject JConvert, ConvertCategory category, int iIndex, ConvertItem key,ref string valReturn)
         {
             bool bProcess = false;
-
-
             try
             {
                 valReturn = JConvert[category.ToString()][iIndex][key.ToString()].ToString();
@@ -642,29 +658,38 @@ namespace AuthorCustmization.ProcessLibrary
         }
 
 
-        public bool GetProcessConvertRuleValidService(ref JObject JConvert, ConvertCategory category, int iIndex, ConvertItem key, string filePath)
+        public bool GetProcessValidService(ref JObject JConvert, ConvertCategory category, int iIndex, ConvertItem key, string[] fileKey,int iCheckStart, string fileName)
         {
             bool bProcess = false;
             string valReturn = string.Empty;
-            string[] validKey = null;
 
             try
             {
-                valReturn = JConvert[category.ToString()][iIndex][key.ToString()].ToString();
-                validKey = valReturn.Split(':');
-                foreach(string curtVal in validKey)
+                valReturn = JConvert[category.ToString()][iIndex][key.ToString()].ToString().ToLower();
+                if(valReturn=="all")
                 {
-                    if (filePath.Contains(curtVal) == true)
-                    {
-                        bProcess = true;
-                        break;
-                    }
+                    bProcess = true;
+                    return bProcess;
                 }
-                bProcess = false;
+
+                string[] invloveService = valReturn.Split('|');
+
+                for(int i=iCheckStart+1; i<=fileKey.Length-1;i++)
+                {
+                    for(int j=0; j<= invloveService.Length-1;j++)
+                    {
+                        if (fileKey[i].ToLower() == invloveService[j].ToLower())
+                        {
+                            bProcess = true;
+                            break;
+                        }
+                    }
+
+                }
+               
             }
             catch (Exception ex)
             {
-                bProcess = true;
             }
 
             return bProcess;

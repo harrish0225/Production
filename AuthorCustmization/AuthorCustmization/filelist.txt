@@ -1,3 +1,1 @@
 create-vm-accelerated-networking-cli.md	articles/virtual-network	10/29/2018
-create-vm-accelerated-networking-powershell.md	articles/virtual-network	10/29/2018
-???? ????10?3???1?  187 0060 5174
