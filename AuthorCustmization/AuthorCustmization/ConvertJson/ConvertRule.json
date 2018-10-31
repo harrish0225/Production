@@ -1,12 +1,6 @@
 ﻿{
   "AuthorReplacement": [
     {
-      "service": "cosmos-db", 
-	    "global": "([\\s]){1}(globally|global)([\\s]){1}(?!(order|consistency models))",
-      "mooncake": " multiple-region ",
-      "comments": "It is last step to update globally single words. except for the order|consistency models."
-    },
-    {
       "service": "ALL",
       "global": "^([\\s]*)author(s)?:([\\s ]*)(.*)",
       "mooncake": "$1author: rockboyfor",
@@ -33,1005 +27,1010 @@
   ],
   "URLReplacement": [
     {
-      "service": "ALL", 
-	    "global": "(c|C)reate the file in the (C|c)loud (S|s)hell not on your local machine",
+      "service": "ALL",
+      "global": "in your (C|c)loud (S|s)hell",
+      "mooncake": "in your local shell"
+    },
+    {
+      "service": "ALL",
+      "global": "(c|C)reate the file in the (C|c)loud (S|s)hell not on your local machine",
       "mooncake": "$1reate the file on your local machine"
     },
     {
-      "service": "ALL", 
-	    "global": "You can now connect to the VM with SSH in the Azure (C|c)loud (S|s)hell or from your local computer",
+      "service": "ALL",
+      "global": "You can now connect to the VM with SSH in the Azure (C|c)loud (S|s)hell or from your local computer",
       "mooncake": "You can now connect to the VM with SSH from your local computer"
     },
     {
-      "service": "ALL", 
-	    "global": "https://aka\\.ms/cosmosdbfeedback\\?subject=Cosmos%20DB%20More%20Throughput%20Request",
+      "service": "ALL",
+      "global": "https://aka\\.ms/cosmosdbfeedback\\?subject=Cosmos%20DB%20More%20Throughput%20Request",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "\\, or different regions\\. Peering virtual networks in different regions is also referred to as global peering\\.",
+      "service": "ALL",
+      "global": "\\, or different regions\\. Peering virtual networks in different regions is also referred to as global peering\\.",
       "mooncake": "."
     },
     {
-      "service": "ALL", 
-	    "global": "When creating a global peering\\, the peered virtual networks can exist in any Azure public cloud region\\, but not in Azure national clouds\\.",
+      "service": "ALL",
+      "global": "When creating a global peering\\, the peered virtual networks can exist in any Azure public cloud region\\, but not in Azure national clouds\\.",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "You can only peer virtual networks in the same region in national clouds\\.",
+      "service": "ALL",
+      "global": "You can only peer virtual networks in the same region in national clouds\\.",
       "mooncake": "You can only peer virtual networks in the same region in Azure China Cloud."
     },
     {
-      "service": "ALL", 
-	    "global": "Resources in one virtual network cannot communicate with the front-end IP address of an Azure internal load balancer in a global peered virtual network\\.",
+      "service": "ALL",
+      "global": "Resources in one virtual network cannot communicate with the front-end IP address of an Azure internal load balancer in a global peered virtual network\\.",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "Azure Government",
+      "service": "ALL",
+      "global": "Azure Government",
       "mooncake": "Azure China Cloud"
     },
     {
-      "service": "ALL", 
-	    "global": "Party clusters are free\\, limited-time Service Fabric clusters hosted on Azure and run by the Service Fabric team\\. You can use party clusters to deploy applications and learn about the platform\\. The cluster uses a single\\, self-signed certificate for node-to-node and client-to-node security\\.",
+      "service": "ALL",
+      "global": "Party clusters are free\\, limited-time Service Fabric clusters hosted on Azure and run by the Service Fabric team\\. You can use party clusters to deploy applications and learn about the platform\\. The cluster uses a single\\, self-signed certificate for node-to-node and client-to-node security\\.",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "https://(login\\.windows\\.net|login\\.microsoftonline\\.us)",
+      "service": "ALL",
+      "global": "https://(login\\.windows\\.net|login\\.microsoftonline\\.us)",
       "mooncake": "https://login.chinacloudapi.cn"
     },
     {
-      "service": "ALL", 
-	    "global": "or leave a comment at the end of this document",
+      "service": "ALL",
+      "global": "or leave a comment at the end of this document",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "(M|m)icrosoft (A|a)zure",
+      "service": "ALL",
+      "global": "(M|m)icrosoft (A|a)zure",
       "mooncake": "21Vianet Azure"
     },
     {
-      "service": "ALL", 
-	    "global": "myIISVMWEurope",
+      "service": "ALL",
+      "global": "myIISVMWEurope",
       "mooncake": "myIISVMChinaNorth"
     },
     {
-      "service": "ALL", 
-	    "global": "Australia Southeast or Australia East",
+      "service": "ALL",
+      "global": "Australia Southeast or Australia East",
       "mooncake": "China North or China East"
     },
     {
-      "service": "ALL", 
-	    "global": "Australia",
+      "service": "ALL",
+      "global": "Australia",
       "mooncake": "China"
     },
     {
-      "service": "ALL", 
-	    "global": "myWestEuropeEndpoint",
+      "service": "ALL",
+      "global": "myWestEuropeEndpoint",
       "mooncake": "myChinaNorthEndpoint"
     },
     {
-      "service": "ALL", 
-	    "global": "US West",
+      "service": "ALL",
+      "global": "US West",
       "mooncake": "China East"
     },
     {
-      "service": "ALL", 
-	    "global": "Central India",
+      "service": "ALL",
+      "global": "Central India",
       "mooncake": "China East 2"
     },
     {
-      "service": "ALL", 
-	    "global": "Microsoft globally distributed multimodel database",
+      "service": "ALL",
+      "global": "Microsoft globally distributed multimodel database",
       "mooncake": "21Vianet globally distributed multimodel database"
     },
     {
-      "service": "ALL", 
-	    "global": "(managed by|from) Microsoft\\.",
+      "service": "ALL",
+      "global": "(managed by|from) Microsoft\\.",
       "mooncake": "$1 21Vianet."
     },
     {
-      "service": "ALL", 
-	    "global": "For national clouds \\(Azure Government, Azure China, Azure Germany\\)",
+      "service": "ALL",
+      "global": "For national clouds \\(Azure Government, Azure China, Azure Germany\\)",
       "mooncake": "For Azure China cloud"
     },
     {
-      "service": "ALL", 
-	    "global": "in the same region and (across|different) regions \\(also known as Global VNet Peering\\)",
+      "service": "ALL",
+      "global": "in the same region and (across|different) regions \\(also known as Global VNet Peering\\)",
       "mooncake": "in the same region",
       "comments": "Global VNet peering not available on MC"
     },
     {
-      "service": "ALL", 
-	    "global": "Peering virtual networks in different regions is also referred to as \\*global peering\\*\\.",
+      "service": "ALL",
+      "global": "Peering virtual networks in different regions is also referred to as \\*global peering\\*\\.",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "You can select a virtual network in the same region or in a different region\\.",
+      "service": "ALL",
+      "global": "You can select a virtual network in the same region or in a different region\\.",
       "mooncake": "You can select a virtual network in the same region.",
       "comments": "Global VNet peering not available on MC"
     },
     {
-      "service": "ALL", 
-	    "global": "You can download the list of ranges \\(prefixes\\) for the Azure \\[Public\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx\\?id=56519\\)\\, \\[US government\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx?id=57063\\)\\, \\[China\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx\\?id=57062\\)\\, and \\[Germany\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx\\?id=57064\\) clouds\\.",
+      "service": "ALL",
+      "global": "You can download the list of ranges \\(prefixes\\) for the Azure \\[Public\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx\\?id=56519\\)\\, \\[US government\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx?id=57063\\)\\, \\[China\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx\\?id=57062\\)\\, and \\[Germany\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx\\?id=57064\\) clouds\\.",
       "mooncake": "You can download the list of ranges (prefixes) for the Azure [China](https://www.microsoft.com/download/details.aspx?id=57062) clouds."
     },
     {
-      "service": "ALL", 
-	    "global": " or by using the Azure Cloud Shell\\.",
+      "service": "ALL",
+      "global": " or by using the Azure Cloud Shell\\.",
       "mooncake": ".",
       "comments": "Azure Cloud Shell on available on MC"
     },
     {
-      "service": "ALL", 
-	    "global": "To use the Azure Cloud Shell\\, select (\\*)*Try It(\\*)* in the top right corner of any command box that follows\\. The Cloud Shell signs you into Azure\\.",
+      "service": "ALL",
+      "global": "To use the Azure Cloud Shell\\, select (\\*)*Try It(\\*)* in the top right corner of any command box that follows\\. The Cloud Shell signs you into Azure\\.",
       "mooncake": "",
       "comments": ""
     },
     {
-      "service": "ALL", 
-	    "global": " To further make it clear\\, consider the following example - with Geographic routing you can make uncommon mappings such as send all traffic from Asia to endpoints in the US and all US traffic to endpoints in Asia\\.",
+      "service": "ALL",
+      "global": " To further make it clear\\, consider the following example - with Geographic routing you can make uncommon mappings such as send all traffic from Asia to endpoints in the US and all US traffic to endpoints in Asia\\.",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": " For example\\, you can set up a parent profile with geographic routing where you send all traffic from North America to a nested profile that has endpoints in the US and use performance routing to send those traffic to the best endpoint within that set\\.",
+      "service": "ALL",
+      "global": " For example\\, you can set up a parent profile with geographic routing where you send all traffic from North America to a nested profile that has endpoints in the US and use performance routing to send those traffic to the best endpoint within that set\\.",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "For example\\, an endpoint in US\\-Central Azure region can have all users from India directed to it\\.",
+      "service": "ALL",
+      "global": "For example\\, an endpoint in US\\-Central Azure region can have all users from India directed to it\\.",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "(\\()?(f|F)or example\\, if an endpoint that has region Spain goes unhealthy\\, we do not failover to another endpoint that has the region Europe assigned to it(\\))?",
+      "service": "ALL",
+      "global": "(\\()?(f|F)or example\\, if an endpoint that has region Spain goes unhealthy\\, we do not failover to another endpoint that has the region Europe assigned to it(\\))?",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "For an approximate comparison\\, calls to Azure Cosmos DB within the same region complete within 1\\-2 ms\\, but the latency between the West and East coast of the US is >50 ms\\.",
+      "service": "ALL",
+      "global": "For an approximate comparison\\, calls to Azure Cosmos DB within the same region complete within 1\\-2 ms\\, but the latency between the West and East coast of the US is >50 ms\\.",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "Party clusters offer an easy way to quickly create a Service Fabric cluster\\. Party clusters are free\\, limited-time Service Fabric clusters hosted on Azure and run by the Service Fabric team\\.",
+      "service": "ALL",
+      "global": "Party clusters offer an easy way to quickly create a Service Fabric cluster\\. Party clusters are free\\, limited-time Service Fabric clusters hosted on Azure and run by the Service Fabric team\\.",
       "mooncake": "",
       "comemnts": "Remove Party cluster on Service Fabric"
     },
     {
-      "service": "ALL", 
-	    "global": "you use the Bash environment in Azure Cloud Shell to run Service Fabric CLI commands\\.",
+      "service": "ALL",
+      "global": "you use the Bash environment in Azure Cloud Shell to run Service Fabric CLI commands\\.",
       "mooncake": "you use the Bash environment in Azure local Shell to run Service Fabric CLI commands."
     },
     {
-      "service": "ALL", 
-	    "global": "You can \\[Try Azure Cosmos DB for Free\\]\\(https://www\\.azure\\.cn/try/cosmosdb/\\) without an Azure subscription\\, free of charge and commitments\\.",
+      "service": "ALL",
+      "global": "You can \\[Try Azure Cosmos DB for Free\\]\\(https://www\\.azure\\.cn/try/cosmosdb/\\) without an Azure subscription\\, free of charge and commitments\\.",
       "mooncake": "",
       "comments": "Remove the Try Azure Cosmos DB"
     },
     {
-      "service": "ALL", 
-	    "global": "\\, but the latency between the West and East coast of the US is \\>50 ms.",
+      "service": "ALL",
+      "global": "\\, but the latency between the West and East coast of the US is \\>50 ms.",
       "mooncake": ".",
       "comments": "Remove the latency of Cosmos DB between West and East coast"
     },
     {
-      "service": "ALL", 
-	    "global": "or \\[Azure Data Factory\\](\\.\\./data-factory/connector-azure-cosmos-db\\.md)\\.",
+      "service": "ALL",
+      "global": "or \\[Azure Data Factory\\](\\.\\./data-factory/connector-azure-cosmos-db\\.md)\\.",
       "mooncake": "."
 
     },
     {
-      "service": "ALL", 
-	    "global": "For more information, see \\[Objects as parameters\\]\\(resource-manager-objects-as-parameters\\.md\\)\\.",
+      "service": "ALL",
+      "global": "For more information, see \\[Objects as parameters\\]\\(resource-manager-objects-as-parameters\\.md\\)\\.",
       "mooncake": ".",
       "comments": "Remove the /azure/architecuture invalid articles"
     },
     {
-      "service": "ALL", 
-	    "global": "(\\,)?(\\s)*then deploy the container from your registry into Azure Container Instances \\(ACI\\)\\.",
+      "service": "ALL",
+      "global": "(\\,)?(\\s)*then deploy the container from your registry into Azure Container Instances \\(ACI\\)\\.",
       "mooncake": ".",
       "comments": "Remove the Azure Container Instances"
     },
     {
-      "service": "ALL", 
-	    "global": "(\\,)?(\\s)*and the container instance\\.",
+      "service": "ALL",
+      "global": "(\\,)?(\\s)*and the container instance\\.",
       "mooncake": ".",
       "comments": "Remove the Azure Container Instances"
     },
     {
-      "service": "ALL", 
-	    "global": ", and launched an instance of it in Azure Container Instances\\. Continue to the Azure Container Instances tutorial for a deeper look at ACI\\.",
+      "service": "ALL",
+      "global": ", and launched an instance of it in Azure Container Instances\\. Continue to the Azure Container Instances tutorial for a deeper look at ACI\\.",
       "mooncake": ".",
       "comments": "Remove the Azure Container Instances"
     },
     {
-      "service": "ALL", 
-	    "global": "http(s)?://manage\\.windowsazure\\.cn/",
+      "service": "ALL",
+      "global": "http(s)?://manage\\.windowsazure\\.cn/",
       "mooncake": "https://portal.azure.cn/",
       "comments": "classic web site has been obsolete now"
     },
     {
-      "service": "ALL", 
-	    "global": "(\\s{1,})Microsoft([\\s{1,}])(?!(Excel|Office|Edge|Word|Corporation|Visual Studio|SQL Server|Script Center|Account|client applications|client applications like|OLE DB Provider|\\.Net|Visual C\\+\\+|SQL server|MVP|DX|Visual Studio|Corporation|Security Essentials|Forefront Endpoint Protection|System Center Endpoint|Antimalware for Azure|Antimalware Client|Antimalware extension|Team Foundation Server|Distributed Transaction Coordinator|Root Certificate Program|Certificate Services|SQL Server|HPC Pack|Management Console|Script Center|\\.NET|Windows Server Active Directory|Software License Terms|Hyper-V Server|DSM|applications))",
+      "service": "ALL",
+      "global": "(\\s{1,})Microsoft([\\s{1,}])(?!(Excel|Office|Edge|Word|Corporation|Visual Studio|SQL Server|Script Center|Account|client applications|client applications like|OLE DB Provider|\\.Net|Visual C\\+\\+|SQL server|MVP|DX|Visual Studio|Corporation|Security Essentials|Forefront Endpoint Protection|System Center Endpoint|Antimalware for Azure|Antimalware Client|Antimalware extension|Team Foundation Server|Distributed Transaction Coordinator|Root Certificate Program|Certificate Services|SQL Server|HPC Pack|Management Console|Script Center|\\.NET|Windows Server Active Directory|Software License Terms|Hyper-V Server|DSM|applications))",
       "mooncake": "$1Azure$2",
       "comments": "Update Microsoft to Azure except Excel/Officer/Word etc."
     },
     {
-      "service": "ALL", 
-	    "global": "You can also delete a model by using the preview Web designer feature\\.",
+      "service": "ALL",
+      "global": "You can also delete a model by using the preview Web designer feature\\.",
       "mooncake": "",
       "comments": "Analysis Service remove the web designer feature"
     },
     {
-      "service": "ALL", 
-	    "global": "where some cities lack a parent State or Province\\, such as Washington D\\.C\\.\\, Vatican City\\.",
+      "service": "ALL",
+      "global": "where some cities lack a parent State or Province\\, such as Washington D\\.C\\.\\, Vatican City\\.",
       "mooncake": "where some cities lack a parent Province.",
       "comments": "Analysise service - remove the such as Washington D.C."
     },
     {
-      "service": "ALL", 
-	    "global": "(\\.|\\n|\\r)([^\\.\\n\\r]*)\\[supported regions\\]\\(virtual-network-manage-peering\\.md#cross-region\\)[^\\.\\n\\r]*(\\.|\\n|\\r)",
+      "service": "ALL",
+      "global": "(\\.|\\n|\\r)([^\\.\\n\\r]*)\\[supported regions\\]\\(virtual-network-manage-peering\\.md#cross-region\\)[^\\.\\n\\r]*(\\.|\\n|\\r)",
       "mooncake": "$1",
       "comments": "first step 1 - to check the simaple fixed value"
     },
     {
-      "service": "ALL", 
-	    "global": "(\\.|\\n|\\r)[^\\.]*peer[^\\.]*virtual networks[^\\.]*different[^\\.]*region(s)?[^\\s]*(\\.|\\n|\\r)",
+      "service": "ALL",
+      "global": "(\\.|\\n|\\r)[^\\.]*peer[^\\.]*virtual networks[^\\.]*different[^\\.]*region(s)?[^\\s]*(\\.|\\n|\\r)",
       "mooncake": "$1",
       "comments": "first step 2 - to check the simaple fixed value"
     },
     {
-      "service": "ALL", 
-	    "global": "\\[\\!INCLUDE \\[cloud-shell-try-it(\\.md)?\\]\\(((\\.\\.\\/){1,})includes\\/cloud-shell-try-it\\.md\\)\\]",
+      "service": "ALL",
+      "global": "\\[\\!INCLUDE \\[cloud-shell-try-it(\\.md)?\\]\\(((\\.\\.\\/){1,})includes\\/cloud-shell-try-it\\.md\\)\\]",
       "mooncake": "[!INCLUDE [azure-cli-2-azurechinacloud-environment-parameter]($2includes/azure-cli-2-azurechinacloud-environment-parameter.md)]",
       "comments": "replace [!INCLUDE [cloud-shell-try-it.md](../../../includes/cloud-shell-try-it.md)] "
     },
     {
-      "service": "ALL", 
-	    "global": "\\[\\!INCLUDE \\[(cloud-shell-try-it|cloud-shell-powershell)(\\.md)?\\]\\(((\\.\\.\\/){1,})includes\\/cloud-shell-powershell\\.md\\)\\]",
+      "service": "ALL",
+      "global": "\\[\\!INCLUDE \\[(cloud-shell-try-it|cloud-shell-powershell)(\\.md)?\\]\\(((\\.\\.\\/){1,})includes\\/cloud-shell-powershell\\.md\\)\\]",
       "mooncake": "<!--[!INCLUDE [$1](../../../includes/cloud-shell-powershell.md)]-->",
       "comments": "replace [!INCLUDE [cloud-shell-try-it.md](../../../includes/cloud-shell-powershell.md)] "
     },
     {
-      "service": "ALL", 
-	    "global": "connect virtual networks that exist in different subscriptions and regions",
+      "service": "ALL",
+      "global": "connect virtual networks that exist in different subscriptions and regions",
       "mooncake": "connect virtual networks that exist in different subscriptions",
       "comments": "virutal network - remove the different regions."
     },
     {
-      "service": "ALL", 
-	    "global": "(\\*)*(\\s)*Global VNet peering - connecting VNets across Azure regions",
+      "service": "ALL",
+      "global": "(\\*)*(\\s)*Global VNet peering - connecting VNets across Azure regions",
       "mooncake": "",
       "comments": "virtual network - remove the Global peering across regions"
     },
     {
-      "service": "ALL", 
-	    "global": "The benefits of using virtual network peering\\, whether local or global\\,",
+      "service": "ALL",
+      "global": "The benefits of using virtual network peering\\, whether local or global\\,",
       "mooncake": "The benefits of using virtual network local peering,",
       "comments": "virtul network - remove the global virtual network peering"
     },
     {
-      "service": "ALL", 
-	    "global": "(\\*)*(\\s)*The ability to transfer data across Azure subscriptions\\, deployment models\\, and across Azure regions\\.",
+      "service": "ALL",
+      "global": "(\\*)*(\\s)*The ability to transfer data across Azure subscriptions\\, deployment models\\, and across Azure regions\\.",
       "mooncake": "* The ability to transfer data across Azure subscriptions, deployment models.",
       "comments": "virtual network - remove the across Azure regions"
     },
     {
-      "service": "ALL", 
-	    "global": "Gateway transit is not supported in the peering relationship between virtual networks created in different regions\\.",
+      "service": "ALL",
+      "global": "Gateway transit is not supported in the peering relationship between virtual networks created in different regions\\.",
       "mooncake": "",
       "comments": "virtual network - remove the virtual networks created in different regions."
     },
     {
-      "service": "ALL", 
-	    "global": "If you want to select a virtual network in a different region\\, you must select a virtual network in a \\[supported region\\]\\(\\#cross\\-region\\)\\.",
+      "service": "ALL",
+      "global": "If you want to select a virtual network in a different region\\, you must select a virtual network in a \\[supported region\\]\\(\\#cross\\-region\\)\\.",
       "mooncake": "",
       "comments": "virtual network - remove the virtual network in a different region"
     },
     {
-      "service": "ALL", 
-	    "global": "\\, or \\[supported different\\]\\(\\#requirements\\-and\\-constraints\\)",
+      "service": "ALL",
+      "global": "\\, or \\[supported different\\]\\(\\#requirements\\-and\\-constraints\\)",
       "mooncake": "",
       "comments": "virtual network - remove the virtual network in supported different"
     },
     {
-      "service": "ALL", 
-	    "global": "You cannot enable this option if you\\'re peering virtual networks in different regions\\.",
+      "service": "ALL",
+      "global": "You cannot enable this option if you\\'re peering virtual networks in different regions\\.",
       "mooncake": "",
       "comments": "virtual network - remove the virtual network in different regions"
     },
     {
-      "service": "ALL", 
-	    "global": "\\<a name\\=\\\"cross\\-region\\\"\\>\\<\\/a\\>",
+      "service": "ALL",
+      "global": "\\<a name\\=\\\"cross\\-region\\\"\\>\\<\\/a\\>",
       "mooncake": "",
       "comments": "virtual network - remove cross-region"
     },
     {
-      "service": "ALL", 
-	    "global": "You can peer virtual networks in the same region\\, or different regions\\.",
+      "service": "ALL",
+      "global": "You can peer virtual networks in the same region\\, or different regions\\.",
       "mooncake": "You can peer virtual networks in the same region.",
       "comments": ""
     },
     {
-      "service": "ALL", 
-	    "global": "(\\,)*(\\s)*but do apply when the virtual networks are (globally|multiple-region) peered(\\.)*",
+      "service": "ALL",
+      "global": "(\\,)*(\\s)*but do apply when the virtual networks are (globally|multiple-region) peered(\\.)*",
       "mooncake": "$4",
       "comments": "virtual network- remove the globally peered"
     },
     {
-      "service": "ALL", 
-	    "global": "(\\,)*(\\s)*but not in Azure national clouds(\\.)*",
+      "service": "ALL",
+      "global": "(\\,)*(\\s)*but not in Azure national clouds(\\.)*",
       "mooncake": "$3",
       "comments": "virtual network- remove the globally peered"
     },
     {
-      "service": "ALL", 
-	    "global": "\\-(\\s)*Communication across globally peered virtual networks through the following VM types is not supported\\: \\[High performance compute\\]\\(\\.\\./virtual-machines/windows/sizes-hpc\\.md\\) and \\[GPU\\]\\(\\.\\./virtual-machines/windows/sizes-gpu\\.md\\)\\. This includes H\\, NC\\, NV\\, NCv2\\, NCv3\\, and ND series VMs\\.",
+      "service": "ALL",
+      "global": "\\-(\\s)*Communication across globally peered virtual networks through the following VM types is not supported\\: \\[High performance compute\\]\\(\\.\\./virtual-machines/windows/sizes-hpc\\.md\\) and \\[GPU\\]\\(\\.\\./virtual-machines/windows/sizes-gpu\\.md\\)\\. This includes H\\, NC\\, NV\\, NCv2\\, NCv3\\, and ND series VMs\\.",
       "mooncake": "",
       "comments": "virtial network - remove the across globally peered virtual network"
     },
     {
-      "service": "ALL", 
-	    "global": "You can also peer virtual networks in different \\[supported regions\\]\\(virtual-network-manage-peering\\.md\\#cross-region\\) and in \\[different Azure subscriptions\\]\\(create-peering-different-subscriptions\\.md\\#powershell\\)",
+      "service": "ALL",
+      "global": "You can also peer virtual networks in different \\[supported regions\\]\\(virtual-network-manage-peering\\.md\\#cross-region\\) and in \\[different Azure subscriptions\\]\\(create-peering-different-subscriptions\\.md\\#powershell\\)",
       "mooncake": "You can also peer virtual networks in [different Azure subscriptions](create-peering-different-subscriptions.md#powershell)",
       "comments": "virtual network - STEP 1 remove the in different supported regions "
     },
     {
-      "service": "ALL", 
-	    "global": "You can also peer virtual networks in different \\[supported regions\\]\\(virtual-network-manage-peering\\.md\\#cross-region\\)\\.",
+      "service": "ALL",
+      "global": "You can also peer virtual networks in different \\[supported regions\\]\\(virtual-network-manage-peering\\.md\\#cross-region\\)\\.",
       "mooncake": "",
       "comments": "virtual network - STEP 2 remove the in different supported regions"
     },
     {
-      "service": "ALL", 
-	    "global": "Regional service tags are not supported on national clouds\\, only in global format\\, (e\\.g\\.|for example) Storage\\, Sql\\.",
+      "service": "ALL",
+      "global": "Regional service tags are not supported on national clouds\\, only in global format\\, (e\\.g\\.|for example) Storage\\, Sql\\.",
       "mooncake": "",
       "comments": "virtual network - remove Region service"
     },
     {
-      "service": "ALL", 
-	    "global": "Not Available on Regional service tags are not supported on national clouds\\, only in global format\\, (e.g.|for example) Storage\\, Sql\\.",
+      "service": "ALL",
+      "global": "Not Available on Regional service tags are not supported on national clouds\\, only in global format\\, (e.g.|for example) Storage\\, Sql\\.",
       "mooncake": "",
       "comments": "virtual network - remove Region service"
     },
     {
-      "service": "ALL", 
-	    "global": "If you do not want to use public IP\\, and/or want to avoid extra hops\\, you can use Azure \\[Virtual Network peering\\]\\(\\.\\./virtual-network/virtual-network-peering-overview\\.md\\) to peer virtual networks across \\[supported Azure regions\\]\\(\\.\\./virtual-network/virtual-network-manage-peering\\.md\\#cross-region\\).",
+      "service": "ALL",
+      "global": "If you do not want to use public IP\\, and/or want to avoid extra hops\\, you can use Azure \\[Virtual Network peering\\]\\(\\.\\./virtual-network/virtual-network-peering-overview\\.md\\) to peer virtual networks across \\[supported Azure regions\\]\\(\\.\\./virtual-network/virtual-network-manage-peering\\.md\\#cross-region\\).",
       "mooncake": "",
       "comments": "site recovery - remove the cross region "
     },
     {
-      "service": "ALL", 
-	    "global": "Post comments or questions at the end of this article or on the",
+      "service": "ALL",
+      "global": "Post comments or questions at the end of this article or on the",
       "mooncake": "Post comments or questions on the",
       "comments": "Remove the at the end of this articls"
     },
     {
-      "service": "ALL", 
-	    "global": "The Azure Cloud Shell is a free interactive shell\\.([\\s]*)It has common Azure tools preinstalled and configured to use with your account\\.",
+      "service": "ALL",
+      "global": "The Azure Cloud Shell is a free interactive shell\\.([\\s]*)It has common Azure tools preinstalled and configured to use with your account\\.",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "but do apply when the virtual networks are (globally|multiple-region) peered",
+      "service": "ALL",
+      "global": "but do apply when the virtual networks are (globally|multiple-region) peered",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "- Communication across (global|multiple-region) peered virtual networks through the following VM types is not supported: \\[High performance compute\\]\\(\\.\\./virtual-machines/windows/sizes-hpc\\.md\\) and \\[GPU\\]\\(\\.\\./virtual-machines/windows/sizes-gpu\\.md\\)\\. This includes H\\, NC\\, NV\\, NCv2\\, NCv3\\, and ND series VMs\\.",
+      "service": "ALL",
+      "global": "- Communication across (global|multiple-region) peered virtual networks through the following VM types is not supported: \\[High performance compute\\]\\(\\.\\./virtual-machines/windows/sizes-hpc\\.md\\) and \\[GPU\\]\\(\\.\\./virtual-machines/windows/sizes-gpu\\.md\\)\\. This includes H\\, NC\\, NV\\, NCv2\\, NCv3\\, and ND series VMs\\.",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "whether local or (multiple-region|global)\\,",
+      "service": "ALL",
+      "global": "whether local or (multiple-region|global)\\,",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": " and across Azure regions\\.",
+      "service": "ALL",
+      "global": " and across Azure regions\\.",
       "mooncake": ""
 
     },
     {
-      "service": "ALL", 
-	    "global": "AzureCloud",
+      "service": "ALL",
+      "global": "AzureCloud",
       "mooncake": "AzureChinaCloud"
     },
     {
-      "service": "ALL", 
-	    "global": "\\?toc\\=\\%2fcli\\%2fazure\\%2ftoc\\.json",
+      "service": "ALL",
+      "global": "\\?toc\\=\\%2fcli\\%2fazure\\%2ftoc\\.json",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "\\?toc\\=\\%2fpowershell\\%2fmodule\\%2ftoc\\.json",
+      "service": "ALL",
+      "global": "\\?toc\\=\\%2fpowershell\\%2fmodule\\%2ftoc\\.json",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "Azure\\.com",
+      "service": "ALL",
+      "global": "Azure\\.com",
       "mooncake": "Azure.cn"
     },
     {
-      "service": "ALL", 
-	    "global": "([\\s]){1}(Microsoft|microsoft)([\\s]){1}",
+      "service": "ALL",
+      "global": "([\\s]){1}(Microsoft|microsoft)([\\s]){1}",
       "mooncake": "$1Azure$3"
     },
     {
-      "service": "ALL", 
-	    "global": "Microsoft (backbone|peering|peer)",
+      "service": "ALL",
+      "global": "Microsoft (backbone|peering|peer)",
       "mooncake": "Azure $1"
     },
     {
-      "service": "ALL", 
-	    "global": "free account",
+      "service": "ALL",
+      "global": "free account",
       "mooncake": "trial account"
     },
     {
-      "service": "ALL", 
-	    "global": "```(azure|azure-)?(powershell)-interactive",
+      "service": "ALL",
+      "global": "```(azure|azure-)?(powershell)-interactive",
       "mooncake": "```PowerShell"
     },
     {
-      "service": "ALL", 
-	    "global": "```(azure|azure-)?(cli)-interactive",
+      "service": "ALL",
+      "global": "```(azure|azure-)?(cli)-interactive",
       "mooncake": "```Azure CLI"
     },
     {
-      "service": "ALL", 
-	    "global": "-Central-US",
+      "service": "ALL",
+      "global": "-Central-US",
       "mooncake": "-East-CN"
     },
     {
-      "service": "ALL", 
-	    "global": "-west-us",
+      "service": "ALL",
+      "global": "-west-us",
       "mooncake": "-north-china"
     },
     {
-      "service": "ALL", 
-	    "global": "-east-us",
+      "service": "ALL",
+      "global": "-east-us",
       "mooncake": "-east-china"
     },
     {
-      "service": "ALL", 
-	    "global": "=WESTUS",
+      "service": "ALL",
+      "global": "=WESTUS",
       "mooncake": "=NORTHCHINA"
     },
     {
-      "service": "ALL", 
-	    "global": "\\#azure-(private|public)-peering",
+      "service": "ALL",
+      "global": "\\#azure-(private|public)-peering",
       "mooncake": "#$1-peering"
     },
     {
-      "service": "ALL", 
-	    "global": "\\#replicated machines",
+      "service": "ALL",
+      "global": "\\#replicated machines",
       "mooncake": "#replicated-machines"
     },
     {
-      "service": "ALL", 
-	    "global": "hk-c-svc-west",
+      "service": "ALL",
+      "global": "hk-c-svc-west",
       "mooncake": "hk-c-svc-north"
     },
     {
-      "service": "ALL", 
-	    "global": "hk-c-svc-east",
+      "service": "ALL",
+      "global": "hk-c-svc-east",
       "mooncake": "hk-c-svc-east"
     },
     {
-      "service": "ALL", 
-	    "global": "Microsoft engineering teams",
+      "service": "ALL",
+      "global": "Microsoft engineering teams",
       "mooncake": "Azure engineering teams"
     },
     {
-      "service": "ALL", 
-	    "global": "over the world",
+      "service": "ALL",
+      "global": "over the world",
       "mooncake": "over multiple-region",
       "comments": "Cosmos DB the world issue change to China or multiple-region"
     },
     {
-      "service": "ALL", 
-	    "global": "(world-wide|across the world|across the globe)",
+      "service": "ALL",
+      "global": "(world-wide|across the world|across the globe)",
       "mooncake": "across multiple-region",
       "comments": "Cosmos DB the world issue change to China or multiple-region(priority)"
     },
     {
-      "service": "ALL", 
-	    "global": "(around the world|worldwide|around the globe)",
+      "service": "ALL",
+      "global": "(around the world|worldwide|around the globe)",
       "mooncake": "around multiple-region",
       "comments": "Cosmos DB the world issue change to China or multiple-region(priority)"
     },
     {
-      "service": "ALL", 
-	    "global": "With its worldwide presence",
+      "service": "ALL",
+      "global": "With its worldwide presence",
       "mooncake": "With its china-wide presence",
       "comments": "Cosmos DB the world issue change to China or multiple-region(priority)"
     },
     {
-      "service": "cosmos-db", 
+      "service": "cosmos-db",
       "global": "globally(,)",
       "mooncake": "multiple-region$1"
     },
     {
-      "service": "cosmos-db", 
-	    "global": "(Globally|Global)[ \\s]*(distributed|distribution|access|ambition|database|databases|replication|replicated)",
+      "service": "cosmos-db",
+      "global": "(Globally|Global)[ \\s]*(distributed|distribution|access|ambition|database|databases|replication|replicated)",
       "mooncake": "Multiple-region $2",
       "comments": "Cosmos DB the world issue change to China or multiple-region"
     },
     {
-      "service": "cosmos-db", 
-	    "global": "(globally|global)[ \\s]*(distributed|distribution|access|ambition|database|databases|replication|replicated)",
+      "service": "cosmos-db",
+      "global": "(globally|global)[ \\s]*(distributed|distribution|access|ambition|database|databases|replication|replicated)",
       "mooncake": "multiple-region $2",
       "comments": "Cosmos DB the world issue change to China or multiple-region"
     },
     {
-      "service": "cosmos-db", 
-	    "global": "globally-distributed",
+      "service": "cosmos-db",
+      "global": "globally-distributed",
       "mooncake": "multiple-region distributed",
       "comments": "Cosmos DB the world issue change to China or multiple-region"
     },
     {
-      "service": "cosmos-db", 
-	    "global": "(planet-scale |global scale|planet scale)",
+      "service": "cosmos-db",
+      "global": "(planet-scale |global scale|planet scale)",
       "mooncake": "multiple-region scale",
       "comments": "Cosmos DB the world issue change to China or multiple-region"
     },
     {
-      "service": "cosmos-db", 
-	    "global": "anywhere in the world",
+      "service": "cosmos-db",
+      "global": "anywhere in the world",
       "mooncake": "anywhere in China",
       "comments": "Cosmos DB the world issue change to China or multiple-region"
     },
     {
-      "service": "cosmos-db", 
-	    "global": "(G|g)lobally replicates",
+      "service": "cosmos-db",
+      "global": "(G|g)lobally replicates",
       "mooncake": "multiple data-center replicates",
       "comments": "Cosmos DB the world issue change to China or multiple-region"
     },
     {
-      "service": "cosmos-db", 
-	    "global": "(D|d)istribute data globally",
+      "service": "cosmos-db",
+      "global": "(D|d)istribute data globally",
       "mooncake": "$1istribute data multiple-region"
     },
     {
-      "service": "cosmos-db", 
-	    "global": "([\\s]){1}(globally|global)([\\s]){1}(?!(order|consistency models))",
+      "service": "cosmos-db",
+      "global": "([\\s]){1}(globally|global)([\\s]){1}(?!(order|consistency models))",
       "mooncake": " multiple-region ",
       "comments": "It is last step to update globally single words. except for the order|consistency models."
     },
     {
-      "service": "ALL", 
-	    "global": "href:([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(dotnet|powershell|cli|rest|java|sql|api|biztalk|system-center|windows)(\\/\\S+)",
+      "service": "ALL",
+      "global": "href:([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(dotnet|powershell|cli|rest|java|sql|api|biztalk|system-center|windows)(\\/\\S+)",
       "mooncake": "href:$1http://docs.microsoft.com$2$3$4",
       "comments": "replace the relative URL with global full URL format - Step 1"
     },
     {
-      "service": "ALL", 
-	    "global": "either run the commands in the \\[Azure Cloud Shell\\]\\(https://shell.azure.com/powershell\\)\\, or",
+      "service": "ALL",
+      "global": "either run the commands in the \\[Azure Cloud Shell\\]\\(https://shell.azure.com/powershell\\)\\, or",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "either run the commands in the \\[Azure Cloud Shell\\]\\(https://shell.azure.com/bash\\)\\, or",
+      "service": "ALL",
+      "global": "either run the commands in the \\[Azure Cloud Shell\\]\\(https://shell.azure.com/bash\\)\\, or",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "http://go\\.microsoft\\.com/fwlink/?LinkId=544799",
+      "service": "ALL",
+      "global": "http://go\\.microsoft\\.com/fwlink/?LinkId=544799",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.cve\\.mitre\\.org/",
+      "service": "ALL",
+      "global": "https://www\\.cve\\.mitre\\.org/",
       "mooncake": "https://cve.mitre.org/"
     },
     {
-      "service": "ALL", 
-	    "global": "The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article\\. It has common Azure tools preinstalled and configured to use with your account\\.",
+      "service": "ALL",
+      "global": "The Azure Cloud Shell is a free interactive shell that you can use to run the steps in this article\\. It has common Azure tools preinstalled and configured to use with your account\\.",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(visualstudio|virtualization|system-center|vsts|windows|power-bi|xamarin|message-passing-interface)/([^\\s)]*)\\)",
+      "service": "ALL",
+      "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(visualstudio|virtualization|system-center|vsts|windows|power-bi|xamarin|message-passing-interface)/([^\\s)]*)\\)",
       "mooncake": "(https://docs.microsoft.com/zh-cn/$2/$3)"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(visual-studio)/([^\\s)]*)\\)",
+      "service": "ALL",
+      "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(visual-studio)/([^\\s)]*)\\)",
       "mooncake": "(https://docs.microsoft.com/zh-cn/visualstudio/$3)"
     },
     {
-      "service": "ALL", 
-	    "global": "management\\.azure\\.com",
+      "service": "ALL",
+      "global": "management\\.azure\\.com",
       "mooncake": "management.chinacloudapi.cn"
     },
     {
-      "service": "ALL", 
-	    "global": "https://aka\\.ms/skurestriction",
+      "service": "ALL",
+      "global": "https://aka\\.ms/skurestriction",
       "mooncake": "https://support.windowsazure.cn/support/support-azure"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(http://azure\\.microsoft\\.com/\\)",
+      "service": "ALL",
+      "global": "\\(http://azure\\.microsoft\\.com/\\)",
       "mooncake": "(https://www.azure.cn/)"
     },
     {
-      "service": "ALL", 
-	    "global": "\\((\\s)*/templates/([^\\(\\)]*)\\)",
+      "service": "ALL",
+      "global": "\\((\\s)*/templates/([^\\(\\)]*)\\)",
       "mooncake": "(https://docs.microsoft.com/zh-cn/azure/templates/$2)"
     },
     {
-      "service": "ALL", 
-	    "global": "https://aka\\.ms/asr-deployment-planner-doc",
+      "service": "ALL",
+      "global": "https://aka\\.ms/asr-deployment-planner-doc",
       "mooncake": "/site-recovery/site-recovery-deployment-planner"
     },
     {
-      "service": "ALL", 
-	    "global": "https://aka\\.ms/servicetags",
+      "service": "ALL",
+      "global": "https://aka\\.ms/servicetags",
       "mooncake": "/virtual-network/security-overview#service-tags"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azure\\.microsoft\\.com/pricing/member-offers/msdn-benefits-details/",
+      "service": "ALL",
+      "global": "https://azure\\.microsoft\\.com/pricing/member-offers/msdn-benefits-details/",
       "mooncake": "https://www.azure.cn/support/legal/offer-rate-plans/",
       "comments": "Replace the Microsoft.com member-offers link"
     },
     {
-      "service": "ALL", 
-	    "global": "https://aka\\.ms/azure-stream-analytics-get-started-iot",
+      "service": "ALL",
+      "global": "https://aka\\.ms/azure-stream-analytics-get-started-iot",
       "mooncake": "https://github.com/Azure/azure-stream-analytics/tree/master/Samples/GettingStarted"
     },
     {
-      "service": "ALL", 
-	    "global": "\\([\\s]*\\/architecture\\/([^\\)]*)\\)",
+      "service": "ALL",
+      "global": "\\([\\s]*\\/architecture\\/([^\\)]*)\\)",
       "mooncake": "(https://docs.microsoft.com/azure/architecture/$1)",
       "comments": "repalce (/architecture/XXXX) Format URL"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azure\\.microsoft\\.com/",
+      "service": "ALL",
+      "global": "https://azure\\.microsoft\\.com/",
       "mooncake": "https://www.azure.cn/"
     },
     {
-      "service": "ALL", 
-	    "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkId=544799",
+      "service": "ALL",
+      "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkId=544799",
       "mooncake": "https://github.com/Azure/azure-quickstart-templates/tree/master/201-2-vms-loadbalancer-lbrules"
     },
     {
-      "service": "ALL", 
-	    "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkId=544800",
+      "service": "ALL",
+      "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkId=544800",
       "mooncake": "https://github.com/Azure/azure-quickstart-templates/tree/master/201-2-vms-internal-load-balancer"
     },
     {
-      "service": "ALL", 
-	    "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkId=544801",
+      "service": "ALL",
+      "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkId=544801",
       "mooncake": "https://github.com/Azure/azure-quickstart-templates/tree/master/201-2-vms-loadbalancer-natrules"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azure\\.microsoft\\.com/en-in/resources/templates/service-fabric-secure-cluster-5-node-1-nodetype/",
+      "service": "ALL",
+      "global": "https://azure\\.microsoft\\.com/en-in/resources/templates/service-fabric-secure-cluster-5-node-1-nodetype/",
       "mooncake": "https://github.com/Azure/azure-quickstart-templates/tree/master/service-fabric-secure-cluster-5-node-1-nodetype"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azure\\.microsoft\\.com/regions/services/",
+      "service": "ALL",
+      "global": "https://azure\\.microsoft\\.com/regions/services/",
       "mooncake": "https://www.azure.cn/zh-cn/home/features/products-by-region",
       "comments": "Step 1 to convert first level"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azure\\.microsoft\\.com/regions/",
+      "service": "ALL",
+      "global": "https://azure\\.microsoft\\.com/regions/",
       "mooncake": "https://www.azure.cn/support/service-dashboard/",
       "comments": "Step 2 to convert second level"
     },
     {
-      "service": "ALL", 
-	    "global": "https://aka\\.ms/azure-regions",
+      "service": "ALL",
+      "global": "https://aka\\.ms/azure-regions",
       "mooncake": "https://www.azure.cn/zh-cn/home/features/products-by-region"
     },
     {
-      "service": "ALL", 
-	    "global": "Microsoft Azure Datacenter IP Ranges",
+      "service": "ALL",
+      "global": "Microsoft Azure Datacenter IP Ranges",
       "mooncake": "Azure Datacenter IP Ranges in China"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)?download/details\\.aspx\\?id=41653",
+      "service": "ALL",
+      "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)?download/details\\.aspx\\?id=41653",
       "mooncake": "https://www.microsoft.com/download/details.aspx?id=42064",
       "comments": "replace IP Range with mooncake https://azure.microsoft.com/regions/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)?download/confirmation\\.aspx\\?id=41653",
+      "service": "ALL",
+      "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)?download/confirmation\\.aspx\\?id=41653",
       "mooncake": "https://www.microsoft.com/download/details.aspx?id=42064",
       "comments": "replace IP Range with mooncake https://azure.microsoft.com/regions/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azure\\.microsoft\\.com/features/azure-portal/availability/",
+      "service": "ALL",
+      "global": "https://azure\\.microsoft\\.com/features/azure-portal/availability/",
       "mooncake": "https://www.azure.cn/support/service-dashboard/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://msdn\\.microsoft\\.com/library/azure/hh367516.aspx",
+      "service": "ALL",
+      "global": "https://msdn\\.microsoft\\.com/library/azure/hh367516.aspx",
       "mooncake": "../service-bus-messaging/service-bus-queues-topics-subscriptions.md"
     },
     {
-      "service": "ALL", 
-	    "global": "http://aka\\.ms/servicefabricdocs",
+      "service": "ALL",
+      "global": "http://aka\\.ms/servicefabricdocs",
       "mooncake": "..//service-fabric/index.yml"
     },
     {
-      "service": "ALL", 
-	    "global": "Login-AzureRmAccount (-EnvironmentName AzureChinaCloud)?",
+      "service": "ALL",
+      "global": "Login-AzureRmAccount (-EnvironmentName AzureChinaCloud)?",
       "mooncake": "Login-AzureRmAccount -EnvironmentName AzureChinaCloud"
     },
     {
-      "service": "ALL", 
-	    "global": "((Get-AzurePublishSettingsFile)|(Add-AzureAccount)|(New-AzureStorageContext)|(Connect-AzureRmAccount))([ \\f\\t\\v]*)(-Environment AzureChinaCloud)?",
+      "service": "ALL",
+      "global": "((Get-AzurePublishSettingsFile)|(Add-AzureAccount)|(New-AzureStorageContext)|(Connect-AzureRmAccount))([ \\f\\t\\v]*)(-Environment AzureChinaCloud)?",
       "mooncake": "$1 -Environment AzureChinaCloud"
     },
     {
-      "service": "ALL", 
-	    "global": "^([\\s]*)(```[\\s\\S]*)(az login)([\\s\\S]*```)",
+      "service": "ALL",
+      "global": "^([\\s]*)(```[\\s\\S]*)(az login)([\\s\\S]*```)",
       "mooncake": "$1$2az cloud set -n AzureChinaCloud\n$1az login\n$1#az cloud set -n AzureCloud   //means return to global azure$4"
     },
     {
-      "service": "ALL", 
-	    "global": "cloudapp\\.azure\\.com",
+      "service": "ALL",
+      "global": "cloudapp\\.azure\\.com",
       "mooncake": "cloudapp.chinacloudapi.cn"
     },
     {
-      "service": "ALL", 
-	    "global": "\\([\\s ]*(\\/|\\/zh-cn\\/|\\/en-us\\/)?(dotnet|powershell|cli|rest|java|sql|api|biztalk|system-center)(\\/\\S+)\\)",
+      "service": "ALL",
+      "global": "\\([\\s ]*(\\/|\\/zh-cn\\/|\\/en-us\\/)?(dotnet|powershell|cli|rest|java|sql|api|biztalk|system-center)(\\/\\S+)\\)",
       "mooncake": "(https://docs.microsoft.com/$2$3)",
       "comments": "replace the relative URL with global full URL format - Step 1"
     },
     {
-      "service": "ALL", 
-	    "global": "https://docs\\.microsoft\\.com/\\S*java/",
+      "service": "ALL",
+      "global": "https://docs\\.microsoft\\.com/\\S*java/",
       "mooncake": "https://docs.azure.cn/java/",
       "comments": "replace the relative URL with global full URL format - Step 2"
     },
     {
-      "service": "ALL", 
-	    "global": "https://docs\\.microsoft\\.com/(zh-cn/|en-us/|)?cli/(azure/)?([^\\#\\)\\n]*)([#]{0,1})([^\\#\\)\\[\\]\\ \\:]*)",
+      "service": "ALL",
+      "global": "https://docs\\.microsoft\\.com/(zh-cn/|en-us/|)?cli/(azure/)?([^\\#\\)\\n]*)([#]{0,1})([^\\#\\)\\[\\]\\ \\:]*)",
       "mooncake": "https://docs.azure.cn/zh-cn/cli/$3?view=azure-cli-latest$4$5",
       "comments": "Replace URL CLI Step 1"
     },
     {
-      "service": "ALL", 
-	    "global": "https://docs\\.azure\\.cn/zh-cn/cli/azure\\?view=azure-cli-latest",
+      "service": "ALL",
+      "global": "https://docs\\.azure\\.cn/zh-cn/cli/azure\\?view=azure-cli-latest",
       "mooncake": "https://docs.azure.cn/zh-cn/cli/index?view=azure-cli-latest"
     },
     {
-      "service": "ALL", 
-	    "global": "https://docs\\.azure\\.cn/zh-cn/cli(/){2,}azure/",
+      "service": "ALL",
+      "global": "https://docs\\.azure\\.cn/zh-cn/cli(/){2,}azure/",
       "mooncake": "https://docs.azure.cn/zh-cn/cli/",
       "commnet": "Remove the azure words in mooncake"
     },
     {
-      "service": "ALL", 
-	    "global": "(\\?view=azure-cli-latest){2,}",
+      "service": "ALL",
+      "global": "(\\?view=azure-cli-latest){2,}",
       "mooncake": "?view=azure-cli-latest",
       "comments": "Correction of Last Step"
     },
     {
-      "service": "ALL", 
-	    "global": "https://aka\\.ms/skurestriction",
+      "service": "ALL",
+      "global": "https://aka\\.ms/skurestriction",
       "mooncake": "https://support.windowsazure.cn/support/support-azure"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(\\s*/azure-supportability/resource-manager-core-quotas-request\\)",
+      "service": "ALL",
+      "global": "\\(\\s*/azure-supportability/resource-manager-core-quotas-request\\)",
       "mooncake": "(https://support.windowsazure.cn/support/support-azure)"
     },
     {
-      "service": "ALL", 
-	    "global": "\\([\\s]*\\/downloads\\/[\\s]*\\)",
+      "service": "ALL",
+      "global": "\\([\\s]*\\/downloads\\/[\\s]*\\)",
       "mooncake": "(https://www.azure.cn/downloads/)",
       "comments": "replace (/download/) with https://www.azure.cn/downloads/"
 
     },
     {
-      "service": "ALL", 
-	    "global": "https://msdn\\.microsoft\\.com/library/azure/dn782250.aspx",
+      "service": "ALL",
+      "global": "https://msdn\\.microsoft\\.com/library/azure/dn782250.aspx",
       "mooncake": "../cosmos-db/sql-api-sql-query-reference.md"
     },
     {
-      "service": "ALL", 
-	    "global": "\\.\\./cosmos-db/documentdb-sql-query-reference\\.md\\#",
+      "service": "ALL",
+      "global": "\\.\\./cosmos-db/documentdb-sql-query-reference\\.md\\#",
       "mooncake": "../cosmos-db/sql-api-sql-query-reference.md#"
     },
     {
-      "service": "ALL", 
-	    "global": "http://go\\.microsoft\\.com/fwlink/p/\\?LinkID\\=510612",
+      "service": "ALL",
+      "global": "http://go\\.microsoft\\.com/fwlink/p/\\?LinkID\\=510612",
       "mooncake": "/cosmos-db/sql-api-sql-query-reference"
     },
     {
-      "service": "ALL", 
-	    "global": "https://msdn\\.microsoft\\.com/library/azure/ee336235.aspx",
+      "service": "ALL",
+      "global": "https://msdn\\.microsoft\\.com/library/azure/ee336235.aspx",
       "mooncake": "../sql-database/sql-database-manage-logins.md"
     },
     {
-      "service": "ALL", 
-	    "global": "https: //msdn\\.microsoft\\.com/library/azure/dn971527.aspx",
+      "service": "ALL",
+      "global": "https: //msdn\\.microsoft\\.com/library/azure/dn971527.aspx",
       "mooncake": "https://docs.azure.cn/zh-cn/dotnet/api/microsoft.servicefabric.data.collections.ireliablequeue-1?view=azure-dotnet#microsoft_servicefabric_data_collections_ireliablequeue_1"
     },
     {
-      "service": "ALL", 
-	    "global": "powerbi\\.com",
+      "service": "ALL",
+      "global": "powerbi\\.com",
       "mooncake": "powerbi.cn"
     },
     {
-      "service": "ALL", 
-	    "global": "https://msdn\\.microsoft\\.com/library/azure/ff683669.aspx",
+      "service": "ALL",
+      "global": "https://msdn\\.microsoft\\.com/library/azure/ff683669.aspx",
       "mooncake": "https://docs.azure.cn/zh-cn/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://aka\\.ms/ubw007",
+      "service": "ALL",
+      "global": "https://aka\\.ms/ubw007",
       "mooncake": "https://docs.azure.cn/cosmos-db"
     },
     {
-      "service": "ALL", 
-	    "global": "https://aka\\.ms/acdbsla",
+      "service": "ALL",
+      "global": "https://aka\\.ms/acdbsla",
       "mooncake": "https://www.azure.cn/support/sla/documentdb/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azure\\.microsoft\\.com/(en-us/)?marketplace/([^?]*)\\?term=([^)\\s]*)",
+      "service": "ALL",
+      "global": "https://azure\\.microsoft\\.com/(en-us/)?marketplace/([^?]*)\\?term=([^)\\s]*)",
       "mooncake": "https://market.azure.cn/zh-cn/marketplace/$2apps?search=$3"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azuremarketplace\\.microsoft\\.com/(en-us/)?marketplace/apps/category/([^\\?\\s]*)\\?([^\\s\\)]*)",
+      "service": "ALL",
+      "global": "https://azuremarketplace\\.microsoft\\.com/(en-us/)?marketplace/apps/category/([^\\?\\s]*)\\?([^\\s\\)]*)",
       "mooncake": "https://market.azure.cn/zh-cn/marketplace/apps?search=$2&$3"
     },
     {
-      "service": "ALL", 
-	    "global": "(blob|queue|table|file)(\\.core\\.windows\\.net)([\\S|\\s]*)",
+      "service": "ALL",
+      "global": "(blob|queue|table|file)(\\.core\\.windows\\.net)([\\S|\\s]*)",
       "mooncake": "$1.core.chinacloudapi.cn$3"
     },
     {
-      "service": "ALL", 
-	    "global": "armclient login",
+      "service": "ALL",
+      "global": "armclient login",
       "mooncake": "armclient login \"MOONCAKE\""
     },
     {
-      "service": "ALL", 
-	    "global": "https://servicefabricdownloads\\.blob\\.core\\.chinacloudapi\\.cn/jenkins/serviceFabric.hpi",
+      "service": "ALL",
+      "global": "https://servicefabricdownloads\\.blob\\.core\\.chinacloudapi\\.cn/jenkins/serviceFabric.hpi",
       "mooncake": "https://servicefabricdownloads.blob.core.windows.net/jenkins/serviceFabric.hpi",
       "comments": "Service Fabric download link "
     },
     {
-      "service": "ALL", 
-	    "global": "WestCentralUS",
+      "service": "ALL",
+      "global": "WestCentralUS",
       "mooncake": "chinanorth"
     },
     {
-      "service": "ALL", 
-	    "global": "Microsoft\\'s",
+      "service": "ALL",
+      "global": "Microsoft\\'s",
       "mooncake": "21Vianet's"
     },
     {
-      "service": "ALL", 
-	    "global": "Microsoft (a|A)zure",
+      "service": "ALL",
+      "global": "Microsoft (a|A)zure",
       "mooncake": "21Vianet Azure"
     },
     {
-      "service": "ALL", 
-	    "global": "http://azure\\.microsoft\\.com/develop/nodejs/tutorials/web-app-with-express/",
+      "service": "ALL",
+      "global": "http://azure\\.microsoft\\.com/develop/nodejs/tutorials/web-app-with-express/",
       "mooncake": "https://docs.azure.cn/cloud-services/cloud-services-nodejs-develop-deploy-express-app"
     },
     {
-      "service": "ALL", 
-	    "global": "http://www\\.microsoft\\.com/server-cloud/",
+      "service": "ALL",
+      "global": "http://www\\.microsoft\\.com/server-cloud/",
       "mooncake": "http://www.microsoft.com/zh-cn/server-cloud/"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(mailto:askcosmosdb@microsoft\\.com\\)",
+      "service": "ALL",
+      "global": "\\(mailto:askcosmosdb@microsoft\\.com\\)",
       "mooncake": "(https://www.azure.cn/support/contact/)"
     },
     {
-      "service": "ALL", 
-	    "global": "managementgroups@microsoft.com",
+      "service": "ALL",
+      "global": "managementgroups@microsoft.com",
       "mooncake": "https://www.azure.cn/support/contact/"
     },
     {
-      "service": "ALL", 
-	    "global": "http://aka.ms/vmspecs",
+      "service": "ALL",
+      "global": "http://aka.ms/vmspecs",
       "mooncake": "/virtual-machines/windows/sizes?toc=%2fvirtual-machines%2fwindows%2ftoc.json"
     },
     {
-      "service": "ALL", 
-	    "global": "http(s)?://msdn\\.microsoft\\.com/library/microsoft\\.azure\\.documents\\.client\\.requestoptions\\.indexingdirective\\.aspx",
+      "service": "ALL",
+      "global": "http(s)?://msdn\\.microsoft\\.com/library/microsoft\\.azure\\.documents\\.client\\.requestoptions\\.indexingdirective\\.aspx",
       "mooncake": "https://docs.azure.cn/zh-cn/dotnet/api/microsoft.azure.documents.client.requestoptions.indexingdirective?view=azure-dotnet"
     },
     {
-      "service": "ALL", 
-	    "global": "http(s)?://azure\\.com/docdb",
+      "service": "ALL",
+      "global": "http(s)?://azure\\.com/docdb",
       "mooncake": "https://www.azure.cn/home/features/cosmos-db/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://aka.ms/premium-storage-workload",
+      "service": "ALL",
+      "global": "https://aka.ms/premium-storage-workload",
       "mooncake": "/virtual-machines/windows/premium-storage"
     },
     {
-      "service": "ALL", 
-	    "global": "https://msdn\\.microsoft\\.com/library/azure/dn782250.aspx",
+      "service": "ALL",
+      "global": "https://msdn\\.microsoft\\.com/library/azure/dn782250.aspx",
       "mooncake": "../cosmos-db/sql-api-sql-query-reference.md"
     },
     {
-      "service": "ALL", 
-	    "global": "\\?ref\\=microsoft\\.com\\&utm_source\\=microsoft\\.com\\&utm_medium\\=docs\\&utm_campaign\\=visualstudio",
+      "service": "ALL",
+      "global": "\\?ref\\=microsoft\\.com\\&utm_source\\=microsoft\\.com\\&utm_medium\\=docs\\&utm_campaign\\=visualstudio",
       "mooncake": "",
       "comments": "Remove the unnecessary postfix in URLs"
     },
     {
-      "service": "ALL", 
-	    "global": "https://msdn\\.microsoft\\.com/library/azure/microsoft\\.servicefabric\\.data\\.collections\\.aspx",
+      "service": "ALL",
+      "global": "https://msdn\\.microsoft\\.com/library/azure/microsoft\\.servicefabric\\.data\\.collections\\.aspx",
       "mooncake": "https://docs.azure.cn/zh-cn/dotnet/api/microsoft.servicefabric.data.collections?view=azure-dotnet#microsoft_servicefabric_data_collections"
     },
     {
-      "service": "ALL", 
-	    "global": "https://msdn\\.microsoft\\.com/library/dn971511\\.aspx",
+      "service": "ALL",
+      "global": "https://msdn\\.microsoft\\.com/library/dn971511\\.aspx",
       "mooncake": "https://docs.azure.cn/zh-cn/dotnet/api/microsoft.servicefabric.data.collections.ireliabledictionary-2?view=azure-dotnet#microsoft_servicefabric_data_collections_ireliabledictionary_2"
     },
     {
-      "service": "ALL", 
-	    "global": "https://msdn\\.microsoft\\.com/library/azure/dn971527\\.aspx",
+      "service": "ALL",
+      "global": "https://msdn\\.microsoft\\.com/library/azure/dn971527\\.aspx",
       "mooncake": "https://docs.azure.cn/zh-cn/dotnet/api/microsoft.servicefabric.data.collections.ireliablequeue-1?view=azure-dotnet#microsoft_servicefabric_data_collections_ireliablequeue_1"
     },
     {
-      "service": "ALL", 
-	    "global": "http://feedback\\.azure\\.com",
+      "service": "ALL",
+      "global": "http://feedback\\.azure\\.com",
       "mooncake": "https://www.azure.cn/support/contact/"
     },
     {
-      "service": "ALL", 
-	    "global": "(M|m)icrosoft([\\s]{1,})(A|a)zure",
+      "service": "ALL",
+      "global": "(M|m)icrosoft([\\s]{1,})(A|a)zure",
       "mooncake": "Azure"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(https://github\\.com/(\\S*)/README\\)",
+      "service": "ALL",
+      "global": "\\(https://github\\.com/(\\S*)/README\\)",
       "mooncake": "(https://github.com/$1/README.md)"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(\\.\\./\\.\\./azure-supportability/resource-manager-core-quotas-request\\.md\\)",
+      "service": "ALL",
+      "global": "\\(\\.\\./\\.\\./azure-supportability/resource-manager-core-quotas-request\\.md\\)",
       "mooncake": "(https://support.azure.cn/zh-cn/support/support-azure/)"
     },
     {
-      "service": "ALL", 
-	    "global": "\\.azurecr\\.io",
+      "service": "ALL",
+      "global": "\\.azurecr\\.io",
       "mooncake": ".azurecr.cn"
     },
     {
-      "service": "ALL", 
-	    "global": "https://docs\\.microsoft\\.com/(zh\\-cn/|en\\-us/)?visualstudio/subscriptions/subscriber\\-benefits",
+      "service": "ALL",
+      "global": "https://docs\\.microsoft\\.com/(zh\\-cn/|en\\-us/)?visualstudio/subscriptions/subscriber\\-benefits",
       "mooncake": "https://www.azure.cn/offers/ms-mc-arz-msdn/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://aka\\.ms/vmbackupmigration",
+      "service": "ALL",
+      "global": "https://aka\\.ms/vmbackupmigration",
       "mooncake": "https://docs.azure.cn/virtual-machines/windows/migration-classic-resource-manager-faq#vault"
     },
     {
-      "service": "ALL", 
-	    "global": "You can also use \\[Cloud Shell\\]\\(/cloud\\-shell/quickstart\\) from your browser",
+      "service": "ALL",
+      "global": "You can also use \\[Cloud Shell\\]\\(/cloud\\-shell/quickstart\\) from your browser",
       "mooncake": ""
     },
     {
-      "service": "ALL", 
-	    "global": "yoursetting",
+      "service": "ALL",
+      "global": "yoursetting",
       "mooncake": "yoursetting"
     }
   ],
