@@ -681,7 +681,14 @@ namespace AuthorCustmization.ProcessLibrary
                         if (fileKey[i].ToLower() == invloveService[j].ToLower())
                         {
                             bProcess = true;
-                            break;
+                            return bProcess;
+                        }
+
+                        //for check the files in the include directory.
+                        if(invloveService[j].Length<fileName.Length && invloveService[j].ToLower()==fileName.Substring(0, invloveService[j].Length))
+                        {
+                            bProcess = true;
+                            return bProcess;
                         }
                     }
 

@@ -1,26 +1,32 @@
 ﻿{
   "AuthorReplacement": [
     {
-      "service": "ALL", 
+      "service": "cosmos-db", 
+	    "global": "([\\s]){1}(globally|global)([\\s]){1}(?!(order|consistency models))",
+      "mooncake": " multiple-region ",
+      "comments": "It is last step to update globally single words. except for the order|consistency models."
+    },
+    {
+      "service": "ALL",
       "global": "^([\\s]*)author(s)?:([\\s ]*)(.*)",
       "mooncake": "$1author: rockboyfor",
       "comments": "modify the author with rockboyfor"
     },
     {
-      "service": "ALL", 
+      "service": "ALL",
       "global": "^([\\s]*)manager:([\\s ]*)(.*)",
       "mooncake": "$1manager: digimobile",
       "comments": "modify the manager with digimobile"
     },
     {
-      "service": "ALL", 
-	    "global": "^([\\s]*)ms.date:([\\s ]*)(.*)",
+      "service": "ALL",
+      "global": "^([\\s]*)ms.date:([\\s ]*)(.*)",
       "mooncake": "$1ms.date: {CustimzedDate}",
       "comments": "change the ms.date(global) to origin.date(mooncake)"
     },
     {
-      "service": "ALL", 
-	    "global": "^([\\s]*)ms.author:([\\s ]*)(.*)",
+      "service": "ALL",
+      "global": "^([\\s]*)ms.author:([\\s ]*)(.*)",
       "mooncake": "$1ms.author: v-yeche",
       "comments": "modify the ms.author in mooncake"
     }
@@ -546,7 +552,7 @@
       "comments": "Cosmos DB the world issue change to China or multiple-region(priority)"
     },
     {
-      "service": "cosmos-db",
+      "service": "cosmos-db", 
       "global": "globally(,)",
       "mooncake": "multiple-region$1"
     },

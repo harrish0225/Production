@@ -1,1 +1,1 @@
-create-vm-accelerated-networking-cli.md	articles/virtual-network	10/29/2018
+cosmos-db-create-dbaccount.md	includes	10/29/2018
