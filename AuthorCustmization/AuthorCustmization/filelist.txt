@@ -1,1 +1,3 @@
-cosmos-db-create-dbaccount.md	includes	10/29/2018
+analysis-services-gateway.md	articles/analysis-services	11/22/2018
+analysis-services-gateway-install.md	articles/analysis-services	11/22/2018
+analysis-services-vnet-gateway.md	articles/analysis-services	11/22/2018

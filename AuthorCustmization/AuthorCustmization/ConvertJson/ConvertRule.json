@@ -27,9 +27,34 @@
   ],
   "URLReplacement": [
     {
+      "serice": "ALL",
+      "global": "(P|p)ay\\-(A|a)s\\-(Y|y)ou\\-(G|g)o",
+      "mooncake": "Standard Pay-in-Advance"
+    },
+    {
       "service": "ALL",
       "global": "in your (C|c)loud (S|s)hell",
       "mooncake": "in your local shell"
+    },
+    {
+      "service": "ALL",
+      "global": "or in different regions \\(also known as Global VNet Peering\\)",
+      "mooncake": ""
+    },
+    {
+      "service": "ALL",
+      "global": "from the Azure Cloud Shell\\, by just selecting the \\*\\*Try it\\*\\* button in any of the following steps\\,",
+      "mooncake": ""
+    },
+    {
+      "service": "ALL",
+      "glboal": "that follow in the \\[Azure Cloud Shell\\]\\(https://shell\\.azure\\.com/powershell\\)\\, or",
+      "mooncake": ""
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/adelinux",
+      "mooncake": "https://docs.azure.cn/security/azure-security-disk-encryption-windows"
     },
     {
       "service": "ALL",
@@ -256,7 +281,7 @@
     },
     {
       "service": "ALL",
-      "global": "(\\s{1,})Microsoft([\\s{1,}])(?!(Excel|Office|Edge|Word|Corporation|Visual Studio|SQL Server|Script Center|Account|client applications|client applications like|OLE DB Provider|\\.Net|Visual C\\+\\+|SQL server|MVP|DX|Visual Studio|Corporation|Security Essentials|Forefront Endpoint Protection|System Center Endpoint|Antimalware for Azure|Antimalware Client|Antimalware extension|Team Foundation Server|Distributed Transaction Coordinator|Root Certificate Program|Certificate Services|SQL Server|HPC Pack|Management Console|Script Center|\\.NET|Windows Server Active Directory|Software License Terms|Hyper-V Server|DSM|applications))",
+      "global": "(\\s{1,})Microsoft([\\s{1,}])(?!(\\.Net|\\.NET|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper-V\\s{1,}Server|Management\\s{1,}Console|MVP|Office|OLE\\s{1,}DB\\s{1,}Provider|Root\\s{1,}Certificate\\s{1,}Program|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|System\\s{1,}Center\\s{1,}Endpoint|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word))",
       "mooncake": "$1Azure$2",
       "comments": "Update Microsoft to Azure except Excel/Officer/Word etc."
     },
@@ -419,6 +444,11 @@
       "service": "ALL",
       "global": "but do apply when the virtual networks are (globally|multiple-region) peered",
       "mooncake": ""
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://aka.ms/ade\\-aad\\-app\\)",
+      "mooncake": "(/security/azure-security-disk-encryption-windows-aad)"
     },
     {
       "service": "ALL",
@@ -771,7 +801,7 @@
     },
     {
       "service": "ALL",
-      "global": "((Get-AzurePublishSettingsFile)|(Add-AzureAccount)|(New-AzureStorageContext)|(Connect-AzureRmAccount))([ \\f\\t\\v]*)(-Environment AzureChinaCloud)?",
+      "global": "((Get-AzurePublishSettingsFile)|(Add-AzureAccount)|(New-AzureStorageContext)|(Connect-AzureRmAccount)|(Login-AzureRmAccount))([ \\f\\t\\v]*)(-Environment AzureChinaCloud)?",
       "mooncake": "$1 -Environment AzureChinaCloud"
     },
     {
@@ -1035,614 +1065,644 @@
     }
   ],
   "URLCorrection": [
-     {
-      "service": "ALL", 
-	    "global": "https://support\\.azure\\.cn/support/support\\-ticket\\-form",
+    {
+      "service": "ALL",
+      "global": "Max NICs / Expected network bandwidth \\(MBps\\)",
+      "mooncake": "Max NICs / Expected network bandwidth (Mbps)"
+    },
+    {
+      "service": "ALL",
+      "global": "https://support\\.azure\\.cn/support/support\\-ticket\\-form",
       "mooncake": "https://support.azure.cn/zh-cn/support/support-azure"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/documentation/articles/powershell-install-configure(/|\\s){1}",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/documentation/articles/powershell-install-configure(/|\\s){1}",
       "mooncake": "https://docs.azure.cn/zh-cn/powershell-install-configure"
     },
     {
-      "service": "ALL", 
-	    "global": "However\\, other regions such as China North can be under maintenance at the same time as China East\\.",
+      "service": "ALL",
+      "global": "However\\, other regions such as China North can be under maintenance at the same time as China East\\.",
       "mooncake": "",
       "comments": "Remove the sample description for Paired Region sample in VM"
     },
     {
-      "service": "ALL", 
-	    "global": "https://docs\\.azure\\.cn/java/azure/?",
+      "service": "ALL",
+      "global": "https://docs\\.azure\\.cn/java/azure/?",
       "mooncake": "https://docs.azure.cn/java/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/pricing/details/storage/blobs/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/pricing/details/storage/blobs/",
       "mooncake": "https://www.azure.cn/pricing/details/storage/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/pricing/purchase-options/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/pricing/purchase-options/",
       "mooncake": "https://www.azure.cn/pricing/overview/"
     },
     {
-      "service": "ALL", 
-	    "global": "\\?toc=%2fazure%2f",
+      "service": "ALL",
+      "global": "\\?toc=%2fazure%2f",
       "mooncake": "?toc=%2f"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/regions/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/regions/",
       "mooncake": "https://www.azure.cn/support/service-dashboard/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/offers/.*\\)",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/offers/.*\\)",
       "mooncake": "https://www.azure.cn/pricing/1rmb-trial-full)"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azure\\.microsoft\\.com/offers/ms-azr-0044p(/)?",
+      "service": "ALL",
+      "global": "https://azure\\.microsoft\\.com/offers/ms-azr-0044p(/)?",
       "mooncake": "https://www.azure.cn/pricing/1rmb-trial-full"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/marketplace/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/marketplace/",
       "mooncake": "https://azure.microsoft.com/marketplace/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/documentation/scripts/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/documentation/scripts/",
       "mooncake": "../automation/automation-runbook-gallery.md"
     },
     {
-      "service": "ALL", 
-	    "global": "http://msdn\\.microsoft\\.com/library/azure/dn643629\\.aspx",
+      "service": "ALL",
+      "global": "http://msdn\\.microsoft\\.com/library/azure/dn643629\\.aspx",
       "mooncake": "https://docs.azure.cn/zh-cn/automation/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://msdn\\.microsoft\\.com/library/azure/dn788799\\.aspx",
+      "service": "ALL",
+      "global": "https://msdn\\.microsoft\\.com/library/azure/dn788799\\.aspx",
       "mooncake": "../site-recovery/site-recovery-vmm-to-azure.md"
     },
     {
-      "service": "ALL", 
-	    "global": "https://msdn\\.microsoft\\.com/library/azure/dn469075\\.aspx",
+      "service": "ALL",
+      "global": "https://msdn\\.microsoft\\.com/library/azure/dn469075\\.aspx",
       "mooncake": "site-recovery-support-matrix-to-azure.md"
     },
     {
-      "service": "ALL", 
-	    "global": "https://msdn\\.microsoft\\.com/library/azure/dn469075\\.aspx",
+      "service": "ALL",
+      "global": "https://msdn\\.microsoft\\.com/library/azure/dn469075\\.aspx",
       "mooncake": "../site-recovery/site-recovery-support-matrix-to-azure.md"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/support/support-azure/{1,2}overview",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/support/support-azure/{1,2}overview",
       "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/",
       "comments": "there are two variant /overview and //overview"
     },
     {
-      "service": "ALL", 
-	    "global": "http://support\\.microsoft\\.com/oas/default.aspx\\?prid=16146",
+      "service": "ALL",
+      "global": "http://support\\.microsoft\\.com/oas/default.aspx\\?prid=16146",
       "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/support/trust-center/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/support/trust-center/",
       "mooncake": "https://www.trustcenter.cn/zh-cn/cloudservices/azure.html"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)TrustCenter/Compliance/HIPAA",
+      "service": "ALL",
+      "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)TrustCenter/Compliance/HIPAA",
       "mooncake": "https://www.trustcenter.cn/zh-cn/cloudservices/azure.html"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/home/features/storage/blobs/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/home/features/storage/blobs/",
       "mooncake": "https://www.azure.cn/home/features/storage/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/pricing/member-offers/msdn-benefits-details/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/pricing/member-offers/msdn-benefits-details/",
       "mooncake": "https://www.azure.cn/support/legal/offer-rate-plans/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/pricing/member-offers/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/pricing/member-offers/",
       "mooncake": "https://www.azure.cn/support/legal/offer-rate-plans/"
     },
     {
-      "service": "ALL", 
-	    "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkId=325362",
+      "service": "ALL",
+      "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkId=325362",
       "mooncake": "https://docs.azure.cn/zh-cn/app-service/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azure\\.microsoft\\.com/account/",
+      "service": "ALL",
+      "global": "https://azure\\.microsoft\\.com/account/",
       "mooncake": "https://www.azure.cn/pricing/1rmb-trial/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azure\\.microsoft\\.com/free/\\?ref\\=microsoft\\.com\\&utm_source\\=microsoft\\.com\\&utm_medium\\=docs\\&utm_campaign\\=visualstudio",
+      "service": "ALL",
+      "global": "https://azure\\.microsoft\\.com/free/\\?ref\\=microsoft\\.com\\&utm_source\\=microsoft\\.com\\&utm_medium\\=docs\\&utm_campaign\\=visualstudio",
       "mooncake": "https://www.azure.cn/pricing/1rmb-trial/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/pricing/1rmb-trial/\\?WT\\.mc_id=A261C142F",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/pricing/1rmb-trial/\\?WT\\.mc_id=A261C142F",
       "mooncake": "https://www.azure.cn/pricing/1rmb-trial"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/blog/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/blog/",
       "mooncake": "https://azure.microsoft.com/blog/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azure\\.microsoft\\.com/blog([^/]*)",
+      "service": "ALL",
+      "global": "https://azure\\.microsoft\\.com/blog([^/]*)",
       "mooncake": "https://azure.microsoft.com/blog/$1"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azure\\.microsoft\\.com/blog//",
+      "service": "ALL",
+      "global": "https://azure\\.microsoft\\.com/blog//",
       "mooncake": "https://azure.microsoft.com/blog/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://mva\\.microsoft\\.com/(en-us/)?training-courses/",
+      "service": "ALL",
+      "global": "https://mva\\.microsoft\\.com/(en-us/)?training-courses/",
       "mooncake": "https://mva.microsoft.com/en-US/training-courses/"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(https://docs\\.microsoft\\.com/(zh-cn/|en-us/|)cli/(azure/)?([^#]*)([#]?)([\\S]*)\\)",
+      "service": "ALL",
+      "global": "\\(https://docs\\.microsoft\\.com/(zh-cn/|en-us/|)cli/(azure/)?([^#]*)([#]?)([\\S]*)\\)",
       "mooncake": "(https://docs.azure.cn/zh-cn/cli/$3?view=azure-cli-latest$4$5)",
       "comments": "replace the relative URL with global full URL format - Step 2"
     },
     {
-      "service": "ALL", 
-	    "global": "\\?view=azure-cli-latest\\?view=azure-cli-latest",
+      "service": "ALL",
+      "global": "\\?view=azure-cli-latest\\?view=azure-cli-latest",
       "mooncake": "?view=azure-cli-latest",
       "comments": "Correction of Next Step"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(https://docs.microsoft.com/cli/azure/",
+      "service": "ALL",
+      "global": "\\(https://docs.microsoft.com/cli/azure/",
       "mooncake": "(https://docs.azure.cn/zh-cn/cli/",
       "comments": "Correction of Last Step, the Regular can not over all the aspect"
     },
     {
-      "service": "ALL", 
-	    "global": "https://portal\\.azure\\.cn/#create/Microsoft.Support",
+      "service": "ALL",
+      "global": "https://portal\\.azure\\.cn/#create/Microsoft.Support",
       "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/",
       "comments": "Replace the Create Microsoft.Support billing link"
     },
     {
-      "service": "ALL", 
-	    "global": "\\\"\\$schema\\\": \\\"http(s)?://schema\\.management\\.chinacloudapi\\.cn/schemas/",
+      "service": "ALL",
+      "global": "\\\"\\$schema\\\": \\\"http(s)?://schema\\.management\\.chinacloudapi\\.cn/schemas/",
       "mooncake": "\"$schema\": \"https://schema.management.azure.com/schemas/",
       "comments": "revoke the wrong replace for https://schema.management.azure.com/schemas/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/features/storage-explorer/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/features/storage-explorer/",
       "mooncake": "https://azure.microsoft.com/en-us/features/storage-explorer/",
       "comments": "revoke the storage exploer download link"
     },
     {
-      "service": "ALL", 
-	    "global": "\\[MSDN and the Stack Overflow\\]\\(https://azure\\.microsoft\\.com/support/forums/\\)",
+      "service": "ALL",
+      "global": "\\[MSDN and the Stack Overflow\\]\\(https://azure\\.microsoft\\.com/support/forums/\\)",
       "mooncake": "[MSDN Azure and CSDN Azure](https://www.azure.cn/support/contact/)"
-    },
+    }
     {
-      "service": "ALL", 
-	    "global": "http://feedback\\.azure\\.com ",
+      "service": "ALL",
+      "global": "http://feedback\\.azure\\.com ",
       "mooncake": "https://www.azure.cn/support/contact/ "
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/pricing/details/virtual-machines/((windows)|(linux)|(sql-server-standard)|(\\#Sql))/?",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/pricing/details/virtual-machines/((windows)|(linux)|(sql-server-standard)|(\\#Sql))/?",
       "mooncake": "https://www.azure.cn/pricing/details/virtual-machines/"
     },
     {
-      "service": "ALL", 
-	    "global": "table.cosmosdb.azure.com",
+      "service": "ALL",
+      "global": "table.cosmosdb.azure.com",
       "mooncake": "table.cosmosdb.azure.cn"
     },
     {
-      "service": "ALL", 
-	    "global": "http(s)?://schema\\.management\\.chinacloudapi\\.cn/schemas/",
+      "service": "ALL",
+      "global": "http(s)?://schema\\.management\\.chinacloudapi\\.cn/schemas/",
       "mooncake": "https://schema.management.azure.com/schemas/",
       "comments": "revoke the wrong replace for https://schema.management.azure.com/schemas/"
     },
     {
-      "service": "ALL", 
-	    "global": "http://go\\.microsoft\\.com/fwlink/p/?LinkID=510612",
+      "service": "ALL",
+      "global": "http://go\\.microsoft\\.com/fwlink/p/?LinkID=510612",
       "mooncake": "../cosmos-db/sql-api-sql-query-reference"
     },
     {
-      "service": "ALL", 
-	    "global": "https://support\\.powerbi\\.cn/",
+      "service": "ALL",
+      "global": "https://support\\.powerbi\\.cn/",
       "mooncake": "https://support.powerbi.com/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azure.microsoft.com/en-us/blog/tag/documentdb/",
+      "service": "ALL",
+      "global": "https://azure.microsoft.com/en-us/blog/tag/documentdb/",
       "mooncake": "https://www.azure.cn/blog/tags/Azure%20Cosmos%20DB"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(mailto:askcosmosdb@microsoft\\.com\\)",
+      "service": "ALL",
+      "global": "\\(mailto:askcosmosdb@microsoft\\.com\\)",
       "mooncake": "(https://www.azure.cn/support/contact/)"
     },
     {
-      "service": "ALL", 
-	    "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkID=402386",
+      "service": "ALL",
+      "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkID=402386",
       "mooncake": "../cosmos-db/sql-api-dotnet-samples"
     },
     {
-      "service": "ALL", 
-	    "global": "\\[askcosmosdb@microsoft\\.com\\]",
+      "service": "ALL",
+      "global": "\\[askcosmosdb@microsoft\\.com\\]",
       "mooncake": "[Azure Support]"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/resources/samples/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/resources/samples/",
       "mooncake": "https://azure.microsoft.com/resources/samples/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/home/features/backup",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/home/features/backup",
       "mooncake": "https://www.azure.cn/home/features/backup",
       "mooncakeOld": "https://www.azure.cn/home/features/back-up",
       "comments": "retired"
     },
     {
-      "service": "ALL", 
-	    "global": "https://social\\.msdn\\.microsoft\\.com/Forums/en-US/home?forum=WAVirtualMachinesforWindows",
+      "service": "ALL",
+      "global": "https://social\\.msdn\\.microsoft\\.com/Forums/en-US/home?forum=WAVirtualMachinesforWindows",
       "mooncake": "https://www.azure.cn/support/contact/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/pricing/hybrid-benefit/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/pricing/hybrid-benefit/",
       "mooncake": "https://www.azure.cn/pricing/hybrid-use-benefit"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azuremarketplace\\.microsoft\\.com/((en-us/)|(zh-cn/))?marketplace/",
+      "service": "ALL",
+      "global": "https://azuremarketplace\\.microsoft\\.com/((en-us/)|(zh-cn/))?marketplace/",
       "mooncake": "https://market.azure.cn/zh-cn/marketplace/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azure\\.microsoft\\.com/((en-us/)|(zh-cn/))?marketplace/",
+      "service": "ALL",
+      "global": "https://azure\\.microsoft\\.com/((en-us/)|(zh-cn/))?marketplace/",
       "mooncake": "https://market.azure.cn/zh-cn/marketplace/"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(https://azuremarketplace\\.microsoft\\.com/\\)",
+      "service": "ALL",
+      "global": "\\(https://azuremarketplace\\.microsoft\\.com/\\)",
       "mooncake": "https://market.azure.cn/zh-cn/marketplace/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://social\\.msdn\\.microsoft\\.com/Forums/en-US/home\\?forum\\=([^\\s\\)])*",
+      "service": "ALL",
+      "global": "https://social\\.msdn\\.microsoft\\.com/Forums/en-US/home\\?forum\\=([^\\s\\)])*",
       "mooncake": "https://www.azure.cn/support/contact/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://aka\\.ms/(serialconsolefeedback)",
+      "service": "ALL",
+      "global": "https://aka\\.ms/(serialconsolefeedback)",
       "mooncake": "https://www.azure.cn/support/contact/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/pricing/details/managed-disks/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/pricing/details/managed-disks/",
       "mooncake": "https://www.azure.cn/pricing/details/storage/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://portal\\.msrc\\.microsoft\\.com/((en-us/)|(en-US/))?security-guidance",
+      "service": "ALL",
+      "global": "https://portal\\.msrc\\.microsoft\\.com/((en-us/)|(en-US/))?security-guidance",
       "mooncake": "https://portal.msrc.microsoft.com/zh-cn/security-guidance"
     },
     {
-      "service": "ALL", 
-	    "global": "\\[Azure (Stream Analytics){1} forum\\]\\(https://social\\.msdn\\.microsoft\\.com/Forums/en-US/home\\?forum=(AzureStreamAnalytics){1}\\)",
+      "service": "ALL",
+      "global": "\\[Azure (Stream Analytics){1} forum\\]\\(https://social\\.msdn\\.microsoft\\.com/Forums/en-US/home\\?forum=(AzureStreamAnalytics){1}\\)",
       "mooncake": "[MSDN Azure 和 CSDN Azure](https://www.azure.cn/support/contact/) "
     },
     {
-      "service": "ALL", 
-	    "global": "(/sql-data-warehouse/|\\./)?sql-data-warehouse-get-started-create-support-ticket(\\.md)?(#request-quota-change)?",
+      "service": "ALL",
+      "global": "(/sql-data-warehouse/|\\./)?sql-data-warehouse-get-started-create-support-ticket(\\.md)?(#request-quota-change)?",
       "mooncake": "https://support.windowsazure.cn/support/support-azure"
     },
     {
-      "service": "ALL", 
-	    "global": "https://aka\\.ms/MicrocodeEnablementRequest-SupportTechnical",
+      "service": "ALL",
+      "global": "https://aka\\.ms/MicrocodeEnablementRequest-SupportTechnical",
       "mooncake": "https://support.windowsazure.cn/support/support-azure"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/overview/clouds/government",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/overview/clouds/government",
       "mooncake": "https://azure.microsoft.com/overview/clouds/government"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/overview/clouds/germany/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/overview/clouds/germany/",
       "mooncake": "https://azure.microsoft.com/overview/clouds/germany/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://portalcontent\\.blob\\.core\\.chinacloudapi\\.cn/samples/",
+      "service": "ALL",
+      "global": "https://portalcontent\\.blob\\.core\\.chinacloudapi\\.cn/samples/",
       "mooncake": "https://portalcontent.blob.core.windows.net/samples/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.microsoft\\.com/TrustCenter",
+      "service": "ALL",
+      "global": "https://www\\.microsoft\\.com/TrustCenter",
       "mooncake": "https://www.microsoft.com/en-us/TrustCenter"
     },
     {
-      "service": "ALL", 
-	    "global": "https://servicefabricsdkstorage\\.blob\\.core\\.chinacloudapi\\.cn/publicrelease",
+      "service": "ALL",
+      "global": "https://servicefabricsdkstorage\\.blob\\.core\\.chinacloudapi\\.cn/publicrelease",
       "mooncake": "https://servicefabricsdkstorage.blob.core.windows.net/publicrelease"
     },
     {
-      "service": "ALL", 
-	    "global": "http://github\\.com",
+      "service": "ALL",
+      "global": "http://github\\.com",
       "mooncake": "https://github.com"
     },
     {
-      "service": "ALL", 
-	    "global": "([\\(|\\'|\\\"| ]{1})(https://docs\\.microsoft\\.com)?/(zh-cn/|en-us/|)?dotnet/(azure/)([^\\#\\?\\[\\])]*)(\\?view=azure-dotnet)?([#]{0,1})([^\\#\\)\\'\\\" ]*)([\\)|\\'|\\\"| ]{1})",
+      "service": "ALL",
+      "global": "([\\(|\\'|\\\"| ]{1})(https://docs\\.microsoft\\.com)?/(zh-cn/|en-us/|)?dotnet/(azure/)([^\\#\\?\\[\\])]*)(\\?view=azure-dotnet)?([#]{0,1})([^\\#\\)\\'\\\" ]*)([\\)|\\'|\\\"| ]{1})",
       "mooncake": "$1https://docs.azure.cn/zh-cn/dotnet/$5?view=azure-dotnet$7$8$9",
       "comments": "Replace DOTNET STEP 0"
     },
     {
-      "service": "ALL", 
-	    "global": "([\\(|\\'|\\\"| ]{1})(https://docs\\.microsoft\\.com)?/(zh-cn/|en-us/|)?dotnet/(?!(articles/standard/frameworks|articles/standard/library))([^\\#\\?)]*)(\\?view=azure-dotnet)?([#]{0,1})([^\\#\\)\\'\\\" ]*)([\\)|\\'|\\\"| ]{1})",
+      "service": "ALL",
+      "global": "([\\(|\\'|\\\"| ]{1})(https://docs\\.microsoft\\.com)?/(zh-cn/|en-us/|)?dotnet/(?!(articles/standard/frameworks|articles/standard/library))([^\\#\\?)]*)(\\?view=azure-dotnet)?([#]{0,1})([^\\#\\)\\'\\\" ]*)([\\)|\\'|\\\"| ]{1})",
       "mooncake": "$1https://docs.azure.cn/zh-cn/dotnet/$5?view=azure-dotnet$7$8$9",
       "comments": "Replace DOTNET STEP 1 "
     },
     {
-      "service": "ALL", 
-	    "global": "([\\(|\\'|\\\"| ]{1})https://docs\\.azure\\.cn/zh-cn/dotnet/(api/overview/){1}azure/([^\\)|\\'|\\\"| ]*)([\\)|\\'|\\\"| ]{1})",
+      "service": "ALL",
+      "global": "([\\(|\\'|\\\"| ]{1})https://docs\\.azure\\.cn/zh-cn/dotnet/(api/overview/){1}azure/([^\\)|\\'|\\\"| ]*)([\\)|\\'|\\\"| ]{1})",
       "mooncake": "$1https://docs.azure.cn/zh-cn/dotnet/$2$3$4",
       "comments": "Replace DOTNET STEP 2 "
     },
     {
-      "service": "ALL", 
-	    "global": "([\\(|\\'|\\\"| ]{1})https://docs\\.azure\\.cn/zh-cn/dotnet/azure/([^\\)|\\'|\\\"| ]*)([\\)|\\'|\\\"| ]{1})",
+      "service": "ALL",
+      "global": "([\\(|\\'|\\\"| ]{1})https://docs\\.azure\\.cn/zh-cn/dotnet/azure/([^\\)|\\'|\\\"| ]*)([\\)|\\'|\\\"| ]{1})",
       "mooncake": "$1https://docs.azure.cn/zh-cn/dotnet/$2$3",
       "comments": "Replace DOTNET STEP 3 "
     },
     {
-      "service": "ALL", 
-	    "global": "https://docs\\.azure\\.cn/zh-cn/dotnet/framework",
+      "service": "ALL",
+      "global": "https://docs\\.azure\\.cn/zh-cn/dotnet/framework",
       "mooncake": "https://docs.microsoft.com/dotnet/framework",
       "comments": "Replace DOTNET STEP 4 "
     },
     {
-      "service": "ALL", 
-	    "global": "\\<a([\\s]+)id([\\s]*)\\=",
+      "service": "ALL",
+      "global": "\\<a([\\s]+)id([\\s]*)\\=",
       "mooncake": "<a name="
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/home/features/hdinsight/apache-spark/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/home/features/hdinsight/apache-spark/",
       "mooncake": "https://www.azure.cn/home/features/hdinsight/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://feedback\\.azure\\.com/forums/([^ \\s\\)\\(\\[\\]]*)",
+      "service": "ALL",
+      "global": "https://feedback\\.azure\\.com/forums/([^ \\s\\)\\(\\[\\]]*)",
       "mooncake": "https://www.azure.cn/support/support-azure/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://feedback\\.azure\\.com",
+      "service": "ALL",
+      "global": "https://feedback\\.azure\\.com",
       "mooncake": "https://www.azure.cn/support/support-azure/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/support/service-dashboard/services/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/support/service-dashboard/services/",
       "mooncake": "https://www.azure.cn/support/service-dashboard/"
     },
     {
-      "service": "ALL", 
-	    "global": "(\\#{1,})[ \\s]*(\\<a[ \\s]+name\\=\\\")(\\S*)(\\\"\\>\\<\\/a\\>)",
+      "service": "ALL",
+      "global": "(\\#{1,})[ \\s]*(\\<a[ \\s]+name\\=\\\")(\\S*)(\\\"\\>\\<\\/a\\>)",
       "mooncake": "$2$3$4\n$1 ",
       "comments": "Convert ###<a name='XXX'></a> Title TO <a name='XXX'></a>\n ### Title"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/en-inhttps://www\\.azure\\.cn/pricing/details",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/en-inhttps://www\\.azure\\.cn/pricing/details",
       "mooncake": "https://www.azure.cn/pricing/details"
     },
     {
-      "service": "ALL", 
-	    "global": "http://aka\\.ms/vmspecs",
+      "service": "ALL",
+      "global": "http://aka\\.ms/vmspecs",
       "mooncake": "https://docs.azure.cn/zh-cn/virtual-machines/windows/sizes?toc=%2fvirtual-machines%2fwindows%2ftoc.json"
     },
     {
-      "service": "ALL", 
-	    "global": "([\\ |\\'|\\\"|\\(])http(s)?://[^(github\\.com)]([^\\ |\\'|\\\"|\\(|\\)]*)\\.(md|MD)([\\ |\\'|\\\"|\\)])",
+      "service": "ALL",
+      "global": "([\\ |\\'|\\\"|\\(])http(s)?://[^(github\\.com)]([^\\ |\\'|\\\"|\\(|\\)]*)\\.(md|MD)([\\ |\\'|\\\"|\\)])",
       "mooncake": "$1http$2://$3$5",
       "comments": "Remove the .md or .MD on link of https://XXXX.XXXX.XXXX.md with NOT start github.com"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/regions",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/regions",
       "mooncake": "https://www.azure.cn/support/service-dashboard/"
     },
     {
-      "service": "ALL", 
-	    "global": "Microsoft 信任中心",
+      "service": "ALL",
+      "global": "Microsoft 信任中心",
       "mooncake": "Azure 信任中心"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/overview/what-is-azure/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/overview/what-is-azure/",
       "mooncake": "https://www.azure.cn/home/features/what-is-azure/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/support/legal/offer-rate-plans/msdn-benefits/\\?c=14-39",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/support/legal/offer-rate-plans/msdn-benefits/\\?c=14-39",
       "mooncake": "https://www.azure.cn/offers/ms-mc-arz-msdn/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/pricing/details/bandwidth/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/pricing/details/bandwidth/",
       "mooncake": "https://www.azure.cn/pricing/details/data-transfer/"
     },
     {
-      "service": "ALL", 
-	    "global": "Expected network bandwidth (MBps)",
+      "service": "ALL",
+      "global": "Expected network bandwidth (MBps)",
       "mooncake": "Expected network bandwidth (Mbps)"
     },
     {
-      "service": "ALL", 
-	    "global": "http://servicefabricsdkstorage\\.blob\\.core\\.chinacloudapi.cn/publicrelease",
+      "service": "ALL",
+      "global": "http://servicefabricsdkstorage\\.blob\\.core\\.chinacloudapi.cn/publicrelease",
       "mooncake": "https://servicefabricsdkstorage.blob.core.windows.net/publicrelease"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/campaigns/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/campaigns/",
       "mooncake": "https://azure.microsoft.com/campaigns/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://cosmosdbportalstorage\\.blob\\.core\\.chinacloudapi\\.cn/datamigrationtool/",
+      "service": "ALL",
+      "global": "https://cosmosdbportalstorage\\.blob\\.core\\.chinacloudapi\\.cn/datamigrationtool/",
       "mooncake": "https://cosmosdbportalstorage.blob.core.windows.net/datamigrationtool/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://community\\.powerbi\\.cn/",
+      "service": "ALL",
+      "global": "https://community\\.powerbi\\.cn/",
       "mooncake": "https://community.powerbi.com/"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(\\.\\./(active-directory)/(active-directory-howto-tenant)(\\.md)(\\#\\S*)?\\)",
+      "service": "ALL",
+      "global": "\\(\\.\\./(active-directory)/(active-directory-howto-tenant)(\\.md)(\\#\\S*)?\\)",
       "mooncake": "(../$1/develop/$2$3$4)"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/en-in/resources/templates/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/en-in/resources/templates/",
       "mooncake": "https://azure.microsoft.com/en-in/resources/templates/"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(https://aka\\.ms/asrconfigurationserver\\)",
+      "service": "ALL",
+      "global": "\\(https://aka\\.ms/asrconfigurationserver\\)",
       "mooncake": "(https://aka.ms/asrconfigurationserver_bjb)",
       "comments": "Site Recovery Infrastructure - Configuration server download template for MC."
     },
     {
-      "service": "ALL", 
-	    "global": "Microsoft Download",
+      "service": "ALL",
+      "global": "Microsoft Download",
       "mooncake": "Download"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.microsoft\\.com/en-us/TrustCenter/Compliance/HIPAA",
+      "service": "ALL",
+      "global": "https://www\\.microsoft\\.com/en-us/TrustCenter/Compliance/HIPAA",
       "mooncake": "https://www.trustcenter.cn/"
     },
     {
-      "service": "ALL", 
-	    "global": "(\\s{1,})/azure/",
+      "service": "ALL",
+      "global": "(\\s{1,})/azure/",
       "mooncake": "$1/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/support/support-azure//newsupportrequest",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/support/support-azure//newsupportrequest",
       "mooncake": "https://www.azure.cn/support/support-azure"
     },
     {
-      "service": "ALL", 
-	    "global": "https://azurewiki\\.chinacloudapp\\.cnVMAgentExtension",
+      "service": "ALL",
+      "global": "https://azurewiki\\.chinacloudapp\\.cnVMAgentExtension",
       "mooncake": "https://azurewiki.cloudapp.netvmagentextension/"
     },
     {
-      "service": "ALL", 
-	    "global": "This tutorial uses Azure (PowerShell|CLI) within the Cloud Shell\\, which is constantly updated to the latest version\\.(\\s{1,})If you choose to install and use (PowerShell|CLI) locally,",
+      "service": "ALL",
+      "global": "This tutorial uses Azure (PowerShell|CLI) within the Cloud Shell\\, which is constantly updated to the latest version\\.(\\s{1,})If you choose to install and use (PowerShell|CLI) locally,",
       "mooncake": "This tutorial uses Azure $1 within the local Shell, when you choose to install and use $2 locally, "
     },
     {
-      "service": "ALL", 
-	    "global": "yoursetting",
+      "service": "ALL",
+      "global": "yoursetting",
       "mooncake": "yoursetting"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.",
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.",
       "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb."
     },
     {
-      "service": "ALL", 
-	    "global": "([\\(|\\s]{1})https://www\\.azure\\.cn/video-center/&sort=newest([\\)|\\s]{1})",
+      "service": "ALL",
+      "global": "([\\(|\\s]{1})https://www\\.azure\\.cn/video-center/&sort=newest([\\)|\\s]{1})",
       "mooncake": "($1https://www.azure.cn/video-center/$2)"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(https://docs\\.azure\\.cn/zh-cn/cli/(\\S*)\\?view\\=azure-cli-latest\\#([a-zA-Z]*)_([a-zA-Z]*)\\)",
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/zh-cn/cli/(\\S*)\\?view\\=azure-cli-latest\\#([a-zA-Z]*)_([a-zA-Z]*)\\)",
       "mooncake": "(https://docs.azure.cn/zh-cn/cli/$1?view=azure-cli-latest#$2-$3)"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(https://docs\\.azure\\.cn/zh-cn/cli/(\\S*)\\?view\\=azure-cli-latest\\#([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)\\)",
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/zh-cn/cli/(\\S*)\\?view\\=azure-cli-latest\\#([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)\\)",
       "mooncake": "(https://docs.azure.cn/zh-cn/cli/$1?view=azure-cli-latest#$2-$3-$4)"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(https://docs\\.azure\\.cn/zh-cn/cli/(\\S*)\\?view\\=azure-cli-latest\\#([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)\\)",
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/zh-cn/cli/(\\S*)\\?view\\=azure-cli-latest\\#([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)\\)",
       "mooncake": "(https://docs.azure.cn/zh-cn/cli/$1?view=azure-cli-latest#$2-$3-$4-$5)"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(https://docs\\.azure\\.cn/zh-cn/cli/(\\S*)\\?view\\=azure-cli-latest\\#([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)\\)",
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/zh-cn/cli/(\\S*)\\?view\\=azure-cli-latest\\#([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)\\)",
       "mooncake": "(https://docs.azure.cn/zh-cn/cli/$1?view=azure-cli-latest#$2-$3-$4-$5-$6)"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(https://docs\\.azure\\.cn/zh-cn/cli/(\\S*)\\?view\\=azure-cli-latest\\#([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)\\)",
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/zh-cn/cli/(\\S*)\\?view\\=azure-cli-latest\\#([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)\\)",
       "mooncake": "(https://docs.azure.cn/zh-cn/cli/$1?view=azure-cli-latest#$2-$3-$4-$5-$6-$7)"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(https://docs\\.azure\\.cn/zh-cn/cli/(\\S*)\\?view\\=azure-cli-latest\\#([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)\\)",
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/zh-cn/cli/(\\S*)\\?view\\=azure-cli-latest\\#([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)\\)",
       "mooncake": "(https://docs.azure.cn/zh-cn/cli/$1?view=azure-cli-latest#$2-$3-$4-$5-$6-$7-$8)"
     },
     {
-      "service": "ALL", 
-	    "global": "\\(https://docs\\.azure\\.cn/zh-cn/cli/(\\S*)\\?view\\=azure-cli-latest\\#([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)\\)",
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/zh-cn/cli/(\\S*)\\?view\\=azure-cli-latest\\#([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)_([a-zA-Z]*)\\)",
       "mooncake": "(https://docs.azure.cn/zh-cn/cli/$1?view=azure-cli-latest#$2-$3-$4-$5-$6-$7-$8-$9)"
     },
     {
-      "service": "ALL", 
-	    "global": "([\\(|\\s]{1})https://docs\\.azure\\.cn/zh-cn/cli/overview\\?view=azure-cli-latest([\\(|\\s]{1})",
+      "service": "ALL",
+      "global": "([\\(|\\s]{1})https://docs\\.azure\\.cn/zh-cn/cli/overview\\?view=azure-cli-latest([\\(|\\s]{1})",
       "mooncake": "$1https://docs.azure.cn/zh-cn/cli/index?view=azure-cli-latest$2"
     },
     {
-      "service": "ALL", 
-	    "global": "([\\(|\\s]{1})https://www\\.azure\\.cn/support/community/([\\(|\\s]{1})",
+      "service": "ALL",
+      "global": "([\\(|\\s]{1})https://www\\.azure\\.cn/support/community/([\\(|\\s]{1})",
       "mooncake": "$1https://www.azure.cn/support/contact/$2"
     },
     {
-      "service": "ALL", 
-	    "global": "([\\*|\\`|\\[]{1,2})Connect\\-AzureRmAccount \\-Environment AzureChinaCloud([\\*|\\`|\\]]{1,2})",
-      "mooncake": "$1Connect-AzureRmAccount$2"
+      "service": "ALL",
+      "global": "([\\*|\\`|\\[]{1,2})(Get\\-AzurePublishSettingsFile|Add\\-AzureAccount|New\\-AzureStorageContext|Connect\\-AzureRmAccount|Login\\-AzureRmAccount) \\-Environment AzureChinaCloud([\\*|\\`|\\]]{1,2})",
+      "mooncake": "$1$2$3"
     },
     {
-      "service": "ALL", 
-	    "global": "([\\*|\\s]{1})EastUs([\\*|\\s]{1})",
+      "service": "ALL",
+      "global": "([\\*|\\s]{1})EastUs([\\*|\\s]{1})",
       "mooncake": "$1chinaeast$2"
     },
     {
-      "service": "ALL", 
-	    "global": "https://(analytics|doctorwho)\\.documents\\.azure\\.cn",
+      "service": "ALL",
+      "global": "https://(analytics|doctorwho)\\.documents\\.azure\\.cn",
       "mooncake": "https://$1.documents.azure.com"
     },
     {
-      "service": "ALL", 
-	    "global": "https://www\\.azure\\.cn/support/community/",
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/support/community/",
       "mooncake": "https://www.azure.cn/support/contact/"
     },
     {
-      "service": "ALL", 
-	    "global": "https://support\\.azure\\.cn/support/support\\-ticket\\-form/",
+      "service": "ALL",
+      "global": "https://support\\.azure\\.cn/support/support\\-ticket\\-form/",
       "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/"
+    },
+    {
+      "service": "azure-to-azure-powershell.md",
+      "global": "(chinanorth|China North)\\s?2",
+      "mooncake": "$1"
+    },
+    {
+      "service": "azure-vm-disaster-recovery-with-expressroute.md",
+      "global": "Hong Kong",
+      "mooncake": "Guang Zhou"
+    },
+    {
+      "service": "azure-vm-disaster-recovery-with-expressroute.md",
+      "global": "Singapore",
+      "mooncake": "Tian Jing"
+    },
+    {
+      "service": "tutorial-traffic-manager-subnet-routing.md|tutorial-traffic-manager-improve-website-response.md",
+      "global": "(User|user|My|my)VMUS",
+      "mooncake": "$1VMEastCN"
+    },
+    {
+      "service": "tutorial-traffic-manager-subnet-routing.md|tutorial-traffic-manager-improve-website-response.md",
+      "global": "(User|user|My|my)VM(Europe|WestEurope|WEurope)",
+      "mooncake": "$1VMNorthCN"
     }
   ],
   "CLIReplacement": [
