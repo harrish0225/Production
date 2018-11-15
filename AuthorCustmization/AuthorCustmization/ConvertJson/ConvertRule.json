@@ -796,12 +796,7 @@
     },
     {
       "service": "ALL",
-      "global": "Login-AzureRmAccount (-EnvironmentName AzureChinaCloud)?",
-      "mooncake": "Login-AzureRmAccount -EnvironmentName AzureChinaCloud"
-    },
-    {
-      "service": "ALL",
-      "global": "((Get-AzurePublishSettingsFile)|(Add-AzureAccount)|(New-AzureStorageContext)|(Connect-AzureRmAccount)|(Login-AzureRmAccount))([ \\f\\t\\v]*)(-Environment AzureChinaCloud)?",
+      "global": "((Get-AzurePublishSettingsFile)|(Add-AzureAccount)|(New-AzureStorageContext)|(Connect-AzureRmAccount)|(Login-AzureRmAccount))([ \\f\\t\\v]*\\-Environment AzureChinaCloud)?",
       "mooncake": "$1 -Environment AzureChinaCloud"
     },
     {
