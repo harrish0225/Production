@@ -44,6 +44,7 @@ namespace AuthorCustmization.ProcessLibrary
     public enum InvolvedService
     {
         analysis_services,
+        aks,
         azure_resource_manager,
         cosmos_db,
         container_registry,
@@ -271,6 +272,12 @@ namespace AuthorCustmization.ProcessLibrary
 
                 for (int i = 0; i < iCount; i++)
                 {
+                    bValidService = this.GetProcessValidService(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.service, fileKey, iCheckStart, this.File);
+                    if (bValidService == false)
+                    {
+                        continue;
+                    }
+
                     bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.global, ref urlGlobal);
                     bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.mooncake, ref urlMooncake);
                     
@@ -295,6 +302,12 @@ namespace AuthorCustmization.ProcessLibrary
 
                 for (int i = 0; i < iCount; i++)
                 {
+                    bValidService = this.GetProcessValidService(ref JUrl, ConvertCategory.URLCorrection, i, ConvertItem.service, fileKey, iCheckStart, this.File);
+                    if (bValidService == false)
+                    {
+                        continue;
+                    }
+
                     bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.URLCorrection, i, ConvertItem.global, ref urlGlobal);
                     bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.URLCorrection, i, ConvertItem.mooncake, ref urlMooncake);
                     //bValidService = this.GetProcessConvertRuleValidService(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.validservice, this.Fullpath);
@@ -320,6 +333,12 @@ namespace AuthorCustmization.ProcessLibrary
 
                     for (int i = 0; i < iCount; i++)
                     {
+                        bValidService = this.GetProcessValidService(ref JUrl, ConvertCategory.MDFileCorrection, i, ConvertItem.service, fileKey, iCheckStart, this.File);
+                        if (bValidService == false)
+                        {
+                            continue;
+                        }
+
                         bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.MDFileCorrection, i, ConvertItem.global, ref urlGlobal);
                         bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.MDFileCorrection, i, ConvertItem.mooncake, ref urlMooncake);
                         //bValidService = this.GetProcessConvertRuleValidService(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.validservice, this.Fullpath);
@@ -344,6 +363,12 @@ namespace AuthorCustmization.ProcessLibrary
 
                     for (int i = 0; i < iCount; i++)
                     {
+                        bValidService = this.GetProcessValidService(ref JUrl, ConvertCategory.YMLFileCorrection, i, ConvertItem.service, fileKey, iCheckStart, this.File);
+                        if (bValidService == false)
+                        {
+                            continue;
+                        }
+
                         bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.YMLFileCorrection, i, ConvertItem.global, ref urlGlobal);
                         bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.YMLFileCorrection, i, ConvertItem.mooncake, ref urlMooncake);
                         //bValidService = this.GetProcessConvertRuleValidService(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.validservice, this.Fullpath);
@@ -372,6 +397,12 @@ namespace AuthorCustmization.ProcessLibrary
 
                 for (int i = 0; i < iCount; i++)
                 {
+                    bValidService = this.GetProcessValidService(ref JUrl, ConvertCategory.ToolReplacement, i, ConvertItem.service, fileKey, iCheckStart, this.File);
+                    if (bValidService == false)
+                    {
+                        continue;
+                    }
+
                     bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.ToolReplacement, i, ConvertItem.global, ref urlGlobal);
                     bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.ToolReplacement, i, ConvertItem.mooncake, ref urlMooncake);
                     if (bGlobal && bMooncake)

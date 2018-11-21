@@ -1,3 +1,2 @@
-analysis-services-gateway.md	articles/analysis-services	11/22/2018
-analysis-services-gateway-install.md	articles/analysis-services	11/22/2018
-analysis-services-vnet-gateway.md	articles/analysis-services	11/22/2018
+n-series-driver-setup.md	articles/virtual-machines/windows	11/26/2018
+features-windows.md	articles/virtual-machines/extensions	12/17/2018

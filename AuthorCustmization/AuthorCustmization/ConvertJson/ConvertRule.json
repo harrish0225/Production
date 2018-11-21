@@ -28,6 +28,11 @@
   "URLReplacement": [
     {
       "serice": "ALL",
+      "global": "http(s)?://go\\.microsoft\\.com/fwlink/p/\\?LinkID\\=525040",
+      "mooncake": "https://portal.azure.cn"
+    },
+    {
+      "serice": "ALL",
       "global": "(P|p)ay\\-(A|a)s\\-(Y|y)ou\\-(G|g)o",
       "mooncake": "Standard Pay-in-Advance"
     },
@@ -557,25 +562,25 @@
       "mooncake": "Azure engineering teams"
     },
     {
-      "service": "ALL",
+      "service": "cosmos-db",
       "global": "over the world",
-      "mooncake": "over multiple-region",
+      "mooncake": "over China",
       "comments": "Cosmos DB the world issue change to China or multiple-region"
     },
     {
-      "service": "ALL",
+      "service": "cosmos-db",
       "global": "(world-wide|across the world|across the globe)",
-      "mooncake": "across multiple-region",
+      "mooncake": "across China",
       "comments": "Cosmos DB the world issue change to China or multiple-region(priority)"
     },
     {
-      "service": "ALL",
+      "service": "cosmos-db",
       "global": "(around the world|worldwide|around the globe)",
-      "mooncake": "around multiple-region",
+      "mooncake": "around China",
       "comments": "Cosmos DB the world issue change to China or multiple-region(priority)"
     },
     {
-      "service": "ALL",
+      "service": "cosmos-db",
       "global": "With its worldwide presence",
       "mooncake": "With its china-wide presence",
       "comments": "Cosmos DB the world issue change to China or multiple-region(priority)"
@@ -1262,7 +1267,7 @@
       "service": "ALL",
       "global": "\\[MSDN and the Stack Overflow\\]\\(https://azure\\.microsoft\\.com/support/forums/\\)",
       "mooncake": "[MSDN Azure and CSDN Azure](https://www.azure.cn/support/contact/)"
-    }
+    },
     {
       "service": "ALL",
       "global": "http://feedback\\.azure\\.com ",
@@ -1698,6 +1703,39 @@
       "service": "tutorial-traffic-manager-subnet-routing.md|tutorial-traffic-manager-improve-website-response.md",
       "global": "(User|user|My|my)VM(Europe|WestEurope|WEurope)",
       "mooncake": "$1VMNorthCN"
+    },
+    {
+      "service": "n-series-driver-setup.md",
+      "global": "(China|china)( *)(East|east|North|north)( *)(2?)( *)",
+      "mooncake": "$1$2$3$2&nbsp;2$4$6",
+      "comments": "NCV3 serial is valid on china east 2 and china north 2 region"
+    },
+    {
+      "service": "n-series-driver-setup.md",
+      "global": "\\&nbsp;2",
+      "mooncake": "2",
+      "comments": "NCV3 serial is valid on china east 2 and china north 2 region"
+    },
+    {
+      "service": "ALL",
+      "global": "(https://)?armtutorials\\.blob\\.core\\.chinacloudapi\\.cn",
+      "mooncake": "$1armtutorials.blob.core.windows.net",
+      "comments": "The URL containes specific json file in *.blob.core.windows.net"
+    },
+    {
+      "service": "ALL",
+      "global": "htts://portal\\.azure\\.cn",
+      "mooncake": "https://portal.azure.cn"
+    },
+    {
+      "service": "multiple-nics.md",
+      "global": "#configure-guest-os-for- multiple-nics",
+      "mooncake": "#configure-guest-os-for-multiple-nics"
+    },
+    {
+      "service": "virtual-network-multiple-ip-addresses-cli.md|virtual-network-multiple-ip-addresses-portal.md|virtual-network-multiple-ip-addresses-powershell.md",
+      "global": "#Scenario",
+      "mooncake": "#scenario"
     }
   ],
   "CLIReplacement": [
@@ -1709,11 +1747,19 @@
     }
   ],
   "ToolReplacement": [
+      {
+      "service": "n-series-driver-setup.md",
+      "global": "(China|china)( *)(East|east|North|north)( *)(2?)( *)",
+      "mooncake": "$1$2$3$2&nbsp;2$4$6",
+      "comments": "NCV3 serial is valid on china east 2 and china north 2 region"
+    },
     {
-      "service": "ALL", 
-	    "global": "([\\(|\\s]{1})https://www\\.azure\\.cn/video-center/&sort=newest([\\)|\\s]{1})",
-      "mooncake": "($1https://www.azure.cn/video-center/$2)"
+      "service": "n-series-driver-setup.md",
+      "global": "\\&nbsp;2",
+      "mooncake": "2",
+      "comments": "NCV3 serial is valid on china east 2 and china north 2 region"
     }
+   
   ],
   "MDFileCorrection": [
     {
