@@ -37,6 +37,11 @@
       "mooncake": "Standard Pay-in-Advance"
     },
     {
+      "serice": "ALL",
+      "global": ", or use it in the \\[Azure Cloud Shell\\]\\[azure-cloud-shell\\]",
+      "mooncake": ""
+    },
+    {
       "service": "ALL",
       "global": "in your (C|c)loud (S|s)hell",
       "mooncake": "in your local shell"
@@ -286,7 +291,7 @@
     },
     {
       "service": "ALL",
-      "global": "(\\s{1,})Microsoft([\\s{1,}])(?!(\\.Net|\\.NET|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper-V\\s{1,}Server|Management\\s{1,}Console|MVP|Office|OLE\\s{1,}DB\\s{1,}Provider|Root\\s{1,}Certificate\\s{1,}Program|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|System\\s{1,}Center\\s{1,}Endpoint|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word))",
+      "global": "(\\s{1,})Microsoft(\\s{1,})(?!(\\.Net|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper-V\\s{1,}Server|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word))",
       "mooncake": "$1Azure$2",
       "comments": "Update Microsoft to Azure except Excel/Officer/Word etc."
     },
@@ -479,12 +484,13 @@
     {
       "service": "ALL",
       "global": "\\?toc\\=\\%2fcli\\%2fazure\\%2ftoc\\.json",
-      "mooncake": ""
+      "mooncake": "?toc=%2fcli%2ftoc.json",
+      "comments": "Remove the %2fazure path in toc configuration"
     },
     {
       "service": "ALL",
       "global": "\\?toc\\=\\%2fpowershell\\%2fmodule\\%2ftoc\\.json",
-      "mooncake": ""
+      "mooncake": "?toc=%2fpowershell%2fmodule%2ftoc.json"
     },
     {
       "service": "ALL",
@@ -530,6 +536,11 @@
       "service": "ALL",
       "global": "-east-us",
       "mooncake": "-east-china"
+    },
+    {
+      "service": "ALL",
+      "global": "open Azure CLI or cloud shell and run the following command",
+      "mooncake": "open Azure CLI and run the following command"
     },
     {
       "service": "ALL",
@@ -640,7 +651,7 @@
     {
       "service": "ALL",
       "global": "href:([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(dotnet|powershell|cli|rest|java|sql|api|biztalk|system-center|windows)(\\/\\S+)",
-      "mooncake": "href:$1http://docs.microsoft.com$2$3$4",
+      "mooncake": "href:$1https://docs.microsoft.com$2$3$4",
       "comments": "replace the relative URL with global full URL format - Step 1"
     },
     {
@@ -655,7 +666,7 @@
     },
     {
       "service": "ALL",
-      "global": "http://go\\.microsoft\\.com/fwlink/?LinkId=544799",
+      "global": "http(s)?://go\\.microsoft\\.com/fwlink/?LinkId=544799",
       "mooncake": ""
     },
     {
@@ -675,8 +686,8 @@
     },
     {
       "service": "ALL",
-      "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(visual-studio)/([^\\s)]*)\\)",
-      "mooncake": "(https://docs.microsoft.com/zh-cn/visualstudio/$3)"
+      "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(devops)/([^\\s)]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/zh-cn/azure/$2/$3)"
     },
     {
       "service": "ALL",
@@ -690,7 +701,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\(http://azure\\.microsoft\\.com/\\)",
+      "global": "\\(http(s)?://azure\\.microsoft\\.com/\\)",
       "mooncake": "(https://www.azure.cn/)"
     },
     {
@@ -732,17 +743,17 @@
     },
     {
       "service": "ALL",
-      "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkId=544799",
+      "global": "http(s)?://go\\.microsoft\\.com/fwlink/\\?LinkId=544799",
       "mooncake": "https://github.com/Azure/azure-quickstart-templates/tree/master/201-2-vms-loadbalancer-lbrules"
     },
     {
       "service": "ALL",
-      "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkId=544800",
+      "global": "http(s)?://go\\.microsoft\\.com/fwlink/\\?LinkId=544800",
       "mooncake": "https://github.com/Azure/azure-quickstart-templates/tree/master/201-2-vms-internal-load-balancer"
     },
     {
       "service": "ALL",
-      "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkId=544801",
+      "global": "http(s)?://go\\.microsoft\\.com/fwlink/\\?LinkId=544801",
       "mooncake": "https://github.com/Azure/azure-quickstart-templates/tree/master/201-2-vms-loadbalancer-natrules"
     },
     {
@@ -752,14 +763,14 @@
     },
     {
       "service": "ALL",
-      "global": "https://azure\\.microsoft\\.com/regions/services/",
+      "global": "https://azure\\.microsoft\\.com/regions/services",
       "mooncake": "https://www.azure.cn/zh-cn/home/features/products-by-region",
       "comments": "Step 1 to convert first level"
     },
     {
       "service": "ALL",
-      "global": "https://azure\\.microsoft\\.com/regions/",
-      "mooncake": "https://www.azure.cn/support/service-dashboard/",
+      "global": "https://azure\\.microsoft\\.com/regions",
+      "mooncake": "https://www.azure.cn/support/service-dashboard",
       "comments": "Step 2 to convert second level"
     },
     {
@@ -796,12 +807,12 @@
     },
     {
       "service": "ALL",
-      "global": "http://aka\\.ms/servicefabricdocs",
+      "global": "http(s)?://aka\\.ms/servicefabricdocs",
       "mooncake": "..//service-fabric/index.yml"
     },
     {
       "service": "ALL",
-      "global": "((Get-AzurePublishSettingsFile)|(Add-AzureAccount)|(New-AzureStorageContext)|(Connect-AzureRmAccount)|(Login-AzureRmAccount))([ \\f\\t\\v]*\\-Environment AzureChinaCloud)?",
+      "global": "((Get-AzurePublishSettingsFile)|(Add-AzureRmAccount)|(New-AzureStorageContext)|(Connect-AzureRmAccount)|(Login-AzureRmAccount))([ \\f\\t\\v]*\\-Environment AzureChinaCloud)?",
       "mooncake": "$1 -Environment AzureChinaCloud"
     },
     {
@@ -868,6 +879,11 @@
     },
     {
       "service": "ALL",
+      "global": "https://azure\\.microsoft\\.com/(en-us/)?support/options/",
+      "mooncake": "https://www.azure.cn/zh-cn/support/plans/"
+    },
+    {
+      "service": "ALL",
       "global": "https://msdn\\.microsoft\\.com/library/azure/dn782250.aspx",
       "mooncake": "../cosmos-db/sql-api-sql-query-reference.md"
     },
@@ -878,7 +894,7 @@
     },
     {
       "service": "ALL",
-      "global": "http://go\\.microsoft\\.com/fwlink/p/\\?LinkID\\=510612",
+      "global": "http(s)?://go\\.microsoft\\.com/fwlink/p/\\?LinkID\\=510612",
       "mooncake": "/cosmos-db/sql-api-sql-query-reference"
     },
     {
@@ -954,13 +970,13 @@
     },
     {
       "service": "ALL",
-      "global": "http://azure\\.microsoft\\.com/develop/nodejs/tutorials/web-app-with-express/",
+      "global": "http(s)?://azure\\.microsoft\\.com/develop/nodejs/tutorials/web-app-with-express/",
       "mooncake": "https://docs.azure.cn/cloud-services/cloud-services-nodejs-develop-deploy-express-app"
     },
     {
       "service": "ALL",
-      "global": "http://www\\.microsoft\\.com/server-cloud/",
-      "mooncake": "http://www.microsoft.com/zh-cn/server-cloud/"
+      "global": "http(s)?://www\\.microsoft\\.com/server-cloud/",
+      "mooncake": "https://www.microsoft.com/zh-cn/server-cloud/"
     },
     {
       "service": "ALL",
@@ -974,7 +990,7 @@
     },
     {
       "service": "ALL",
-      "global": "http://aka.ms/vmspecs",
+      "global": "http(s)?://aka.ms/vmspecs",
       "mooncake": "/virtual-machines/windows/sizes?toc=%2fvirtual-machines%2fwindows%2ftoc.json"
     },
     {
@@ -1020,7 +1036,7 @@
     },
     {
       "service": "ALL",
-      "global": "http://feedback\\.azure\\.com",
+      "global": "http(s)?://feedback\\.azure\\.com",
       "mooncake": "https://www.azure.cn/support/contact/"
     },
     {
@@ -1057,6 +1073,11 @@
       "service": "ALL",
       "global": "You can also use \\[Cloud Shell\\]\\(/cloud\\-shell/quickstart\\) from your browser",
       "mooncake": ""
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/azure\\-jdks",
+      "mooncake": "https://docs.azure.cn/zh-cn/java/java-supported-jdk-runtime?view=azure-java-stable"
     },
     {
       "service": "ALL",
@@ -1133,7 +1154,7 @@
     },
     {
       "service": "ALL",
-      "global": "http://msdn\\.microsoft\\.com/library/azure/dn643629\\.aspx",
+      "global": "http(s)?://msdn\\.microsoft\\.com/library/azure/dn643629\\.aspx",
       "mooncake": "https://docs.azure.cn/zh-cn/automation/"
     },
     {
@@ -1159,7 +1180,7 @@
     },
     {
       "service": "ALL",
-      "global": "http://support\\.microsoft\\.com/oas/default.aspx\\?prid=16146",
+      "global": "http(s)?://support\\.microsoft\\.com/oas/default.aspx\\?prid=16146",
       "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/"
     },
     {
@@ -1169,8 +1190,8 @@
     },
     {
       "service": "ALL",
-      "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)TrustCenter/Compliance/HIPAA",
-      "mooncake": "https://www.trustcenter.cn/zh-cn/cloudservices/azure.html"
+      "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)TrustCenter/Compliance(/HIPAA)?",
+      "mooncake": "https://www.trustcenter.cn/zh-cn/Compliance"
     },
     {
       "service": "ALL",
@@ -1189,7 +1210,7 @@
     },
     {
       "service": "ALL",
-      "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkId=325362",
+      "global": "http(s)?://go\\.microsoft\\.com/fwlink/\\?LinkId=325362",
       "mooncake": "https://docs.azure.cn/zh-cn/app-service/"
     },
     {
@@ -1270,7 +1291,7 @@
     },
     {
       "service": "ALL",
-      "global": "http://feedback\\.azure\\.com ",
+      "global": "http(s)?://feedback\\.azure\\.com ",
       "mooncake": "https://www.azure.cn/support/contact/ "
     },
     {
@@ -1291,7 +1312,7 @@
     },
     {
       "service": "ALL",
-      "global": "http://go\\.microsoft\\.com/fwlink/p/?LinkID=510612",
+      "global": "http(s)?://go\\.microsoft\\.com/fwlink/p/?LinkID=510612",
       "mooncake": "../cosmos-db/sql-api-sql-query-reference"
     },
     {
@@ -1311,7 +1332,7 @@
     },
     {
       "service": "ALL",
-      "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkID=402386",
+      "global": "http(s)?://go\\.microsoft\\.com/fwlink/\\?LinkID=402386",
       "mooncake": "../cosmos-db/sql-api-dotnet-samples"
     },
     {
@@ -1418,7 +1439,7 @@
     },
     {
       "service": "ALL",
-      "global": "http://github\\.com",
+      "global": "http(s)?://github\\.com",
       "mooncake": "https://github.com"
     },
     {
@@ -1489,7 +1510,7 @@
     },
     {
       "service": "ALL",
-      "global": "http://aka\\.ms/vmspecs",
+      "global": "http(s)?://aka\\.ms/vmspecs",
       "mooncake": "https://docs.azure.cn/zh-cn/virtual-machines/windows/sizes?toc=%2fvirtual-machines%2fwindows%2ftoc.json"
     },
     {
@@ -1530,7 +1551,7 @@
     },
     {
       "service": "ALL",
-      "global": "http://servicefabricsdkstorage\\.blob\\.core\\.chinacloudapi.cn/publicrelease",
+      "global": "http(s)?://servicefabricsdkstorage\\.blob\\.core\\.chinacloudapi.cn/publicrelease",
       "mooncake": "https://servicefabricsdkstorage.blob.core.windows.net/publicrelease"
     },
     {
@@ -1596,13 +1617,13 @@
     },
     {
       "service": "ALL",
-      "global": "yoursetting",
-      "mooncake": "yoursetting"
+      "global": "\\[Products available by region\\]\\(https://www\\.azure\\.cn/support/service-dashboard(/\\S*)\\)",
+      "mooncake": "[Products available by region](https://www.azure.cn/zh-cn/home/features/products-by-region)"
     },
     {
       "service": "ALL",
       "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.",
-      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb."
+      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.cosmosdb."
     },
     {
       "service": "ALL",
@@ -1665,6 +1686,16 @@
       "mooncake": "$1chinaeast$2"
     },
     {
+      "service": "cassandra-nodejs.md",
+      "global": "EASTUS",
+      "mooncake": "EASTCHINA"
+    },
+     {
+      "service": "cassandra-nodejs.md",
+      "global": "WESTUS",
+      "mooncake": "NORTHCHINA"
+    },
+    {
       "service": "ALL",
       "global": "https://(analytics|doctorwho)\\.documents\\.azure\\.cn",
       "mooncake": "https://$1.documents.azure.com"
@@ -1676,8 +1707,23 @@
     },
     {
       "service": "ALL",
+      "global": "\\(https://www\\.azure\\.cn/pricing/details/virtual-machines/series/#\\S*\\)",
+      "mooncake": "(https://www.azure.cn/pricing/details/virtual-machines)"
+    },
+    {
+      "service": "ALL",
       "global": "https://support\\.azure\\.cn/support/support\\-ticket\\-form/",
       "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/"
+    },
+    {
+      "serice": "ALL",
+      "global": "https://docs\\.microsoft\\.com/visualstudio/subscriptions/subscriber-benefits",
+      "mooncake": "https://www.azure.cn/offers/ms-mc-arz-msdn/"
+    },
+    {
+      "serice": "ALL",
+      "global": "https://www\\.microsoft\\.com/(Licensing|licensing)/",
+      "mooncake": "https://www.microsoft.com/en-us/$1/"
     },
     {
       "service": "azure-to-azure-powershell.md",
@@ -1705,16 +1751,21 @@
       "mooncake": "$1VMNorthCN"
     },
     {
-      "service": "n-series-driver-setup.md",
+      "service": "n-series-driver-setup.md|hpccompute-gpu-linux.md|hpccompute-gpu-windows.md",
       "global": "(China|china)( *)(East|east|North|north)( *)(2?)( *)",
       "mooncake": "$1$2$3$2&nbsp;2$4$6",
       "comments": "NCV3 serial is valid on china east 2 and china north 2 region"
     },
     {
-      "service": "n-series-driver-setup.md",
+      "service": "n-series-driver-setup.md|hpccompute-gpu-linux.md|hpccompute-gpu-windows.md",
       "global": "\\&nbsp;2",
       "mooncake": "2",
       "comments": "NCV3 serial is valid on china east 2 and china north 2 region"
+    },
+    {
+      "service": "virtual-machines-windows-sql-automated-backup.md|virtual-machines-windows-sql-automated-backup-v2.md",
+      "global": "EASTUS2",
+      "mooncake": "chinanorth"
     },
     {
       "service": "ALL",
@@ -1736,28 +1787,53 @@
       "service": "virtual-network-multiple-ip-addresses-cli.md|virtual-network-multiple-ip-addresses-portal.md|virtual-network-multiple-ip-addresses-powershell.md",
       "global": "#Scenario",
       "mooncake": "#scenario"
+    },
+    {
+      "service": "infrastructure-example.md",
+      "global": "-use-",
+      "mooncake": "-che-"
+    },
+    {
+      "service": "infrastructure-example.md",
+      "global": "-USE-",
+      "mooncake": "-CHE-"
+    },
+    {
+      "service": "ALL",
+      "global": "https://msdn\\.microsoft\\.com/library/azure/microsoft\\.azure\\.documents\\.([^\\(\\)\\n\\r]*)\\.aspx",
+      "mooncake": "https://docs.azure.cn/zh-cn/dotnet/api/microsoft.azure.documents.$1"
+    },
+    {
+      "service": "ALL",
+      "global": "https://docs\\.azure\\.cn/zh-cn/dotnet/api/microsoft\\.azure\\.documents\\.linq\\.documentqueryable\\.createdatabasequery",
+      "mooncake": "https://msdn.microsoft.com/library/azure/microsoft.azure.documents.linq.documentqueryable.createdatabasequery.aspx"
+    },
+    {
+      "service": "ALL",
+      "global": "https://docs\\.azure\\.cn/zh-cn/dotnet/api/microsoft\\.azure\\.documents\\.linq\\.documentqueryable\\.createofferquery",
+      "mooncake": "https://msdn.microsoft.com/library/azure/microsoft.azure.documents.linq.documentqueryable.createofferquery.aspx"
+    },
+    {
+      "service": "ALL",
+      "global": "https://docs\\.azure\\.cn/zh-cn/dotnet/api/microsoft\\.azure\\.documents\\.linq\\.documentqueryable\\.createdocumentquery",
+      "mooncake": "https://msdn.microsoft.com/library/azure/microsoft.azure.documents.linq.documentqueryable.createdocumentquery.aspx"
     }
+
+
   ],
   "CLIReplacement": [
      {
       "service": "ALL", 
 	    "global": "href:([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(dotnet|powershell|cli|rest|java|sql|api|biztalk|system-center)(\\/\\S+)",
-      "mooncake": "href:$1http://docs.microsoft.com$2$3$4",
+      "mooncake": "href:$1https://docs.microsoft.com$2$3$4",
       "comments": "replace the relative URL with global full URL format - Step 1"
     }
   ],
   "ToolReplacement": [
-      {
-      "service": "n-series-driver-setup.md",
-      "global": "(China|china)( *)(East|east|North|north)( *)(2?)( *)",
-      "mooncake": "$1$2$3$2&nbsp;2$4$6",
-      "comments": "NCV3 serial is valid on china east 2 and china north 2 region"
-    },
     {
-      "service": "n-series-driver-setup.md",
-      "global": "\\&nbsp;2",
-      "mooncake": "2",
-      "comments": "NCV3 serial is valid on china east 2 and china north 2 region"
+      "service": "ALL",
+      "global": "https://msdn\\.microsoft\\.com/library/azure/microsoft\\.azure\\.documents\\.([^\\(\\)\\n\\r]*)\\.aspx",
+      "mooncake": "https://docs.azure.cn/zh-cn/dotnet/api/microsoft.azure.documents.$1"
     }
    
   ],

@@ -1,1 +1,1 @@
-app-service-api-get-started-selector.md	includes	02/22/2018
+sql-api-dotnet-samples.md	articles/cosmos-db	12/03/2018

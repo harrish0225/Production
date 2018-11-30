@@ -8,6 +8,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using AuthorCustmization.ProcessLibrary;
 using System.Threading;
+using System.Collections;
 
 namespace AuthorCustmization
 {
@@ -21,65 +22,83 @@ namespace AuthorCustmization
         static void Main(string[] args)
         {
             int iCount = args.Count();
+
             ConvertCategory category = ConvertCategory.ALL;
-            if (iCount > 1)
+            CustomizedCategory itercategory = CustomizedCategory.CustomizedByFile;
+            CommandPara curtpara = CommandPara.Null;
+
+            for (int i = 0; i < iCount; i++)
             {
-                ShowUseageTip();
-                return;
-
-            }else if (iCount==1)
-            {
-                string sParam = args[0].TrimStart('-').ToUpper();
-                int iParamCount = sParam.Trim().Length;
-
-
-                if (iParamCount== 1)
+                switch (args[i].ToUpper().Trim())
                 {
-                    switch (sParam)
-                    {
-                        case "A":
-                            category = ConvertCategory.AuthorReplacement;
-                            break;
-                        case "U":
-                            category = ConvertCategory.URLReplacement;
-                            break;
-                        case "C":
-                            category = ConvertCategory.URLCorrection;
-                            break;
-                        case "F":
-                            category = ConvertCategory.FindArticle;
-                            break;
-                        case "I":
-                            category = ConvertCategory.IncludeParentFile;
-                            break;
-                        case "T":
-                            category = ConvertCategory.ToolReplacement;
-                            break;
-
-                        case "H":
-                        default:
-                            ShowUseageTip();
-                            return;
-                    }
+                    case "--SERVICE":
+                    case "-S":
+                        curtpara = CommandPara.Servcie;
+                        break;
+                    case "--CUSTOMIZE":
+                    case "-C":
+                        curtpara = CommandPara.Customize;
+                        break;
+                    case "--HELP":
+                    case "-H":
+                        ShowUseageTip();
+                        return;
+                    default:
+                        switch (curtpara)
+                        {
+                            case CommandPara.Servcie:
+                                switch (args[i].ToUpper().Trim())
+                                {
+                                case "S":
+                                    itercategory = CustomizedCategory.CustomizedByService;
+                                    break;
+                                case "F":
+                                    itercategory = CustomizedCategory.CustomizedByFile;
+                                    break;
+                                default:
+                                    curtpara = CommandPara.VerifyFail;
+                                    break;
+                                }
+                                break;
+                            case CommandPara.Customize:
+                                switch (args[i].ToUpper().Trim())
+                                {
+                                    case "A":
+                                        category = ConvertCategory.AuthorReplacement;
+                                        break;
+                                    case "U":
+                                        category = ConvertCategory.URLReplacement;
+                                        break;
+                                    case "C":
+                                        category = ConvertCategory.URLCorrection;
+                                        break;
+                                    case "F":
+                                        category = ConvertCategory.FindArticle;
+                                        break;
+                                    case "I":
+                                        category = ConvertCategory.IncludeParentFile;
+                                        break;
+                                    case "T":
+                                        category = ConvertCategory.ToolReplacement;
+                                        break;
+                                    default:
+                                        curtpara = CommandPara.VerifyFail;
+                                        break;
+                                }
+                                break;
+                            case CommandPara.Null:
+                                curtpara = CommandPara.VerifyFail;
+                                break;
+                            case CommandPara.VerifyFail:
+                                ShowUseageTip();
+                                return;
+                        }
+                        break;
                 }
-                else
-                {
-                    switch(sParam)
-                    {
-                        case "HELP":
-                            ShowUseageTip();
-                            return;
-                        default:
-                            Console.WriteLine("You type the wrong command:");
-                            ShowUseageTip();
-                            return;
-                    }
-                    
-                }
-
-              
-                
+                        
             }
+          
+
             
 
             string error = "";
@@ -89,9 +108,9 @@ namespace AuthorCustmization
                 return;
             }
 
-            StreamReader sr = File.OpenText(configfile);
-            string row = "";
-            row = sr.ReadLine();
+            StreamReader sr = null;
+
+           
 
             string filename = "";
             string directory = "";
@@ -99,34 +118,40 @@ namespace AuthorCustmization
 
             List<FileCustomize> fileList = new List<FileCustomize>();
 
-            //Get the thread count
+            ArrayList arrFile = new ArrayList();
+
             int threadCount = 0;
 
-            while (row != null)
+            switch (itercategory)
             {
-                string[] para = row.Split(new Char[] { '\t' });
-
-                filename = para[0];
-                directory = para[1];
-                customizedate = para[2];
-
-                //fileList.Add(new FileCustomize(filename, directory, customizedate));
-                threadCount += 1;
-                row = sr.ReadLine();
+                case  CustomizedCategory.CustomizedByService:
+                    customizedate = DateTime.Now.ToString("MM/dd/yyyy");
+                    arrFile = GetFileListByService(customizedate);
+                    break;
+                case CustomizedCategory.CustomizedByFile:
+                    arrFile = GetFileListByArticles();
+                    break;
             }
+           
+
+
+                //Get the thread count
+
+
 
             ThreadPool.SetMinThreads(1000, 1000);
 
-            // Declare the application thread.
+            threadCount = arrFile.Count;
             Thread[] newThreads = new Thread[threadCount];
-            sr.BaseStream.Seek(0, SeekOrigin.Begin);
+
+            // Declare the application thread.
 
             int threadIdx = 0;
-            row = sr.ReadLine();
-            while (row != null)
-            {
-                string[] para = row.Split(new Char[] { '\t' });
+            string[] para = new string[] { };
 
+            for (int i=0;i<threadCount;i++)
+            {
+                para = (string[])arrFile[i];
                 filename = para[0];
                 directory = para[1];
                 customizedate = para[2];
@@ -143,12 +168,7 @@ namespace AuthorCustmization
                 newThreads[threadIdx].Join();
 #endif
 
-
-                row = sr.ReadLine();
-                threadIdx += 1;
             }
-
-            sr.Close();
 
             bool allThreadOver = false;
             while (allThreadOver == false)
@@ -240,14 +260,19 @@ namespace AuthorCustmization
         static void ShowUseageTip()
         {
             Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-            Console.WriteLine("Useage: AuthorCustmization [-A|-U|-C|-F|-I|-T]");
-            Console.WriteLine("without parameter means replace the AuthorReplacement,URLRepalcement,URLCorrection");
-            Console.WriteLine("-A means replace the AuthorReplacement");
-            Console.WriteLine("-U means replace the URLReplacement");
-            Console.WriteLine("-C means replace the URLCorrection");
-            Console.WriteLine("-F means find and mark the invloved articles");
-            Console.WriteLine("-I means find the one refrenced parent's articles");
-            Console.WriteLine("-T means replace the Tool");
+            Console.WriteLine("Useage: Your can use eithor of the following commandformat");
+            Console.WriteLine("AuthorCustmization --Service [S|F] --Customize [A|U|C|F|I|T]");
+            Console.WriteLine("AuthorCustmization -S [S|F] -C [A|U|C|F|I|T]");
+            Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            Console.WriteLine("The First Parameter group --Service [S|F] means We customized the file [By Servie|By FileList]");
+            Console.WriteLine("The Second Parameter group --Customize [A|U|C|F|I|T] means which format we should use to Customized the specific articles");
+            Console.WriteLine("A means replace the AuthorReplacement");
+            Console.WriteLine("U means replace the URLReplacement");
+            Console.WriteLine("C means replace the URLCorrection");
+            Console.WriteLine("F means find and mark the invloved articles");
+            Console.WriteLine("I means find the one refrenced parent's articles");
+            Console.WriteLine("T means replace the Tool");
+            Console.WriteLine("You can alter the specific section in the ConvertRule.json");
             Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             Console.WriteLine("Press <Enter> to exit....");
 
@@ -263,8 +288,73 @@ namespace AuthorCustmization
 
             }
         }
-        
 
-        
+
+        public static ArrayList GetFileListByService(string customizedate)
+        {
+            CollectAllFileByService fileByService = new CollectAllFileByService();
+            ArrayList arrFile = new ArrayList();
+            arrFile = fileByService.GetAllFileByServiceWithCustomziedate(customizedate);
+
+            return arrFile;
+
+        }
+
+        public static ArrayList GetFileListByArticles()
+        {
+            string error = "";
+            ArrayList arrFile = new ArrayList();
+            string configfile = CommonFun.GetConfigurationValue("customerfilepath", ref error);
+            if (error.Length > 0)
+            {
+                return null;
+            }
+
+            string filename = string.Empty;
+            string directory = string.Empty;
+            string customizedate = string.Empty;
+            string fullfilename = string.Empty;
+
+            string globalpath = string.Empty;
+
+
+            globalpath = CommonFun.GetConfigurationValue("GlobalRepository", ref error);
+
+
+            StreamReader sr = File.OpenText(configfile);
+            string row = "";
+            row = sr.ReadLine();
+
+            while (row != null)
+            {
+                string[] para = row.Split(new Char[] { '\t' });
+
+                filename = para[0];
+                directory = para[1];
+                customizedate = para[2];
+
+                switch (directory)
+                {
+                    case "includes":
+                        fullfilename = string.Format("{0}{1}/{2}", globalpath, directory, filename);
+
+                        break;
+                    default:
+                        fullfilename = string.Format("{0}{1}/{2}", globalpath, directory, filename);
+                        break;
+                }
+                arrFile.Add(new string[] { filename,directory, customizedate});
+
+                row = sr.ReadLine();
+
+            }
+
+
+            return arrFile;
+
+        }
+
+
+
     }
 }

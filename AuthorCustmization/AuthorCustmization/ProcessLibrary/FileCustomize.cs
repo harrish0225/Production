@@ -19,6 +19,15 @@ namespace AuthorCustmization.ProcessLibrary
         mooncake,
         service,
     }
+
+    public enum CommandPara
+    {
+        Null,
+        Servcie,
+        Customize,
+        VerifyFail,
+    }
+
     public enum ConvertCategory
     {
         ALL,
@@ -33,6 +42,12 @@ namespace AuthorCustmization.ProcessLibrary
         YMLFileCorrection
     }
 
+    public enum CustomizedCategory
+    {
+        CustomizedByService,
+        CustomizedByFile,
+    }
+
     public enum ProcessStatus
     {
         UnDefine,
@@ -40,6 +55,11 @@ namespace AuthorCustmization.ProcessLibrary
         Process,
         Complete,
     }
+
+    //public enum InvolvedService
+    //{
+    //    analysis_services,
+    //}
 
     public enum InvolvedService
     {
@@ -54,8 +74,8 @@ namespace AuthorCustmization.ProcessLibrary
         traffic_manager,
         virtual_machines,
         virtual_network,
+        includes,
     }
-
 
     public enum ReplaceParam
     {
@@ -66,6 +86,77 @@ namespace AuthorCustmization.ProcessLibrary
     {
         Article,
         Includes,
+    }
+
+    public class CollectAllFileByService : FileCustomize
+    {
+
+        public ArrayList GetAllFileByService()
+        {
+            ArrayList fileList = new ArrayList();
+            string message = string.Empty;
+            string diskpath = string.Empty;
+            string parentpath = string.Empty;
+
+            if (this.CheckFileList != null && this.CheckFileList.Count > 0)
+            {
+                this.CheckFileList = new ArrayList();
+            }
+
+            foreach (InvolvedService curtService in Enum.GetValues(typeof(InvolvedService)))
+            {
+                if (curtService.ToString().ToLower() == "includes".ToLower())
+                {
+                    diskpath = CommonFun.GetConfigurationValue("RepositoryENUSIncludeDir", ref message);
+                    parentpath = string.Format("{0}", diskpath);
+                }
+                else
+                {
+                    diskpath = CommonFun.GetConfigurationValue("RepositoryENUSArticleDir", ref message);
+                    parentpath = string.Format("{0}\\{1}", diskpath, curtService.ToString().Replace('_', '-'));
+                }
+
+                this.GetAllFilesInDirectory(parentpath);
+
+            }
+
+            fileList = this.CheckFileList;
+            return fileList;
+        }
+
+        public ArrayList GetAllFileByServiceWithCustomziedate(string customizedate)
+        {
+            ArrayList fileList = new ArrayList();
+            string message = string.Empty;
+            string diskpath = string.Empty;
+            string parentpath = string.Empty;
+
+            if (this.CheckFileList != null && this.CheckFileList.Count > 0)
+            {
+                this.CheckFileList = new ArrayList();
+            }
+
+            foreach (InvolvedService curtService in Enum.GetValues(typeof(InvolvedService)))
+            {
+                if (curtService.ToString().ToLower() == "includes".ToLower())
+                {
+                    diskpath = CommonFun.GetConfigurationValue("GlobalIncludeDir", ref message);
+                    parentpath = string.Format("{0}", diskpath);
+                }
+                else
+                {
+                    diskpath = CommonFun.GetConfigurationValue("GlobalArticleDir", ref message);
+                    parentpath = string.Format("{0}\\{1}", diskpath, curtService.ToString().Replace('_', '-'));
+                }
+
+                this.GetAllFilesInDirectoryWithCustomizedate(parentpath, customizedate);
+
+            }
+
+            fileList = this.CheckFileList;
+            return fileList;
+        }
+
     }
 
     public class FileCustomize
@@ -110,7 +201,7 @@ namespace AuthorCustmization.ProcessLibrary
         public string GetRightFileName(string[] para)
         {
             string rightname = "";
-            for (int i =1; i <= para.Length - 1; i++)
+            for (int i = 1; i <= para.Length - 1; i++)
             {
                 rightname = string.Format(@"{0}\{1}", rightname, para[i]);
             }
@@ -146,10 +237,13 @@ namespace AuthorCustmization.ProcessLibrary
             }
 
         }
-       
 
+        public FileCustomize()
+        {
+            this.CheckFileList = new ArrayList();
+        }
 
-        public FileCustomize(int id,string filename,string directory,string customizedate, ConvertCategory category)
+        public FileCustomize(int id, string filename, string directory, string customizedate, ConvertCategory category)
         {
             this.Id = id;
             this.File = filename;
@@ -190,10 +284,10 @@ namespace AuthorCustmization.ProcessLibrary
                 sr.Close();
             }
 
-            
-            
+
+
             JObject JUrl = (JObject)JsonConvert.DeserializeObject(ruleJson);
-            
+
             string urlGlobal = string.Empty;
             string urlMooncake = string.Empty;
             bool bGlobal = false;
@@ -219,28 +313,28 @@ namespace AuthorCustmization.ProcessLibrary
             string sTakeTime = string.Empty;
 #endif
 
-            string[] fileKey= this.Fullpath.Split('\\');
+            string[] fileKey = this.Fullpath.Split('\\');
             int iCheckStart = 0;
-            for(int i=0;i<=fileKey.Length-1;i++)
+            for (int i = 0; i <= fileKey.Length - 1; i++)
             {
-                switch(fileKey[i].ToLower())
+                switch (fileKey[i].ToLower())
                 {
                     case "articles":
                     case "includes":
                         iCheckStart = i;
                         break;
-                    
+
                 }
             }
 
 
-            if (category==ConvertCategory.ALL || category==ConvertCategory.AuthorReplacement)
+            if (category == ConvertCategory.ALL || category == ConvertCategory.AuthorReplacement)
             {
                 iCount = JUrl[ConvertCategory.AuthorReplacement.ToString()].Count();
 
                 for (int i = 0; i < iCount; i++)
                 {
-                    bValidService = this.GetProcessValidService(ref JUrl, ConvertCategory.AuthorReplacement, i, ConvertItem.service, fileKey, iCheckStart,this.File);
+                    bValidService = this.GetProcessValidService(ref JUrl, ConvertCategory.AuthorReplacement, i, ConvertItem.service, fileKey, iCheckStart, this.File);
                     if (bValidService == false)
                     {
                         continue;
@@ -257,8 +351,8 @@ namespace AuthorCustmization.ProcessLibrary
 
 #if DEBUG
                     dEnd = DateTime.Now;
-                    sTakeTime= CommonFun.DateDiff(ref dEnd, ref dStart);
-                    Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.AuthorReplacement.ToString(),i, urlGlobal, urlMooncake, sTakeTime));
+                    sTakeTime = CommonFun.DateDiff(ref dEnd, ref dStart);
+                    Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.AuthorReplacement.ToString(), i, urlGlobal, urlMooncake, sTakeTime));
 #endif
                 }
             }
@@ -280,16 +374,16 @@ namespace AuthorCustmization.ProcessLibrary
 
                     bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.global, ref urlGlobal);
                     bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.mooncake, ref urlMooncake);
-                    
-                    if (bGlobal && bMooncake )
+
+                    if (bGlobal && bMooncake)
                     {
                         reg = new Regex(urlGlobal);
                         articleContent = reg.Replace(articleContent, urlMooncake);
                     }
 #if DEBUG
                     dEnd = DateTime.Now;
-                    sTakeTime= CommonFun.DateDiff(ref dEnd, ref dStart);
-                    Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.URLReplacement.ToString(),i, urlGlobal, urlMooncake, sTakeTime));
+                    sTakeTime = CommonFun.DateDiff(ref dEnd, ref dStart);
+                    Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.URLReplacement.ToString(), i, urlGlobal, urlMooncake, sTakeTime));
 #endif
                 }
             }
@@ -311,23 +405,23 @@ namespace AuthorCustmization.ProcessLibrary
                     bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.URLCorrection, i, ConvertItem.global, ref urlGlobal);
                     bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.URLCorrection, i, ConvertItem.mooncake, ref urlMooncake);
                     //bValidService = this.GetProcessConvertRuleValidService(ref JUrl, ConvertCategory.URLReplacement, i, ConvertItem.validservice, this.Fullpath);
-                    if (bGlobal && bMooncake )
+                    if (bGlobal && bMooncake)
                     {
                         reg = new Regex(urlGlobal);
                         articleContent = reg.Replace(articleContent, urlMooncake);
                     }
 #if DEBUG
                     dEnd = DateTime.Now;
-                    sTakeTime= CommonFun.DateDiff(ref dEnd, ref dStart);
-                    Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.URLCorrection.ToString(),i, urlGlobal, urlMooncake, sTakeTime));
+                    sTakeTime = CommonFun.DateDiff(ref dEnd, ref dStart);
+                    Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.URLCorrection.ToString(), i, urlGlobal, urlMooncake, sTakeTime));
 #endif
                 }
 
                 //For only md File
 
                 string filePostfix = this.File.Trim().Substring(this.File.Trim().Length - 3).ToLower();
-                
-                if (filePostfix==".md")
+
+                if (filePostfix == ".md")
                 {
                     iCount = JUrl[ConvertCategory.MDFileCorrection.ToString()].Count();
 
@@ -349,8 +443,8 @@ namespace AuthorCustmization.ProcessLibrary
                         }
 #if DEBUG
                         dEnd = DateTime.Now;
-                        sTakeTime= CommonFun.DateDiff(ref dEnd, ref dStart);
-                        Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.MDFileCorrection.ToString(),i, urlGlobal, urlMooncake, sTakeTime));
+                        sTakeTime = CommonFun.DateDiff(ref dEnd, ref dStart);
+                        Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.MDFileCorrection.ToString(), i, urlGlobal, urlMooncake, sTakeTime));
 #endif               
                     }
 
@@ -379,14 +473,14 @@ namespace AuthorCustmization.ProcessLibrary
                         }
 #if DEBUG
                         dEnd = DateTime.Now;
-                        sTakeTime= CommonFun.DateDiff(ref dEnd, ref dStart);
-                        Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.YMLFileCorrection.ToString(),i, urlGlobal, urlMooncake, sTakeTime));
+                        sTakeTime = CommonFun.DateDiff(ref dEnd, ref dStart);
+                        Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.YMLFileCorrection.ToString(), i, urlGlobal, urlMooncake, sTakeTime));
 #endif
                     }
 
                 }
 
-                    
+
 
             }
 
@@ -412,8 +506,8 @@ namespace AuthorCustmization.ProcessLibrary
                     }
 #if DEBUG
                     dEnd = DateTime.Now;
-                    sTakeTime= CommonFun.DateDiff(ref dEnd, ref dStart);
-                    Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.ToolReplacement.ToString(),i, urlGlobal, urlMooncake, sTakeTime));
+                    sTakeTime = CommonFun.DateDiff(ref dEnd, ref dStart);
+                    Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.ToolReplacement.ToString(), i, urlGlobal, urlMooncake, sTakeTime));
 #endif
                 }
             }
@@ -421,9 +515,9 @@ namespace AuthorCustmization.ProcessLibrary
             //Find Reference file of Include File
             if (category == ConvertCategory.ALL || category == ConvertCategory.IncludeParentFile)
             {
-                if(this.ArticleCategory == FileCategory.Includes)
+                if (this.ArticleCategory == FileCategory.Includes)
                 {
-                    if(this.CheckFileList == null && this.CheckFileList.Count>0)
+                    if (this.CheckFileList == null && this.CheckFileList.Count > 0)
                     {
                         this.CheckFileList.Clear();
                     }
@@ -433,10 +527,10 @@ namespace AuthorCustmization.ProcessLibrary
 
             //articleContent += "\n";
 
-            
+
         }
 
-        private void GetAllFilesInDirectory(string parentPath)
+        public void GetAllFilesInDirectory(string parentPath)
         {
             string[] curtFiles = System.IO.Directory.GetFiles(parentPath, "*.md");
             this.CheckFileList.AddRange(curtFiles);
@@ -445,9 +539,82 @@ namespace AuthorCustmization.ProcessLibrary
 
             string[] curtDirList = System.IO.Directory.GetDirectories(parentPath);
 
-            for(int i=0; i<curtDirList.Length;i++)
+            for (int i = 0; i < curtDirList.Length; i++)
             {
                 this.GetAllFilesInDirectory(curtDirList[i]);
+            }
+
+        }
+
+        public void GetAllFilesInDirectoryWithCustomizedate(string parentPath, string customizedate)
+        {
+            string[] curtFiles = System.IO.Directory.GetFiles(parentPath, "*.md");
+            string filename = string.Empty;
+            string directory = string.Empty;
+
+            string curtValue = string.Empty;
+            string[] curtKey = new string[] { };
+
+            int iStartIdx = 0;
+            
+            if(curtFiles.Length>0)
+            {
+                curtValue = curtFiles[0].Replace("\\", "/");
+                curtKey = curtValue.Split('/');
+
+                for(int i=0; i<curtKey.Length;i++)
+                {
+                    if(curtKey[i].ToUpper()== "ARTICLES" || curtKey[i].ToUpper() == "INCLUDES")
+                    {
+                        iStartIdx = i;
+                        break;
+                    }
+                }
+
+                for (int i = 0; i < curtFiles.Length; i++)
+                {
+                    curtValue = curtFiles[i].Replace("\\", "/");
+                    curtKey = curtValue.Split('/');
+                    directory = string.Empty;
+                    for (int j = iStartIdx; j < curtKey.Length - 1; j++)
+                    {
+                        directory += string.Format("/{0}", curtKey[j]);
+                    }
+                    directory = directory.Trim('/');
+                    filename = curtKey[curtKey.Length - 1];
+
+                    this.CheckFileList.Add(new string[] { filename, directory, customizedate });
+                }
+            }
+
+            
+            
+
+
+            string[] curtymlFiles = System.IO.Directory.GetFiles(parentPath, "*.yml");
+
+            if (curtFiles.Length > 0)
+            {
+                for (int i = 0; i < curtymlFiles.Length; i++)
+                {
+                    curtValue = curtymlFiles[i].Replace("\\", "/");
+                    curtKey = curtValue.Split('/');
+                    for (int j = iStartIdx; j < curtKey.Length - 1; j++)
+                    {
+                        directory += string.Format("/{0}", curtKey[j]);
+                    }
+                    directory = directory.Trim('/');
+                    filename = curtKey[curtKey.Length - 1];
+
+                    this.CheckFileList.Add(new string[] { filename, directory, customizedate });
+                }
+            }
+
+            string[] curtDirList = System.IO.Directory.GetDirectories(parentPath);
+
+            for (int i = 0; i < curtDirList.Length; i++)
+            {
+                this.GetAllFilesInDirectoryWithCustomizedate(curtDirList[i], customizedate);
             }
 
         }
@@ -488,7 +655,7 @@ namespace AuthorCustmization.ProcessLibrary
             int idx = 1;
             parentInclude = this.Fullpath;
 
-            while(parentInclude!=string.Empty )
+            while (parentInclude != string.Empty)
             {
                 foreach (string curtFile in fileList)
                 {
@@ -496,7 +663,7 @@ namespace AuthorCustmization.ProcessLibrary
                     try
                     {
                         curtCheckFile = curtFile;
-                        
+
                         Mutex fileMutex = new Mutex(false, GetMetuxFileName(curtCheckFile));
                         fileMutex.WaitOne();
                         fs = new FileStream(curtCheckFile, FileMode.OpenOrCreate);
@@ -512,7 +679,7 @@ namespace AuthorCustmization.ProcessLibrary
                             if (reg.IsMatch(filecontent))
                             {
                                 sw = new StreamWriter(curtCheckFile, false);
-                                filecontent += string.Format("\n<!--Not Available the {0} parent file {1} of includes file of {2}-->",idx, Path.GetFileName(curtCheckFile), Path.GetFileName(parentInclude));
+                                filecontent += string.Format("\n<!--Not Available the {0} parent file {1} of includes file of {2}-->", idx, Path.GetFileName(curtCheckFile), Path.GetFileName(parentInclude));
                                 filecontent += string.Format("\n<!--ms.date:{0}-->", this.CustomizedDate);
                                 sw.Write(filecontent);
                                 sw.Flush();
@@ -559,7 +726,8 @@ namespace AuthorCustmization.ProcessLibrary
             if (this.ParentIncludeFile == string.Empty)
             {
                 parentInclude = this.File;
-            }else
+            }
+            else
             {
                 parentInclude = this.ParentIncludeFile;
             }
@@ -581,7 +749,7 @@ namespace AuthorCustmization.ProcessLibrary
             //string regRule = "\\[\\!INCLUDE \\[(\\S+)(\\.md)?\\]\\(((\\.\\.\\/)*)includes\\/{0}\\)\\]";
             Regex reg;
 
-            FileStream fs ;
+            FileStream fs;
             StreamReader sr;
             StreamWriter sw;
             bool findFile = false;
@@ -648,13 +816,13 @@ namespace AuthorCustmization.ProcessLibrary
                             break;
                         }
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
 
                     }
-                   
+
                 }
-               
+
                 if (findFile == true)
                 {
                     break;
@@ -665,21 +833,19 @@ namespace AuthorCustmization.ProcessLibrary
 
         }
 
-
-
-        public bool GetProcessConvertRule(ref JObject JConvert, ConvertCategory category, int iIndex, ConvertItem key,ref string valReturn)
+        public bool GetProcessConvertRule(ref JObject JConvert, ConvertCategory category, int iIndex, ConvertItem key, ref string valReturn)
         {
             bool bProcess = false;
             try
             {
                 valReturn = JConvert[category.ToString()][iIndex][key.ToString()].ToString();
-                if (valReturn== "mysetting")
+                if (valReturn == "mysetting")
                 {
                     return bProcess;
                 }
                 bProcess = true;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
@@ -688,8 +854,7 @@ namespace AuthorCustmization.ProcessLibrary
 
         }
 
-
-        public bool GetProcessValidService(ref JObject JConvert, ConvertCategory category, int iIndex, ConvertItem key, string[] fileKey,int iCheckStart, string fileName)
+        public bool GetProcessValidService(ref JObject JConvert, ConvertCategory category, int iIndex, ConvertItem key, string[] fileKey, int iCheckStart, string fileName)
         {
             bool bProcess = false;
             string valReturn = string.Empty;
@@ -697,7 +862,7 @@ namespace AuthorCustmization.ProcessLibrary
             try
             {
                 valReturn = JConvert[category.ToString()][iIndex][key.ToString()].ToString().ToLower();
-                if(valReturn=="all")
+                if (valReturn == "all")
                 {
                     bProcess = true;
                     return bProcess;
@@ -705,9 +870,9 @@ namespace AuthorCustmization.ProcessLibrary
 
                 string[] invloveService = valReturn.Split('|');
 
-                for(int i=iCheckStart+1; i<=fileKey.Length-1;i++)
+                for (int i = iCheckStart + 1; i <= fileKey.Length - 1; i++)
                 {
-                    for(int j=0; j<= invloveService.Length-1;j++)
+                    for (int j = 0; j <= invloveService.Length - 1; j++)
                     {
                         if (fileKey[i].ToLower() == invloveService[j].ToLower())
                         {
@@ -716,7 +881,7 @@ namespace AuthorCustmization.ProcessLibrary
                         }
 
                         //for check the files in the include directory.
-                        if(invloveService[j].Length<fileName.Length && invloveService[j].ToLower()==fileName.Substring(0, invloveService[j].Length))
+                        if (invloveService[j].Length < fileName.Length && invloveService[j].ToLower() == fileName.Substring(0, invloveService[j].Length))
                         {
                             bProcess = true;
                             return bProcess;
@@ -724,7 +889,7 @@ namespace AuthorCustmization.ProcessLibrary
                     }
 
                 }
-               
+
             }
             catch (Exception ex)
             {
@@ -754,13 +919,13 @@ namespace AuthorCustmization.ProcessLibrary
                 Console.WriteLine(string.Format("Processing Thread[{0}] : {1}", this.Id, this.Fullpath));
 
                 this.ProcessConvertJson(ref fullcontent);
-                
-                sw = new StreamWriter(this.Fullpath,false);
+
+                sw = new StreamWriter(this.Fullpath, false);
                 sw.Write(fullcontent);
                 sw.Flush();
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 error = ex.Message.ToString();
                 CommonFun.GenerateErrorDownloadFile(ref error);
@@ -790,9 +955,12 @@ namespace AuthorCustmization.ProcessLibrary
 
         }
 
-       
+
 
     }
 
-
 }
+
+
+
+
