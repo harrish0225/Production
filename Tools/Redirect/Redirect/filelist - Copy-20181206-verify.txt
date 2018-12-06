@@ -1,0 +1,5 @@
+distribute-data-globally-benefits.md	articles/cosmos-db	11/16/2018
+distribute-data-globally-turnkey.md	articles/cosmos-db	11/16/2018
+enable-multi-master.md	articles/cosmos-db	11/16/2018
+multi-master-conflict-resolution.md	articles/cosmos-db	11/16/2018
+multi-master-oss-nosql.md	articles/cosmos-db	11/16/2018

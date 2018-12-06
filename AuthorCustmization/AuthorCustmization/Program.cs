@@ -146,7 +146,7 @@ namespace AuthorCustmization
 
             // Declare the application thread.
 
-            int threadIdx = 0;
+
             string[] para = new string[] { };
 
             for (int i=0;i<threadCount;i++)
@@ -155,17 +155,17 @@ namespace AuthorCustmization
                 filename = para[0];
                 directory = para[1];
                 customizedate = para[2];
-                FileCustomize curtFile = new FileCustomize(threadIdx,filename, directory, customizedate,category);
+                FileCustomize curtFile = new FileCustomize(i,filename, directory, customizedate,category);
                 fileList.Add(curtFile);
-                newThreads[threadIdx] = new Thread(new ThreadStart(curtFile.ProcessFileCustomize));
-                newThreads[threadIdx].Name = string.Format("{0}/{1}", directory, filename);
-                newThreads[threadIdx].Start();
-                Console.WriteLine(string.Format("Start the Thread[{0}] in application...", threadIdx));
+                newThreads[i] = new Thread(new ThreadStart(curtFile.ProcessFileCustomize));
+                newThreads[i].Name = string.Format("{0}/{1}", directory, filename);
+                newThreads[i].Start();
+                Console.WriteLine(string.Format("Start the Thread[{0}] in application...", i));
 
 
                 // Console.WriteLine(string.Format("Join the {0} thread in application", threadIdx));
 #if DEBUG
-                newThreads[threadIdx].Join();
+                newThreads[i].Join();
 #endif
 
             }

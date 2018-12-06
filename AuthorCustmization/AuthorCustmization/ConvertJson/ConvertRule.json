@@ -34,7 +34,7 @@
     {
       "serice": "ALL",
       "global": "(P|p)ay\\-(A|a)s\\-(Y|y)ou\\-(G|g)o",
-      "mooncake": "Standard Pay-in-Advance"
+      "mooncake": "Standard Pay-in-Advance Offer"
     },
     {
       "serice": "ALL",
@@ -65,6 +65,11 @@
       "service": "ALL",
       "global": "https://aka\\.ms/adelinux",
       "mooncake": "https://docs.azure.cn/security/azure-security-disk-encryption-windows"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://aka\\.ms/asr-iis\\)",
+      "mooncake": "(https://docs.azure.cn/site-recovery/site-recovery-iis)"
     },
     {
       "service": "ALL",
@@ -195,6 +200,11 @@
     },
     {
       "service": "ALL",
+      "global": "\\(https://www\\.microsoft\\.com/download/details\\.aspx\\?id=(56519|57063|57064)\\)",
+      "mooncake": "(https://www.microsoft.com/download/details.aspx?id=57062)"
+    },
+    {
+      "service": "ALL",
       "global": " or by using the Azure Cloud Shell\\.",
       "mooncake": ".",
       "comments": "Azure Cloud Shell on available on MC"
@@ -291,7 +301,7 @@
     },
     {
       "service": "ALL",
-      "global": "(\\s{1,})Microsoft(\\s{1,})(?!(\\.Net|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper-V\\s{1,}Server|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word))",
+      "global": "(\\s{1,})Microsoft(\\s{1,})(?!(\\.Net|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|EXCEL|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper-V\\s{1,}Server|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word|Update))",
       "mooncake": "$1Azure$2",
       "comments": "Update Microsoft to Azure except Excel/Officer/Word etc."
     },
@@ -462,6 +472,11 @@
     },
     {
       "service": "ALL",
+      "global": "\\(https?://aka\\.ms/getazuresupport\\)",
+      "mooncake": "(https://support.windowsazure.cn/support/support-azure)"
+    },
+    {
+      "service": "ALL",
       "global": "- Communication across (global|multiple-region) peered virtual networks through the following VM types is not supported: \\[High performance compute\\]\\(\\.\\./virtual-machines/windows/sizes-hpc\\.md\\) and \\[GPU\\]\\(\\.\\./virtual-machines/windows/sizes-gpu\\.md\\)\\. This includes H\\, NC\\, NV\\, NCv2\\, NCv3\\, and ND series VMs\\.",
       "mooncake": ""
     },
@@ -496,11 +511,6 @@
       "service": "ALL",
       "global": "Azure\\.com",
       "mooncake": "Azure.cn"
-    },
-    {
-      "service": "ALL",
-      "global": "([\\s]){1}(Microsoft|microsoft)([\\s]){1}",
-      "mooncake": "$1Azure$3"
     },
     {
       "service": "ALL",
@@ -681,7 +691,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(visualstudio|virtualization|system-center|vsts|windows|power-bi|xamarin|message-passing-interface)/([^\\s)]*)\\)",
+      "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(previous-versions|visualstudio|virtualization|system-center|vsts|windows|power-bi|xamarin|message-passing-interface)/([^\\s)]*)\\)",
       "mooncake": "(https://docs.microsoft.com/zh-cn/$2/$3)"
     },
     {
@@ -1832,10 +1842,9 @@
   "ToolReplacement": [
     {
       "service": "ALL",
-      "global": "https://msdn\\.microsoft\\.com/library/azure/microsoft\\.azure\\.documents\\.([^\\(\\)\\n\\r]*)\\.aspx",
-      "mooncake": "https://docs.azure.cn/zh-cn/dotnet/api/microsoft.azure.documents.$1"
+      "global": "\\(https?://aka\\.ms/getazuresupport\\)",
+      "mooncake": "(https://support.windowsazure.cn/support/support-azure)"
     }
-   
   ],
   "MDFileCorrection": [
     {

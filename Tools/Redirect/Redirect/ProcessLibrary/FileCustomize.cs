@@ -418,8 +418,17 @@ namespace CLIReplacement.ProcessLibrary
 
                 diskpath = CommonFun.GetConfigurationValue("GlobalArticleDir", ref message);
                 relativefile = GetRightFileName(para);
-                this.FullPath = string.Format(@"{0}\{1}\{2}", diskpath, relativefile, this.File);
-                this.RelativeFile = string.Format(@"articles/{0}/{1}", relativefile, this.File).Replace(@"\","/");
+                if (relativefile.Length > 0)
+                {
+                    this.FullPath = string.Format(@"{0}\{1}\{2}", diskpath, relativefile, this.File);
+                    this.RelativeFile = string.Format(@"articles/{0}/{1}", relativefile, this.File).Replace(@"\", "/");
+                }
+                else
+                {
+                    this.FullPath = string.Format(@"{0}\{1}", diskpath, this.File);
+                    this.RelativeFile = string.Format(@"articles/{0}", this.File).Replace(@"\", "/");
+                }
+                
                 this.ArticleCategory = FileCategory.Article;
 
             }

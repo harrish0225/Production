@@ -599,6 +599,7 @@ namespace AuthorCustmization.ProcessLibrary
                 {
                     curtValue = curtymlFiles[i].Replace("\\", "/");
                     curtKey = curtValue.Split('/');
+                    directory = string.Empty;
                     for (int j = iStartIdx; j < curtKey.Length - 1; j++)
                     {
                         directory += string.Format("/{0}", curtKey[j]);
@@ -903,13 +904,14 @@ namespace AuthorCustmization.ProcessLibrary
         {
             this.Status = ProcessStatus.Start;
 
-            FileStream fs = new FileStream(this.Fullpath, FileMode.OpenOrCreate);
+            FileStream fs = null;
 
             StreamReader sr = null;
             StreamWriter sw = null;
             string error = "";
             try
             {
+                fs = new FileStream(this.Fullpath, FileMode.OpenOrCreate);
                 sr = new StreamReader(fs);
                 string fullcontent = sr.ReadToEnd();
 
