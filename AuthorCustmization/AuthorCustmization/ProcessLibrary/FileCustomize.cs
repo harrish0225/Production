@@ -532,18 +532,22 @@ namespace AuthorCustmization.ProcessLibrary
 
         public void GetAllFilesInDirectory(string parentPath)
         {
-            string[] curtFiles = System.IO.Directory.GetFiles(parentPath, "*.md");
-            this.CheckFileList.AddRange(curtFiles);
-            string[] curtymlFiles = System.IO.Directory.GetFiles(parentPath, "*.yml");
-            this.CheckFileList.AddRange(curtymlFiles);
-
-            string[] curtDirList = System.IO.Directory.GetDirectories(parentPath);
-
-            for (int i = 0; i < curtDirList.Length; i++)
+            if(System.IO.Directory.Exists(parentPath)==true)
             {
-                this.GetAllFilesInDirectory(curtDirList[i]);
-            }
+                string[] curtFiles = System.IO.Directory.GetFiles(parentPath, "*.md");
+                this.CheckFileList.AddRange(curtFiles);
+                string[] curtymlFiles = System.IO.Directory.GetFiles(parentPath, "*.yml");
+                this.CheckFileList.AddRange(curtymlFiles);
 
+                string[] curtDirList = System.IO.Directory.GetDirectories(parentPath);
+
+                for (int i = 0; i < curtDirList.Length; i++)
+                {
+                    this.GetAllFilesInDirectory(curtDirList[i]);
+                }
+
+            }
+            
         }
 
         public void GetAllFilesInDirectoryWithCustomizedate(string parentPath, string customizedate)

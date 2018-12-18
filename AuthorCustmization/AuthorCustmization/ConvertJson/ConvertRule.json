@@ -595,7 +595,7 @@
       "comments": "Cosmos DB the world issue change to China or multiple-region(priority)"
     },
     {
-      "service": "cosmos-db",
+      "service": "cosmos-db|traffic-manager-performance-considerations.md",
       "global": "(around the world|worldwide|around the globe)",
       "mooncake": "around China",
       "comments": "Cosmos DB the world issue change to China or multiple-region(priority)"
