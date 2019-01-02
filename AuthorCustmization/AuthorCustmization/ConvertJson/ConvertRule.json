@@ -589,10 +589,10 @@
       "comments": "Cosmos DB the world issue change to China or multiple-region"
     },
     {
-      "service": "cosmos-db",
+      "service": "cosmos-db|understand-vm-reboot.md",
       "global": "(world-wide|across the world|across the globe)",
       "mooncake": "across China",
-      "comments": "Cosmos DB the world issue change to China or multiple-region(priority)"
+      "comments": "Cosmos DB the world issue change to China or multiple-region(priority). the same the VM one articles."
     },
     {
       "service": "cosmos-db|traffic-manager-performance-considerations.md",
@@ -822,7 +822,7 @@
     },
     {
       "service": "ALL",
-      "global": "((Get-AzurePublishSettingsFile)|(Add-AzureRmAccount)|(New-AzureStorageContext)|(Connect-AzureRmAccount)|(Login-AzureRmAccount))([ \\f\\t\\v]*\\-Environment AzureChinaCloud)?",
+      "global": "((Get\\-AzurePublishSettingsFile)|(Add\\-AzureRmAccount)|(New\\-AzureStorageContext)|(Connect\\-AzureRmAccount)|(Login\\-AzureRmAccount))([ \\f\\t\\v]*\\-(Environment|EnvironmentName) AzureChinaCloud)?",
       "mooncake": "$1 -Environment AzureChinaCloud"
     },
     {
@@ -1088,6 +1088,12 @@
       "service": "ALL",
       "global": "https://aka\\.ms/azure\\-jdks",
       "mooncake": "https://docs.azure.cn/zh-cn/java/java-supported-jdk-runtime?view=azure-java-stable"
+    },
+    {
+      "service": "ALL",
+      "global": "http://azure\\.microsoft\\.com/pricing/member\\-offers/msdn\\-benefits\\-details/?",
+      "mooncake": "https://www.azure.cn/zh-cn/offers/ms-mc-arz-msdn/",
+      "comments": "MSDN benefits on Mooncake"
     },
     {
       "service": "ALL",
@@ -1687,11 +1693,6 @@
     },
     {
       "service": "ALL",
-      "global": "([\\*|\\`|\\[]{1,2})(Get\\-AzurePublishSettingsFile|Add\\-AzureAccount|New\\-AzureStorageContext|Connect\\-AzureRmAccount|Login\\-AzureRmAccount) \\-Environment AzureChinaCloud([\\*|\\`|\\]]{1,2})",
-      "mooncake": "$1$2$3"
-    },
-    {
-      "service": "ALL",
       "global": "([\\*|\\s]{1})EastUs([\\*|\\s]{1})",
       "mooncake": "$1chinaeast$2"
     },
@@ -1779,8 +1780,8 @@
     },
     {
       "service": "ALL",
-      "global": "(https://)?armtutorials\\.blob\\.core\\.chinacloudapi\\.cn",
-      "mooncake": "$1armtutorials.blob.core.windows.net",
+      "global": "(https://)?(armtutorials|documentdbportalstorage)\\.blob\\.core\\.chinacloudapi\\.cn",
+      "mooncake": "$1$2.blob.core.windows.net",
       "comments": "The URL containes specific json file in *.blob.core.windows.net"
     },
     {
@@ -1810,8 +1811,8 @@
     },
     {
       "service": "ALL",
-      "global": "https://msdn\\.microsoft\\.com/library/azure/microsoft\\.azure\\.documents\\.([^\\(\\)\\n\\r]*)\\.aspx",
-      "mooncake": "https://docs.azure.cn/zh-cn/dotnet/api/microsoft.azure.documents.$1"
+      "global": "https://msdn\\.microsoft\\.com/library/(azure/)?microsoft\\.azure\\.documents\\.([^\\(\\)\\n\\r]*)\\.aspx",
+      "mooncake": "https://docs.azure.cn/zh-cn/dotnet/api/microsoft.azure.documents.$2"
     },
     {
       "service": "ALL",
@@ -1827,6 +1828,41 @@
       "service": "ALL",
       "global": "https://docs\\.azure\\.cn/zh-cn/dotnet/api/microsoft\\.azure\\.documents\\.linq\\.documentqueryable\\.createdocumentquery",
       "mooncake": "https://msdn.microsoft.com/library/azure/microsoft.azure.documents.linq.documentqueryable.createdocumentquery.aspx"
+    },
+    {
+      "service": "container-registry",
+      "global": "chinaeast",
+      "mooncake": "chinanorth",
+      "comments": "Container Registry is only valid on chinanorth currently"
+    },
+    {
+      "service": "ALL",
+      "global": "https://(www|support)\\.azure\\.cn/support/(support\\-ticket\\-form|support\\-azure)(/)?",
+      "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/"
+    },
+    {
+      "service": "service-fabric",
+      "global": "party\\-cluster\\-1486790479\\-client\\-cert\\.pfx",
+      "mooncake": "<YOUR_CERTIFICATE_PFX_FILE_Name>.pfx",
+      "comments": "step 1: change party cluster to mooncake portal certificate"
+    },
+    {
+      "service": "service-fabric",
+      "global": "party\\-cluster\\-1486790479\\-client\\-cert\\.pem",
+      "mooncake": "<YOUR_CERTIFICATE_PEM_FILE_Name>.pem",
+      "comments": "step 2: change party cluster to mooncake portal certificate"
+    },
+    {
+      "service": "service-fabric",
+      "global": "pass\\:1486790479",
+      "mooncake": "pass:<YOUR_PASSWORD>",
+      "comments": "step 3: change party cluster to mooncake portal certificate"
+    },
+    {
+      "service": "service-fabric",
+      "global": " Party Cluster website",
+      "mooncake": "[Azure Portal](https://portal.azure.cn)",
+      "comments": "change Party Cluster website"
     }
 
 
@@ -1842,8 +1878,8 @@
   "ToolReplacement": [
     {
       "service": "ALL",
-      "global": "\\(https?://aka\\.ms/getazuresupport\\)",
-      "mooncake": "(https://support.windowsazure.cn/support/support-azure)"
+      "global": "((Get\\-AzurePublishSettingsFile)|(Add\\-AzureRmAccount)|(New\\-AzureStorageContext)|(Connect\\-AzureRmAccount)|(Login\\-AzureRmAccount))([ \\f\\t\\v]*\\-Environment AzureChinaCloud)?",
+      "mooncake": "$1 -Environment AzureChinaCloud"
     }
   ],
   "MDFileCorrection": [
