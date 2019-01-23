@@ -33,6 +33,27 @@
     },
     {
       "serice": "ALL",
+      "global": "\\[(cosmosdbtooling\\@microsoft\\.com|cosmosdbtooling\\@microsoft\\.test)\\]",
+      "mooncake": "[MSDN Azure and CSDN Azure]"
+    },
+    {
+      "serice": "ALL",
+      "global": "\\((mailto\\:)?(cosmosdbtooling\\@microsoft\\.com|cosmosdbtooling\\@microsoft\\.test)\\)",
+      "mooncake": "(https://www.azure.cn/support/contact/)"
+    },
+    {
+      "serice": "ALL",
+      "global": "https://partner\\.microsoft\\.com/cloud\\-solution\\-provider",
+      "mooncake": "https://www.21vbluecloud.com/partner-china/welcome/",
+      "comments": ""
+    },
+    {
+      "serice": "ALL",
+      "global": "https://partnercenter\\.microsoft\\.com/",
+      "mooncake": "https://market-publish.azure.cn/zh-cn/isv/index"
+    },
+    {
+      "serice": "ALL",
       "global": "(P|p)ay\\-(A|a)s\\-(Y|y)ou\\-(G|g)o",
       "mooncake": "Standard Pay-in-Advance Offer"
     },
@@ -195,13 +216,13 @@
     },
     {
       "service": "ALL",
-      "global": "You can download the list of ranges \\(prefixes\\) for the Azure \\[Public\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx\\?id=56519\\)\\, \\[US government\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx?id=57063\\)\\, \\[China\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx\\?id=57062\\)\\, and \\[Germany\\]\\(https://www\\.microsoft\\.com/download/details\\.aspx\\?id=57064\\) clouds\\.",
-      "mooncake": "You can download the list of ranges (prefixes) for the Azure [China](https://www.microsoft.com/download/details.aspx?id=57062) clouds."
+      "global": "You can download the list of ranges \\(prefixes\\) for the Azure \\[Public\\]\\(https://www\\.microsoft\\.com/download/(details|confirmation)\\.aspx\\?id=56519\\)\\, \\[US government\\]\\(https://www\\.microsoft\\.com/download/(details|confirmation)\\.aspx?id=57063\\)\\, \\[China\\]\\(https://www\\.microsoft\\.com/download/(details|confirmation)\\.aspx\\?id=57062\\)\\, and \\[Germany\\]\\(https://www\\.microsoft\\.com/download/(details|confirmation)\\.aspx\\?id=57064\\) clouds\\.",
+      "mooncake": "You can download the list of ranges (prefixes) for the Azure [China](https://www.microsoft.com/download/confirmation.aspx?id=57062) clouds."
     },
     {
       "service": "ALL",
-      "global": "\\(https://www\\.microsoft\\.com/download/details\\.aspx\\?id=(56519|57063|57064)\\)",
-      "mooncake": "(https://www.microsoft.com/download/details.aspx?id=57062)"
+      "global": "\\(https://www\\.microsoft\\.com/download/(details|confirmation)\\.aspx\\?id=(56519|57063|57064)\\)",
+      "mooncake": "(https://www.microsoft.com/download/confirmation.aspx?id=57062)"
     },
     {
       "service": "ALL",
@@ -301,9 +322,20 @@
     },
     {
       "service": "ALL",
-      "global": "(\\s{1,})Microsoft(\\s{1,})(?!(\\.Net|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|EXCEL|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper-V\\s{1,}Server|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word|Update))",
+      "global": "(\\s{1,})Microsoft(\\s{1,})(?!(\\.Net|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|EXCEL|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper-V\\s{1,}Server|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows\\s{1,}Server|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word|Update))",
       "mooncake": "$1Azure$2",
       "comments": "Update Microsoft to Azure except Excel/Officer/Word etc."
+    },
+    {
+      "service": "ALL",
+      "global": "(or)? \\[(Azure|Microsoft) peering\\]\\(\\.\\./expressroute/expressroute\\-circuit\\-peerings\\.md#microsoft(\\-)?peering\\)",
+      "mooncake": "",
+      "comments": "Remove the Microsoft Peering"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/azure\\-hybrid\\-benefit\\-pricing",
+      "mooncake": "https://www.azure.cn/zh-cn/pricing/hybrid-benefit/"
     },
     {
       "service": "ALL",
@@ -505,7 +537,8 @@
     {
       "service": "ALL",
       "global": "\\?toc\\=\\%2fpowershell\\%2fmodule\\%2ftoc\\.json",
-      "mooncake": "?toc=%2fpowershell%2fmodule%2ftoc.json"
+      "mooncake": "",
+      "comments": "There is no powershell docs in docs.azure.cn"
     },
     {
       "service": "ALL",
@@ -530,7 +563,7 @@
     {
       "service": "ALL",
       "global": "```(azure|azure-)?(cli)-interactive",
-      "mooncake": "```Azure CLI"
+      "mooncake": "```azurecli"
     },
     {
       "service": "ALL",
@@ -608,18 +641,28 @@
     },
     {
       "service": "cosmos-db",
-      "global": "globally(,)",
-      "mooncake": "multiple-region$1"
+      "global": "globally(\\,|\\.|\\:)",
+      "mooncake": "multiple-regionally$1"
     },
     {
       "service": "cosmos-db",
-      "global": "(Globally|Global)[ \\s]*(distributed|distribution|access|ambition|database|databases|replication|replicated)",
+      "global": "all (A|a)zure regions",
+      "mooncake": "all Azure China regions"
+    },
+    {
+      "service": "cosmos-db",
+      "global": "throughput([ \\s]{1,})globally",
+      "mooncake": "throughput China"
+    },
+    {
+      "service": "cosmos-db",
+      "global": "(Globally|Global)[ \\s]*(access|ambition|distributed|distribution|data|database|databases|replication|replicated)",
       "mooncake": "Multiple-region $2",
       "comments": "Cosmos DB the world issue change to China or multiple-region"
     },
     {
       "service": "cosmos-db",
-      "global": "(globally|global)[ \\s]*(distributed|distribution|access|ambition|database|databases|replication|replicated)",
+      "global": "(globally|global)[ \\s]*(access|ambition|distributed|distribution|data|database|databases|replication|replicated)",
       "mooncake": "multiple-region $2",
       "comments": "Cosmos DB the world issue change to China or multiple-region"
     },
@@ -677,6 +720,11 @@
     {
       "service": "ALL",
       "global": "http(s)?://go\\.microsoft\\.com/fwlink/?LinkId=544799",
+      "mooncake": ""
+    },
+    {
+      "service": "ALL",
+      "global": "email askcosmosdb@microsoft.com or",
       "mooncake": ""
     },
     {
@@ -795,14 +843,8 @@
     },
     {
       "service": "ALL",
-      "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)?download/details\\.aspx\\?id=41653",
-      "mooncake": "https://www.microsoft.com/download/details.aspx?id=42064",
-      "comments": "replace IP Range with mooncake https://azure.microsoft.com/regions/"
-    },
-    {
-      "service": "ALL",
-      "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)?download/confirmation\\.aspx\\?id=41653",
-      "mooncake": "https://www.microsoft.com/download/details.aspx?id=42064",
+      "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)?download/(details|confirmation)\\.aspx\\?id=41653",
+      "mooncake": "https://www.microsoft.com/en-us/download/confirmation.aspx?id=57062",
       "comments": "replace IP Range with mooncake https://azure.microsoft.com/regions/"
     },
     {
@@ -846,6 +888,16 @@
       "global": "https://docs\\.microsoft\\.com/\\S*java/",
       "mooncake": "https://docs.azure.cn/java/",
       "comments": "replace the relative URL with global full URL format - Step 2"
+    },
+    {
+      "service": "ALL",
+      "global": "https://support\\.office\\.com/article/Office\\-365\\-URLs\\-and\\-IP\\-address\\-ranges\\-8548a211\\-3fe7\\-47cb\\-abb1\\-355ea5aa88a2#bkmk_identity",
+      "mooncake": "https://docs.microsoft.com/en-us/office365/enterprise/urls-and-ip-address-ranges-21vianet"
+    },
+    {
+      "service": "concepts-traffic-manager-with-site-recovery.md",
+      "global": "Germany",
+      "mooncake": "China"
     },
     {
       "service": "ALL",
@@ -919,6 +971,11 @@
     },
     {
       "service": "ALL",
+      "global": "https: //msdn\\.microsoft\\.com/library/azure/dn971511.aspx",
+      "mooncake": "https://docs.azure.cn/zh-cn/dotnet/api/microsoft.servicefabric.data.collections.ireliabledictionary-2?view=azure-dotnet#microsoft_servicefabric_data_collections_ireliabledictionary_2"
+    },
+    {
+      "service": "ALL",
       "global": "powerbi\\.com",
       "mooncake": "powerbi.cn"
     },
@@ -955,7 +1012,7 @@
     {
       "service": "ALL",
       "global": "armclient login",
-      "mooncake": "armclient login \"MOONCAKE\""
+      "mooncake": "$env:ARMCLIENT_ENV=\"MOONCAKE\"\n armclient login"
     },
     {
       "service": "ALL",
@@ -1094,6 +1151,16 @@
       "global": "http://azure\\.microsoft\\.com/pricing/member\\-offers/msdn\\-benefits\\-details/?",
       "mooncake": "https://www.azure.cn/zh-cn/offers/ms-mc-arz-msdn/",
       "comments": "MSDN benefits on Mooncake"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/CosmosDotnetAPIDocs",
+      "mooncake": "https://docs.microsoft.com/dotnet/api/microsoft.azure.cosmos?view=azure-dotnet-preview"
+    },
+    {
+      "service": "ALL",
+      "global": "yoursetting",
+      "mooncake": "yoursetting"
     },
     {
       "service": "ALL",
@@ -1494,6 +1561,11 @@
       "mooncake": "<a name="
     },
     {
+      "service": "azure-to-azure-how-to-enable-replication-ade-vms.md",
+      "global": "South China East",
+      "mooncake": "China North"
+    },
+    {
       "service": "ALL",
       "global": "https://www\\.azure\\.cn/home/features/hdinsight/apache-spark/",
       "mooncake": "https://www.azure.cn/home/features/hdinsight/"
@@ -1863,9 +1935,103 @@
       "global": " Party Cluster website",
       "mooncake": "[Azure Portal](https://portal.azure.cn)",
       "comments": "change Party Cluster website"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2$3$4$5$6.$7)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2$3$4$5$6.$7)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2$3$4$5.$6)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2$3$4.$5)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2$3.$4)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*).([^_\\.]*)\\)",
+      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2.$3)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2$3$4$5$6.$7)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2$3$4$5$6.$7)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2$3$4$5.$6)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2$3$4.$5)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2$3.$4)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*).([^_\\.]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2.$3)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*).([^_\\.]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2.$3)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?java/api/com\\.microsoft\\.azure\\.cosmosdb\\.",
+      "mooncake": "https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.",
+      "comments": "Replace with cosmos db library java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?dotnet/api/microsoft\\.azure\\.cosmosdb\\.",
+      "mooncake": "https://docs.microsoft.com/dotnet/api/microsoft.azure.cosmosdb.",
+      "comments": "Replace with cosmos db library java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/documentation/videos/index/\\?services\\=([^\\s]*)",
+      "mooncake": "https://www.azure.cn/zh-cn/video-center/",
+      "comments": "Replace with cosmos db library java api reference links"
     }
-
-
   ],
   "CLIReplacement": [
      {
@@ -1878,9 +2044,64 @@
   "ToolReplacement": [
     {
       "service": "ALL",
-      "global": "((Get\\-AzurePublishSettingsFile)|(Add\\-AzureRmAccount)|(New\\-AzureStorageContext)|(Connect\\-AzureRmAccount)|(Login\\-AzureRmAccount))([ \\f\\t\\v]*\\-Environment AzureChinaCloud)?",
-      "mooncake": "$1 -Environment AzureChinaCloud"
-    }
+      "global": "\\(https://docs\\.microsoft\\.com/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2$3$4$5$6.$7)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.microsoft\\.com/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2$3$4$5.$6)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.microsoft\\.com/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2$3$4.$5)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.microsoft\\.com/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2$3.$4)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.microsoft\\.com/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*).([^_\\.]*)\\)",
+      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2.$3)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+        {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2$3$4$5$6.$7)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2$3$4$5.$6)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2$3$4.$5)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
+      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2$3.$4)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*).([^_\\.]*)\\)",
+      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2.$3)",
+      "comments": "Replace with cosmos db java api reference links"
+    },
   ],
   "MDFileCorrection": [
     {
