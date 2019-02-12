@@ -83,6 +83,16 @@
       "mooncake": ""
     },
     {
+      "service": "analysis-services",
+      "glboal": "chinaeast",
+      "mooncake": "chinanorth"
+    },
+    {
+      "service": "analysis-services-database-users.md",
+      "glboal": "USA",
+      "mooncake": "China"
+    },
+    {
       "service": "ALL",
       "global": "https://aka\\.ms/adelinux",
       "mooncake": "https://docs.azure.cn/security/azure-security-disk-encryption-windows"
@@ -105,26 +115,6 @@
     {
       "service": "ALL",
       "global": "https://aka\\.ms/cosmosdbfeedback\\?subject=Cosmos%20DB%20More%20Throughput%20Request",
-      "mooncake": ""
-    },
-    {
-      "service": "ALL",
-      "global": "\\, or different regions\\. Peering virtual networks in different regions is also referred to as global peering\\.",
-      "mooncake": "."
-    },
-    {
-      "service": "ALL",
-      "global": "When creating a global peering\\, the peered virtual networks can exist in any Azure public cloud region\\, but not in Azure national clouds\\.",
-      "mooncake": ""
-    },
-    {
-      "service": "ALL",
-      "global": "You can only peer virtual networks in the same region in national clouds\\.",
-      "mooncake": "You can only peer virtual networks in the same region in Azure China Cloud."
-    },
-    {
-      "service": "ALL",
-      "global": "Resources in one virtual network cannot communicate with the front-end IP address of an Azure internal load balancer in a global peered virtual network\\.",
       "mooncake": ""
     },
     {
@@ -196,23 +186,6 @@
       "service": "ALL",
       "global": "For national clouds \\(Azure Government, Azure China, Azure Germany\\)",
       "mooncake": "For Azure China cloud"
-    },
-    {
-      "service": "ALL",
-      "global": "in the same region and (across|different) regions \\(also known as Global VNet Peering\\)",
-      "mooncake": "in the same region",
-      "comments": "Global VNet peering not available on MC"
-    },
-    {
-      "service": "ALL",
-      "global": "Peering virtual networks in different regions is also referred to as \\*global peering\\*\\.",
-      "mooncake": ""
-    },
-    {
-      "service": "ALL",
-      "global": "You can select a virtual network in the same region or in a different region\\.",
-      "mooncake": "You can select a virtual network in the same region.",
-      "comments": "Global VNet peering not available on MC"
     },
     {
       "service": "ALL",
@@ -328,12 +301,6 @@
     },
     {
       "service": "ALL",
-      "global": "(or)? \\[(Azure|Microsoft) peering\\]\\(\\.\\./expressroute/expressroute\\-circuit\\-peerings\\.md#microsoft(\\-)?peering\\)",
-      "mooncake": "",
-      "comments": "Remove the Microsoft Peering"
-    },
-    {
-      "service": "ALL",
       "global": "https://aka\\.ms/azure\\-hybrid\\-benefit\\-pricing",
       "mooncake": "https://www.azure.cn/zh-cn/pricing/hybrid-benefit/"
     },
@@ -348,18 +315,6 @@
       "global": "where some cities lack a parent State or Province\\, such as Washington D\\.C\\.\\, Vatican City\\.",
       "mooncake": "where some cities lack a parent Province.",
       "comments": "Analysise service - remove the such as Washington D.C."
-    },
-    {
-      "service": "ALL",
-      "global": "(\\.|\\n|\\r)([^\\.\\n\\r]*)\\[supported regions\\]\\(virtual-network-manage-peering\\.md#cross-region\\)[^\\.\\n\\r]*(\\.|\\n|\\r)",
-      "mooncake": "$1",
-      "comments": "first step 1 - to check the simaple fixed value"
-    },
-    {
-      "service": "ALL",
-      "global": "(\\.|\\n|\\r)[^\\.]*peer[^\\.]*virtual networks[^\\.]*different[^\\.]*region(s)?[^\\s]*(\\.|\\n|\\r)",
-      "mooncake": "$1",
-      "comments": "first step 2 - to check the simaple fixed value"
     },
     {
       "service": "ALL",
@@ -381,90 +336,6 @@
     },
     {
       "service": "ALL",
-      "global": "(\\*)*(\\s)*Global VNet peering - connecting VNets across Azure regions",
-      "mooncake": "",
-      "comments": "virtual network - remove the Global peering across regions"
-    },
-    {
-      "service": "ALL",
-      "global": "The benefits of using virtual network peering\\, whether local or global\\,",
-      "mooncake": "The benefits of using virtual network local peering,",
-      "comments": "virtul network - remove the global virtual network peering"
-    },
-    {
-      "service": "ALL",
-      "global": "(\\*)*(\\s)*The ability to transfer data across Azure subscriptions\\, deployment models\\, and across Azure regions\\.",
-      "mooncake": "* The ability to transfer data across Azure subscriptions, deployment models.",
-      "comments": "virtual network - remove the across Azure regions"
-    },
-    {
-      "service": "ALL",
-      "global": "Gateway transit is not supported in the peering relationship between virtual networks created in different regions\\.",
-      "mooncake": "",
-      "comments": "virtual network - remove the virtual networks created in different regions."
-    },
-    {
-      "service": "ALL",
-      "global": "If you want to select a virtual network in a different region\\, you must select a virtual network in a \\[supported region\\]\\(\\#cross\\-region\\)\\.",
-      "mooncake": "",
-      "comments": "virtual network - remove the virtual network in a different region"
-    },
-    {
-      "service": "ALL",
-      "global": "\\, or \\[supported different\\]\\(\\#requirements\\-and\\-constraints\\)",
-      "mooncake": "",
-      "comments": "virtual network - remove the virtual network in supported different"
-    },
-    {
-      "service": "ALL",
-      "global": "You cannot enable this option if you\\'re peering virtual networks in different regions\\.",
-      "mooncake": "",
-      "comments": "virtual network - remove the virtual network in different regions"
-    },
-    {
-      "service": "ALL",
-      "global": "\\<a name\\=\\\"cross\\-region\\\"\\>\\<\\/a\\>",
-      "mooncake": "",
-      "comments": "virtual network - remove cross-region"
-    },
-    {
-      "service": "ALL",
-      "global": "You can peer virtual networks in the same region\\, or different regions\\.",
-      "mooncake": "You can peer virtual networks in the same region.",
-      "comments": ""
-    },
-    {
-      "service": "ALL",
-      "global": "(\\,)*(\\s)*but do apply when the virtual networks are (globally|multiple-region) peered(\\.)*",
-      "mooncake": "$4",
-      "comments": "virtual network- remove the globally peered"
-    },
-    {
-      "service": "ALL",
-      "global": "(\\,)*(\\s)*but not in Azure national clouds(\\.)*",
-      "mooncake": "$3",
-      "comments": "virtual network- remove the globally peered"
-    },
-    {
-      "service": "ALL",
-      "global": "\\-(\\s)*Communication across globally peered virtual networks through the following VM types is not supported\\: \\[High performance compute\\]\\(\\.\\./virtual-machines/windows/sizes-hpc\\.md\\) and \\[GPU\\]\\(\\.\\./virtual-machines/windows/sizes-gpu\\.md\\)\\. This includes H\\, NC\\, NV\\, NCv2\\, NCv3\\, and ND series VMs\\.",
-      "mooncake": "",
-      "comments": "virtial network - remove the across globally peered virtual network"
-    },
-    {
-      "service": "ALL",
-      "global": "You can also peer virtual networks in different \\[supported regions\\]\\(virtual-network-manage-peering\\.md\\#cross-region\\) and in \\[different Azure subscriptions\\]\\(create-peering-different-subscriptions\\.md\\#powershell\\)",
-      "mooncake": "You can also peer virtual networks in [different Azure subscriptions](create-peering-different-subscriptions.md#powershell)",
-      "comments": "virtual network - STEP 1 remove the in different supported regions "
-    },
-    {
-      "service": "ALL",
-      "global": "You can also peer virtual networks in different \\[supported regions\\]\\(virtual-network-manage-peering\\.md\\#cross-region\\)\\.",
-      "mooncake": "",
-      "comments": "virtual network - STEP 2 remove the in different supported regions"
-    },
-    {
-      "service": "ALL",
       "global": "Regional service tags are not supported on national clouds\\, only in global format\\, (e\\.g\\.|for example) Storage\\, Sql\\.",
       "mooncake": "",
       "comments": "virtual network - remove Region service"
@@ -474,12 +345,6 @@
       "global": "Not Available on Regional service tags are not supported on national clouds\\, only in global format\\, (e.g.|for example) Storage\\, Sql\\.",
       "mooncake": "",
       "comments": "virtual network - remove Region service"
-    },
-    {
-      "service": "ALL",
-      "global": "If you do not want to use public IP\\, and/or want to avoid extra hops\\, you can use Azure \\[Virtual Network peering\\]\\(\\.\\./virtual-network/virtual-network-peering-overview\\.md\\) to peer virtual networks across \\[supported Azure regions\\]\\(\\.\\./virtual-network/virtual-network-manage-peering\\.md\\#cross-region\\).",
-      "mooncake": "",
-      "comments": "site recovery - remove the cross region "
     },
     {
       "service": "ALL",
@@ -494,11 +359,6 @@
     },
     {
       "service": "ALL",
-      "global": "but do apply when the virtual networks are (globally|multiple-region) peered",
-      "mooncake": ""
-    },
-    {
-      "service": "ALL",
       "global": "\\(https://aka.ms/ade\\-aad\\-app\\)",
       "mooncake": "(/security/azure-security-disk-encryption-windows-aad)"
     },
@@ -506,11 +366,6 @@
       "service": "ALL",
       "global": "\\(https?://aka\\.ms/getazuresupport\\)",
       "mooncake": "(https://support.windowsazure.cn/support/support-azure)"
-    },
-    {
-      "service": "ALL",
-      "global": "- Communication across (global|multiple-region) peered virtual networks through the following VM types is not supported: \\[High performance compute\\]\\(\\.\\./virtual-machines/windows/sizes-hpc\\.md\\) and \\[GPU\\]\\(\\.\\./virtual-machines/windows/sizes-gpu\\.md\\)\\. This includes H\\, NC\\, NV\\, NCv2\\, NCv3\\, and ND series VMs\\.",
-      "mooncake": ""
     },
     {
       "service": "ALL",
@@ -558,7 +413,7 @@
     {
       "service": "ALL",
       "global": "```(azure|azure-)?(powershell)-interactive",
-      "mooncake": "```PowerShell"
+      "mooncake": "```powershell"
     },
     {
       "service": "ALL",
@@ -579,6 +434,21 @@
       "service": "ALL",
       "global": "-east-us",
       "mooncake": "-east-china"
+    },
+    {
+      "service": "ALL",
+      "global": "(W|w)(E|e)(S|s)(T|t)(U|u)(S|s)",
+      "mooncake": "chinanorth"
+    },
+    {
+      "service": "ALL",
+      "global": "You can skip this step if you're using the Azure Cloud Shell\\.",
+      "mooncake": ""
+    },
+    {
+      "service": "ALL",
+      "global": "(PowerShell|CLI) Cloud Shell",
+      "mooncake": "$1"
     },
     {
       "service": "ALL",
@@ -879,7 +749,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\([\\s ]*(\\/|\\/zh-cn\\/|\\/en-us\\/)?(dotnet|powershell|cli|rest|java|sql|api|biztalk|system-center)(\\/\\S+)\\)",
+      "global": "\\([\\s ]*(\\/|\\/zh-cn\\/|\\/en-us\\/)?(api|biztalk|cli|dotnet|java|powershell|rest|sql|sysinternals|system-center|previous-versions)(\\s/\\S+)\\)",
       "mooncake": "(https://docs.microsoft.com/$2$3)",
       "comments": "replace the relative URL with global full URL format - Step 1"
     },
@@ -1273,7 +1143,7 @@
     },
     {
       "service": "ALL",
-      "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)TrustCenter/Compliance(/HIPAA)?",
+      "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)?TrustCenter/Compliance(/HIPAA)?",
       "mooncake": "https://www.trustcenter.cn/zh-cn/Compliance"
     },
     {
@@ -1680,8 +1550,13 @@
     },
     {
       "service": "ALL",
-      "global": "https://www\\.microsoft\\.com/en-us/TrustCenter/Compliance/HIPAA",
+      "global": "https://www\\.microsoft\\.com/(en\\-us\\/)?TrustCenter/Compliance/HIPAA",
       "mooncake": "https://www.trustcenter.cn/"
+    },
+    {
+      "service": "ALL",
+      "global": "https://www\\.microsoft\\.com/trustcenter",
+      "mooncake": "https://www.trustcenter.cn/zh-cn/cloudservices/azure.html"
     },
     {
       "service": "ALL",
@@ -1931,6 +1806,12 @@
       "comments": "step 3: change party cluster to mooncake portal certificate"
     },
     {
+      "service": "quickstart-create-traffic-manager-profile.md",
+      "global": "WestEurope",
+      "mooncake": "ChinaNorth",
+      "comments": "replace on Mooncake"
+    },
+    {
       "service": "service-fabric",
       "global": " Party Cluster website",
       "mooncake": "[Azure Portal](https://portal.azure.cn)",
@@ -2031,6 +1912,12 @@
       "global": "https://www\\.azure\\.cn/documentation/videos/index/\\?services\\=([^\\s]*)",
       "mooncake": "https://www.azure.cn/zh-cn/video-center/",
       "comments": "Replace with cosmos db library java api reference links"
+    },
+    {
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/home/features/managed-disks(/)?",
+      "mooncake": "https://www.azure.cn/home/features/storage/managed-disks$1",
+      "comments": "Replace with managed disk features URL"
     }
   ],
   "CLIReplacement": [
@@ -2152,23 +2039,6 @@
       "service": "ALL", 
 	    "global": "(\\s{1,})/azure/",
       "mooncake": "$1/"
-    },
-    {
-      "service": "ALL", 
-	    "global": "You can also peer virtual networks in different \\[supported regions\\]\\(virtual-network-manage-peering\\.md\\#cross-region\\) and in \\[different Azure subscriptions\\]\\(create-peering-different-subscriptions.md#cli\\)",
-      "mooncake": "You can also peer virtual networks in [different Azure subscriptions](create-peering-different-subscriptions.md#cli)"
-    },
-    {
-      "service": "ALL", 
-	    "global": "(\\.|\\n|\\r)([^\\.\\n\\r]*)\\[supported regions\\]\\(virtual-network-manage-peering\\.md#cross-region\\)[^\\.\\n\\r]*(\\.|\\n|\\r)",
-      "mooncake": "$1",
-      "comments": "first step 1 - to check the simaple fixed value"
-    },
-    {
-      "service": "ALL", 
-	    "global": "(\\.|\\n|\\r)[^\\.]*peer[^\\.]*virtual networks[^\\.]*different[^\\.]*region(s)?[^\\s]*(\\.|\\n|\\r)",
-      "mooncake": "$1",
-       "comments": "first step 2 - to check the simaple fixed value"
     },
     {
       "service": "ALL", 
