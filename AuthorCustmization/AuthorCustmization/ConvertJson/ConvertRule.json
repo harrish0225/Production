@@ -28,8 +28,18 @@
   "URLReplacement": [
     {
       "serice": "ALL",
+      "global": "\\(\\s{1,}/cli/",
+      "mooncake": "(/cli/"
+    },
+    {
+      "serice": "ALL",
       "global": "http(s)?://go\\.microsoft\\.com/fwlink/p/\\?LinkID\\=525040",
       "mooncake": "https://portal.azure.cn"
+    },
+    {
+      "serice": "ALL",
+      "global": "active-directory/active-directory-authentication-libraries(\\.md)?",
+      "mooncake": "active-directory/develop/active-directory-authentication-libraries$1"
     },
     {
       "serice": "ALL",
@@ -46,6 +56,11 @@
       "global": "https://partner\\.microsoft\\.com/cloud\\-solution\\-provider",
       "mooncake": "https://www.21vbluecloud.com/partner-china/welcome/",
       "comments": ""
+    },
+    {
+      "serice": "provision-sql-server-linux-virtual-machine.md",
+      "global": "SQL Server 2017",
+      "mooncake": "SQL Server 2019"
     },
     {
       "serice": "ALL",
@@ -69,27 +84,27 @@
     },
     {
       "service": "ALL",
-      "global": "or in different regions \\(also known as Global VNet Peering\\)",
-      "mooncake": ""
-    },
-    {
-      "service": "ALL",
       "global": "from the Azure Cloud Shell\\, by just selecting the \\*\\*Try it\\*\\* button in any of the following steps\\,",
       "mooncake": ""
     },
     {
       "service": "ALL",
-      "glboal": "that follow in the \\[Azure Cloud Shell\\]\\(https://shell\\.azure\\.com/powershell\\)\\, or",
+      "global": "\\s*that follow in the\\s{1,}\\[Azure Cloud Shell\\]\\(https://shell\\.azure\\.com/(powershell|bash)\\)\\, or",
+      "mooncake": ""
+    },
+    {
+      "service": "ALL",
+      "global": "\\s*the Azure\\s{1,}\\[Cloud Shell\\]\\(https://shell\\.azure\\.com/(powershell|bash)\\)\\, or from",
       "mooncake": ""
     },
     {
       "service": "analysis-services",
-      "glboal": "chinaeast",
+      "global": "chinaeast",
       "mooncake": "chinanorth"
     },
     {
       "service": "analysis-services-database-users.md",
-      "glboal": "USA",
+      "global": "USA",
       "mooncake": "China"
     },
     {
@@ -194,7 +209,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\(https://www\\.microsoft\\.com/download/(details|confirmation)\\.aspx\\?id=(56519|57063|57064)\\)",
+      "global": "\\(https://www\\.microsoft\\.com/download/(details|confirmation)\\.aspx\\?id=(56519|57063|57064|42064)\\)",
       "mooncake": "(https://www.microsoft.com/download/confirmation.aspx?id=57062)"
     },
     {
@@ -295,7 +310,7 @@
     },
     {
       "service": "ALL",
-      "global": "(\\s{1,})Microsoft(\\s{1,})(?!(\\.Net|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|EXCEL|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper-V\\s{1,}Server|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows\\s{1,}Server|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word|Update))",
+      "global": "(\\s{1,})Microsoft(\\s{1,})(?!(\\.Net|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|EXCEL|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper\\-V\\s{1,}Server|IIS|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows\\s{1,}Server|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word|Update))",
       "mooncake": "$1Azure$2",
       "comments": "Update Microsoft to Azure except Excel/Officer/Word etc."
     },
@@ -327,12 +342,6 @@
       "global": "\\[\\!INCLUDE \\[(cloud-shell-try-it|cloud-shell-powershell)(\\.md)?\\]\\(((\\.\\.\\/){1,})includes\\/cloud-shell-powershell\\.md\\)\\]",
       "mooncake": "<!--[!INCLUDE [$1](../../../includes/cloud-shell-powershell.md)]-->",
       "comments": "replace [!INCLUDE [cloud-shell-try-it.md](../../../includes/cloud-shell-powershell.md)] "
-    },
-    {
-      "service": "ALL",
-      "global": "connect virtual networks that exist in different subscriptions and regions",
-      "mooncake": "connect virtual networks that exist in different subscriptions",
-      "comments": "virutal network - remove the different regions."
     },
     {
       "service": "ALL",
@@ -374,12 +383,6 @@
     },
     {
       "service": "ALL",
-      "global": " and across Azure regions\\.",
-      "mooncake": ""
-
-    },
-    {
-      "service": "ALL",
       "global": "AzureCloud",
       "mooncake": "AzureChinaCloud"
     },
@@ -412,13 +415,14 @@
     },
     {
       "service": "ALL",
-      "global": "```(azure|azure-)?(powershell)-interactive",
-      "mooncake": "```powershell"
+      "global": "```(azure|azure-|Azure|Azure-)?(powershell|PowerShell)-interactive",
+      "mooncake": "```$2",
+      "comment": "Should be Powershell only after studied."
     },
     {
       "service": "ALL",
-      "global": "```(azure|azure-)?(cli)-interactive",
-      "mooncake": "```azurecli"
+      "global": "```(azure|azure|Azure|Azure)?(-)?(cli|CLI)-interactive",
+      "mooncake": "```$1$3"
     },
     {
       "service": "ALL",
@@ -573,7 +577,7 @@
     },
     {
       "service": "ALL",
-      "global": "href:([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(dotnet|powershell|cli|rest|java|sql|api|biztalk|system-center|windows)(\\/\\S+)",
+      "global": "href:([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(dotnet|powershell|cli|dynamics\\-nav|rest|java|sql|api|biztalk|system-center|windows)(\\/\\S+)",
       "mooncake": "href:$1https://docs.microsoft.com$2$3$4",
       "comments": "replace the relative URL with global full URL format - Step 1"
     },
@@ -585,6 +589,11 @@
     {
       "service": "ALL",
       "global": "either run the commands in the \\[Azure Cloud Shell\\]\\(https://shell.azure.com/bash\\)\\, or",
+      "mooncake": ""
+    },
+    {
+      "service": "ALL",
+      "global": "use \\[Cloud Shell\\]\\(https://shell\\.azure\\.com/bash\\) or ",
       "mooncake": ""
     },
     {
@@ -734,7 +743,7 @@
     },
     {
       "service": "ALL",
-      "global": "((Get\\-AzurePublishSettingsFile)|(Add\\-AzureRmAccount)|(New\\-AzureStorageContext)|(Connect\\-AzureRmAccount)|(Login\\-AzureRmAccount))([ \\f\\t\\v]*\\-(Environment|EnvironmentName) AzureChinaCloud)?",
+      "global": "((Get\\-AzurePublishSettingsFile)|(Add\\-AzureRmAccount)|(New\\-AzureStorageContext)|(Connect\\-AzureRmAccount)|(Connect\\-AzAccount)|(Login\\-AzureRmAccount))([ \\f\\t\\v]*\\-(Environment|EnvironmentName) AzureChinaCloud)?",
       "mooncake": "$1 -Environment AzureChinaCloud"
     },
     {
@@ -1640,7 +1649,7 @@
     },
     {
       "service": "ALL",
-      "global": "([\\*|\\s]{1})EastUs([\\*|\\s]{1})",
+      "global": "([\\*|\\s|\\\"|\\']{1})EastUs([\\*|\\s|\\\"|\\']{1})",
       "mooncake": "$1chinaeast$2"
     },
     {
@@ -1918,6 +1927,47 @@
       "global": "https://www\\.azure\\.cn/home/features/managed-disks(/)?",
       "mooncake": "https://www.azure.cn/home/features/storage/managed-disks$1",
       "comments": "Replace with managed disk features URL"
+    },
+    {
+      "service": "ALL",
+      "global": "\\[\\s*(az)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "mooncake": "[$1 $2](https://docs.azure.cn/zh-cn/cli/$3$4?view=azure-cli-latest#az-$2)",
+      "comments": "powershell archor generator format with two parameters."
+    },
+    {
+      "service": "ALL",
+      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "mooncake": "[$1 $2 $3](https://docs.azure.cn/zh-cn/cli/$4$5?view=azure-cli-latest#az-$2-$3)",
+      "comments": "powershell archor generator format with three parameters."
+    },
+    {
+      "service": "ALL",
+      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "mooncake": "[$1 $2 $3 $4](https://docs.azure.cn/zh-cn/cli/$5$6?view=azure-cli-latest#az-$2-$3-$4)",
+      "comments": "powershell archor generator format with four parameters."
+    },
+    {
+      "service": "ALL",
+      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "mooncake": "[$1 $2 $3 $4 $5](https://docs.azure.cn/zh-cn/cli/$6$7?view=azure-cli-latest#az-$2-$3-$4-$5)",
+      "comments": "powershell archor generator format with five parameters."
+    },
+    {
+      "service": "ALL",
+      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "mooncake": "[$1 $2 $3 $4 $5 $6](https://docs.azure.cn/zh-cn/cli/$7$8?view=azure-cli-latest#az-$2-$3-$4-$5-$6)",
+      "comments": "powershell archor generator format with six parameters."
+    },
+    {
+      "service": "ALL",
+      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "mooncake": "[$1 $2 $3 $4 $5 $6 $7](https://docs.azure.cn/zh-cn/cli/$8$9?view=azure-cli-latest#az-$2-$3-$4-$5-$6-$7)",
+      "comments": "powershell archor generator format with seven parameters."
+    },
+    {
+      "service": "ALL",
+      "global": "Azure Cloud Shell",
+      "mooncake": "Azure local Shell"
     }
   ],
   "CLIReplacement": [
@@ -1931,64 +1981,14 @@
   "ToolReplacement": [
     {
       "service": "ALL",
-      "global": "\\(https://docs\\.microsoft\\.com/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
-      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2$3$4$5$6.$7)",
-      "comments": "Replace with cosmos db java api reference links"
+      "global": "https://www\\.azure\\.cn/develop/",
+      "mooncake": "https://docs.azure.cn/develop/"
     },
     {
       "service": "ALL",
-      "global": "\\(https://docs\\.microsoft\\.com/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
-      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2$3$4$5.$6)",
-      "comments": "Replace with cosmos db java api reference links"
-    },
-    {
-      "service": "ALL",
-      "global": "\\(https://docs\\.microsoft\\.com/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
-      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2$3$4.$5)",
-      "comments": "Replace with cosmos db java api reference links"
-    },
-    {
-      "service": "ALL",
-      "global": "\\(https://docs\\.microsoft\\.com/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
-      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2$3.$4)",
-      "comments": "Replace with cosmos db java api reference links"
-    },
-    {
-      "service": "ALL",
-      "global": "\\(https://docs\\.microsoft\\.com/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*).([^_\\.]*)\\)",
-      "mooncake": "(https://docs.microsoft.com/java/api/com.microsoft.azure.cosmosdb.$1.$2.$3)",
-      "comments": "Replace with cosmos db java api reference links"
-    },
-        {
-      "service": "ALL",
-      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
-      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2$3$4$5$6.$7)",
-      "comments": "Replace with cosmos db java api reference links"
-    },
-    {
-      "service": "ALL",
-      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
-      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2$3$4$5.$6)",
-      "comments": "Replace with cosmos db java api reference links"
-    },
-    {
-      "service": "ALL",
-      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
-      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2$3$4.$5)",
-      "comments": "Replace with cosmos db java api reference links"
-    },
-    {
-      "service": "ALL",
-      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
-      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2$3.$4)",
-      "comments": "Replace with cosmos db java api reference links"
-    },
-    {
-      "service": "ALL",
-      "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.documentdb\\.([^_\\.]*)\\._([^_\\.]*).([^_\\.]*)\\)",
-      "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2.$3)",
-      "comments": "Replace with cosmos db java api reference links"
-    },
+      "global": "https://docs\\.azure\\.cn/develop/javascript",
+      "mooncake": "https://docs.azure.cn/develop/nodejs"
+    }
   ],
   "MDFileCorrection": [
     {
