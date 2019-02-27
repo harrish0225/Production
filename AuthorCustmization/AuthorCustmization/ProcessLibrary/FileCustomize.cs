@@ -56,26 +56,26 @@ namespace AuthorCustmization.ProcessLibrary
         Complete,
     }
 
-    //public enum InvolvedService
-    //{
-    //    analysis_services,
-    //}
-
     public enum InvolvedService
     {
         analysis_services,
-        aks,
-        azure_resource_manager,
-        cosmos_db,
-        container_registry,
-        service_fabric,
-        site_recovery,
-        sql_server_stretch_database,
-        traffic_manager,
-        virtual_machines,
-        virtual_network,
-        includes,
     }
+
+    //public enum InvolvedService
+    //{
+    //    analysis_services,
+    //    aks,
+    //    azure_resource_manager,
+    //    cosmos_db,
+    //    container_registry,
+    //    service_fabric,
+    //    site_recovery,
+    //    sql_server_stretch_database,
+    //    traffic_manager,
+    //    virtual_machines,
+    //    virtual_network,
+    //    includes,
+    //}
 
     public enum ReplaceParam
     {

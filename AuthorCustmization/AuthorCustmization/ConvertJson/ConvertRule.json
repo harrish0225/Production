@@ -98,7 +98,7 @@
       "mooncake": ""
     },
     {
-      "service": "analysis-services",
+      "service": "analysis\\-services",
       "global": "chinaeast",
       "mooncake": "chinanorth"
     },
@@ -1981,13 +1981,44 @@
   "ToolReplacement": [
     {
       "service": "ALL",
-      "global": "https://www\\.azure\\.cn/develop/",
-      "mooncake": "https://docs.azure.cn/develop/"
+      "global": "-AzureR(m|M)",
+      "mooncake": "-Az"
+    },
+        {
+      "service": "ALL",
+      "global": "\\[\\s*(az)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "mooncake": "[$1 $2](https://docs.azure.cn/zh-cn/cli/$3$4?view=azure-cli-latest#az-$2)",
+      "comments": "powershell archor generator format with two parameters."
     },
     {
       "service": "ALL",
-      "global": "https://docs\\.azure\\.cn/develop/javascript",
-      "mooncake": "https://docs.azure.cn/develop/nodejs"
+      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "mooncake": "[$1 $2 $3](https://docs.azure.cn/zh-cn/cli/$4$5?view=azure-cli-latest#az-$2-$3)",
+      "comments": "powershell archor generator format with three parameters."
+    },
+    {
+      "service": "ALL",
+      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "mooncake": "[$1 $2 $3 $4](https://docs.azure.cn/zh-cn/cli/$5$6?view=azure-cli-latest#az-$2-$3-$4)",
+      "comments": "powershell archor generator format with four parameters."
+    },
+    {
+      "service": "ALL",
+      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "mooncake": "[$1 $2 $3 $4 $5](https://docs.azure.cn/zh-cn/cli/$6$7?view=azure-cli-latest#az-$2-$3-$4-$5)",
+      "comments": "powershell archor generator format with five parameters."
+    },
+    {
+      "service": "ALL",
+      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "mooncake": "[$1 $2 $3 $4 $5 $6](https://docs.azure.cn/zh-cn/cli/$7$8?view=azure-cli-latest#az-$2-$3-$4-$5-$6)",
+      "comments": "powershell archor generator format with six parameters."
+    },
+    {
+      "service": "ALL",
+      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "mooncake": "[$1 $2 $3 $4 $5 $6 $7](https://docs.azure.cn/zh-cn/cli/$8$9?view=azure-cli-latest#az-$2-$3-$4-$5-$6-$7)",
+      "comments": "powershell archor generator format with seven parameters."
     }
   ],
   "MDFileCorrection": [

@@ -29,7 +29,21 @@ namespace CLIReplacement.ProcessLibrary
         FindArticle,
         IncludeParentFile,
         CLIReplacement,
+        H1ToTitle,
+        CheckBrokenLinkByService,
+        CheckBrokenLinkByFile,
+        CheckImageByService,
+        CheckImageByFile,
+        CheckRedirectByService,
+        CheckRedirectByFile,
         redirections,
+
+    }
+
+    public enum ConvertProcess
+    {
+        ShowResult,
+        ShowHistory,
     }
 
     public enum ProcessStatus
@@ -43,27 +57,30 @@ namespace CLIReplacement.ProcessLibrary
 
     //public enum InvolvedService
     //{
-    //    virtual_machines,
-    //    virtual_network,
+    //    aks,
     //}
 
     public enum InvolvedService
     {
         analysis_services,
+        aks,
         azure_resource_manager,
         cosmos_db,
         container_registry,
-        event_hubs,
-        load_balancer,
-        resiliency,
         service_fabric,
         site_recovery,
-        sql_data_warehouse,
         sql_server_stretch_database,
-        stream_analytics,
         traffic_manager,
         virtual_machines,
         virtual_network,
+    }
+
+    public enum CommandPara
+    {
+        Null,
+        Servcie,
+        Customize,
+        VerifyFail,
     }
 
     public enum ReplaceParam
@@ -77,10 +94,10 @@ namespace CLIReplacement.ProcessLibrary
         Includes,
     }
 
-    public class CollectAllFileByService : FileCustomize
+    public class CollectAllFileByService : CollectRedirectFileByArticle
     {
 
-        public ArrayList GetAllFileByService()
+        public ArrayList GetAllFileByService(string customizedate)
         {
             ArrayList fileList = new ArrayList();
             string message = string.Empty;
@@ -92,18 +109,90 @@ namespace CLIReplacement.ProcessLibrary
                 this.CheckFileList = new ArrayList();
             }
 
+            string globalDiskPath= CommonFun.GetConfigurationValue("GlobalRedirectDir", ref message);
+            string customDiskPath= CommonFun.GetConfigurationValue("MooncakeRedirectDir", ref message);
+
             foreach (InvolvedService curtService in Enum.GetValues(typeof(InvolvedService)))
             {
-                diskpath = CommonFun.GetConfigurationValue("GlobalArticleDir", ref message);
 
-                parentpath = string.Format("{0}\\{1}", diskpath, curtService.ToString().Replace('_', '-'));
+                if (curtService.ToString().ToLower() == "includes".ToLower())
+                {
+                    diskpath = CommonFun.GetConfigurationValue("CustomizeIncludeDir", ref message);
+                    parentpath = string.Format("{0}", diskpath);
+                }
+                else
+                {
+                    diskpath = CommonFun.GetConfigurationValue("CustomizeArticleDir", ref message);
+                    parentpath = string.Format("{0}\\{1}", diskpath, curtService.ToString().Replace('_', '-'));
+                }
 
-                this.GetAllFilesInDirectory(parentpath);
+                //parentpath = string.Format("{0}\\articles\\{1}", customDiskPath, curtService.ToString().Replace('_', '-'));
+
+                this.GetAllFilesInDirectoryWithCustomizedate(parentpath, customizedate, globalDiskPath, customDiskPath);
                 
             }
 
+
+            
             fileList = this.CheckFileList;
+
             return fileList;
+        }
+
+
+        public void GetAllFilesInDirectoryWithCustomizedate(string parentPath, string customizedate,string globalDiskPath,string customDiskPath)
+        {
+            string[] curtFiles = System.IO.Directory.GetFiles(parentPath, "*.md");
+            string filename = string.Empty;
+            string directory = string.Empty;
+
+            string curtValue = string.Empty;
+            string[] curtKey = new string[] { };
+
+            int iStartIdx = 0;
+
+            if (curtFiles.Length > 0)
+            {
+                curtValue = curtFiles[0].Replace("\\", "/");
+                curtKey = curtValue.Split('/');
+                string globalname = string.Empty;
+
+
+
+                for (int i = 0; i < curtKey.Length; i++)
+                {
+
+                    if (curtKey[i].ToUpper() == "ARTICLES" || curtKey[i].ToUpper() == "INCLUDES")
+                    {
+                        iStartIdx = i;
+                        break;
+                    }
+                }
+
+                for (int i = 0; i < curtFiles.Length; i++)
+                {
+                    globalname = curtFiles[i].ToString().Replace(customDiskPath, globalDiskPath);
+
+                    if (System.IO.File.Exists(globalname) == true)
+                    {
+                        continue;
+                    }
+
+                    curtValue = curtFiles[i].Replace("\\", "/");
+                    curtKey = curtValue.Split('/');
+                    directory = string.Empty;
+                    for (int j = iStartIdx; j < curtKey.Length - 1; j++)
+                    {
+                        directory += string.Format("/{0}", curtKey[j]);
+                    }
+                    directory = directory.Trim('/');
+                    filename = curtKey[curtKey.Length - 1];
+
+                    this.CheckFileList.Add(new string[] { filename, directory, customizedate });
+                }
+            }
+
+
         }
 
     }
@@ -256,7 +345,7 @@ namespace CLIReplacement.ProcessLibrary
             int iMCount = 0;
 
             //Redirect Section
-            if (category == ConvertCategory.redirections)
+            if (category == ConvertCategory.CheckRedirectByFile || category == ConvertCategory.CheckRedirectByService)
             {
                 try
                 {
@@ -393,6 +482,12 @@ namespace CLIReplacement.ProcessLibrary
 
         public static Object ObjJason = new Object();
 
+        private Hashtable htbSevice = new Hashtable();
+        public Hashtable HTBService
+        {
+            get { return this.htbSevice; }
+            set { this.htbSevice = value; }
+        }
 
 
         public string GetRightFileName(string[] para)
