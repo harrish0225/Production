@@ -23,25 +23,64 @@ namespace H1ToTitle
         {
             int iCount = args.Count();
             ConvertCategory category = ConvertCategory.H1ToTitle;
-            if (iCount > 1)
+            CustomizedCategory itercategory = CustomizedCategory.CustomizedByFile;
+            CommandPara curtpara = CommandPara.Null;
+            for (int i = 0; i < iCount; i++)
             {
-                ShowUseageTip();
-                return;
-
-            }else if (iCount==1)
-            {
-                switch (args[0].TrimStart('-'))
+                switch (args[i].ToUpper().Trim())
                 {
-                    case "R":
-                    case "r":
-                        category = ConvertCategory.H1ToTitle;
+                    case "--SERVICE":
+                    case "-S":
+                        curtpara = CommandPara.Servcie;
                         break;
-                    default:
+                    case "--CUSTOMIZE":
+                    case "-C":
+                        curtpara = CommandPara.Customize;
+                        break;
+                    case "--HELP":
+                    case "-H":
                         ShowUseageTip();
                         return;
+                    default:
+                        switch (curtpara)
+                        {
+                            case CommandPara.Servcie:
+                                switch (args[i].ToUpper().Trim())
+                                {
+                                    case "S":
+                                        itercategory = CustomizedCategory.CustomizedByService;
+                                        break;
+                                    case "F":
+                                        itercategory = CustomizedCategory.CustomizedByFile;
+                                        break;
+                                    default:
+                                        curtpara = CommandPara.VerifyFail;
+                                        break;
+                                }
+                                break;
+                            case CommandPara.Customize:
+                                switch (args[i].ToUpper().Trim())
+                                {
+                                    case "H":
+                                        category = ConvertCategory.H1ToTitle;
+                                        break;
+                                    default:
+                                        curtpara = CommandPara.VerifyFail;
+                                        break;
+                                }
+                                break;
+                            case CommandPara.Null:
+                                curtpara = CommandPara.VerifyFail;
+                                break;
+                            case CommandPara.VerifyFail:
+                                ShowUseageTip();
+                                return;
+                        }
+                        break;
                 }
+
             }
-            
+
 
             string error = "";
          
@@ -61,31 +100,46 @@ namespace H1ToTitle
             string directory = "";
             string curtFullName = "";
 
+            ArrayList arrFile = new ArrayList();
+
             List<FileCustomize> fileList = new List<FileCustomize>();
 
-            //Get the thread count
             int threadCount = 0;
 
-            CollectAllFileByService fileByService = new CollectAllFileByService();
-            ArrayList arrFile = new ArrayList();
-            arrFile = fileByService.GetAllFileByService();
+            switch (itercategory)
+            {
+                case CustomizedCategory.CustomizedByService:
+                    customizedate = DateTime.Now.ToString("MM/dd/yyyy");
+                    arrFile = GetFileListByService(customizedate);
+                    break;
+                case CustomizedCategory.CustomizedByFile:
+                    arrFile = GetFileListByArticles();
+                    break;
+            }
+
+            ThreadPool.SetMinThreads(1000, 1000);
 
             threadCount = arrFile.Count;
             Thread[] newThreads = new Thread[threadCount];
 
+            string[] para = new string[] { };
+
             for (int i=0; i < threadCount; i++)
             {
-                curtFullName = arrFile[i].ToString();
-                filename = Path.GetFileName(curtFullName);
-                directory = curtFullName.Substring(fileprefix.Length,curtFullName.Length- fileprefix.Length- filename.Length-1).Replace("\\","/");
-               
+                para = (string[])arrFile[i];
+                filename = para[0];
+                directory = para[1];
+                customizedate = para[2];
+
 
                 FileCustomize curtFile = new FileCustomize(i, filename, directory, customizedate, category);
                 fileList.Add(curtFile);
                 newThreads[i] = new Thread(new ThreadStart(curtFile.ProcessFileCustomize));
                 newThreads[i].Start();
-
-                //newThreads[i].Join();
+#if DEBUG
+                newThreads[i].Join();
+#endif
+                
             }
             
 
@@ -144,8 +198,9 @@ namespace H1ToTitle
         static void ShowUseageTip()
         {
             Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-            Console.WriteLine("Useage: H1ToTitle [-R|-r]");
-            Console.WriteLine("-R means replace title with H1 description");
+            Console.WriteLine("Useage: H1ToTitle --Service [S|F] --Customize [H]");
+            Console.WriteLine("The First Parameter group --Service [S|F] means We customized the file [By Servie|By FileList]");
+            Console.WriteLine("The Second Parameter group --Customize [H] means which format we should use to Customized the specific articles");
             Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             Console.WriteLine("Press <Enter> to exit....");
 
@@ -161,8 +216,74 @@ namespace H1ToTitle
 
             }
         }
-        
 
-        
+        public static ArrayList GetFileListByService(string customizedate)
+        {
+            CollectAllFileByService fileByService = new CollectAllFileByService();
+            ArrayList arrFile = new ArrayList();
+            arrFile = fileByService.GetAllFileByServiceWithCustomziedate(customizedate);
+
+            return arrFile;
+
+        }
+
+        public static ArrayList GetFileListByArticles()
+        {
+            string error = "";
+            ArrayList arrFile = new ArrayList();
+            string configfile = CommonFun.GetConfigurationValue("customerfilepath", ref error);
+            if (error.Length > 0)
+            {
+                return null;
+            }
+
+            string filename = string.Empty;
+            string directory = string.Empty;
+            string customizedate = string.Empty;
+            string fullfilename = string.Empty;
+
+            string globalpath = string.Empty;
+
+
+            globalpath = CommonFun.GetConfigurationValue("GlobalRepository", ref error);
+
+
+            StreamReader sr = File.OpenText(configfile);
+            string row = "";
+            row = sr.ReadLine();
+
+            while (row != null)
+            {
+                string[] para = row.Split(new Char[] { '\t' });
+
+                filename = para[0];
+                directory = para[1];
+                customizedate = para[2];
+
+                switch (directory)
+                {
+                    case "includes":
+                        fullfilename = string.Format("{0}{1}/{2}", globalpath, directory, filename);
+
+                        break;
+                    default:
+                        fullfilename = string.Format("{0}{1}/{2}", globalpath, directory, filename);
+                        break;
+                }
+                arrFile.Add(new string[] { filename, directory, customizedate });
+
+                row = sr.ReadLine();
+
+            }
+
+
+            return arrFile;
+
+        }
+
+
+
     }
 }
+
+        

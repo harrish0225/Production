@@ -23,13 +23,71 @@
       "global": "^([\\s]*)ms.author:([\\s ]*)(.*)",
       "mooncake": "$1ms.author: v-yeche",
       "comments": "modify the ms.author in mooncake"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(\\s{1,}/cli/azure/",
+      "mooncake": "(/cli/",
+      "comments": "Repalce ( /cli/XXXXXX)"
     }
   ],
   "URLReplacement": [
     {
+      "serice": "provision-sql-server-linux-virtual-machine.md",
+      "global": "2017",
+      "mooncake": "2019",
+      "comments": "Mooncake only provider SQL Server 2018 to replace 2017"
+    },
+    {
       "serice": "ALL",
-      "global": "\\(\\s{1,}/cli/",
-      "mooncake": "(/cli/"
+      "global": "http://aka\\.ms/allocation-guidance",
+      "mooncake": "https://docs.azure.cn/virtual-machines/troubleshooting/allocation-failure",
+      "comments": "Replace the allocation guidance Refrerence"
+    },
+    {
+      "serice": "ALL",
+      "global": "https://aka\\.ms/cassandratutorial",
+      "mooncake": "/cosmos-db/create-cassandra-api-account-java"
+    },
+    {
+      "serice": "ALL",
+      "global": "https://aka\\.ms/tableapiimporttool",
+      "mooncake": "/cosmos-db/table-import"
+    },
+    {
+      "serice": "ALL",
+      "global": "https://aka\\.ms/cassandraimport",
+      "mooncake": "/cosmos-db/cassandra-import-data"
+    },
+    {
+      "serice": "ALL",
+      "global": "\\.azmk8s\\.io",
+      "mooncake": ".cx.prod.service.azk8s.cn"
+    },
+    {
+      "serice": "ALL",
+      "global": "https://aka\\.ms/acr/pricing",
+      "mooncake": "https://www.azure.cn/zh-cn/pricing/details/container-registry/"
+    },
+    {
+      "serice": "aks",
+      "global": "china(east|north)2*",
+      "mooncake": "china$12"
+    },
+    {
+      "serice": "service-fabric-quickstart-containers.md|service-fabric-tutorial-deploy-app-to-party-cluster.md",
+      "global": "(SouthCentralUS|southcentral)",
+      "mooncake": "chinaeast"
+    },
+    {
+      "serice": "virtual-networks-static-private-ip-classic-cli.md",
+      "global": "uscentral",
+      "mooncake": "chinaeast"
+    },
+    {
+      "serice": "azure-to-azure-exclude-disks.md",
+      "global": "China North 2",
+      "mooncake": "China North"
     },
     {
       "serice": "ALL",
@@ -44,12 +102,12 @@
     {
       "serice": "ALL",
       "global": "\\[(cosmosdbtooling\\@microsoft\\.com|cosmosdbtooling\\@microsoft\\.test)\\]",
-      "mooncake": "[MSDN Azure and CSDN Azure]"
+      "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
     },
     {
       "serice": "ALL",
       "global": "\\((mailto\\:)?(cosmosdbtooling\\@microsoft\\.com|cosmosdbtooling\\@microsoft\\.test)\\)",
-      "mooncake": "(https://www.azure.cn/support/contact/)"
+      "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
     },
     {
       "serice": "ALL",
@@ -176,6 +234,11 @@
       "service": "ALL",
       "global": "myWestEuropeEndpoint",
       "mooncake": "myChinaNorthEndpoint"
+    },
+    {
+      "service": "ALL",
+      "global": "\\?view\\=azure-dotnet\\?redirectedfrom\\=MSDN",
+      "mooncake": "?view=azure-dotnet"
     },
     {
       "service": "ALL",
@@ -310,7 +373,7 @@
     },
     {
       "service": "ALL",
-      "global": "(\\s{1,})Microsoft(\\s{1,})(?!(\\.Net|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|EXCEL|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper\\-V\\s{1,}Server|IIS|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows\\s{1,}Server|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word|Update))",
+      "global": "(\\s{1,})Microsoft(\\s{1,})(?!(\\.Net|and\\s{1,}21Vianet|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|EXCEL|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper\\-V\\s{1,}Server|IIS|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows\\s{1,}Server|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word|Update))",
       "mooncake": "$1Azure$2",
       "comments": "Update Microsoft to Azure except Excel/Officer/Word etc."
     },
@@ -415,13 +478,19 @@
     },
     {
       "service": "ALL",
-      "global": "```(azure|azure-|Azure|Azure-)?(powershell|PowerShell)-interactive",
+      "global": "```posh",
+      "mooncake": "```powershell",
+      "comment": "Replace the abbrevation format."
+    },
+    {
+      "service": "ALL",
+      "global": "```(azure|azure-|Azure|Azure-)?(powershell|PowerShell)-?interactive",
       "mooncake": "```$2",
       "comment": "Should be Powershell only after studied."
     },
     {
       "service": "ALL",
-      "global": "```(azure|azure|Azure|Azure)?(-)?(cli|CLI)-interactive",
+      "global": "```(azure|azure|Azure|Azure)?(-)?(cli|CLI)-?interactive",
       "mooncake": "```$1$3"
     },
     {
@@ -515,8 +584,9 @@
     },
     {
       "service": "cosmos-db",
-      "global": "globally(\\,|\\.|\\:)",
-      "mooncake": "multiple-regionally$1"
+      "global": "globally(?!(\\.(m|M)(d|D)|\\.(p|P)(n|N)(g|G)))",
+      "mooncake": "multiple-regionally$1",
+      "comments": "explicit on globally.png or globally.md and so on "
     },
     {
       "service": "cosmos-db",
@@ -618,7 +688,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(previous-versions|visualstudio|virtualization|system-center|vsts|windows|power-bi|xamarin|message-passing-interface)/([^\\s)]*)\\)",
+      "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(previous-versions|visualstudio|virtualization|system-center|sysinternals|vsts|windows|power-bi|xamarin|message-passing-interface)/([^\\s)]*)\\)",
       "mooncake": "(https://docs.microsoft.com/zh-cn/$2/$3)"
     },
     {
@@ -758,7 +828,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\([\\s ]*(\\/|\\/zh-cn\\/|\\/en-us\\/)?(api|biztalk|cli|dotnet|java|powershell|rest|sql|sysinternals|system-center|previous-versions)(\\s/\\S+)\\)",
+      "global": "\\([\\s ]*(\\/|\\/zh-cn\\/|\\/en-us\\/)?(api|biztalk|cli|dotnet|java|powershell|rest|sql|sysinternals|system-center|previous-versions)([/\\S]*)\\)",
       "mooncake": "(https://docs.microsoft.com/$2$3)",
       "comments": "replace the relative URL with global full URL format - Step 1"
     },
@@ -845,12 +915,12 @@
     },
     {
       "service": "ALL",
-      "global": "https: //msdn\\.microsoft\\.com/library/azure/dn971527.aspx",
+      "global": "https://msdn\\.microsoft\\.com/library/azure/dn971527.aspx",
       "mooncake": "https://docs.azure.cn/zh-cn/dotnet/api/microsoft.servicefabric.data.collections.ireliablequeue-1?view=azure-dotnet#microsoft_servicefabric_data_collections_ireliablequeue_1"
     },
     {
       "service": "ALL",
-      "global": "https: //msdn\\.microsoft\\.com/library/azure/dn971511.aspx",
+      "global": "https://msdn\\.microsoft\\.com/library/azure/dn971511.aspx",
       "mooncake": "https://docs.azure.cn/zh-cn/dotnet/api/microsoft.servicefabric.data.collections.ireliabledictionary-2?view=azure-dotnet#microsoft_servicefabric_data_collections_ireliabledictionary_2"
     },
     {
@@ -926,8 +996,13 @@
     },
     {
       "service": "ALL",
+      "global": "or send an email to \\[askcosmosdbcassandra@microsoft\\.com\\]\\(mailto:askcosmosdbcassandra\\@microsoft\\.com\\)",
+      "mooncake": ""
+    },
+    {
+      "service": "ALL",
       "global": "\\(mailto:askcosmosdb@microsoft\\.com\\)",
-      "mooncake": "(https://www.azure.cn/support/contact/)"
+      "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
     },
     {
       "service": "ALL",
@@ -1052,6 +1127,91 @@
       "service": "ALL",
       "global": "Max NICs / Expected network bandwidth \\(MBps\\)",
       "mooncake": "Max NICs / Expected network bandwidth (Mbps)"
+    },
+    {
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/home/features/functions(/?)",
+      "mooncake": "https://www.azure.cn/home/features/azure-functions$1"
+    },
+    {
+      "service": "ALL",
+      "global": "https://docs\\.azure\\.cn/(zh-cn/)?dotnet/standard/net-standard(\\?view=azure-dotnet)?",
+      "mooncake": "https://docs.microsoft.com/dotnet/standard/net-standard",
+      "comments":  "Microsoft dot Net SDK 2.0 reference link"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/cosmosdbtriggerportalfunc",
+      "mooncake": "/azure-functions/functions-create-cosmos-db-triggered-function",
+      "comments": "Replace with Cosmos trigger function"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/cosmosdbinputbind",
+      "mooncake": "/azure-functions/functions-bindings-cosmosdb",
+      "comments": "Replace with Cosmos bindings function"
+    },
+    {
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/solutions/serverless/",
+      "mooncake": "https://azure.microsoft.com/solutions/serverless/",
+      "comments": "Replace with Cosmos bindings function"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://ocs\\.microsoft\\.com/([^)]*)\\)",
+      "mooncake": "($1.md)",
+      "comments": "https://ocs.microsoft.com/ is not valid http address"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/asr_pricing_FAQ",
+      "mooncake": "https://www.azure.cn/zh-cn/pricing/details/site-recovery/"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/asr_pricing_calculator",
+      "mooncake": "https://www.azure.cn/zh-cn/pricing/calculator"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/siterecovery_deployment_planner",
+      "mooncake": "../site-recovery/site-recovery-vmware-deployment-planner-cost-estimation.md"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/asr_DP_costreport",
+      "mooncake": "../site-recovery/site-recovery-vmware-deployment-planner-cost-estimation.md"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/asr_support_statement",
+      "mooncake": "../site-recovery/service-updates-how-to.md#support-statement-for-azure-site-recovery"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/asr_how_to_upgrade",
+      "mooncake": "../site-recovery/service-updates-how-to.md"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/doc-plugin-VM-not-showing",
+      "mooncake": "../site-recovery/vmware-azure-troubleshoot-replication.md#source-machine-isnt-listed-in-the-azure-portal"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/asr_update_rollups",
+      "mooncake": "../site-recovery/service-updates-how-to.md#links-to-currently-supported-update-rollups"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/asr_vmware_upgrades",
+      "mooncake": "../site-recovery/service-updates-how-to.md#between-an-on-premises-vmware-or-physical-site-to-azure"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/asr_workload",
+      "mooncake": "../site-recovery/site-recovery-workload.md"
     },
     {
       "service": "ALL",
@@ -1249,7 +1409,12 @@
     {
       "service": "ALL",
       "global": "\\[MSDN and the Stack Overflow\\]\\(https://azure\\.microsoft\\.com/support/forums/\\)",
-      "mooncake": "[MSDN Azure and CSDN Azure](https://www.azure.cn/support/contact/)"
+      "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
+    },
+    {
+      "service": "ALL",
+      "global": "send (an |a )?(email|mail) at \\[askcosmosdbcassandra\\@microsoft\\.com\\]\\(mailto:askcosmosdbcassandra\\@microsoft\\.com\\)",
+      "mooncake": "contact [Azure Support](https://www.azure.cn/support/support-azure/)"
     },
     {
       "service": "ALL",
@@ -1263,8 +1428,13 @@
     },
     {
       "service": "ALL",
-      "global": "table.cosmosdb.azure.com",
-      "mooncake": "table.cosmosdb.azure.cn"
+      "global": "(documents|graphs|table)\\.azure\\.com",
+      "mooncake": "$1.azure.cn"
+    },
+    {
+      "service": "ALL",
+      "global": "(table|cassandra|gremlin)\\.cosmosdb\\.azure\\.com",
+      "mooncake": "$1.cosmosdb.azure.cn"
     },
     {
       "service": "ALL",
@@ -1328,6 +1498,11 @@
       "service": "ALL",
       "global": "https://azuremarketplace\\.microsoft\\.com/((en-us/)|(zh-cn/))?marketplace/",
       "mooncake": "https://market.azure.cn/zh-cn/marketplace/"
+    },
+    {
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/support/legal/preview-supplemental-terms(/?)",
+      "mooncake": "https://www.azure.cn/support/legal$1"
     },
     {
       "service": "ALL",
@@ -1822,7 +1997,7 @@
     },
     {
       "service": "service-fabric",
-      "global": " Party Cluster website",
+      "global": "Party Cluster website",
       "mooncake": "[Azure Portal](https://portal.azure.cn)",
       "comments": "change Party Cluster website"
     },
@@ -1912,8 +2087,8 @@
     },
     {
       "service": "ALL",
-      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?dotnet/api/microsoft\\.azure\\.cosmosdb\\.",
-      "mooncake": "https://docs.microsoft.com/dotnet/api/microsoft.azure.cosmosdb.",
+      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?dotnet/api/microsoft\\.azure\\.(cosmosdb|cosmos)\\.",
+      "mooncake": "https://docs.microsoft.com/dotnet/api/microsoft.azure.$2.",
       "comments": "Replace with cosmos db library java api reference links"
     },
     {
@@ -1966,6 +2141,11 @@
     },
     {
       "service": "ALL",
+      "global": "\\(https://www\\.azure\\.cn/support/contact/{1,}forums/[0-9\\-\\S]*\\)",
+      "mooncake": "(https://www.azure.cn/support/contact/)"
+    },
+    {
+      "service": "ALL",
       "global": "Azure Cloud Shell",
       "mooncake": "Azure local Shell"
     }
@@ -1981,44 +2161,13 @@
   "ToolReplacement": [
     {
       "service": "ALL",
-      "global": "-AzureR(m|M)",
-      "mooncake": "-Az"
+      "global": "-(A|a)zure(R|r)(M|m)",
+      "mooncake": "-$1z"
     },
-        {
+     {
       "service": "ALL",
-      "global": "\\[\\s*(az)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
-      "mooncake": "[$1 $2](https://docs.azure.cn/zh-cn/cli/$3$4?view=azure-cli-latest#az-$2)",
-      "comments": "powershell archor generator format with two parameters."
-    },
-    {
-      "service": "ALL",
-      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
-      "mooncake": "[$1 $2 $3](https://docs.azure.cn/zh-cn/cli/$4$5?view=azure-cli-latest#az-$2-$3)",
-      "comments": "powershell archor generator format with three parameters."
-    },
-    {
-      "service": "ALL",
-      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
-      "mooncake": "[$1 $2 $3 $4](https://docs.azure.cn/zh-cn/cli/$5$6?view=azure-cli-latest#az-$2-$3-$4)",
-      "comments": "powershell archor generator format with four parameters."
-    },
-    {
-      "service": "ALL",
-      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
-      "mooncake": "[$1 $2 $3 $4 $5](https://docs.azure.cn/zh-cn/cli/$6$7?view=azure-cli-latest#az-$2-$3-$4-$5)",
-      "comments": "powershell archor generator format with five parameters."
-    },
-    {
-      "service": "ALL",
-      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
-      "mooncake": "[$1 $2 $3 $4 $5 $6](https://docs.azure.cn/zh-cn/cli/$7$8?view=azure-cli-latest#az-$2-$3-$4-$5-$6)",
-      "comments": "powershell archor generator format with six parameters."
-    },
-    {
-      "service": "ALL",
-      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
-      "mooncake": "[$1 $2 $3 $4 $5 $6 $7](https://docs.azure.cn/zh-cn/cli/$8$9?view=azure-cli-latest#az-$2-$3-$4-$5-$6-$7)",
-      "comments": "powershell archor generator format with seven parameters."
+      "global": "/(A|a)zure(R|r)(M|m)",
+      "mooncake": "/$1z"
     }
   ],
   "MDFileCorrection": [
@@ -2037,10 +2186,15 @@
   ],
   "Backup": [
     {
-      "service": "ALL", 
-	    "global": "([\\s]*)(\\n)",
+      "service": "ALL",
+      "global": "([\\s]*)(\\n)",
       "mooncake": "$2",
       "comments": "MD File Replace the last blank coloumn in the each row"
+    },
+    {
+      "service": "ALL",
+      "global": "-(A|a)zure(R|r)m",
+      "mooncake": "-$1z"
     },
      {
       "service": "ALL", 

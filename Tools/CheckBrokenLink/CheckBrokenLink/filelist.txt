@@ -1,1 +1,1 @@
-sql-api-dotnet-samples.md	articles/cosmos-db	12/03/2018
+TOC.yml	articles/cosmos-db	12/03/2018

@@ -60,18 +60,15 @@ namespace CheckBrokenLink.ProcessLibrary
 
     public enum InvolvedService
     {
+        aks,
         analysis_services,
         azure_resource_manager,
         container_registry,
         cosmos_db,
-        event_hubs,
-        load_balancer,
         resiliency,
-        network_watcher,
         service_fabric,
         site_recovery,
         sql_server_stretch_database,
-        stream_analytics,
         traffic_manager,
         virtual_machines,
         virtual_network,
@@ -80,7 +77,8 @@ namespace CheckBrokenLink.ProcessLibrary
 
     //public enum InvolvedService
     //{
-    //    virtual_machines,
+    //    aks,
+    //    includes,
     //}
 
     public enum ReplaceParam

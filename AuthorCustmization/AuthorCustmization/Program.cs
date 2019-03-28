@@ -315,10 +315,10 @@ namespace AuthorCustmization
             string customizedate = string.Empty;
             string fullfilename = string.Empty;
 
-            string globalpath = string.Empty;
+            //string globalpath = string.Empty;
 
 
-            globalpath = CommonFun.GetConfigurationValue("GlobalRepository", ref error);
+            //globalpath = CommonFun.GetConfigurationValue("GlobalRepository", ref error);
 
 
             StreamReader sr = File.OpenText(configfile);
@@ -333,16 +333,16 @@ namespace AuthorCustmization
                 directory = para[1];
                 customizedate = para[2];
 
-                switch (directory)
-                {
-                    case "includes":
-                        fullfilename = string.Format("{0}{1}/{2}", globalpath, directory, filename);
+                //switch (directory)
+                //{
+                //    case "includes":
+                //        fullfilename = string.Format("{0}{1}/{2}", globalpath, directory, filename);
 
-                        break;
-                    default:
-                        fullfilename = string.Format("{0}{1}/{2}", globalpath, directory, filename);
-                        break;
-                }
+                //        break;
+                //    default:
+                //        fullfilename = string.Format("{0}{1}/{2}", globalpath, directory, filename);
+                //        break;
+                //}
                 arrFile.Add(new string[] { filename,directory, customizedate});
 
                 row = sr.ReadLine();

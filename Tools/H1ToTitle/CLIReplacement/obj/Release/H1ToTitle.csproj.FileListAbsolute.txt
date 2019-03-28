@@ -1,0 +1,7 @@
+D:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\bin\Release\H1TOTITLE.exe.config
+D:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\bin\Release\H1TOTITLE.exe
+D:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\bin\Release\H1TOTITLE.pdb
+D:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\bin\Release\Newtonsoft.Json.dll
+D:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\bin\Release\Newtonsoft.Json.xml
+D:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\obj\Release\H1TOTITLE.exe
+D:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\obj\Release\H1TOTITLE.pdb

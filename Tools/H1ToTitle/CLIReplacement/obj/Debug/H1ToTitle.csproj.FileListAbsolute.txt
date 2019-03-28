@@ -8,3 +8,7 @@ E:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\obj\Debug\H1TOTITLE.pdb
 D:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\bin\Debug\H1TOTITLE.exe.config
 D:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\obj\Debug\H1TOTITLE.exe
 D:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\obj\Debug\H1TOTITLE.pdb
+D:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\bin\Debug\H1TOTITLE.exe
+D:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\bin\Debug\H1TOTITLE.pdb
+D:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\bin\Debug\Newtonsoft.Json.dll
+D:\gitrep\Production\Tools\H1ToTitle\CLIReplacement\bin\Debug\Newtonsoft.Json.xml

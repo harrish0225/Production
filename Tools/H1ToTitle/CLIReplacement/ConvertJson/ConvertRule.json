@@ -293,7 +293,7 @@
     {
 
       "Title": "^\\s*---\\s*\\ntitle: \\s*(?<title>[^\\n]*)\\s*(\"?)",
-      "H1": "#([\\s]*)(<a(\\s)*(\\S)*></a>)?(\\s*)(?<h1>[^#\\n]+)(\\s*)\\n",
+      "H1": "#([\\s]*)(<a(\\s)*(\\S)*></a>)?(\\s*)(?<h1>[^#\\n]+)(\\s*) \\n",
       "TitleReplace": "---\ntitle: {0}\n",
       "TitleReplaceWithQuotation": "---\ntitle: \"{0}\"\n",
       "comment": "replace Title with H1. "

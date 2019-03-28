@@ -51,16 +51,12 @@ namespace H1ToTitle.ProcessLibrary
     //public enum InvolvedService
     //{
     //    analysis_services,
+    //    aks,
     //    azure_resource_manager,
     //    cosmos_db,
-    //    event_hubs,
-    //    load_balancer,
-    //    resiliency,
+    //    container_registry,
     //    service_fabric,
     //    site_recovery,
-    //    sql_data_warehouse,
-    //    sql_server_stretch_database,
-    //    stream_analytics,
     //    traffic_manager,
     //    virtual_machines,
     //    virtual_network,
@@ -68,12 +64,26 @@ namespace H1ToTitle.ProcessLibrary
 
     public enum InvolvedService
     {
-        virtual_machines,
+        service_fabric,
     }
 
     public enum ReplaceParam
     {
         CustimzedDate,
+    }
+
+    public enum CustomizedCategory
+    {
+        CustomizedByService,
+        CustomizedByFile,
+    }
+
+    public enum CommandPara
+    {
+        Null,
+        Servcie,
+        Customize,
+        VerifyFail,
     }
 
     public enum FileCategory
@@ -99,7 +109,7 @@ namespace H1ToTitle.ProcessLibrary
 
             foreach (InvolvedService curtService in Enum.GetValues(typeof(InvolvedService)))
             {
-                diskpath = CommonFun.GetConfigurationValue("RepositoryZHCNArticleDir", ref message);
+                diskpath = CommonFun.GetConfigurationValue("GlobalArticleDir", ref message);
 
                 parentpath = string.Format("{0}\\{1}", diskpath, curtService.ToString().Replace('_', '-'));
 
@@ -111,9 +121,116 @@ namespace H1ToTitle.ProcessLibrary
             return fileList;
         }
 
+        public ArrayList GetAllFileByServiceWithCustomziedate(string customizedate)
+        {
+            ArrayList fileList = new ArrayList();
+            string message = string.Empty;
+            string diskpath = string.Empty;
+            string parentpath = string.Empty;
+
+            if (this.CheckFileList != null && this.CheckFileList.Count > 0)
+            {
+                this.CheckFileList = new ArrayList();
+            }
+
+            foreach (InvolvedService curtService in Enum.GetValues(typeof(InvolvedService)))
+            {
+                if (curtService.ToString().ToLower() == "includes".ToLower())
+                {
+                    diskpath = CommonFun.GetConfigurationValue("GlobalIncludeDir", ref message);
+                    parentpath = string.Format("{0}", diskpath);
+                }
+                else
+                {
+                    diskpath = CommonFun.GetConfigurationValue("GlobalArticleDir", ref message);
+                    parentpath = string.Format("{0}\\{1}", diskpath, curtService.ToString().Replace('_', '-'));
+                }
+
+                this.GetAllFilesInDirectoryWithCustomizedate(parentpath, customizedate);
+
+            }
+
+            fileList = this.CheckFileList;
+            return fileList;
+        }
+
+        public void GetAllFilesInDirectoryWithCustomizedate(string parentPath, string customizedate)
+        {
+            string[] curtFiles = System.IO.Directory.GetFiles(parentPath, "*.md");
+            string filename = string.Empty;
+            string directory = string.Empty;
+
+            string curtValue = string.Empty;
+            string[] curtKey = new string[] { };
+
+            int iStartIdx = 0;
+
+            if (curtFiles.Length > 0)
+            {
+                curtValue = curtFiles[0].Replace("\\", "/");
+                curtKey = curtValue.Split('/');
+
+                for (int i = 0; i < curtKey.Length; i++)
+                {
+                    if (curtKey[i].ToUpper() == "ARTICLES" || curtKey[i].ToUpper() == "INCLUDES")
+                    {
+                        iStartIdx = i;
+                        break;
+                    }
+                }
+
+                for (int i = 0; i < curtFiles.Length; i++)
+                {
+                    curtValue = curtFiles[i].Replace("\\", "/");
+                    curtKey = curtValue.Split('/');
+                    directory = string.Empty;
+                    for (int j = iStartIdx; j < curtKey.Length - 1; j++)
+                    {
+                        directory += string.Format("/{0}", curtKey[j]);
+                    }
+                    directory = directory.Trim('/');
+                    filename = curtKey[curtKey.Length - 1];
+
+                    this.CheckFileList.Add(new string[] { filename, directory, customizedate });
+                }
+            }
+
+
+
+
+
+            string[] curtymlFiles = System.IO.Directory.GetFiles(parentPath, "*.yml");
+
+            if (curtFiles.Length > 0)
+            {
+                for (int i = 0; i < curtymlFiles.Length; i++)
+                {
+                    curtValue = curtymlFiles[i].Replace("\\", "/");
+                    curtKey = curtValue.Split('/');
+                    directory = string.Empty;
+                    for (int j = iStartIdx; j < curtKey.Length - 1; j++)
+                    {
+                        directory += string.Format("/{0}", curtKey[j]);
+                    }
+                    directory = directory.Trim('/');
+                    filename = curtKey[curtKey.Length - 1];
+
+                    this.CheckFileList.Add(new string[] { filename, directory, customizedate });
+                }
+            }
+
+            string[] curtDirList = System.IO.Directory.GetDirectories(parentPath);
+
+            for (int i = 0; i < curtDirList.Length; i++)
+            {
+                this.GetAllFilesInDirectoryWithCustomizedate(curtDirList[i], customizedate);
+            }
+
+        }
+
     }
 
-   
+
 
     public class FileCustomize
     {
@@ -180,7 +297,7 @@ namespace H1ToTitle.ProcessLibrary
             if (para[0].ToLower() == "articles")
             {
 
-                diskpath = CommonFun.GetConfigurationValue("RepositoryZHCNArticleDir", ref message);
+                diskpath = CommonFun.GetConfigurationValue("GlobalArticleDir", ref message);
                 relativefile = GetRightFileName(para);
                 this.Fullpath = string.Format(@"{0}\{1}\{2}", diskpath, relativefile, this.File);
                 this.ArticleCategory = FileCategory.Article;
@@ -190,7 +307,7 @@ namespace H1ToTitle.ProcessLibrary
             if (para[0].ToLower() == "includes")
             {
 
-                diskpath = CommonFun.GetConfigurationValue("RepositoryZHCNIncludeDir", ref message);
+                diskpath = CommonFun.GetConfigurationValue("GlobalIncludeDir", ref message);
                 relativefile = GetRightFileName(para);
                 this.Fullpath = string.Format(@"{0}\{2}", diskpath, relativefile, this.File);
                 this.ArticleCategory = FileCategory.Includes;
@@ -416,7 +533,7 @@ namespace H1ToTitle.ProcessLibrary
         {
             string parentInclude = string.Empty;
             string message = string.Empty;
-            string parentpath = CommonFun.GetConfigurationValue("RepositoryZHCNIncludeDir", ref message);
+            string parentpath = CommonFun.GetConfigurationValue("GlobalIncludeDir", ref message);
 
             string filecontent = string.Empty;
             string regRule = "\\[\\!INCLUDE \\[([\\S|\\s]+)(\\.md)?\\]\\(((\\.\\.\\/)*)includes\\/{0}\\)\\]";
