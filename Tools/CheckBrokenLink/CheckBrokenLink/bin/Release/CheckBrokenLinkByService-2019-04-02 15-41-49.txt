@@ -24,8 +24,6 @@ Error : https://docs.azure.cn/zh-cn/container-registry/container-registry-auth-a
 6 : articles\aks\TOC.yml
 Error : https://docs.azure.cn/zh-cn/aks/index.yml -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/aks/http-application-routing -> The remote server returned an error: (404) Not Found.
-Error : https://docs.azure.cn/zh-cn//azure-monitor/insights/container-insights-overview -> The remote server returned an error: (404) Not Found.
-Error : https://www.azure.cn/pricing/details/container-service/ -> The remote server returned an error: (404) Not Found.
 
 7 : articles\analysis-services\analysis-services-datasource.md
 #azsqlmanaged : missing.
@@ -93,322 +91,261 @@ Error : https://docs.azure.cn/zh-cn//role-based-access-control/index.yml -> The 
 17 : articles\container-registry\TOC.yml
 Error : https://docs.azure.cn/zh-cn/container-registry/index.yml -> The remote server returned an error: (404) Not Found.
 
-18 : articles\cosmos-db\bulk-executor-graph-dotnet.md
-Error : https://docs.azure.cn/zh-cn/cosmos-db/create-graph-dotnet -> The remote server returned an error: (404) Not Found.
-
-19 : articles\cosmos-db\bulk-executor-java.md
+18 : articles\cosmos-db\bulk-executor-java.md
 Error : https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.bulkexecutor -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.bulkexecutor -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.bulkexecutor -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.bulkexecutor -> The remote server returned an error: (404) Not Found.
 
-20 : articles\cosmos-db\cassandra-spark-generic.md
+19 : articles\cosmos-db\cassandra-spark-generic.md
 Error : https://search.maven.org/artifact/com.microsoft.azure.cosmosdb/azure-cosmos-cassandra-spark-helper/1.0.0/jar -> The remote server returned an error: (404) Not Found.
 
-21 : articles\cosmos-db\consistency-levels.md
+20 : articles\cosmos-db\consistency-levels.md
 Error : https://lamport.chinacloudsites.cn/tla/tla.html -> The remote name could not be resolved: 'lamport.chinacloudsites.cn'
 
-22 : articles\cosmos-db\logging.md
+21 : articles\cosmos-db\logging.md
 Error : https://www.azure.cn/home/features/log-analytics/ -> The remote server returned an error: (404) Not Found.
 Error : https://www.azure.cn/home/features/log-analytics/ -> The remote server returned an error: (404) Not Found.
-Error : https://docs.azure.cn/zh-cn/log-analytics/log-analytics-azure-storage -> The remote server returned an error: (404) Not Found.
 
-23 : articles\cosmos-db\monitor-accounts.md
+22 : articles\cosmos-db\monitor-accounts.md
 Error : https://blogs.msdn.microsoft.com/cloud_solution_architect/2016/02/23/retrieving-resource-metrics-via-the-azure-insights-api/ -> The remote server returned an error: (410) Gone.
 
-24 : articles\cosmos-db\optimize-cost-reads-writes.md
-Error : https://docs.azure.cn/zh-cn//data-factory/connector-azure-cosmos-db -> The remote server returned an error: (404) Not Found.
-
-25 : articles\cosmos-db\optimize-cost-throughput.md
-Error : https://docs.azure.cn/zh-cn/cosmos-db/cosmos-db-reserved-capacity -> The remote server returned an error: (404) Not Found.
-
-26 : articles\cosmos-db\sql-api-dotnet-core-get-started-preview.md
-Error : https://docs.azure.cn/zh-cn/dotnet/standard/net-standard?view=azure-dotnet -> The remote server returned an error: (404) Not Found.
-
-27 : articles\cosmos-db\sql-api-dotnet-get-started-preview.md
-Error : https://docs.azure.cn/zh-cn/dotnet/standard/net-standard?view=azure-dotnet -> The remote server returned an error: (404) Not Found.
-
-28 : articles\cosmos-db\sql-api-sdk-bulk-executor-dot-net.md
-Error : https://docs.azure.cn/zh-cn/dotnet/api/microsoft.azure.cosmosdb.bulkexecutor?view=azure-dotnet -> The remote server returned an error: (404) Not Found.
-
-29 : articles\cosmos-db\sql-api-sdk-bulk-executor-java.md
+23 : articles\cosmos-db\sql-api-sdk-bulk-executor-java.md
 Error : https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.bulkexecutor -> The remote server returned an error: (404) Not Found.
 
-30 : articles\cosmos-db\table-storage-design-guide.md
+24 : articles\cosmos-db\table-storage-design-guide.md
 Error : https://blogs.msdn.com/b/windowsazurestorage/archive/2011/11/20/windows-azure-storage-a-highly-available-cloud-storage-service-with-strong-consistency.aspx -> The remote server returned an error: (410) Gone.
 
-31 : articles\cosmos-db\troubleshoot-dot-net-sdk.md
+25 : articles\cosmos-db\troubleshoot-dot-net-sdk.md
 #logging : missing.
 #production-check-list : missing.
 
-32 : articles\cosmos-db\index.yml
+26 : articles\cosmos-db\index.yml
 Error : Index and length must refer to a location within the string.
 Parameter name: length
 
-33 : articles\service-fabric\service-fabric-best-practices-capacity-scaling.md
+27 : articles\cosmos-db\TOC.yml
+Error : https://docs.azure.cn/zh-cn/dotnet/articles/fsharp/using-fsharp-on-azure/table-storage -> The remote server returned an error: (404) Not Found.
+
+28 : articles\service-fabric\service-fabric-best-practices-capacity-scaling.md
 Error : https://docs.azure.cn/vs-azure-tools-resource-groups-ci-in-vsts -> The remote server returned an error: (404) Not Found.
 
-34 : articles\service-fabric\service-fabric-best-practices-monitoring.md
+29 : articles\service-fabric\service-fabric-best-practices-monitoring.md
 Error : https://docs.azure.cn/zh-cn/service-fabric/service-fabric-tutorial-monitoring-aspnet -> The remote server returned an error: (404) Not Found.
 
-35 : articles\service-fabric\service-fabric-best-practices-security.md
+30 : articles\service-fabric\service-fabric-best-practices-security.md
 Error : https://docs.azure.cn/zh-cn/security/azure-service-fabric-security-best-practices -> The remote server returned an error: (404) Not Found.
 
-36 : articles\service-fabric\service-fabric-capacity-planning.md
+31 : articles\service-fabric\service-fabric-capacity-planning.md
 Error : https://servicefabricsdkstorage.blob.core.windows.net/publicrelease/SF%20VM%20Cost%20calculator-NEW.xlsx -> The remote name could not be resolved: 'servicefabricsdkstorage.blob.core.windows.net'
 
-37 : articles\service-fabric\service-fabric-cicd-your-linux-applications-with-jenkins.md
+32 : articles\service-fabric\service-fabric-cicd-your-linux-applications-with-jenkins.md
 Error : https://docs.azure.cn/zh-cn/var/jenkins_home -> The remote server returned an error: (404) Not Found.
 
-38 : articles\service-fabric\service-fabric-cluster-creation-for-windows-server.md
+33 : articles\service-fabric\service-fabric-cluster-creation-for-windows-server.md
 Error : https://go.microsoft.com/fwlink/?LinkID=733084 -> The remote server returned an error: (404) Not Found.
 
-39 : articles\service-fabric\service-fabric-cluster-creation-setup-aad.md
+34 : articles\service-fabric\service-fabric-cluster-creation-setup-aad.md
 Error : https://servicefabricsdkstorage.blob.core.windows.net/publicrelease/MicrosoftAzureServiceFabric-AADHelpers.zip -> The remote name could not be resolved: 'servicefabricsdkstorage.blob.core.windows.net'
 
-40 : articles\service-fabric\service-fabric-cluster-standalone-package-contents.md
+35 : articles\service-fabric\service-fabric-cluster-standalone-package-contents.md
 Error : https://go.microsoft.com/fwlink/?LinkID=733084 -> The remote server returned an error: (404) Not Found.
 
-41 : articles\service-fabric\service-fabric-containers-volume-logging-drivers.md
+36 : articles\service-fabric\service-fabric-containers-volume-logging-drivers.md
 Error : https://aka.ms/sfvolume6.4 -> The remote server returned an error: (404) Not Found.
 
-42 : articles\service-fabric\service-fabric-content-roadmap.md
+37 : articles\service-fabric\service-fabric-content-roadmap.md
 Error : https://docs.azure.cn/zh-cn/java/api/servicefabric?view=azure-java-stable -> The remote server returned an error: (404) Not Found.
 
-43 : articles\service-fabric\service-fabric-create-your-first-linux-application-with-csharp.md
+38 : articles\service-fabric\service-fabric-create-your-first-linux-application-with-csharp.md
 Error : https://docs.azure.cn/zh-cn/home -> The remote server returned an error: (404) Not Found.
 
-44 : articles\service-fabric\service-fabric-create-your-first-linux-application-with-java.md
+39 : articles\service-fabric\service-fabric-create-your-first-linux-application-with-java.md
 Error : https://docs.azure.cn/zh-cn/home -> The remote server returned an error: (404) Not Found.
 
-45 : articles\service-fabric\service-fabric-deploy-multiple-apps.md
+40 : articles\service-fabric\service-fabric-deploy-multiple-apps.md
 Error : https://aka.ms/servicefabricpacktool -> The remote name could not be resolved: 'servicefabricsdkstorage.blob.core.windows.net'
 
-46 : articles\service-fabric\service-fabric-get-started-with-a-local-cluster.md
+41 : articles\service-fabric\service-fabric-get-started-with-a-local-cluster.md
 Error : https://aka.ms/servicefabric-wordcountapp -> The remote name could not be resolved: 'servicefabricsdkstorage.blob.core.windows.net'
 Error : https://aka.ms/servicefabric-wordcountappv2 -> The remote name could not be resolved: 'servicefabricsdkstorage.blob.core.windows.net'
 
-47 : articles\service-fabric\service-fabric-host-app-in-a-container.md
+42 : articles\service-fabric\service-fabric-host-app-in-a-container.md
 Error : https://www.azure.cn/free/ -> The remote server returned an error: (404) Not Found.
 
-48 : articles\service-fabric\service-fabric-patch-orchestration-application.md
+43 : articles\service-fabric\service-fabric-patch-orchestration-application.md
 Error : https://www.microsoft.com/wdsi/definitions -> The remote server returned an error: (404) Not Found.
 
-49 : articles\service-fabric\service-fabric-service-model-schema.md
+44 : articles\service-fabric\service-fabric-service-model-schema.md
 #%s-complextype : missing.
 
-50 : articles\service-fabric\service-fabric-sfctl.md
+45 : articles\service-fabric\service-fabric-sfctl.md
 Error : https://docs.azure.cn/zh-cn/service-fabric/service-fabric-sfctl-settings -> The remote server returned an error: (404) Not Found.
 
-51 : articles\service-fabric\service-fabric-tutorial-create-vnet-and-windows-cluster.md
+46 : articles\service-fabric\service-fabric-tutorial-create-vnet-and-windows-cluster.md
 #createvaultandcert : missing.
 
-52 : articles\service-fabric\service-fabric-tutorial-dotnet-app-enable-https-endpoint.md
+47 : articles\service-fabric\service-fabric-tutorial-dotnet-app-enable-https-endpoint.md
 Error : https://mycluster.region.cloudapp.chinacloudapi.cn:443 -> The remote name could not be resolved: 'mycluster.region.cloudapp.chinacloudapi.cn'
 
-53 : articles\service-fabric\service-fabric-view-entities-aggregated-health.md
+48 : articles\service-fabric\service-fabric-view-entities-aggregated-health.md
 Error : https://aka.ms/servicefabric-wordcountapp -> The remote name could not be resolved: 'servicefabricsdkstorage.blob.core.windows.net'
 
-54 : articles\service-fabric\toc.yml
+49 : articles\service-fabric\toc.yml
 Error : https://docs.azure.cn/zh-cn/java/api/servicefabric?view=azure-java-stable -> The remote server returned an error: (404) Not Found.
 
-55 : articles\site-recovery\azure-to-azure-support-matrix.md
+50 : articles\site-recovery\azure-to-azure-support-matrix.md
 Error : https://docs.azure.cn/zh-cn/security/azure-security-disk-encryption-windows-aad -> The remote server returned an error: (404) Not Found.
 
-56 : articles\site-recovery\azure-vm-disaster-recovery-with-expressroute.md
+51 : articles\site-recovery\azure-vm-disaster-recovery-with-expressroute.md
 #azure-vm-replication-steps : missing.
 
-57 : articles\site-recovery\concepts-public-ip-address-with-site-recovery.md
+52 : articles\site-recovery\concepts-public-ip-address-with-site-recovery.md
 Error : https://docs.azure.cn/zh-cn//site-recovery/site-recovery-runbook-automation#customize-the-recovery-plan -> The remote server returned an error: (404) Not Found.
 
-58 : articles\site-recovery\file-server-disaster-recovery.md
+53 : articles\site-recovery\file-server-disaster-recovery.md
 #use-azure-file-sync-service-to-replicate-your-files : missing.
 
-59 : articles\site-recovery\site-recovery-active-directory.md
+54 : articles\site-recovery\site-recovery-active-directory.md
 #environment-with-multiple-domain-controllers : missing.
 Error : https://blogs.technet.microsoft.com/janelewis/2006/09/18/d2-and-d4-what-is-it-for/ -> The remote server returned an error: (410) Gone.
 Error : https://blogs.technet.microsoft.com/thbouche/2013/08/28/dfsr-sysvol-authoritative-non-authoritative-restore-powershell-functions/ -> The remote server returned an error: (410) Gone.
 
-60 : articles\site-recovery\site-recovery-citrix-xenapp-and-xendesktop.md
+55 : articles\site-recovery\site-recovery-citrix-xenapp-and-xendesktop.md
 Error : https://www.azure.cn/pricing/licensing-faq/ -> The remote server returned an error: (404) Not Found.
 
-61 : articles\site-recovery\site-recovery-test-failover-to-azure.md
+56 : articles\site-recovery\site-recovery-test-failover-to-azure.md
 Error : https://blogs.technet.microsoft.com/srinathv/2018/02/07/how-to-add-a-public-ip-address-to-azure-vm-for-vm-failed-over-using-asr/ -> The remote server returned an error: (410) Gone.
 Error : https://aka.ms/addpublicip -> The remote server returned an error: (410) Gone.
 Error : https://aka.ms/addpublicip -> The remote server returned an error: (410) Gone.
 
-62 : articles\site-recovery\vmware-physical-secondary-disaster-recovery.md
+57 : articles\site-recovery\vmware-physical-secondary-disaster-recovery.md
 #create-a-vault : missing.
 #create-a-vault : missing.
 
-63 : articles\site-recovery\index.yml
+58 : articles\site-recovery\index.yml
 Error : https://docs.azure.cn/zh-cn/site-recovery/tutorial-hyper-v-to-azure-failover-failback -> The remote server returned an error: (404) Not Found.
 
-64 : articles\traffic-manager\index.yml
+59 : articles\traffic-manager\index.yml
 Error : https://docs.azure.cn/zh-cn/traffic-manager/tutorial-traffic-manager-subnet-routing -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/traffic-manager/cli-samples -> The remote server returned an error: (404) Not Found.
 
-65 : articles\traffic-manager\toc.yml
+60 : articles\traffic-manager\toc.yml
 Error : https://docs.azure.cn/zh-cn/traffic-manager/traffic-manager-geographic-regions -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/traffic-manager/traffic-manager-configure-subnet-routing-method -> The remote server returned an error: (404) Not Found.
 
-66 : articles\virtual-machines\extensions\features-windows.md
+61 : articles\virtual-machines\extensions\features-windows.md
 Error : https://docs.azure.cn/zh-cn/virtual-machines/extensions/Name -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/virtual-machines/extensions/Code -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/virtual-machines/extensions/Code -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/virtual-machines/extensions/Code -> The remote server returned an error: (404) Not Found.
 
-67 : articles\virtual-machines\extensions\hpccompute-gpu-linux.md
-Error : https://go.microsoft.com/fwlink/?linkid=874330 -> The remote name could not be resolved: 'nvidiadrivereula.azurewebsites.net'
-
-68 : articles\virtual-machines\extensions\hpccompute-gpu-windows.md
-Error : https://go.microsoft.com/fwlink/?linkid=874330 -> The remote name could not be resolved: 'nvidiadrivereula.azurewebsites.net'
-
-69 : articles\virtual-machines\extensions\iaas-antimalware-windows.md
-Error : https://blogs.msdn.microsoft.com/azuresecurity/2017/03/07/update-to-azure-antimalware-extension-for-cloud-services/ -> The remote server returned an error: (410) Gone.
-
-70 : articles\virtual-machines\extensions\toc.yml
+62 : articles\virtual-machines\extensions\toc.yml
 Error : https://docs.azure.cn/zh-cn/virtual-machines/index.yml -> The remote server returned an error: (404) Not Found.
 
-71 : articles\virtual-machines\linux\create-cli-complete-nodejs.md
+63 : articles\virtual-machines\linux\create-cli-complete-nodejs.md
 Error : https://docs.azure.cn/zh-cn/virtual-machines/linux/4222)' -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/virtual-machines/linux/4222' -> The remote server returned an error: (404) Not Found.
 
-72 : articles\virtual-machines\linux\endorsed-distros.md
-Error : https://build.opensuse.org/project/show/Cloud:Tools -> The remote server returned an error: (404) Not Found.
-Error : https://build.opensuse.org/project/show/Cloud:Tools -> The remote server returned an error: (404) Not Found.
-
-73 : articles\virtual-machines\linux\metrics-vm-usage-rest.md
+64 : articles\virtual-machines\linux\metrics-vm-usage-rest.md
 Error : https://docs.azure.cn/zh-cn/load-balancer/load-balancer-standard-diagnostics -> The remote server returned an error: (404) Not Found.
 
-74 : articles\virtual-machines\linux\migrate-to-premium-storage-using-azure-site-recovery.md
+65 : articles\virtual-machines\linux\migrate-to-premium-storage-using-azure-site-recovery.md
 Error : https://docs.azure.cn/zh-cn/virtual-machines/linux/media/migrate-to-premium-storage-using-azure-site-recovery/migrate-to-premium-storage-using-azure-site-recovery-14.pngg -> The remote server returned an error: (404) Not Found.
 
-75 : articles\virtual-machines\linux\tutorial-lemp-stack.md
+66 : articles\virtual-machines\linux\terraform-install-configure.md
+Error : https://www.terraform.io/docs/configuration/syntax.html -> The remote name could not be resolved: 'www.terraform.io'
+
+67 : articles\virtual-machines\linux\tutorial-lemp-stack.md
 Error : https://docs.azure.cn/zh-cn/virtual-machines/linux/80 -> The remote server returned an error: (404) Not Found.
 
-76 : articles\virtual-machines\scripts\virtual-machines-linux-cli-sample-create-vm-nsg.md
+68 : articles\virtual-machines\scripts\virtual-machines-linux-cli-sample-create-vm-nsg.md
 Error : https://docs.azure.cn/zh-cn/cli/group/extension?view=azure-cli-latest#az-group-delete -> The remote server returned an error: (404) Not Found.
 
-77 : articles\virtual-machines\scripts\virtual-machines-linux-cli-sample-create-vm-quick-create.md
+69 : articles\virtual-machines\scripts\virtual-machines-linux-cli-sample-create-vm-quick-create.md
 Error : https://docs.azure.cn/zh-cn/cli/group/extension?view=azure-cli-latest#az-group-delete -> The remote server returned an error: (404) Not Found.
 
-78 : articles\virtual-machines\scripts\virtual-machines-linux-cli-sample-encrypt-vm.md
+70 : articles\virtual-machines\scripts\virtual-machines-linux-cli-sample-encrypt-vm.md
 Error : https://docs.azure.cn/zh-cn/cli/group/extension?view=azure-cli-latest#az-group-delete -> The remote server returned an error: (404) Not Found.
 
-79 : articles\virtual-machines\scripts\virtual-machines-linux-cli-sample-nlb.md
+71 : articles\virtual-machines\scripts\virtual-machines-linux-cli-sample-nlb.md
 Error : https://docs.azure.cn/zh-cn/cli/group/extension?view=azure-cli-latest#az-group-delete -> The remote server returned an error: (404) Not Found.
 
-80 : articles\virtual-machines\scripts\virtual-machines-linux-cli-sample-restart-by-tag.md
+72 : articles\virtual-machines\scripts\virtual-machines-linux-cli-sample-restart-by-tag.md
 Error : https://docs.azure.cn/zh-cn/cli/group/extension?view=azure-cli-latest#az-group-delete -> The remote server returned an error: (404) Not Found.
 
-81 : articles\virtual-machines\scripts\virtual-machines-windows-cli-sample-create-iis-using-dsc.md
+73 : articles\virtual-machines\scripts\virtual-machines-windows-cli-sample-create-iis-using-dsc.md
 Error : https://docs.azure.cn/zh-cn/cli/group/extension?view=azure-cli-latest#az-group-delete -> The remote server returned an error: (404) Not Found.
 
-82 : articles\virtual-machines\scripts\virtual-machines-windows-cli-sample-create-vm-iis.md
+74 : articles\virtual-machines\scripts\virtual-machines-windows-cli-sample-create-vm-iis.md
 Error : https://docs.azure.cn/zh-cn/cli/group/extension?view=azure-cli-latest#az-group-delete -> The remote server returned an error: (404) Not Found.
 
-83 : articles\virtual-machines\scripts\virtual-machines-windows-cli-sample-create-vm-nsg.md
+75 : articles\virtual-machines\scripts\virtual-machines-windows-cli-sample-create-vm-nsg.md
 Error : https://docs.azure.cn/zh-cn/cli/group/extension?view=azure-cli-latest#az-group-delete -> The remote server returned an error: (404) Not Found.
 
-84 : articles\virtual-machines\scripts\virtual-machines-windows-cli-sample-create-vm-quick-create.md
+76 : articles\virtual-machines\scripts\virtual-machines-windows-cli-sample-create-vm-quick-create.md
 Error : https://docs.azure.cn/zh-cn/cli/group/extension?view=azure-cli-latest#az-group-delete -> The remote server returned an error: (404) Not Found.
 
-85 : articles\virtual-machines\scripts\virtual-machines-windows-cli-sample-create-vm.md
+77 : articles\virtual-machines\scripts\virtual-machines-windows-cli-sample-create-vm.md
 Error : https://docs.azure.cn/zh-cn/cli/group/extension?view=azure-cli-latest#az-group-delete -> The remote server returned an error: (404) Not Found.
 
-86 : articles\virtual-machines\scripts\virtual-machines-windows-cli-sample-encrypt-vm.md
+78 : articles\virtual-machines\scripts\virtual-machines-windows-cli-sample-encrypt-vm.md
 Error : https://docs.azure.cn/zh-cn/cli/group/extension?view=azure-cli-latest#az-group-delete -> The remote server returned an error: (404) Not Found.
 
-87 : articles\virtual-machines\scripts\virtual-machines-windows-cli-sample-nlb.md
+79 : articles\virtual-machines\scripts\virtual-machines-windows-cli-sample-nlb.md
 Error : https://docs.azure.cn/zh-cn/cli/group/extension?view=azure-cli-latest#az-group-delete -> The remote server returned an error: (404) Not Found.
 
-88 : articles\virtual-machines\troubleshooting\detailed-troubleshoot-rdp.md
+80 : articles\virtual-machines\troubleshooting\detailed-troubleshoot-rdp.md
 Error : https://docs.azure.cn/zh-cn/virtual-machines/troubleshooting/PS -> The remote server returned an error: (404) Not Found.
 
-89 : articles\virtual-machines\troubleshooting\disable-guest-os-firewall-windows.md
-Error : https://docs.azure.cn/zh-cn/sysinternals/downloads/pstools -> The remote server returned an error: (404) Not Found.
-
-90 : articles\virtual-machines\troubleshooting\enable-disable-firewall-rule-guest-os.md
-Error : https://docs.azure.cn/zh-cn/sysinternals/downloads/pstools -> The remote server returned an error: (404) Not Found.
-
-91 : articles\virtual-machines\troubleshooting\event-id-troubleshoot-vm-rdp-connecton.md
+81 : articles\virtual-machines\troubleshooting\event-id-troubleshoot-vm-rdp-connecton.md
 Error : https://blogs.technet.microsoft.com/instan/2009/01/05/schannel-36872-or-schannel-36870-on-a-domain-controller/ -> The remote server returned an error: (410) Gone.
 
-92 : articles\virtual-machines\troubleshooting\remote-tools-troubleshoot-azure-vm-issues.md
-Error : https://docs.azure.cn/zh-cn/sysinternals/downloads/pstools -> The remote server returned an error: (404) Not Found.
-
-93 : articles\virtual-machines\troubleshooting\troubleshoot-activation-problems.md
-Error : https://blogs.msdn.com/b/mast/archive/2015/05/20/use-azure-custom-routes-to-enable-kms-activation-with-forced-tunneling.aspx -> The remote server returned an error: (410) Gone.
-Error : https://blogs.msdn.com/b/mast/archive/2015/12/01/azure-vm-may-fail-to-activate-over-expressroute.aspx -> The remote server returned an error: (410) Gone.
-
-94 : articles\virtual-machines\troubleshooting\troubleshoot-deploy-vm-windows.md
+82 : articles\virtual-machines\troubleshooting\troubleshoot-deploy-vm-windows.md
 Error : https://blogs.msdn.microsoft.com/azureedu/2016/04/13/how-can-i-use-the-hybrid-use-benefit-in-azure -> The remote server returned an error: (410) Gone.
 
-95 : articles\virtual-machines\troubleshooting\troubleshoot-reboot-loop.md
-Error : https://blogs.msdn.microsoft.com/mast/2014/04/07/install-the-vm-agent-on-an-existing-azure-vm/ -> The remote server returned an error: (410) Gone.
-
-96 : articles\virtual-machines\troubleshooting\troubleshoot-specific-rdp-errors.md
-Error : https://blogs.msdn.microsoft.com/mast/2014/01/21/rdp-to-azure-vm-fails-with-no-remote-desktop-license-servers-available/ -> The remote server returned an error: (410) Gone.
-
-97 : articles\virtual-machines\troubleshooting\understand-vm-reboot.md
-Error : https://blogs.msdn.com/b/mast/archive/2014/10/14/configuring-azure-virtual-machines-for-optimal-storage-performance.aspx -> The remote server returned an error: (410) Gone.
-
-98 : articles\virtual-machines\windows\about-disks-and-vhds.md
-Error : https://blogs.msdn.microsoft.com/mast/2013/12/06/understanding-the-temporary-drive-on-windows-azure-virtual-machines/ -> The remote server returned an error: (410) Gone.
-
-99 : articles\virtual-machines\windows\change-drive-letter.md
-Error : https://blogs.msdn.microsoft.com/mast/2013/12/06/understanding-the-temporary-drive-on-windows-azure-virtual-machines/ -> The remote server returned an error: (410) Gone.
-
-100 : articles\virtual-machines\windows\connect-logon.md
-Error : https://itunes.apple.com/app/microsoft-remote-desktop/id715768417 -> The remote server returned an error: (404) Not Found.
-
-101 : articles\virtual-machines\windows\matlab-mdcs-cluster.md
+83 : articles\virtual-machines\windows\matlab-mdcs-cluster.md
 Error : http://www.mathworks.com/products/parallel-computing/mathworks-hosted-license-manager/ -> The remote server returned an error: (404) Not Found.
 
-102 : articles\virtual-machines\windows\nested-virtualization.md
-Error : https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12 -> The remote server returned an error: (404) Not Found.
-
-103 : articles\virtual-machines\windows\prepare-for-upload-vhd-image.md
+84 : articles\virtual-machines\windows\prepare-for-upload-vhd-image.md
 Error : https://blogs.msdn.com/b/timomta/archive/2015/06/11/how-to-convert-a-vmware-vmdk-to-hyper-v-vhd.aspx -> The remote server returned an error: (410) Gone.
-Error : https://blogs.msdn.microsoft.com/mast/2015/05/18/what-is-the-ip-address-168-63-129-16/ -> The remote server returned an error: (410) Gone.
 
-104 : articles\virtual-machines\windows\quick-create-portal.md
-Error : https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12 -> The remote server returned an error: (404) Not Found.
-
-105 : articles\virtual-machines\windows\quick-create-powershell.md
+85 : articles\virtual-machines\windows\quick-create-powershell.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/cloud-shell-powershell -> The remote server returned an error: (404) Not Found.
 
-106 : articles\virtual-machines\windows\tutorial-govern-resources.md
+86 : articles\virtual-machines\windows\tutorial-govern-resources.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/resource-manager-governance-tags-billing -> The remote server returned an error: (404) Not Found.
 
-107 : articles\virtual-machines\windows\classic\TOC.md
+87 : articles\virtual-machines\windows\classic\TOC.md
 Error : https://docs.azure.cn/zh-cn/java/api/?view=azure-java-stable -> The remote server returned an error: (404) Not Found.
 
-108 : articles\virtual-machines\windows\classic\virtual-machines-windows-classic-restart-resize-error-troubleshooting.md
+88 : articles\virtual-machines\windows\classic\virtual-machines-windows-classic-restart-resize-error-troubleshooting.md
 Error : https://docs.azure.cn/zh-cn/virtual-machines/windows/restart-resize-error-troubleshooting -> The remote server returned an error: (404) Not Found.
 
-109 : articles\virtual-machines\windows\sql\virtual-machines-windows-portal-sql-alwayson-int-listener.md
+89 : articles\virtual-machines\windows\sql\virtual-machines-windows-portal-sql-alwayson-int-listener.md
 #addcap : missing.
 #congroup : missing.
 #dependencyGroup : missing.
 #listname : missing.
 #setparam : missing.
 
-110 : articles\virtual-machines\windows\sql\virtual-machines-windows-portal-sql-create-failover-cluster.md
+90 : articles\virtual-machines\windows\sql\virtual-machines-windows-portal-sql-create-failover-cluster.md
 Error : https://www.azure.cn/pricing/details/virtual-machines/sql-server-enterprise/ -> The remote server returned an error: (404) Not Found.
 
-111 : articles\virtual-machines\windows\sql\virtual-machines-windows-portal-sql-server-provision.experimental.md
+91 : articles\virtual-machines\windows\sql\virtual-machines-windows-portal-sql-server-provision.experimental.md
 Error : https://www.azure.cn/pricing/details/virtual-machines/windows/ -> The remote server returned an error: (404) Not Found.
 
-112 : articles\virtual-machines\windows\sql\virtual-machines-windows-sql-high-availability-dr.md
+92 : articles\virtual-machines\windows\sql\virtual-machines-windows-sql-high-availability-dr.md
 Error : https://www.azure.cn/bloghigh-availability-for-a-file-share-using-wsfc-ilb-and-3rd-party-software-sios-datakeeper/ -> The remote server returned an error: (404) Not Found.
 
-113 : articles\virtual-machines\windows\sql\virtual-machines-windows-sql-server-iaas-faq.md
+93 : articles\virtual-machines\windows\sql\virtual-machines-windows-sql-server-iaas-faq.md
 Error : https://www.azure.cn/pricing/licensing-faq/ -> The remote server returned an error: (404) Not Found.
 Error : https://www.azure.cn/pricing/licensing-faq/ -> The remote server returned an error: (404) Not Found.
 
-114 : articles\virtual-machines\windows\sqlclassic\virtual-machines-windows-classic-sql-connect.experimental.md
+94 : articles\virtual-machines\windows\sqlclassic\virtual-machines-windows-classic-ps-sql-report.md
+Error : http://adititechnologiesblog.blogspot.in/2012/07/hosting-sql-reporting-service-on-azure.html -> The remote server returned an error: (404) Not Found.
+
+95 : articles\virtual-machines\windows\sqlclassic\virtual-machines-windows-classic-sql-connect.experimental.md
 #create-a-tcp-endpoint-for-the-virtual-machine : missing.
 #open-tcp-ports-in-the-windows-firewall-for-the-default-instance-of-the-database-engine : missing.
 #configure-sql-server-to-listen-on-the-tcp-protocol : missing.
@@ -417,7 +354,7 @@ Error : https://www.azure.cn/pricing/licensing-faq/ -> The remote server returne
 #determine-the-dns-name-of-the-virtual-machine : missing.
 #connect-to-the-database-engine-from-another-computer : missing.
 
-115 : articles\virtual-machines\windows\sqlclassic\virtual-machines-windows-classic-sql-connect.md
+96 : articles\virtual-machines\windows\sqlclassic\virtual-machines-windows-classic-sql-connect.md
 #create-a-tcp-endpoint-for-the-virtual-machine : missing.
 #open-tcp-ports-in-the-windows-firewall-for-the-default-instance-of-the-database-engine : missing.
 #configure-sql-server-to-listen-on-the-tcp-protocol : missing.
@@ -426,58 +363,64 @@ Error : https://www.azure.cn/pricing/licensing-faq/ -> The remote server returne
 #determine-the-dns-name-of-the-virtual-machine : missing.
 #connect-to-the-database-engine-from-another-computer : missing.
 
-116 : articles\virtual-network\create-peering-different-deployment-models.md
+97 : articles\virtual-network\create-peering-different-deployment-models.md
 Error : https://docs.azure.cn/zh-cn/cli/install-cli-version-1.0?toc=%2fvirtual-network%2ftoc.json?view=azure-cli-latest -> The remote server returned an error: (404) Not Found.
 
-117 : articles\virtual-network\create-peering-different-subscriptions.md
+98 : articles\virtual-network\create-peering-different-subscriptions.md
 Error : Could not find file 'd:\gitrep\mc-docs-pr.zh-cn\includes\resource-manager-cloud-shell-deploy.md'.
 
-118 : articles\virtual-network\create-vm-accelerated-networking-cli.md
+99 : articles\virtual-network\create-vm-accelerated-networking-cli.md
 Error : https://www.azure.cn/updates/accelerated-networking-in-expanded-preview -> The remote server returned an error: (404) Not Found.
 
-119 : articles\virtual-network\tutorial-connect-virtual-networks-powershell.md
+100 : articles\virtual-network\tutorial-connect-virtual-networks-powershell.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/includes/cloud-shell-powershell -> The remote server returned an error: (404) Not Found.
 
-120 : articles\virtual-network\tutorial-restrict-network-access-to-resources-powershell.md
+101 : articles\virtual-network\tutorial-restrict-network-access-to-resources-powershell.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/includes/cloud-shell-powershell -> The remote server returned an error: (404) Not Found.
 
-121 : articles\virtual-network\virtual-network-for-azure-services.md
+102 : articles\virtual-network\virtual-network-for-azure-services.md
 Error : https://docs.azure.cn/zh-cn//active-directory-domain-services/active-directory-ds-getting-started-vnet -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn//aks/networking-overview -> The remote server returned an error: (404) Not Found.
 
-122 : articles\virtual-network\virtual-network-multiple-ip-addresses-cli.md
+103 : articles\virtual-network\virtual-network-multiple-ip-addresses-cli.md
 #os-config : missing.
 #scenario : missing.
 #os-config : missing.
 
-123 : articles\virtual-network\virtual-network-multiple-ip-addresses-portal.md
+104 : articles\virtual-network\virtual-network-multiple-ip-addresses-portal.md
 #Scenario : missing.
 #os-config : missing.
 #os-config : missing.
 
-124 : articles\virtual-network\virtual-network-multiple-ip-addresses-powershell.md
+105 : articles\virtual-network\virtual-network-multiple-ip-addresses-powershell.md
 #os-config : missing.
 #scenario : missing.
 #os-config : missing.
 #os-config : missing.
 
-125 : articles\virtual-network\virtual-network-troubleshoot-nva.md
+106 : articles\virtual-network\virtual-network-troubleshoot-nva.md
 Error : https://docs.azure.cn/zh-cn/sysinternals/downloads/psping -> The remote server returned an error: (404) Not Found.
 
-126 : articles\virtual-network\virtual-networks-create-nsg-classic-cli.md
+107 : articles\virtual-network\virtual-networks-create-nsg-classic-cli.md
 Error : https://docs.azure.cn/zh-cn/cli/install-cli-version-1.0?view=azure-cli-latest -> The remote server returned an error: (404) Not Found.
 
-127 : articles\virtual-network\virtual-networks-name-resolution-ddns.md
+108 : articles\virtual-network\virtual-networks-dmz-nsg-fw-asm.md
+Error : https://techlib.barracuda.com/NG61/NGAdmin -> The remote name could not be resolved: 'techlib.barracuda.com'
+
+109 : articles\virtual-network\virtual-networks-dmz-nsg-fw-udr-asm.md
+Error : https://techlib.barracuda.com/NG61/NGAdmin -> The remote name could not be resolved: 'techlib.barracuda.com'
+
+110 : articles\virtual-network\virtual-networks-name-resolution-ddns.md
 Error : http://linux.yyz.us/nsupdate/ -> The remote name could not be resolved: 'linux.yyz.us'
 Error : http://linux.yyz.us/dns/ddns-server.html -> The remote name could not be resolved: 'linux.yyz.us'
 
-128 : articles\virtual-network\virtual-networks-static-private-ip-classic-cli.md
+111 : articles\virtual-network\virtual-networks-static-private-ip-classic-cli.md
 Error : https://docs.azure.cn/zh-cn/cli/install-cli-version-1.0?view=azure-cli-latest -> The remote server returned an error: (404) Not Found.
 
-129 : includes\active-directory-devguide.md
+112 : includes\active-directory-devguide.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/active-directory/develop/index.yml -> The remote server returned an error: (404) Not Found.
 
-130 : includes\active-directory-playbook-steps.md
+113 : includes\active-directory-playbook-steps.md
 Error : https://docs.azure.cn/zh-cn/active-directory/active-directory-playbook-intro -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/active-directory/active-directory-playbook-ingredients -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/active-directory/active-directory-playbook-ingredients -> The remote server returned an error: (404) Not Found.
@@ -499,69 +442,69 @@ Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/active-d
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/active-directory/active-directory-playbook-building-blocks#generic-ldap-connector-configuration -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/active-directory/active-directory-playbook-building-blocks#configuring-certificate-based-authentication -> The remote server returned an error: (404) Not Found.
 
-131 : includes\app-insights-analytics-footer.md
+114 : includes\app-insights-analytics-footer.md
 Error : https://docs.azure.cn/zh-cn/azure-monitor/app/analytics -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/azure-monitor/app/analytics-troubleshooting -> The remote server returned an error: (404) Not Found.
 
-132 : includes\app-service-api-auth-troubleshooting.md
+115 : includes\app-service-api-auth-troubleshooting.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/app-service-web/web-sites-dotnet-troubleshoot-visual-studio#remoteview -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/app-service-web/web-sites-dotnet-troubleshoot-visual-studio#remotedebug -> The remote server returned an error: (404) Not Found.
 
-133 : includes\app-service-blueprint-webjobs.md
+116 : includes\app-service-blueprint-webjobs.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/app-service-web/websites-dotnet-deploy-webjobs#configure -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/app-service-web/web-sites-create-web-jobs#CreateScheduled -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/app-service-web/websites-dotnet-webjobs-sdk-get-started#view-the-webjobs-sdk-dashboard -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/app-service-web/websites-dotnet-webjobs-sdk-storage-queues-how-to#logs -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/app-service-web/web-sites-dotnet-troubleshoot-visual-studio#remotedebugwj -> The remote server returned an error: (404) Not Found.
 
-134 : includes\app-service-deploy-prepare-repo.md
+117 : includes\app-service-deploy-prepare-repo.md
 Error : https://docs.azure.cn/zh-cn/vsts/git/tutorial/creatingrepo?view=vsts&tabs=visual-studio -> The remote server returned an error: (404) Not Found.
 
-135 : includes\app-service-dotnet-debug-api-app-gen-api-client.md
+118 : includes\app-service-dotnet-debug-api-app-gen-api-client.md
 Error : https://docs.azure.cn/zh-cn/app-service-api/app-service-dotnet-create-api-app -> The remote server returned an error: (404) Not Found.
 
-136 : includes\app-service-web-configure-local-git-no-h.md
+119 : includes\app-service-web-configure-local-git-no-h.md
 #configure-a-deployment-user : missing.
 
-137 : includes\app-service-web-create-web-app-linux-dotnetcore-no-h.md
+120 : includes\app-service-web-create-web-app-linux-dotnetcore-no-h.md
 Error : https://docs.azure.cn/zh-cn/app-service/containers/app-service-linux-intro -> The remote server returned an error: (404) Not Found.
 
-138 : includes\app-service-web-create-web-app-linux-nodejs-no-h.md
+121 : includes\app-service-web-create-web-app-linux-nodejs-no-h.md
 Error : https://docs.azure.cn/zh-cn/app-service/containers/app-service-linux-intro -> The remote server returned an error: (404) Not Found.
 
-139 : includes\app-service-web-create-web-app-linux-php-no-h.md
+122 : includes\app-service-web-create-web-app-linux-php-no-h.md
 Error : https://docs.azure.cn/zh-cn/app-service/containers/app-service-linux-intro -> The remote server returned an error: (404) Not Found.
 
-140 : includes\app-service-web-deploy-zip.md
+123 : includes\app-service-web-deploy-zip.md
 #create-a-project-zip-file : missing.
 
-141 : includes\app-service-web-enable-hostname.md
+124 : includes\app-service-web-enable-hostname.md
 D:\gitrep\mc-docs-pr.zh-cn\includes\media\app-service-web-tutorial-custom-domain\add-host-name-cname.png : missing.
 D:\gitrep\mc-docs-pr.zh-cn\includes\media\app-service-web-tutorial-custom-domain\validate-domain-name-cname.png : missing.
 
-142 : includes\app-service-web-get-started-nav-tabs.md
+125 : includes\app-service-web-get-started-nav-tabs.md
 Error : https://docs.azure.cn/zh-cn/app-service/app-service-web-get-started-python -> The remote server returned an error: (404) Not Found.
 
-143 : includes\app-service-web-git-push-to-azure-no-h.md
+126 : includes\app-service-web-git-push-to-azure-no-h.md
 #create-a-web-app : missing.
 
-144 : includes\app-service-web-hostname-validation-error.md
+127 : includes\app-service-web-hostname-validation-error.md
 D:\gitrep\mc-docs-pr.zh-cn\includes\media\app-service-web-tutorial-custom-domain\verification-error-cname.png : missing.
 
-145 : includes\app-service-web-quickstart2.md
+128 : includes\app-service-web-quickstart2.md
 #configure-a-deployment-user : missing.
 #configure-a-deployment-user : missing.
 
-146 : includes\app-service-web-selector-get-started-nodejs-cli.md
+129 : includes\app-service-web-selector-get-started-nodejs-cli.md
 Error : https://docs.azure.cn/zh-cn/app-service-web/app-service-web-get-started-python-cli-nodejs -> The remote server returned an error: (404) Not Found.
 
-147 : includes\app-service-web-selector-get-started.md
+130 : includes\app-service-web-selector-get-started.md
 Error : https://docs.azure.cn/zh-cn/app-service-web/app-service-web-get-started-python -> The remote server returned an error: (404) Not Found.
 
-148 : includes\application-insights-data-model-measurements.md
+131 : includes\application-insights-data-model-measurements.md
 Error : https://docs.azure.cn/zh-cn/azure-monitor/app/api-custom-events-metrics -> The remote server returned an error: (404) Not Found.
 
-149 : includes\application-insights-limits.md
+132 : includes\application-insights-limits.md
 Error : https://docs.azure.cn/zh-cn/azure-monitor/app/diagnostic-search -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/azure-monitor/app/analytics -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/azure-monitor/app/metrics-explorer -> The remote server returned an error: (404) Not Found.
@@ -571,7 +514,7 @@ Error : https://docs.azure.cn/zh-cn/azure-monitor/app/profiler -> The remote ser
 Error : https://docs.azure.cn/zh-cn/azure-monitor/app/profiler -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/azure-monitor/app/pricing -> The remote server returned an error: (404) Not Found.
 
-150 : includes\application-model.md
+133 : includes\application-model.md
 Error : https://docs.azure.cn/zh-cn/develop/net/how-to-guides/blob-storage-v17/ -> The remote server returned an error: (404) Not Found.
 Error : http://msdn.microsoft.com/zh-cn/library/hh560567.aspx -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/develop/net/fundamentals/deploying-applications/ -> The remote server returned an error: (404) Not Found.
@@ -580,34 +523,34 @@ Error : http://msdn.microsoft.com/zh-cn/library/gg433038.aspx -> The remote serv
 Error : http://msdn.microsoft.com/zh-cn/library/gg186051.aspx -> The remote server returned an error: (404) Not Found.
 Error : http://msdn.microsoft.com/zh-cn/library/azure/ee405486.aspx -> The remote server returned an error: (404) Not Found.
 
-151 : includes\automation-note-authentication.md
+134 : includes\automation-note-authentication.md
 #nextsteps : missing.
 
-152 : includes\azure-iot-hub-edge-glossary-includes.md
+135 : includes\azure-iot-hub-edge-glossary-includes.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/articles/iot-hub/iot-hub-auto-device-config -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/articles/iot-edge/how-to-deploy-monitor -> The remote server returned an error: (404) Not Found.
 
-153 : includes\azure-storage-limits.md
+136 : includes\azure-storage-limits.md
 Error : http://blogs.msdn.com/b/windowsazurestorage/archive/2011/11/20/windows-azure-storage-a-highly-available-cloud-storage-service-with-strong-consistency.aspx -> The remote server returned an error: (410) Gone.
 
-154 : includes\azure-visual-studio-login-guide.md
+137 : includes\azure-visual-studio-login-guide.md
 Error : Could not find a part of the path 'D:\gitrep\mc-docs-pr.zh-cn\articles\articles\guidance\developerdifferences.md'.
 D:\gitrep\mc-docs-pr.zh-cn\articles\articles\guidance\developerdifferences.md#使用-visual-studio-2015连接中国区-azure : missing.
 Error : Could not find a part of the path 'D:\gitrep\mc-docs-pr.zh-cn\articles\articles\guidance\developerdifferences.md'.
 D:\gitrep\mc-docs-pr.zh-cn\articles\articles\guidance\developerdifferences.md#使用-visual-studio-2017连接中国区-azure : missing.
 
-155 : includes\backup-upgrade-mars-agent.md
+138 : includes\backup-upgrade-mars-agent.md
 Error : https://blogs.technet.microsoft.com/srinathv/2018/01/17/updating-azure-backup-agents/ -> The remote server returned an error: (410) Gone.
 
-156 : includes\blitline-signup.md
+139 : includes\blitline-signup.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/media/blitline-signup/blitline_connection_info_screen.jpeg -> The remote server returned an error: (404) Not Found.
 
-157 : includes\cdn.md
+140 : includes\cdn.md
 Error : https://docs.azure.cn/zh-cn/cdn/cdn-https-how-to -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/documentation/articles/web-sites-create-deploy/ -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/media-services/media-services-create-account -> The remote server returned an error: (404) Not Found.
 
-158 : includes\cognitive-services-containers-configuration-shared-settings-table.md
+141 : includes\cognitive-services-containers-configuration-shared-settings-table.md
 #apikey-configuration-setting : missing.
 #billing-configuration-setting : missing.
 #eula-setting : missing.
@@ -616,43 +559,40 @@ Error : https://docs.azure.cn/zh-cn/media-services/media-services-create-account
 #logging-settings : missing.
 #mount-settings : missing.
 
-159 : includes\connectors-create-api-azureblobstorage.md
+142 : includes\connectors-create-api-azureblobstorage.md
 #add-trigger : missing.
 #add-action : missing.
 
-160 : includes\connectors-create-api-onedriveforbusiness.md
-Error : http://OneDrive.com -> Unable to connect to the remote server
-
-161 : includes\connectors-create-api-sharepointonline.md
+143 : includes\connectors-create-api-sharepointonline.md
 D:\gitrep\mc-docs-pr.zh-cn\includes\media\connectors-create-api-sharepointonline\connectionconfig5.png : missing.
 
-162 : includes\connectors-create-api-sqlazure.md
+144 : includes\connectors-create-api-sqlazure.md
 #add-sql-trigger : missing.
 #add-sql-action : missing.
 #add-sql-trigger : missing.
 #add-sql-action : missing.
 Error : https://docs.azure.cn/zh-cn/logic-apps-gateway-connection -> The remote server returned an error: (404) Not Found.
 
-163 : includes\create-mysql-db.md
+145 : includes\create-mysql-db.md
 Error : https://docs.azure.cn/zh-cn/zh-cn/gallery/store/ -> The remote server returned an error: (404) Not Found.
 
-164 : includes\crossplat-cmd-tools.md
+146 : includes\crossplat-cmd-tools.md
 #Download : missing.
 
-165 : includes\documentdb-create-dbaccount.md
+147 : includes\documentdb-create-dbaccount.md
 #Howto : missing.
 #NextSteps : missing.
 
-166 : includes\documentdb-sdk-faq.md
+148 : includes\documentdb-sdk-faq.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/mailto:askdocdb@microsoft.com -> The remote server returned an error: (404) Not Found.
 
-167 : includes\functions-install-vs-code-extension.md
+149 : includes\functions-install-vs-code-extension.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/vscode:extension/ms-azuretools.vscode-azurefunctions -> The remote server returned an error: (404) Not Found.
 
-168 : includes\functions-package-auto.md
+150 : includes\functions-package-auto.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/azure-functions/functions-triggers-bindings#local-development-azure-functions-core-tools -> The remote server returned an error: (404) Not Found.
 
-169 : includes\guidance-compute-single-vm-linux.md
+151 : includes\guidance-compute-single-vm-linux.md
 #Solution-components : missing.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/SLA -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/RBAC -> The remote server returned an error: (404) Not Found.
@@ -661,7 +601,7 @@ Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/active-d
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/active-directory/role-based-access-built-in-roles#network-contributor -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/virtual-machines/virtual-machines-windows-sizes#size-tables -> The remote server returned an error: (404) Not Found.
 
-170 : includes\guidance-compute-single-vm-windows.md
+152 : includes\guidance-compute-single-vm-windows.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/SLA -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/RBAC -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/virtual-network/virtual-networks-nsg#default-rules -> The remote server returned an error: (404) Not Found.
@@ -669,30 +609,29 @@ Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/active-d
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/active-directory/role-based-access-built-in-roles#network-contributor -> The remote server returned an error: (404) Not Found.
 Error : https://www.azure.cn/home/features/security-center/ -> The remote server returned an error: (404) Not Found.
 
-171 : includes\howto-access-mongolab-ui.md
+153 : includes\howto-access-mongolab-ui.md
 Error : http://support.mongolab.com -> The remote name could not be resolved: 'support.mongolab.com'
 
-172 : includes\howto-custom-create-vm.md
+154 : includes\howto-custom-create-vm.md
 Error : https://docs.azure.cn/zh-cn/virtual-machines/linux/classic/connect-vms -> The remote server returned an error: (404) Not Found.
 
-173 : includes\iot-hub-create-hub.md
+155 : includes\iot-hub-create-hub.md
 Error : https://portal.azure.n/ -> The remote name could not be resolved: 'portal.azure.n'
 
-174 : includes\iot-hub-selector-twin-get-started.md
+156 : includes\iot-hub-selector-twin-get-started.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages -> The remote server returned an error: (404) Not Found.
 
-175 : includes\iot-security-architecture.md
-Error : http://www.microsoft.com/security/sdl/adopt/threatmodeling.aspx -> The remote server returned an error: (404) Not Found.
+157 : includes\iot-security-architecture.md
 Error : https://blogs.msdn.microsoft.com/larryosterman/2007/09/04/threat-modeling-again-stride/ -> The remote server returned an error: (410) Gone.
 Error : https://cloudsecurityalliance.org/research/top-threats/ -> The remote server returned an error: (404) Not Found.
 
-176 : includes\iot-security-ground-up.md
+158 : includes\iot-security-ground-up.md
 Error : https://www.microsoft.com/enterprise/microsoftcloud/default.aspx#fbid=WzBsRQi6aGk -> The remote server returned an error: (404) Not Found.
 
-177 : includes\iot-suite-provision-remote-monitoring.md
+159 : includes\iot-suite-provision-remote-monitoring.md
 Error : https://www.azureiotsuite.cn -> The remote name could not be resolved: 'www.azureiotsuite.cn'
 
-178 : includes\iot-suite-v1-gateway-kit-view-solution.md
+160 : includes\iot-suite-v1-gateway-kit-view-solution.md
 D:\gitrep\mc-docs-pr.zh-cn\includes\media\iot-suite-v1-gateway-kit-view-solution\launch.png : missing.
 D:\gitrep\mc-docs-pr.zh-cn\includes\media\iot-suite-v1-gateway-kit-view-solution\menu.png : missing.
 D:\gitrep\mc-docs-pr.zh-cn\includes\media\iot-suite-v1-gateway-kit-view-solution\suite0.png : missing.
@@ -700,17 +639,17 @@ D:\gitrep\mc-docs-pr.zh-cn\includes\media\iot-suite-v1-gateway-kit-view-solution
 D:\gitrep\mc-docs-pr.zh-cn\includes\media\iot-suite-v1-gateway-kit-view-solution\suite2.png : missing.
 D:\gitrep\mc-docs-pr.zh-cn\includes\media\iot-suite-v1-gateway-kit-view-solution\suite3.png : missing.
 
-179 : includes\iot-suite-v1-provision-remote-monitoring.md
+161 : includes\iot-suite-v1-provision-remote-monitoring.md
 Error : https://www.azureiotsuite.cn -> The remote name could not be resolved: 'www.azureiotsuite.cn'
 
-180 : includes\media-services-learning-paths-include.md
+162 : includes\media-services-learning-paths-include.md
 Error : http://azure.microsoft.com/documentation/learning-paths/media-services-streaming-live/ -> The remote server returned an error: (404) Not Found.
 Error : http://azure.microsoft.com/documentation/learning-paths/media-services-streaming-on-demand/ -> The remote server returned an error: (404) Not Found.
 
-181 : includes\redis-cache-non-ssl-port.md
+163 : includes\redis-cache-non-ssl-port.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/redis-cache/cache-configure#configure-redis-cache-settings -> The remote server returned an error: (404) Not Found.
 
-182 : includes\SecurityRX.md
+164 : includes\SecurityRX.md
 Error : https://msdn.microsoft.com/zh-CN/library/gg429786.aspx -> The remote server returned an error: (404) Not Found.
 Error : http://msdn.microsoft.com/zh-cn/library/hh289316.aspx -> The remote server returned an error: (404) Not Found.
 Error : http://msdn.microsoft.com/zh-cn/library/gg185954.aspx -> The remote server returned an error: (404) Not Found.
@@ -735,87 +674,81 @@ Error : http://www.microsoft.com/security/msrc/default.aspx -> The remote server
 Error : http://www.microsoft.com/security/sir -> The remote server returned an error: (404) Not Found.
 Error : http://www.microsoft.com/security/sdl/default.aspx -> The remote server returned an error: (404) Not Found.
 
-183 : includes\sql-database-configure-includes-selector-method.md
+165 : includes\sql-database-configure-includes-selector-method.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/sql-database-configure-firewall-settings -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/sql-database-configure-firewall-settings-tsql -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/sql-database-configure-firewall-settings-powershell -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/sql-database-configure-firewall-settings-rest -> The remote server returned an error: (404) Not Found.
 
-184 : includes\sql-database-create-new-server-firewall-portal.md
+166 : includes\sql-database-create-new-server-firewall-portal.md
 D:\gitrep\mc-docs-pr.zh-cn\articles\sql-data-warehouse\media\sql-data-warehouse-get-started-provision\add-client-ip.png : missing.
 
-185 : includes\sql-database-develop-includes-selector-language-platform-depth.md
+167 : includes\sql-database-develop-includes-selector-language-platform-depth.md
 Error : https://docs.azure.cn/zh-cn/sql-database/sql-database-develop-php-simple -> The remote server returned an error: (404) Not Found.
 
-186 : includes\sql-database-sql-server-management-studio-connect-server-principal.md
+168 : includes\sql-database-sql-server-management-studio-connect-server-principal.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/sql-database/sql-database-aad-authentication# -> The remote server returned an error: (404) Not Found.
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/sql-database/sql-database-aad-authentication# -> The remote server returned an error: (404) Not Found.
 
-187 : includes\storage-blob-concepts-include.md
+169 : includes\storage-blob-concepts-include.md
 Error : https://docs.azure.cn/zh-cn/java/api/storage/clientlibrary?view=azure-java-stable -> The remote server returned an error: (404) Not Found.
 
-188 : includes\storage-selector-blob-include.md
+170 : includes\storage-selector-blob-include.md
 Error : https://docs.azure.cn/zh-cn/storage/blobs/storage-php-how-to-use-blobs -> The remote server returned an error: (404) Not Found.
 
-189 : includes\virtual-machines-autoscale.md
+171 : includes\virtual-machines-autoscale.md
 Error : https://docs.azure.cn/zh-cn/nodejs/azure -> The remote server returned an error: (404) Not Found.
 
-190 : includes\virtual-machines-common-accelerated-maintenance.md
-Error : https://googleprojectzero.blogspot.com/2018/01/reading-privileged-memory-with-side.html -> Unable to connect to the remote server
-
-191 : includes\virtual-machines-common-classic-oracle-images.md
+172 : includes\virtual-machines-common-classic-oracle-images.md
 #miscellaneous-considerations-for-oracle-virtual-machine-images-new-article : missing.
 
-192 : includes\virtual-machines-common-classic-resource-manager-migration-common-errors.md
+173 : includes\virtual-machines-common-classic-resource-manager-migration-common-errors.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/includes/$blob.Length -> The remote server returned an error: (404) Not Found.
 
-193 : includes\virtual-machines-common-classic-web-app-visual-studio.md
+174 : includes\virtual-machines-common-classic-web-app-visual-studio.md
 Error : Index and length must refer to a location within the string.
 Parameter name: length
 
-194 : includes\virtual-machines-common-image-terms.md
+175 : includes\virtual-machines-common-image-terms.md
 #deploy-an-image-with-marketplace-terms : missing.
 
-195 : includes\virtual-machines-common-sizes.md
+176 : includes\virtual-machines-common-sizes.md
 #ds-series : missing.
 
-196 : includes\virtual-machines-linux-infrastructure-guidelines-intro.md
+177 : includes\virtual-machines-linux-infrastructure-guidelines-intro.md
 #next-steps : missing.
 
-197 : includes\virtual-machines-managed-disks-types-billing-and-fees.md
+178 : includes\virtual-machines-managed-disks-types-billing-and-fees.md
 Error : https://www.azure.cn/zh-cn/pricing/details/managed-disks -> The remote server returned an error: (404) Not Found.
 
-198 : includes\virtual-machines-sql-server-akv-prepare.md
+179 : includes\virtual-machines-sql-server-akv-prepare.md
 Error : http://blogs.technet.com/b/kv/archive/2015/01/09/azure-key-vault-step-by-step.aspx -> The remote server returned an error: (410) Gone.
 
-199 : includes\virtual-machines-understand-vm-reboot.md
-Error : http://blogs.msdn.com/b/mast/archive/2014/10/14/configuring-azure-virtual-machines-for-optimal-storage-performance.aspx -> The remote server returned an error: (410) Gone.
-
-200 : includes\virtual-machines-windows-infrastructure-guidelines-intro.md
+180 : includes\virtual-machines-windows-infrastructure-guidelines-intro.md
 #next-steps : missing.
 
-201 : includes\virtual-networks-nrp-nic-include.md
+181 : includes\virtual-networks-nrp-nic-include.md
 #Public-IP-address : missing.
 
-202 : includes\virtual-networks-nrp-vnet-include.md
+182 : includes\virtual-networks-nrp-vnet-include.md
 #Network-Security-Group : missing.
 #Route-table : missing.
 #Route-table : missing.
 
-203 : includes\vpn-gateway-add-site-to-site-connection-s2s-rm-portal-include.md
+183 : includes\vpn-gateway-add-site-to-site-connection-s2s-rm-portal-include.md
 D:\gitrep\mc-docs-pr.zh-cn\includes\media\vpn-gateway-add-site-to-site-connection-s2s-rm-portal-include\connection1.png : missing.
 
-204 : includes\vpn-gateway-basic-vnet-s2s-rm-portal-include.md
+184 : includes\vpn-gateway-basic-vnet-s2s-rm-portal-include.md
 #values : missing.
 
-205 : includes\vpn-gateway-create-virtual-network-portal-include.md
+185 : includes\vpn-gateway-create-virtual-network-portal-include.md
 #values : missing.
 
-206 : includes\vs-docker-add-docker-support.md
+186 : includes\vs-docker-add-docker-support.md
 D:\gitrep\mc-docs-pr.zh-cn\includes\media\vs-docker-add-docker-support\add-docker-support.png : missing.
 D:\gitrep\mc-docs-pr.zh-cn\includes\media\vs-docker-add-docker-support\docker-files-added.png : missing.
 
-207 : includes\vs-storage-aspnet-getting-started-create-azure-account.md
+187 : includes\vs-storage-aspnet-getting-started-create-azure-account.md
 Error : https://docs.azure.cn/zh-cn/D:/gitrep/mc-docs-pr.zh-cn/articles/storage/storage-create-storage-account#create-a-storage-account -> The remote server returned an error: (404) Not Found.
 
 --------------Abort List in this round of Check Broken Link--------------

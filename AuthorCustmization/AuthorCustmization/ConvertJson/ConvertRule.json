@@ -39,6 +39,18 @@
       "comments": "Mooncake only provider SQL Server 2018 to replace 2017"
     },
     {
+      "serice": "aks",
+      "global": "image:(\s*)(dockerhub\\.azk8s\\.cn/)*nginx:(\d{1,2})\\.(\d{1,2})\\.(\d{1,2})",
+      "mooncake": "image:$1dockerhub.azk8s.cn/nginx:$3.$4.$5",
+      "comments": "Replace the nginx image version"
+    },
+    {
+      "serice": "aks",
+      "global": "(dockerhub\\.azk8s\\.cn/)?microsoft/samples-tf-mnist-demo:gpu",
+      "mooncake": "dockerhub.azk8s.cn/microsoft/samples-tf-mnist-demo:gpu",
+      "comments": "Replace the nginx image version"
+    },
+    {
       "serice": "ALL",
       "global": "http://aka\\.ms/allocation-guidance",
       "mooncake": "https://docs.azure.cn/virtual-machines/troubleshooting/allocation-failure",
@@ -75,7 +87,32 @@
       "mooncake": "china$12"
     },
     {
-      "serice": "service-fabric-quickstart-containers.md|service-fabric-tutorial-deploy-app-to-party-cluster.md",
+      "serice": "aks",
+      "global": "quay\\.io",
+      "mooncake": "quay.azk8s.cn"
+    },
+    {
+      "serice": "aks",
+      "global": "docker\\.io",
+      "mooncake": "dockerhub.azk8s.cn"
+    },
+    {
+      "serice": "aks",
+      "global": "gcr\\.io",
+      "mooncake": "gcr.azk8s.cn"
+    },
+    {
+      "serice": "aks",
+      "global": "(dockerhub.azk8s.cn/)?microsoft/samples-tf-mnist-demo:gpu",
+      "mooncake": "dockerhub.azk8s.cn/microsoft/samples-tf-mnist-demo:gpu"
+    },
+    {
+      "serice": "aks",
+      "global": "(dockerhub.azk8s.cn/)?microsoft/samples-tf-mnist-demo:gpu",
+      "mooncake": "dockerhub.azk8s.cn/microsoft/samples-tf-mnist-demo:gpu"
+    },
+    {
+      "serice": "service-fabric-quickstart-containers.md|service-fabric-tutorial-deploy-app-to-party-cluster.md|virtual-machines-windows-ps-sql-create.md",
       "global": "(SouthCentralUS|southcentral)",
       "mooncake": "chinaeast"
     },
@@ -127,7 +164,7 @@
     },
     {
       "serice": "ALL",
-      "global": "(P|p)ay\\-(A|a)s\\-(Y|y)ou\\-(G|g)o",
+      "global": "(P|p)ay(-| )(A|a)s(-| )(Y|y)ou(-| )(G|g)o",
       "mooncake": "Standard Pay-in-Advance Offer"
     },
     {
@@ -688,7 +725,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(previous-versions|visualstudio|virtualization|system-center|sysinternals|vsts|windows|power-bi|xamarin|message-passing-interface)/([^\\s)]*)\\)",
+      "global": "\\(\\s*(https://docs\\.microsoft\\.com)?/(dynamics-nav|previous-versions|visualstudio|virtualization|system-center|sysinternals|vsts|windows|power-bi|xamarin|message-passing-interface)/([^\\s)]*)\\)",
       "mooncake": "(https://docs.microsoft.com/zh-cn/$2/$3)"
     },
     {
@@ -971,8 +1008,13 @@
     },
     {
       "service": "ALL",
-      "global": "WestCentralUS",
+      "global": "(WestCentralUS|CentralUS)",
       "mooncake": "chinanorth"
+    },
+    {
+      "service": "java.md",
+      "global": "(US_EAST)",
+      "mooncake": "CHINA_NORTH"
     },
     {
       "service": "ALL",
@@ -1064,6 +1106,11 @@
       "service": "ALL",
       "global": "(M|m)icrosoft([\\s]{1,})(A|a)zure",
       "mooncake": "Azure"
+    },
+    {
+      "service": "ALL",
+      "global": "(azEnvironment:)? AZUREPUBLICCLOUD",
+      "mooncake": "$1 AZURECHINACLOUD"
     },
     {
       "service": "ALL",
@@ -1160,7 +1207,7 @@
     {
       "service": "ALL",
       "global": "\\(https://ocs\\.microsoft\\.com/([^)]*)\\)",
-      "mooncake": "($1.md)",
+      "mooncake": "(https://docs.microsoft.com/$1)",
       "comments": "https://ocs.microsoft.com/ is not valid http address"
     },
     {
@@ -1212,6 +1259,36 @@
       "service": "ALL",
       "global": "https://aka\\.ms/asr_workload",
       "mooncake": "../site-recovery/site-recovery-workload.md"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/asr-scout-release-notes",
+      "mooncake": "../"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/",
+      "mooncake": "../"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/",
+      "mooncake": "../"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/",
+      "mooncake": "../"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/",
+      "mooncake": "../"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/",
+      "mooncake": "../"
     },
     {
       "service": "ALL",
@@ -2111,31 +2188,31 @@
     },
     {
       "service": "ALL",
-      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "global": "\\[\\s*(az)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
       "mooncake": "[$1 $2 $3](https://docs.azure.cn/zh-cn/cli/$4$5?view=azure-cli-latest#az-$2-$3)",
       "comments": "powershell archor generator format with three parameters."
     },
     {
       "service": "ALL",
-      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "global": "\\[\\s*(az)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
       "mooncake": "[$1 $2 $3 $4](https://docs.azure.cn/zh-cn/cli/$5$6?view=azure-cli-latest#az-$2-$3-$4)",
       "comments": "powershell archor generator format with four parameters."
     },
     {
       "service": "ALL",
-      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "global": "\\[\\s*(az)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
       "mooncake": "[$1 $2 $3 $4 $5](https://docs.azure.cn/zh-cn/cli/$6$7?view=azure-cli-latest#az-$2-$3-$4-$5)",
       "comments": "powershell archor generator format with five parameters."
     },
     {
       "service": "ALL",
-      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "global": "\\[\\s*(az)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
       "mooncake": "[$1 $2 $3 $4 $5 $6](https://docs.azure.cn/zh-cn/cli/$7$8?view=azure-cli-latest#az-$2-$3-$4-$5-$6)",
       "comments": "powershell archor generator format with six parameters."
     },
     {
       "service": "ALL",
-      "global": "\\[\\s*(az|azure|Azure)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
+      "global": "\\[\\s*(az)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s{1,}([\\S]*)\\s*\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/([a-zA-Z/\\-]*)(\\?toc=[a-zA-z2\\%\\-]*toc\\.json)?\\?view=azure-cli-latest\\)",
       "mooncake": "[$1 $2 $3 $4 $5 $6 $7](https://docs.azure.cn/zh-cn/cli/$8$9?view=azure-cli-latest#az-$2-$3-$4-$5-$6-$7)",
       "comments": "powershell archor generator format with seven parameters."
     },
@@ -2148,6 +2225,26 @@
       "service": "ALL",
       "global": "Azure Cloud Shell",
       "mooncake": "Azure local Shell"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(/azure-supportability/resource-manager-core-quotas-request/?\\)",
+      "mooncake": "(https://support.windowsazure.cn/support/support-azure)"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(\\.\\./azure-supportability/resource-manager-core-quotas-request\\.md\\)",
+      "mooncake": "(https://support.windowsazure.cn/support/support-azure)"
+    },
+    {
+      "service": "ALL",
+      "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/contact/\\)",
+      "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
+    },
+    {
+      "service": "ALL",
+      "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/contact/\\)",
+      "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
     }
   ],
   "CLIReplacement": [
@@ -2179,9 +2276,21 @@
   ],
   "YMLFileCorrection": [
     {
-      "service": "ALL", 
-	    "global": "mysetting",
+      "service": "ALL",
+      "global": "mysetting",
       "mooncake": "mysetting"
+    }
+  ],
+  "TIPSNOTDELETE": [
+    {
+      "service": "ALL",
+      "global": "\\.?\\S*\\\{1,}\\S*\\.(png|PNG|svg|SVG)",
+      "mooncake": "CHECK THE \ WRONG CHARA IN image/links"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(\\S*\\\{1,}\\S*\\)",
+      "mooncake": "CHECK THE \ WRONG CHARA IN image/links"
     }
   ],
   "Backup": [
