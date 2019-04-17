@@ -1,0 +1,144 @@
+**********************Check Process Result(IncludeParentFile)**********************
+The parent file of	active-directory-develop-guidedsetup-aspnetwebapp-test.md	is			.
+The parent file of	active-directory-develop-guidedsetup-ios-use.md	is			.
+The parent file of	active-directory-develop-guidedsetup-javascriptspa-use.md	is			.
+The parent file of	application-gateway-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	app-service-deploy-zip-push-rest.md	is			.
+The parent file of	app-service-mobile-dotnet-backend-configure-push-apns.md	is			.
+The parent file of	app-service-mobile-dotnet-backend-configure-push-google.md	is			.
+The parent file of	app-service-mobile-update-server-project-for-push-template.md	is			.
+The parent file of	azure-cloud-services-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	azure-mediaservices-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	azure-monitor-log-analytics-rebrand.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	logging.md	.
+The parent file of	azure-resource-groups-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	azure-search-limits-per-service.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	azure-search-limits-per-subscription.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	azure-storage-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	azure-storage-limits-premium.md	is			.
+The parent file of	azure-subscription-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	azure-subscription-limits-azure-resource-manager.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	biztalk-services-retirement-azure-classic-portal.md	is			.
+The parent file of	cloud-shell-try-it.md	is	D:\gitrep\azure-docs-pr\articles\aks	kubernetes-walkthrough.md	.
+The parent file of	cognitive-services-anomaly-finder-private-preview-note.md	is			.
+The parent file of	cognitive-services-containers-api-documentation.md	is			.
+The parent file of	cognitive-services-containers-configuration-shared-settings-http-proxy.md	is			.
+The parent file of	cognitive-services-containers-configuration-shared-settings-logging.md	is			.
+The parent file of	cognitive-services-speech-service-endpoints-text-to-speech.md	is			.
+The parent file of	cognitive-services-speech-service-quickstart-cpp-create-proj.md	is			.
+The parent file of	cognitive-services-speech-service-quickstart-java-create-proj.md	is			.
+The parent file of	cognitive-services-speech-service-quickstart-selector.md	is			.
+The parent file of	cognitive-services-speech-service-quickstart-uwp-create-proj.md	is			.
+The parent file of	cognitive-services-speech-service-rest-auth.md	is			.
+The parent file of	configure-deployment-user-no-h.md	is			.
+The parent file of	container-instances-vnet-limits.md	is			.
+The parent file of	cosmos-db-create-dbaccount.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	create-sql-api-dotnet.md	.
+The parent file of	cosmos-db-create-sql-api-query-data.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	create-sql-api-dotnet-preview.md	.
+The parent file of	cosmos-db-delete-resource-group.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	create-cassandra-dotnet.md	.
+The parent file of	cosmos-db-tutorial-review-slas.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	create-cassandra-dotnet.md	.
+The parent file of	data-factory-azure-storage-linked-services.md	is			.
+The parent file of	data-factory-create-install-integration-runtime.md	is			.
+The parent file of	data-factory-data-flow-preview.md	is			.
+The parent file of	data-factory-file-format.md	is			.
+The parent file of	data-factory-quickstart-verify-output-cleanup.md	is			.
+The parent file of	event-hubs-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	expressroute-direct-faq-include.md	is			.
+The parent file of	expressroute-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	firewall-faq-include.md	is			.
+The parent file of	firewall-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	firewall-preview-notice.md	is			.
+The parent file of	iot-hub-diagnostics-settings.md	is			.
+The parent file of	iot-hub-file-upload-selector.md	is			.
+The parent file of	iot-hub-get-access-token.md	is			.
+The parent file of	iot-hub-get-started-create-consumer-group.md	is			.
+The parent file of	iot-hub-get-started-note.md	is			.
+The parent file of	iot-hub-include-create-device.md	is			.
+The parent file of	iot-hub-include-create-hub.md	is			.
+The parent file of	iot-hub-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	iot-hub-pii-note-naming-device.md	is			.
+The parent file of	iot-hub-pii-note-naming-hub.md	is			.
+The parent file of	iot-hub-prepare-resource-manager.md	is			.
+The parent file of	iot-hub-resource-manager-selector.md	is			.
+The parent file of	log-analytics-troubleshoot-azure-diagnostics.md	is			.
+The parent file of	mobile-services-enable-google-cloud-messaging.md	is			.
+The parent file of	mobile-windows-universal-dotnet-authenticate-app-with-token.md	is			.
+The parent file of	monitoring-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	requires-azurerm.md	is	D:\gitrep\azure-docs-pr\articles\azure-resource-manager	templates-cloud-consistency.md	.
+The parent file of	resource-manager-governance-tags-powershell.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\windows	tutorial-govern-resources.md	.
+The parent file of	resource-manager-tutorials-quickstarts.md	is	D:\gitrep\azure-docs-pr\articles\azure-resource-manager	resource-group-authoring-templates.md	.
+The parent file of	sample-powershell-install.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\scripts	virtual-machines-linux-powershell-sample-copy-managed-disks-to-same-or-different-subscription.md	.
+The parent file of	sample-powershell-install-no-ssh.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\scripts	create-and-configure-cassandra-database.md	.
+The parent file of	security-attributes-backup.md	is			.
+The parent file of	security-attributes-key-vault.md	is			.
+The parent file of	security-attributes-service-fabric.md	is	D:\gitrep\azure-docs-pr\articles\service-fabric	service-fabric-security-attributes.md	.
+The parent file of	security-attributes-storage.md	is			.
+The parent file of	service-fabric-powershell.md	is	D:\gitrep\azure-docs-pr\articles\service-fabric	service-fabric-powershell-samples.md	.
+The parent file of	site-recovery-config-server-reqs-physical.md	is	D:\gitrep\azure-docs-pr\articles\site-recovery	azure-stack-site-recovery.md	.
+The parent file of	spatial-anchors-create-locate-anchors-aad-tokens.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-aad-tokens-event.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-access-tokens.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-access-tokens-event.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-account-keys.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-asynchronous-tokens.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-cleanup-java.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-cleanup-unity.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-creating.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-deleting.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-feedback.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-getting-properties.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-locating.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-locating-events.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-next-steps.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-resetting.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-session-status.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-setup-non-ios.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-start.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-stopping.md	is			.
+The parent file of	spatial-anchors-create-locate-anchors-updating-properties.md	is			.
+The parent file of	spatial-anchors-get-started-create-resource.md	is			.
+The parent file of	spatial-anchors-run-share-sample.md	is			.
+The parent file of	spatial-anchors-share-sample-prereqs.md	is			.
+The parent file of	spatial-anchors-unity-android-build-settings.md	is			.
+The parent file of	spatial-anchors-unity-ios-build-settings.md	is			.
+The parent file of	storage-account-types-include.md	is			.
+The parent file of	storage-auth-rbac-roles-include.md	is			.
+The parent file of	storage-blob-concepts-include.md	is			.
+The parent file of	storage-files-scale-targets.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	storage-import-export-ship-drives.md	is			.
+The parent file of	storage-sync-files-bad-connection.md	is			.
+The parent file of	storage-table-entities-powershell-include.md	is			.
+The parent file of	storsimple-preparing-for-updates.md	is			.
+The parent file of	storsimple-upgrade-sharepoint-adapter.md	is			.
+The parent file of	virtual-machines-ag-listener-configure.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\windows\sql	virtual-machines-windows-portal-sql-alwayson-int-listener.md	.
+The parent file of	virtual-machines-common-allocation-failure.md	is			.
+The parent file of	virtual-machines-common-b-series-burstable.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	b-series-burstable.md	.
+The parent file of	virtual-machines-common-classic-hpcpack-cluster-powershell-script.md	is			.
+The parent file of	virtual-machines-common-classic-resource-manager-migration-common-errors.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	migration-classic-resource-manager-errors.md	.
+The parent file of	virtual-machines-common-cli-manage.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	cli-manage.md	.
+The parent file of	virtual-machines-common-how-to-enable-write-accelerator.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	how-to-enable-write-accelerator.md	.
+The parent file of	virtual-machines-common-infrastructure-automation.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	infrastructure-automation.md	.
+The parent file of	virtual-machines-common-log-collector-extension.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\extensions	log-collector.md	.
+The parent file of	virtual-machines-common-network-overview.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	network-overview.md	.
+The parent file of	virtual-machines-common-premium-storage-performance.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	premium-storage-performance.md	.
+The parent file of	virtual-machines-common-sizes-general.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	sizes-general.md	.
+The parent file of	virtual-machines-faq-for-disks.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	faq-for-disks.md	.
+The parent file of	virtual-machines-managed-disks-overview.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	managed-disks-overview.md	.
+The parent file of	virtual-machines-n-series-linux-support.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	n-series-driver-setup.md	.
+The parent file of	virtual-machines-sql-server-akv-prepare.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\windows\sql	virtual-machines-windows-ps-sql-keyvault.md	.
+The parent file of	virtual-wan-faq-include.md	is			.
+The parent file of	virtual-wan-tutorial-vwan-include.md	is			.
+The parent file of	vpn-gateway-faq-p2s-all-include.md	is			.
+The parent file of	aml-prereq.md	is			.
+The parent file of	cognitive-services-anomaly-detector-data-requirements.md	is			.
+The parent file of	cognitive-services-anomaly-detector-signup-requirements.md	is			.
+The parent file of	data-box-edge-gateway-gov-url-patterns-firewall.md	is			.
+The parent file of	functions-premium-create.md	is			.
+The parent file of	iot-hub-include-blob-storage-format.md	is			.
+The parent file of	iot-hub-include-create-routing-description.md	is			.
+The parent file of	iot-hub-include-create-simulated-device-portal.md	is			.
+The parent file of	iot-hub-include-routing-create-resources.md	is			.
+The parent file of	iot-hub-include-routing-intro.md	is			.
+The parent file of	iot-hub-include-view-routing-in-portal.md	is			.
+The parent file of	security-attributes-header.md	is	D:\gitrep\azure-docs-pr\articles\service-fabric	service-fabric-security-attributes.md	.
+The parent file of	spatial-anchors-new-android-app-finished.md	is			.
+The parent file of	storage-auth-resource-scope-include.md	is			.
+

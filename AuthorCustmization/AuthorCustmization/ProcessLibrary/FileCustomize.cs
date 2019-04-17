@@ -59,6 +59,8 @@ namespace AuthorCustmization.ProcessLibrary
     //public enum InvolvedService
     //{
     //    analysis_services,
+    //    includes,
+    //    articles,
     //}
 
     public enum InvolvedService
@@ -75,6 +77,7 @@ namespace AuthorCustmization.ProcessLibrary
         virtual_machines,
         virtual_network,
         includes,
+        articles,
     }
 
     public enum ReplaceParam
@@ -539,12 +542,24 @@ namespace AuthorCustmization.ProcessLibrary
                 string[] curtymlFiles = System.IO.Directory.GetFiles(parentPath, "*.yml");
                 this.CheckFileList.AddRange(curtymlFiles);
 
-                string[] curtDirList = System.IO.Directory.GetDirectories(parentPath);
 
-                for (int i = 0; i < curtDirList.Length; i++)
+                string[] directoryson = parentPath.Replace("\\", "/").Split('/');
+                switch(directoryson[directoryson.Length-1])
                 {
-                    this.GetAllFilesInDirectory(curtDirList[i]);
+                    case "articles":
+                        // We just collection the files in repostorypath/articles, the involved service did not collection.
+                        break;
+                    default:
+                        string[] curtDirList = System.IO.Directory.GetDirectories(parentPath);
+
+                        for (int i = 0; i < curtDirList.Length; i++)
+                        {
+                            this.GetAllFilesInDirectory(curtDirList[i]);
+                        }
+                        break;
                 }
+
+               
 
             }
             
@@ -768,7 +783,17 @@ namespace AuthorCustmization.ProcessLibrary
                 }
 
                 findFile = false;
-                parentpath = string.Format("{0}\\{1}", diskpath, curtService.ToString().Replace('_', '-'));
+                switch(curtService)
+                {
+                    case InvolvedService.articles:
+                    case InvolvedService.includes:
+                        parentpath = string.Format("{0}", diskpath);
+                        break;
+                    default:
+                        parentpath = string.Format("{0}\\{1}", diskpath, curtService.ToString().Replace('_', '-'));
+                        break;
+                }
+                
 
                 this.GetAllFilesInDirectory(parentpath);
                 ArrayList fileList = this.CheckFileList;
