@@ -58,9 +58,10 @@ namespace AuthorCustmization.ProcessLibrary
 
     //public enum InvolvedService
     //{
-    //    analysis_services,
-    //    includes,
+    //    //analysis_services,
     //    articles,
+    //    includes,
+
     //}
 
     public enum InvolvedService
@@ -141,6 +142,11 @@ namespace AuthorCustmization.ProcessLibrary
 
             foreach (InvolvedService curtService in Enum.GetValues(typeof(InvolvedService)))
             {
+                if (curtService.ToString().ToLower() == "articles".ToLower())
+                {
+                    //Did not collect the articles in the <repository-parth>/articles/ direction
+                    break;
+                }
                 if (curtService.ToString().ToLower() == "includes".ToLower())
                 {
                     diskpath = CommonFun.GetConfigurationValue("GlobalIncludeDir", ref message);

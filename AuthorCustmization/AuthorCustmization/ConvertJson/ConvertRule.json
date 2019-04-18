@@ -268,7 +268,7 @@
     },
     {
       "serice": "ALL",
-      "global": "login\\.micorsoftonline\\.com",
+      "global": "login\\.microsoftonline\\.com",
       "mooncake": "login.partner.microsoftonline.cn",
       "comments": "O365 Authentication URL"
     },
@@ -304,6 +304,16 @@
       "serice": "ALL",
       "global": "https://aka\\.ms/cassandraimport",
       "mooncake": "/cosmos-db/cassandra-import-data"
+    },
+    {
+      "serice": "ALL",
+      "global": "\\(https://aka\\.ms/v2a_asr_reboot\\)",
+      "mooncake": "(../site-recovery/service-updates-how-to.md#reboot-of-source-machine-after-mobility-agent-upgrade)"
+    },
+    {
+      "serice": "ALL",
+      "global": "\\(https://aka\\.ms/v2a_asr_upgrade_practice\\)",
+      "mooncake": "(../site-recovery/service-updates-how-to.md#support-for-latest-oskernel-versions)"
     },
     {
       "serice": "ALL",
@@ -440,6 +450,11 @@
       "service": "ALL",
       "global": "\\(https://aka\\.ms/asr-iis\\)",
       "mooncake": "(https://docs.azure.cn/site-recovery/site-recovery-iis)"
+    },
+    {
+      "service": "ALL",
+      "global": "\\(https://aka\\.ms/a2a-cost-estimator\\)",
+      "mooncake": "(https://www.azure.cn/zh-cn/pricing/calculator/)"
     },
     {
       "service": "ALL",
@@ -1466,11 +1481,6 @@
     },
     {
       "service": "ALL",
-      "global": "",
-      "mooncake": ""
-    },
-    {
-      "service": "ALL",
       "global": "https://aka\\.ms/asr_support_statement",
       "mooncake": "../site-recovery/service-updates-how-to.md#support-statement-for-azure-site-recovery"
     },
@@ -1498,11 +1508,6 @@
       "service": "ALL",
       "global": "https://aka\\.ms/asr_workload",
       "mooncake": "../site-recovery/site-recovery-workload.md"
-    },
-    {
-      "service": "ALL",
-      "global": "https://aka\\.ms/asr-scout-release-notes",
-      "mooncake": "../virtual-machines/extensions/agent-linux.md#command-line-options"
     },
     {
       "service": "ALL",
@@ -2464,7 +2469,19 @@
       "service": "ALL",
       "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/contact/\\)",
       "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
+    },
+    {
+      "service": "ALL",
+      "global": "(C|D|E|F):\\\\Program Files \\(x86\\)\\\\Azure Site Recovery",
+      "mooncake": "$1:\\Program Files (x86)\\Microsoft Azure Site Recovery"
+    },
+    {
+      "service": "ALL",
+      "global": "</br */{0,1}>",
+      "mooncake": "<br />",
+      "comments": "replace the correct empty line with <br />"
     }
+
   ],
   "CLIReplacement": [
      {
@@ -2477,9 +2494,8 @@
   "ToolReplacement": [
     {
       "service": "ALL",
-      "global": "\\(https://ocs\\.microsoft\\.com/(sql)(\\S*)\\)",
-      "mooncake": "($1$2.md)",
-      "comments": "https://ocs.microsoft.com/ is not valid http address"
+      "global": "</br */{0,1}>",
+      "mooncake": "<br />"
     }
   ],
   "MDFileCorrection": [
