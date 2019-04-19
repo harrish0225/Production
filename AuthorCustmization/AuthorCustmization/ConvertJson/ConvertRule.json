@@ -33,381 +33,381 @@
   ],
   "URLReplacement": [
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "(\\d{1,}\\.)([ \\t]{1,})(\\S*)",
       "mooncake": "$1 $3",
       "comments": "Replace list with digital. and one blank char to replace with TAB "
     },
     {
-      "serice": "understand-your-bill.md|optimize-cost-regions.md",
+      "service": "understand-your-bill.md|optimize-cost-regions.md",
       "global": "$0.008",
       "mooncake": "CNY 0.082",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md|optimize-cost-regions.md",
+      "service": "understand-your-bill.md|optimize-cost-regions.md",
       "global": "$0.016",
       "mooncake": "CNY 0.102",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$0.072",
       "mooncake": "CNY 0.738",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$0.08",
       "mooncake": "CNY 0.82",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$0.096",
       "mooncake": "CNY 0.984",
       "comments": ""
     },
      {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$0.25",
       "mooncake": "CNY 2.576",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$1.776",
       "mooncake": "CNY 18.21",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$4.80",
       "mooncake": "CNY 49.2",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$9.60",
       "mooncake": "CNY 98.4",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$12.4",
       "mooncake": "CNY 127.1",
       "comments": ""
     },
      {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$25.00",
       "mooncake": "CNY 257.6",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$53.57",
       "mooncake": "CNY 549.1",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$57.60",
       "mooncake": "CNY 610.1",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$62.5",
       "mooncake": "CNY 644",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$78.57",
       "mooncake": "CNY 806.7",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$160",
       "mooncake": "CNY 1,020",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$320",
       "mooncake": "CNY 2,040",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$480",
       "mooncake": "CNY 3,060",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$640",
       "mooncake": "CNY 4,080",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$960",
       "mooncake": "CNY 6,120",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$187.50",
       "mooncake": "CNY 1,932",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$438.72",
       "mooncake": "CNY 13402.56",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "$576",
       "mooncake": "CNY 6,101",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "24 * 30",
       "mooncake": "24 * 31",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "China East, China North, and China East",
       "mooncake": "China East, China North 2, and China East 2",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "\\$1,?152",
       "mooncake": "CNY 7589",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "\\$1,?728",
       "mooncake": "CNY 18,303",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "\\$2,?554",
       "mooncake": "CNY 26,980",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "\\$2,?880",
       "mooncake": "CNY 29,520",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "\\$4,?608",
       "mooncake": "CNY 30,355.2",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "\\$5,?208",
       "mooncake": "CNY 56,433",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "\\$6,?010",
       "mooncake": "CNY 40,520.2",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "\\$8,?088",
       "mooncake": "CNY 85,953",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "30 days",
       "mooncake": "31 days",
       "comments": ""
     },
      {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "220",
       "mooncake": "244",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "720 hours",
       "mooncake": "744 hours",
       "comments": ""
     },
     {
-      "serice": "understand-your-bill.md",
+      "service": "understand-your-bill.md",
       "global": "7,?200 units",
       "mooncake": "7,440 units",
       "comments": ""
     },
     {
-      "serice": "provision-sql-server-linux-virtual-machine.md",
+      "service": "provision-sql-server-linux-virtual-machine.md",
       "global": "2017",
       "mooncake": "2019",
       "comments": "Mooncake only provider SQL Server 2018 to replace 2017"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "login\\.microsoftonline\\.com",
       "mooncake": "login.partner.microsoftonline.cn",
       "comments": "O365 Authentication URL"
     },
     {
-      "serice": "aks",
+      "service": "aks",
       "global": "image:(\\s*)(dockerhub\\.azk8s\\.cn/)*nginx:(\\d{1,2})\\.(\\d{1,2})\\.(\\d{1,2})",
       "mooncake": "image:$1dockerhub.azk8s.cn/nginx:$3.$4.$5",
       "comments": "Replace the nginx image version"
     },
     {
-      "serice": "aks",
+      "service": "aks",
       "global": "(dockerhub\\.azk8s\\.cn/)?microsoft/samples-tf-mnist-demo:gpu",
       "mooncake": "dockerhub.azk8s.cn/microsoft/samples-tf-mnist-demo:gpu",
       "comments": "Replace the nginx image version"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "http://aka\\.ms/allocation-guidance",
       "mooncake": "https://docs.azure.cn/virtual-machines/troubleshooting/allocation-failure",
       "comments": "Replace the allocation guidance Refrerence"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "https://aka\\.ms/cassandratutorial",
       "mooncake": "/cosmos-db/create-cassandra-api-account-java"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "https://aka\\.ms/tableapiimporttool",
       "mooncake": "/cosmos-db/table-import"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "https://aka\\.ms/cassandraimport",
       "mooncake": "/cosmos-db/cassandra-import-data"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "\\(https://aka\\.ms/v2a_asr_reboot\\)",
       "mooncake": "(../site-recovery/service-updates-how-to.md#reboot-of-source-machine-after-mobility-agent-upgrade)"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "\\(https://aka\\.ms/v2a_asr_upgrade_practice\\)",
       "mooncake": "(../site-recovery/service-updates-how-to.md#support-for-latest-oskernel-versions)"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "\\.azmk8s\\.io",
       "mooncake": ".cx.prod.service.azk8s.cn"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "https://aka\\.ms/acr/pricing",
       "mooncake": "https://www.azure.cn/zh-cn/pricing/details/container-registry/"
     },
     {
-      "serice": "aks",
+      "service": "aks",
       "global": "china(east|north)2*",
       "mooncake": "china$12"
     },
     {
-      "serice": "aks|container-registry",
+      "service": "aks|container-registry",
       "global": "quay\\.io",
       "mooncake": "quay.azk8s.cn"
     },
     {
-      "serice": "aks|container-registry",
+      "service": "aks|container-registry",
       "global": "docker\\.io",
       "mooncake": "dockerhub.azk8s.cn"
     },
     {
-      "serice": "aks|container-registry",
+      "service": "aks|container-registry",
       "global": "gcr\\.io",
       "mooncake": "gcr.azk8s.cn"
     },
     {
-      "serice": "aks|container-registry",
+      "service": "aks|container-registry",
       "global": "(dockerhub.azk8s.cn/)?microsoft/samples-tf-mnist-demo:gpu",
       "mooncake": "dockerhub.azk8s.cn/microsoft/samples-tf-mnist-demo:gpu"
     },
     {
-      "serice": "service-fabric-quickstart-containers.md|service-fabric-tutorial-deploy-app-to-party-cluster.md|virtual-machines-windows-ps-sql-create.md",
+      "service": "service-fabric-quickstart-containers.md|service-fabric-tutorial-deploy-app-to-party-cluster.md|virtual-machines-windows-ps-sql-create.md",
       "global": "(SouthCentralUS|southcentral)",
       "mooncake": "chinaeast"
     },
     {
-      "serice": "virtual-networks-static-private-ip-classic-cli.md",
+      "service": "virtual-networks-static-private-ip-classic-cli.md",
       "global": "uscentral",
       "mooncake": "chinaeast"
     },
     {
-      "serice": "azure-to-azure-exclude-disks.md",
+      "service": "azure-to-azure-exclude-disks.md",
       "global": "China North 2",
       "mooncake": "China North"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "http(s)?://go\\.microsoft\\.com/fwlink/p/\\?LinkID\\=525040",
       "mooncake": "https://portal.azure.cn"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "active-directory/active-directory-authentication-libraries(\\.md)?",
       "mooncake": "active-directory/develop/active-directory-authentication-libraries$1"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "\\[(cosmosdbtooling\\@microsoft\\.com|cosmosdbtooling\\@microsoft\\.test)\\]",
       "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "\\((mailto\\:)?(cosmosdbtooling\\@microsoft\\.com|cosmosdbtooling\\@microsoft\\.test)\\)",
       "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "https://partner\\.microsoft\\.com/cloud\\-solution\\-provider",
       "mooncake": "https://www.21vbluecloud.com/partner-china/welcome/",
       "comments": ""
     },
     {
-      "serice": "provision-sql-server-linux-virtual-machine.md",
+      "service": "provision-sql-server-linux-virtual-machine.md",
       "global": "SQL Server 2017",
       "mooncake": "SQL Server 2019"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "https://partnercenter\\.microsoft\\.com/",
       "mooncake": "https://market-publish.azure.cn/zh-cn/isv/index"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "(P|p)ay(-| )(A|a)s(-| )(Y|y)ou(-| )(G|g)o",
       "mooncake": "Standard Pay-in-Advance Offer"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": ", or use it in the \\[Azure Cloud Shell\\]\\[azure-cloud-shell\\]",
       "mooncake": ""
     },
@@ -2159,12 +2159,12 @@
       "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "https://docs\\.microsoft\\.com/visualstudio/subscriptions/subscriber-benefits",
       "mooncake": "https://www.azure.cn/offers/ms-mc-arz-msdn/"
     },
     {
-      "serice": "ALL",
+      "service": "ALL",
       "global": "https://www\\.microsoft\\.com/(Licensing|licensing)/",
       "mooncake": "https://www.microsoft.com/en-us/$1/"
     },
@@ -2494,8 +2494,8 @@
   "ToolReplacement": [
     {
       "service": "ALL",
-      "global": "</br */{0,1}>",
-      "mooncake": "<br />"
+      "global": "/-az\\.",
+      "mooncake": "/az."
     }
   ],
   "MDFileCorrection": [
@@ -2533,10 +2533,20 @@
     },
     {
       "service": "ALL",
-      "global": "-(A|a)zure(R|r)m",
+      "global": "</br */{0,1}>",
+      "mooncake": "<br />"
+    },
+        {
+      "service": "ALL",
+      "global": "-(A|a)zure(R|r)(M|m)",
       "mooncake": "-$1z"
     },
-     {
+    {
+      "service": "ALL",
+      "global": "(A|a)zure(R|r)(M|m)(\\.?)",
+      "mooncake": "-$1z$4"
+    },
+    {
       "service": "ALL", 
 	    "global": "([\\s]*)(\\n)",
       "mooncake": "$2",
