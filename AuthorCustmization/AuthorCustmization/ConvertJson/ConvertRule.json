@@ -274,8 +274,8 @@
     },
     {
       "service": "aks",
-      "global": "image:(\\s*)(dockerhub\\.azk8s\\.cn/)*nginx:(\\d{1,2})\\.(\\d{1,2})\\.(\\d{1,2})",
-      "mooncake": "image:$1dockerhub.azk8s.cn/nginx:$3.$4.$5",
+      "global": "(i|I)mage:(\\s*)(dockerhub\\.azk8s\\.cn/)*nginx:(\\d{1,2})\\.(\\d{1,2})\\.(\\d{1,2})",
+      "mooncake": "$1mage:$2dockerhub.azk8s.cn/nginx:$4.$5.$6",
       "comments": "Replace the nginx image version"
     },
     {
@@ -322,13 +322,18 @@
     },
     {
       "service": "ALL",
+      "global": "Standard_NC6(s_v3)?",
+      "mooncake": "Standard_NC6s_v3"
+    },
+    {
+      "service": "ALL",
       "global": "https://aka\\.ms/acr/pricing",
       "mooncake": "https://www.azure.cn/zh-cn/pricing/details/container-registry/"
     },
     {
       "service": "aks",
-      "global": "china(east|north)2*",
-      "mooncake": "china$12"
+      "global": "(china|canada)(east|north)2*",
+      "mooncake": "china$22"
     },
     {
       "service": "aks|container-registry",
@@ -483,8 +488,8 @@
     },
     {
       "service": "ALL",
-      "global": "https://(login\\.windows\\.net|login\\.microsoftonline\\.us)",
-      "mooncake": "https://login.chinacloudapi.cn"
+      "global": "https:(\\)?//(login\\.windows\\.net|login\\.microsoftonline\\.us)",
+      "mooncake": "https:$1//login.chinacloudapi.cn"
     },
     {
       "service": "ALL",
@@ -1109,8 +1114,8 @@
     },
     {
       "service": "ALL",
-      "global": "\\([\\s ]*(\\/|\\/zh-cn\\/|\\/en-us\\/)?(api|biztalk|cli|dotnet|java|powershell|rest|sql|sysinternals|system-center|previous-versions)([^\\.]*)(?!\\.md)(\\#[\\S]*)?\\)",
-      "mooncake": "(https://docs.microsoft.com/$2$3$4)",
+      "global": "\\([\\s ]*(\\/|\\/zh-cn\\/|\\/en-us\\/)?(api|biztalk|cli|dotnet|java|powershell|rest|sql|sysinternals|system-center|previous-versions)/([^\\. \\(\\)]*)(?!\\.md)(\\#[\\S]*)?\\)",
+      "mooncake": "(https://docs.microsoft.com/$2/$3$4)",
       "comments": "replace the relative URL with global full URL format - Step 1"
     },
     {
@@ -1131,9 +1136,9 @@
     },
     {
       "service": "ALL",
-      "global": "https://docs\\.microsoft\\.com/(zh-cn/|en-us/|)?cli/(azure/)?([^\\#\\)\\n]*)([#]{0,1})([^\\#\\)\\[\\]\\ \\:]*)",
+      "global": "https://docs\\.microsoft\\.com/(zh-cn/|en-us/|)?cli/(azure/)?([^\\#\\)\\n]*)([#]{0,1})([^\\#\\)\\[\\]\\ \\:\\s]*)",
       "mooncake": "https://docs.azure.cn/zh-cn/cli/$3?view=azure-cli-latest$4$5",
-      "comments": "Replace URL CLI Step 1"
+      "comments": "Replace URL CLI Step 1; Add \\s to exclude the vbcrlf; testing"
     },
     {
       "service": "ALL",
@@ -1888,7 +1893,7 @@
     },
     {
       "service": "ALL",
-      "global": "([\\(|\\'|\\\"| ]{1})(https://docs\\.microsoft\\.com)?/(zh-cn/|en-us/|)?dotnet/(?!(articles/standard/frameworks|articles/standard/library))([^\\#\\?)]*)(\\?view=azure-dotnet)?([#]{0,1})([^\\#\\)\\'\\\" ]*)([\\)|\\'|\\\"| ]{1})",
+      "global": "([\\(|\\'|\\\"| ]{1})(https://docs\\.microsoft\\.com)?/(zh-cn/|en-us/|)?dotnet/(?!(articles/standard/frameworks|standard/frameworks|articles/standard/library|standard/library|standard/microservices-architecture))([^\\#\\?)]*)(\\?view=azure-dotnet)?([#]{0,1})([^\\#\\)\\'\\\" ]*)([\\)|\\'|\\\"| ]{1})",
       "mooncake": "$1https://docs.azure.cn/zh-cn/dotnet/$5?view=azure-dotnet$7$8$9",
       "comments": "Replace DOTNET STEP 1 "
     },
@@ -2477,11 +2482,34 @@
     },
     {
       "service": "ALL",
+      "global": "<br>(?!(\\s*</br>))",
+      "mooncake": "<br />",
+      "comments": "replace the correct empty line with <br />"
+    },
+    {
+      "service": "ALL",
       "global": "</br */{0,1}>",
       "mooncake": "<br />",
       "comments": "replace the correct empty line with <br />"
+    },
+    {
+      "service": "aks",
+      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?cli/aks\\?view=azure-cli-latest",
+      "mooncake": "https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest",
+      "comments": "aks cli not synced with global documents."
+    },
+    {
+      "service": "ALL",
+      "global": "\\n\\?view=azure-cli-latest",
+      "mooncake": "",
+      "comments": "Remove the duplicate row of ?view=azure-cli-latest"
+    },
+    {
+      "service": "ALL",
+      "global": "<center>\\n!(\\[\\S*\\])(\\(\\S*\\)|\\[\\S*\\])\n</center>",
+      "mooncake": "<center>\n\n!$1$2\n</center>",
+      "comments": "Correct the <center> images_URL </center> format in articles"
     }
-
   ],
   "CLIReplacement": [
      {
@@ -2494,8 +2522,8 @@
   "ToolReplacement": [
     {
       "service": "ALL",
-      "global": "/-az\\.",
-      "mooncake": "/az."
+      "global": "<center>\\n!(\\[\\S*\\])(\\(\\S*\\)|\\[\\S*\\])\n</center>",
+      "mooncake": "<center>\n\n!$1$2\n</center>"
     }
   ],
   "MDFileCorrection": [
@@ -2536,15 +2564,15 @@
       "global": "</br */{0,1}>",
       "mooncake": "<br />"
     },
-        {
-      "service": "ALL",
+    {
+      "service": "service-fabric",
       "global": "-(A|a)zure(R|r)(M|m)",
       "mooncake": "-$1z"
     },
     {
-      "service": "ALL",
-      "global": "(A|a)zure(R|r)(M|m)(\\.?)",
-      "mooncake": "-$1z$4"
+      "service": "service-fabric",
+      "global": "/(A|a)zurerm\\.",
+      "mooncake": "/$1z."
     },
     {
       "service": "ALL", 
