@@ -333,7 +333,7 @@
     {
       "service": "aks",
       "global": "(china|canada)(east|north)2*",
-      "mooncake": "china$22"
+      "mooncake": "chinaeast2"
     },
     {
       "service": "aks|container-registry",
@@ -488,7 +488,7 @@
     },
     {
       "service": "ALL",
-      "global": "https:(\\)?//(login\\.windows\\.net|login\\.microsoftonline\\.us)",
+      "global": "https:(\\|)?//(login\\.windows\\.net|login\\.microsoftonline\\.us)",
       "mooncake": "https:$1//login.chinacloudapi.cn"
     },
     {
@@ -659,7 +659,7 @@
     },
     {
       "service": "ALL",
-      "global": "(\\s{1,})Microsoft(\\s{1,})(?!(\\.Net|and\\s{1,}21Vianet|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|EXCEL|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper\\-V\\s{1,}Server|IIS|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows\\s{1,}Server|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word|Update))",
+      "global": "(\\s{1,})Microsoft(\\s{0,})(?!(\\.Net|\\.Logging|and\\s{1,}21Vianet|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|EXCEL|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper\\-V\\s{1,}Server|IIS|Intune|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Power\\s{1}BI|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows\\s{1,}Server|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word|Update))",
       "mooncake": "$1Azure$2",
       "comments": "Update Microsoft to Azure except Excel/Officer/Word etc."
     },
@@ -933,7 +933,7 @@
     },
     {
       "service": "ALL",
-      "global": "href:([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(dotnet|powershell|cli|dynamics\\-nav|rest|java|sql|api|biztalk|system-center|windows)(\\/\\S+)",
+      "global": "href:([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(api|biztalk|cli|dotnet|dynamics\\-nav|java|powershell|rest|sql|system-center|sysinternals|windows)(\\/\\S+)",
       "mooncake": "href:$1https://docs.microsoft.com$2$3$4",
       "comments": "replace the relative URL with global full URL format - Step 1"
     },
@@ -1099,7 +1099,7 @@
     },
     {
       "service": "ALL",
-      "global": "((Get\\-AzurePublishSettingsFile)|(Add\\-AzureRmAccount)|(New\\-AzureStorageContext)|(Connect\\-AzureRmAccount)|(Connect\\-AzAccount)|(Login\\-AzureRmAccount))([ \\f\\t\\v]*\\-(Environment|EnvironmentName) AzureChinaCloud)?",
+      "global": "(Get\\-AzurePublishSettingsFile|Add\\-AzureRmAccount|New\\-AzureStorageContext|Connect\\-AzureRmAccount|Connect\\-AzAccount|Login\\-AzureRmAccount)([ \\f\\t\\v]*\\-(Environment|EnvironmentName) AzureChinaCloud)?",
       "mooncake": "$1 -Environment AzureChinaCloud"
     },
     {
@@ -1887,13 +1887,13 @@
     },
     {
       "service": "ALL",
-      "global": "([\\(|\\'|\\\"| ]{1})(https://docs\\.microsoft\\.com)?/(zh-cn/|en-us/|)?dotnet/(azure/)([^\\#\\?\\[\\])]*)(\\?view=azure-dotnet)?([#]{0,1})([^\\#\\)\\'\\\" ]*)([\\)|\\'|\\\"| ]{1})",
+      "global": "([\\(|\\'|\\\"| ]{1})(https://docs\\.microsoft\\.com)?/(zh-cn/|en-us/)?dotnet/(azure/)([^\\#\\?\\[\\])]*)(\\?view=azure-dotnet)?([#]{0,1})([^\\#\\)\\'\\\" ]*)([\\)|\\'|\\\"| ]{1})",
       "mooncake": "$1https://docs.azure.cn/zh-cn/dotnet/$5?view=azure-dotnet$7$8$9",
-      "comments": "Replace DOTNET STEP 0"
+      "comments": "Replace DOTNET STEP 0;  only match /dotnet/azure format "
     },
     {
       "service": "ALL",
-      "global": "([\\(|\\'|\\\"| ]{1})(https://docs\\.microsoft\\.com)?/(zh-cn/|en-us/|)?dotnet/(?!(articles/standard/frameworks|standard/frameworks|articles/standard/library|standard/library|standard/microservices-architecture))([^\\#\\?)]*)(\\?view=azure-dotnet)?([#]{0,1})([^\\#\\)\\'\\\" ]*)([\\)|\\'|\\\"| ]{1})",
+      "global": "([\\(|\\'|\\\"| ]{1})(https://docs\\.microsoft\\.com)?/(zh-cn/|en-us/|)?dotnet/(?!(articles/standard/frameworks|api/system\\.diagnostics\\.tracing\\.eventsource|standard/frameworks|articles/standard/library|standard/library|standard/microservices-architecture))([^\\#\\?)]*)(\\?view=azure-dotnet)?([#]{0,1})([^\\#\\)\\'\\\" ]*)([\\)|\\'|\\\"| ]{1})",
       "mooncake": "$1https://docs.azure.cn/zh-cn/dotnet/$5?view=azure-dotnet$7$8$9",
       "comments": "Replace DOTNET STEP 1 "
     },
@@ -2457,6 +2457,12 @@
     },
     {
       "service": "ALL",
+      "global": "\\[Azure (Cloud|Local|local) Shell\\]\\(https://shell\\.azure\\.com/(powershell|bash)\\)",
+      "mooncake": "",
+      "comments": "Remove the Cloud Shell"
+    },
+    {
+      "service": "ALL",
       "global": "\\(/azure-supportability/resource-manager-core-quotas-request/?\\)",
       "mooncake": "(https://support.windowsazure.cn/support/support-azure)"
     },
@@ -2482,7 +2488,7 @@
     },
     {
       "service": "ALL",
-      "global": "<br>(?!(\\s*</br>))",
+      "global": "<br\\s*>(?!(\\s*</br>))",
       "mooncake": "<br />",
       "comments": "replace the correct empty line with <br />"
     },
