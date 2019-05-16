@@ -1,1 +1,3 @@
-TOC.yml	articles/cosmos-db	12/03/2018
+mitigate-se.md	articles/virtual-machines/linux	05/15/2019
+mitigate-se.md	articles/virtual-machines/windows	05/15/2019
+virtual-machines-common-mitigate-se.md	includes	05/15/2019
