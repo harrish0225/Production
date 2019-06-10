@@ -280,14 +280,20 @@
     },
     {
       "service": "aks",
-      "global": "(i|I)mage:(\\s*)(dockerhub\\.azk8s\\.cn/)*nginx:(\\d{1,2})\\.(\\d{1,2})\\.(\\d{1,2})",
-      "mooncake": "$1mage:$2dockerhub.azk8s.cn/nginx:$4.$5.$6",
+      "global": "(i|I)mage:(\\s*)(dockerhub\\.azk8s\\.cn/library/)*nginx:(\\d{1,2})\\.(\\d{1,2})\\.(\\d{1,2})",
+      "mooncake": "$1mage:$2dockerhub.azk8s.cn/library/nginx:$4.$5.$6",
       "comments": "Replace the nginx image version"
     },
     {
       "service": "aks",
       "global": "(I|i)mage:(\\s*)(dockerhub\\.azk8s\\.cn/)?microsoft/([^\\s]*)",
       "mooncake": "$1mage:$2dockerhub.azk8s.cn/microsoft/$4",
+      "comments": "Append the images server before the image name"
+    },
+    {
+      "service": "aks",
+      "global": "(I|i)mage:(\\s*)(dockerhub\\.azk8s\\.cn/)?nvidia/k8s-device-plugin:(\\d{1,2})\\.(\\d{1,2})",
+      "mooncake": "$1mage:$2dockerhub.azk8s.cn/nvidia/k8s-device-plugin:$4.$5",
       "comments": "Append the images server before the image name"
     },
     {
@@ -564,7 +570,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\(https://www\\.microsoft\\.com/download/(details|confirmation)\\.aspx\\?id=(56519|57063|57064|42064)\\)",
+      "global": "\\(https://www\\.microsoft\\.com/download/(details|confirmation)\\.aspx\\?id=(56519|57063|57064)\\)",
       "mooncake": "(https://www.microsoft.com/download/confirmation.aspx?id=57062)"
     },
     {
@@ -1085,7 +1091,7 @@
     {
       "service": "ALL",
       "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)?download/(details|confirmation)\\.aspx\\?id=41653",
-      "mooncake": "https://www.microsoft.com/en-us/download/confirmation.aspx?id=57062",
+      "mooncake": "https://www.microsoft.com/en-us/download/confirmation.aspx?id=42064",
       "comments": "replace IP Range with mooncake https://azure.microsoft.com/regions/"
     },
     {
@@ -1105,13 +1111,13 @@
     },
     {
       "service": "ALL",
-      "global": "(Get\\-AzurePublishSettingsFile|Add\\-AzureRmAccount|New\\-AzureStorageContext|Connect\\-AzureRmAccount|Connect\\-AzAccount|Login\\-AzureRmAccount)([ \\f\\t\\v]*\\-(Environment|EnvironmentName) AzureChinaCloud)?",
+      "global": "(Get\\-AzurePublishSettingsFile|Add\\-AzureRmAccount|Add\\-AzureAccount|New\\-AzureStorageContext|Connect\\-AzureRmAccount|Connect\\-AzAccount|Login\\-AzureRmAccount)([ \\f\\t\\v]*\\-(Environment|EnvironmentName) AzureChinaCloud)?",
       "mooncake": "$1 -Environment AzureChinaCloud"
     },
     {
       "service": "ALL",
       "global": "^([\\s]*)(```[\\s\\S]*)(az login)([\\s\\S]*```)",
-      "mooncake": "$1$2az cloud set -n AzureChinaCloud\n$1az login\n$1#az cloud set -n AzureCloud   //means return to global azure$4"
+      "mooncake": "$1$2az cloud set -n AzureChinaCloud\\n$1az login\\n$1# az cloud set -n AzureCloud   //means return to global azure$4"
     },
     {
       "service": "ALL",
@@ -1253,7 +1259,7 @@
     {
       "service": "ALL",
       "global": "armclient login",
-      "mooncake": "$env:ARMCLIENT_ENV=\"MOONCAKE\"\n armclient login"
+      "mooncake": "$env:ARMCLIENT_ENV=\\\"MOONCAKE\\\"\n armclient login"
     },
     {
       "service": "ALL",
@@ -1298,7 +1304,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\(mailto:askcosmosdb@microsoft\\.com\\)",
+      "global": "(\\[Ask Cosmos DB\\])?\\(mailto:askcosmosdb@microsoft\\.com\\)",
       "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
     },
     {
@@ -1364,8 +1370,8 @@
     },
     {
       "service": "ALL",
-      "global": "(azEnvironment:)? AZUREPUBLICCLOUD",
-      "mooncake": "$1 AZURECHINACLOUD"
+      "global": "(\\\"azEnvironment\\\":)?\\s*(\\\")?AZUREPUBLICCLOUD(\\\")?",
+      "mooncake": "$1 $2AZURECHINACLOUD$3"
     },
     {
       "service": "ALL",
@@ -1429,6 +1435,11 @@
       "service": "ALL",
       "global": "Max NICs / Expected network bandwidth \\(MBps\\)",
       "mooncake": "Max NICs / Expected network bandwidth (Mbps)"
+    },
+    {
+      "service": "resource-manager-supported-services.md",
+      "global": "Microsoft\\.Blueprint",
+      "mooncake": "Microsoft.Batch"
     },
     {
       "service": "azure-to-azure-how-to-enable-replication.md",
@@ -2479,18 +2490,18 @@
     },
     {
       "service": "ALL",
-      "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/contact/\\)",
+      "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/contact/\\|)",
       "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
     },
     {
       "service": "ALL",
-      "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/contact/\\)",
+      "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/forums/?)",
       "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
     },
     {
       "service": "ALL",
-      "global": "(C|D|E|F):\\\\Program Files \\(x86\\)\\\\Azure Site Recovery",
-      "mooncake": "$1:\\Program Files (x86)\\Microsoft Azure Site Recovery"
+      "global": "(C|D|E|F)(:\\\\)(Program Files \\(x86\\)|Program Files \\(X86\\)|Program Files|ProgramData)(\\\\)(Azure Site Recovery|Azure Recovery Services Agent|Azure Site Recovery Provider|Azure Site Recovery Configuration Manager|Azure Site Recovery Error Collection Tool)",
+      "mooncake": "$1$2$3$4Microsoft $5"
     },
     {
       "service": "ALL",
@@ -2512,8 +2523,8 @@
     },
     {
       "service": "ALL",
-      "global": "\\n\\?view=azure-cli-latest",
-      "mooncake": "",
+      "global": "\\?view=azure-cli-latest\\n\\?view=azure-cli-latest",
+      "mooncake": "?view=azure-cli-latest",
       "comments": "Remove the duplicate row of ?view=azure-cli-latest"
     },
     {
@@ -2524,7 +2535,7 @@
     },
     {
       "service": "ALL",
-      "global": "Azure\\.(Azure|OSTCExtensions|Insights)\\.",
+      "global": "Azure\\.(Azure|OSTCExtensions|Insights|Powershell|EnterpriseCloud)\\.",
       "mooncake": "Microsoft.$1.",
       "comments": "Correct the Azure.Azure.XXXX"
     },
@@ -2539,6 +2550,12 @@
       "global": "https://www.azure.cn/support/forums/",
       "mooncake": "https://www.azure.cn/support/contact/",
       "comments": "Correct the Azure support link"
+    },
+    {
+      "service": "ALL",
+      "global": "(Microsoft)? Azure Recovery Services Agent",
+      "mooncake": "Microsoft Azure Recovery Services Agent",
+      "comments": "Correct the wrong update"
     },
     {
       "service": "ALL",
