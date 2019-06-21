@@ -32,6 +32,12 @@
     }
   ],
   "URLReplacement": [
+     {
+      "service": "ALL",
+      "global": "(\\ +)(ASP)?\\.(N|n)(E|e)(T|t)(\\ +)",
+      "mooncake": "$1$2.NET$6",
+      "comments": "Replace .Net with .NET "
+    },
     {
       "service": "ALL",
       "global": "(\\d{1,}\\.)([ \\t]{1,})(\\S*)",
@@ -44,7 +50,7 @@
       "mooncake": "https://portal.azure.cn",
       "comments": "Replace list with digital. and one blank char to replace with TAB "
     },
-    {  
+    {
       "service": "understand-your-bill.md|optimize-cost-regions.md",
       "global": "$0.008",
       "mooncake": "CNY 0.082",
@@ -74,7 +80,7 @@
       "mooncake": "CNY 0.984",
       "comments": ""
     },
-     {
+    {
       "service": "understand-your-bill.md",
       "global": "$0.25",
       "mooncake": "CNY 2.576",
@@ -104,7 +110,7 @@
       "mooncake": "CNY 127.1",
       "comments": ""
     },
-     {
+    {
       "service": "understand-your-bill.md",
       "global": "$25.00",
       "mooncake": "CNY 257.6",
@@ -248,7 +254,7 @@
       "mooncake": "31 days",
       "comments": ""
     },
-     {
+    {
       "service": "understand-your-bill.md",
       "global": "220",
       "mooncake": "244",
@@ -395,12 +401,12 @@
     {
       "service": "ALL",
       "global": "\\[(cosmosdbtooling\\@microsoft\\.com|cosmosdbtooling\\@microsoft\\.test)\\]",
-      "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
+      "mooncake": "[Azure Support](https://support.azure.cn/support/contact/)"
     },
     {
       "service": "ALL",
       "global": "\\((mailto\\:)?(cosmosdbtooling\\@microsoft\\.com|cosmosdbtooling\\@microsoft\\.test)\\)",
-      "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
+      "mooncake": "[Azure Support](https://support.azure.cn/support/contact/)"
     },
     {
       "service": "ALL",
@@ -945,7 +951,7 @@
     },
     {
       "service": "ALL",
-      "global": "href:([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(api|biztalk|cli|dotnet|dynamics\\-nav|java|powershell|rest|sql|system-center|sysinternals|windows)(\\/\\S+)",
+      "global": "href:([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(api|biztalk|cli|dotnet|dynamics-nav|java|powershell|nuget|rest|sql|system-center|sysinternals|windows)(\\/\\S+)",
       "mooncake": "href:$1https://docs.microsoft.com$2$3$4",
       "comments": "replace the relative URL with global full URL format - Step 1"
     },
@@ -1091,8 +1097,8 @@
     {
       "service": "ALL",
       "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)?download/(details|confirmation)\\.aspx\\?id=41653",
-      "mooncake": "https://www.microsoft.com/en-us/download/confirmation.aspx?id=42064",
-      "comments": "replace IP Range with mooncake https://azure.microsoft.com/regions/"
+      "mooncake": "https://www.microsoft.com/en-us/download/confirmation.aspx?id=57062",
+      "comments": "replace IP Range with mooncake https://azure.microsoft.com/regions/  41653 to 57062"
     },
     {
       "service": "ALL",
@@ -1169,6 +1175,7 @@
       "mooncake": "?view=azure-cli-latest",
       "comments": "Correction of Last Step"
     },
+    
     {
       "service": "ALL",
       "global": "https://aka\\.ms/skurestriction",
@@ -1305,12 +1312,12 @@
     {
       "service": "ALL",
       "global": "(\\[Ask Cosmos DB\\])?\\(mailto:askcosmosdb@microsoft\\.com\\)",
-      "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
+      "mooncake": "[Azure Support](https://support.azure.cn/support/contact)"
     },
     {
       "service": "ALL",
       "global": "managementgroups@microsoft.com",
-      "mooncake": "https://www.azure.cn/support/contact/"
+      "mooncake": "https://support.azure.cn/en-us/support/contact"
     },
     {
       "service": "ALL",
@@ -1361,7 +1368,7 @@
     {
       "service": "ALL",
       "global": "http(s)?://feedback\\.azure\\.com",
-      "mooncake": "https://www.azure.cn/support/contact/"
+      "mooncake": "https://support.azure.cn/en-us/support/contact"
     },
     {
       "service": "ALL",
@@ -1433,6 +1440,54 @@
   "URLCorrection": [
     {
       "service": "ALL",
+      "global": "/log-analytics/log-analytics-alerts",
+      "mooncake": "/azure-monitor/platform/alerts-overview",
+      "comments": "CORRECT THE REDIRECTION OF LOG ANALYTICS"
+    },
+    {
+      "service": "ALL",
+      "global": "/log-analytics/log-analytics-log-searches",
+      "mooncake": "/azure-monitor/log-query/log-query-overview",
+      "comments": "CORRECT THE REDIRECTION OF LOG ANALYTICS"
+    },
+    {
+      "service": "ALL",
+      "global": "/log-analytics/log-analytics-view-designer",
+      "mooncake": "/azure-monitor/platform/view-designer",
+      "comments": "CORRECT THE REDIRECTION OF LOG ANALYTICS"
+    },
+    {
+      "service": "ALL",
+      "global": "/log-analytics/log-analytics-data-sources-syslog",
+      "mooncake": "/azure-monitor/platform/data-sources-syslog",
+      "comments":  "CORRECT THE REDIRECTION OF LOG ANALYTICS"
+    },
+    {
+      "service": "ALL",
+      "global": "/operations-management-suite/operations-management-suite-overview",
+      "mooncake": "/azure-monitor/overview",
+      "comments": "CORRECT THE REDIRECTION OF LOG ANALYTICS"
+    },
+    {
+      "service": "ALL",
+      "global": "/network-watcher/network-watcher-check-ip-flow-verify-portal",
+      "mooncake": "/network-watcher/diagnose-vm-network-traffic-filtering-problem",
+      "comments": "CORRECT THE REDIRECTION OF LOG ANALYTICS"
+    },
+    {
+      "service": "ALL",
+      "global": "/network-watcher/network-watcher-check-next-hop-portal",
+      "mooncake": "/network-watcher/diagnose-vm-network-routing-problem",
+      "comments": "CORRECT THE REDIRECTION OF LOG ANALYTICS"
+    },
+    {
+      "service": "ALL",
+      "global": "/vpn-gateway/vpn-gateway-plan-design",
+      "mooncake": "/vpn-gateway/vpn-gateway-about-vpn-gateway-settings",
+      "comments":  "CORRECT THE REDIRECTION OF LOG ANALYTICS"
+    },
+    {
+      "service": "ALL",
       "global": "Max NICs / Expected network bandwidth \\(MBps\\)",
       "mooncake": "Max NICs / Expected network bandwidth (Mbps)"
     },
@@ -1455,7 +1510,7 @@
       "service": "ALL",
       "global": "https://docs\\.azure\\.cn/(zh-cn/)?dotnet/standard/net-standard(\\?view=azure-dotnet)?",
       "mooncake": "https://docs.microsoft.com/dotnet/standard/net-standard",
-      "comments":  "Microsoft dot Net SDK 2.0 reference link"
+      "comments": "Microsoft dot Net SDK 2.0 reference link"
     },
     {
       "service": "ALL",
@@ -1732,7 +1787,7 @@
     {
       "service": "ALL",
       "global": "\\[MSDN and the Stack Overflow\\]\\(https://azure\\.microsoft\\.com/support/forums/\\)",
-      "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
+      "mooncake": "[Azure Support](https://support.azure.cn/en-us/support/contact)"
     },
     {
       "service": "ALL",
@@ -1742,7 +1797,7 @@
     {
       "service": "ALL",
       "global": "http(s)?://feedback\\.azure\\.com ",
-      "mooncake": "https://www.azure.cn/support/contact/ "
+      "mooncake": "https://support.azure.cn/support/contact/"
     },
     {
       "service": "ALL",
@@ -1783,7 +1838,7 @@
     {
       "service": "ALL",
       "global": "\\(mailto:askcosmosdb@microsoft\\.com\\)",
-      "mooncake": "(https://www.azure.cn/support/contact/)"
+      "mooncake": "(https://support.azure.cn/support/contact/)"
     },
     {
       "service": "ALL",
@@ -1810,7 +1865,7 @@
     {
       "service": "ALL",
       "global": "https://social\\.msdn\\.microsoft\\.com/Forums/en-US/home?forum=WAVirtualMachinesforWindows",
-      "mooncake": "https://www.azure.cn/support/contact/"
+      "mooncake": "https://support.azure.cn/support/contact/"
     },
     {
       "service": "ALL",
@@ -1825,7 +1880,7 @@
     {
       "service": "ALL",
       "global": "https://www\\.azure\\.cn/support/legal/preview-supplemental-terms(/?)",
-      "mooncake": "https://www.azure.cn/support/legal$1"
+      "mooncake": "https://www.azure.cn/support/legal/subscription-agreement$1"
     },
     {
       "service": "ALL",
@@ -1840,12 +1895,12 @@
     {
       "service": "ALL",
       "global": "https://social\\.msdn\\.microsoft\\.com/Forums/en-US/home\\?forum\\=([^\\s\\)])*",
-      "mooncake": "https://www.azure.cn/support/contact/"
+      "mooncake": "https://support.azure.cn/support/contact/"
     },
     {
       "service": "ALL",
       "global": "https://aka\\.ms/(serialconsolefeedback)",
-      "mooncake": "https://www.azure.cn/support/contact/"
+      "mooncake": "https://support.azure.cn/support/contact/"
     },
     {
       "service": "ALL",
@@ -1860,7 +1915,7 @@
     {
       "service": "ALL",
       "global": "\\[Azure (Stream Analytics){1} forum\\]\\(https://social\\.msdn\\.microsoft\\.com/Forums/en-US/home\\?forum=(AzureStreamAnalytics){1}\\)",
-      "mooncake": "[MSDN Azure 和 CSDN Azure](https://www.azure.cn/support/contact/) "
+      "mooncake": "[MSDN Azure 和 CSDN Azure](https://support.azure.cn/support/contact/) "
     },
     {
       "service": "ALL",
@@ -1966,7 +2021,13 @@
       "service": "ALL",
       "global": "(\\#{1,})[ \\s]*(\\<a[ \\s]+name\\=\\\")(\\S*)(\\\"\\>\\<\\/a\\>)(\\s*)?",
       "mooncake": "$2$3$4\n$1 ",
-      "comments": "Convert ###<a name='XXX'></a> Title TO <a name='XXX'></a>\n ### Title"
+      "comments": "Step1: Convert ###<a name='XXX'></a> Title TO <a name='XXX'></a>\n ### Title"
+    },
+    {
+      "service": "ALL",
+      "global": "(\\#+)([\\t\\ \\v]{1,})(\\S+)",
+      "mooncake": "$1 $3",
+      "comments": "Step2: Convert ###    Title TO ### Title"
     },
     {
       "service": "ALL",
@@ -2143,7 +2204,7 @@
     {
       "service": "ALL",
       "global": "([\\(|\\s]{1})https://www\\.azure\\.cn/support/community/([\\(|\\s]{1})",
-      "mooncake": "$1https://www.azure.cn/support/contact/$2"
+      "mooncake": "$1https://support.azure.cn/support/contact/$2"
     },
     {
       "service": "ALL",
@@ -2155,7 +2216,7 @@
       "global": "EASTUS",
       "mooncake": "EASTCHINA"
     },
-     {
+    {
       "service": "cassandra-nodejs.md",
       "global": "WESTUS",
       "mooncake": "NORTHCHINA"
@@ -2163,12 +2224,12 @@
     {
       "service": "ALL",
       "global": "https://(analytics|doctorwho)\\.documents\\.azure\\.cn",
-      "mooncake": "https://$1.documents.azure.com"
+      "mooncake": "https://$1.documents.azure.cn"
     },
     {
       "service": "ALL",
       "global": "https://www\\.azure\\.cn/support/community/",
-      "mooncake": "https://www.azure.cn/support/contact/"
+      "mooncake": "https://support.azure.cn/support/contact/"
     },
     {
       "service": "ALL",
@@ -2214,6 +2275,11 @@
       "service": "tutorial-traffic-manager-subnet-routing.md|tutorial-traffic-manager-improve-website-response.md",
       "global": "(User|user|My|my)VM(Europe|WestEurope|WEurope)",
       "mooncake": "$1VMNorthCN"
+    },
+    {
+      "service": "traffic-manager-configure-subnet-routing-method.md",
+      "global": "(User|user|My|my|myEndpoint|MyEndpoint)VM(Europe|WestEurope|WEurope)",
+      "mooncake": "$1VMChinaNorth"
     },
     {
       "service": "n-series-driver-setup.md|hpccompute-gpu-linux.md|hpccompute-gpu-windows.md",
@@ -2465,43 +2531,49 @@
     {
       "service": "ALL",
       "global": "\\(https://www\\.azure\\.cn/support/contact/{1,}forums/[0-9\\-\\S]*\\)",
-      "mooncake": "(https://www.azure.cn/support/contact/)"
+      "mooncake": "(https://support.azure.cn/support/contact/)"
     },
     {
       "service": "ALL",
-      "global": "Azure Cloud Shell",
-      "mooncake": "Azure local Shell"
+      "global": "(Azure)? Cloud Shell",
+      "mooncake": "$1 local Shell"
     },
     {
       "service": "ALL",
-      "global": "\\[Azure (Cloud|Local|local) Shell\\]\\(https://shell\\.azure\\.com/(powershell|bash)\\)",
+      "global": "\\[(Azure )?(Cloud|Local|local) Shell\\]\\(https://shell\\.azure\\.com/(powershell|bash)\\)",
       "mooncake": "",
       "comments": "Remove the Cloud Shell"
     },
     {
       "service": "ALL",
-      "global": "\\(/azure-supportability/resource-manager-core-quotas-request/?\\)",
+      "global": "\\(/azure-supportability/(resource-manager-core-quotas-request|how-to-create-azure-support-request)/?\\)",
       "mooncake": "(https://support.azure.cn/zh-cn/support/support-azure/)"
     },
     {
       "service": "ALL",
-      "global": "\\(\\.\\./azure-supportability/resource-manager-core-quotas-request\\.md\\)",
+      "global": "\\(\\.\\./azure-supportability/(resource-manager-core-quotas-request|how-to-create-azure-support-request)\\.md\\)",
       "mooncake": "(https://support.azure.cn/zh-cn/support/support-azure/)"
     },
     {
       "service": "ALL",
-      "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/contact/\\|)",
-      "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
+      "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/contact/\\)",
+      "mooncake": "[Azure Support](https://support.azure.cn/zh-cn/support/contact)"
     },
     {
       "service": "ALL",
-      "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/forums/?)",
-      "mooncake": "[Azure Support](https://www.azure.cn/support/contact/)"
+      "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/forums/?\\)",
+      "mooncake": "[Azure Support](https://support.azure.cn/zh-cn/support/contact)"
     },
     {
       "service": "ALL",
       "global": "(C|D|E|F)(:\\\\)(Program Files \\(x86\\)|Program Files \\(X86\\)|Program Files|ProgramData)(\\\\)(Azure Site Recovery|Azure Recovery Services Agent|Azure Site Recovery Provider|Azure Site Recovery Configuration Manager|Azure Site Recovery Error Collection Tool)",
       "mooncake": "$1$2$3$4Microsoft $5"
+    },
+    {
+      "service": "ALL",
+      "global": "https://lamport\\.chinacloudsites\\.cn/",
+      "mooncake": "https://lamport\\.azurewebsites\\.net/",
+      "comments": "Correct the lamport.azurewebsites.net URL"
     },
     {
       "service": "ALL",
@@ -2547,14 +2619,26 @@
     },
     {
       "service": "ALL",
-      "global": "https://www.azure.cn/support/forums/",
-      "mooncake": "https://www.azure.cn/support/contact/",
+      "global": "https://www\\.azure\\.cn/support/forums/",
+      "mooncake": "https://support.azure.cn/en-us/support/contact",
       "comments": "Correct the Azure support link"
     },
     {
       "service": "ALL",
       "global": "(Microsoft)? Azure Recovery Services Agent",
       "mooncake": "Microsoft Azure Recovery Services Agent",
+      "comments": "Correct the wrong update"
+    },
+    {
+      "service": "ALL",
+      "global": "(\\n|\\r\\n|\\r)\\?view=azure-cli-latest",
+      "mooncake": "?view=azure-cli-latest",
+      "comments": "Correct ?view=azure-cli-latest with break line; \\n - Linux; \\r\\n - windows' \\r - Mac", 
+    },
+    {
+      "service": "ALL",
+      "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/(forums|contact)/?\\) ",
+      "mooncake": "[Azure Support](https://support.azure.cn/support/contact)",
       "comments": "Correct the wrong update"
     },
     {

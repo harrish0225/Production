@@ -1,6 +1,0 @@
-grant-access-to-create-subscription.md	articles/azure-resource-manager	09/10/2018
-management-groups-create.md	articles/azure-resource-manager	09/10/2018
-management-groups-manage.md	articles/azure-resource-manager	09/10/2018
-management-groups-overview.md	articles/azure-resource-manager	09/10/2018
-programmatically-create-subscription.md	articles/azure-resource-manager	09/10/2018
-TOC.yml	articles/azure-resource-manager	09/10/2018
