@@ -29,7 +29,15 @@
       "global": "\\(\\s{1,}/cli/azure/",
       "mooncake": "(/cli/",
       "comments": "Repalce ( /cli/XXXXXX)"
+    },
+    {
+      "service": "ALL",
+      "global": "([ |\\t|\\v|\\f]{1,})(title|description|services|documentationCenter|authors|manager|editor|ms\\.\\S{1,})(\\s*):(\\s*)",
+      "mooncake": "$2$3:$4",
+      "comments": "Remove the blank charactor before meta.data"
     }
+
+
   ],
   "URLReplacement": [
      {
@@ -2158,8 +2166,8 @@
     },
     {
       "service": "ALL",
-      "global": "([\\(|\\s]{1})https://www\\.azure\\.cn/video-center/&sort=newest([\\)|\\s]{1})",
-      "mooncake": "($1https://www.azure.cn/video-center/$2)"
+      "global": "([\\(|\\s|\\`]{1})https://www\\.azure\\.cn/video-center/&sort=newest([\\)|\\s|\\`]{1})",
+      "mooncake": "$1https://www.azure.cn/video-center/$2"
     },
     {
       "service": "ALL",
