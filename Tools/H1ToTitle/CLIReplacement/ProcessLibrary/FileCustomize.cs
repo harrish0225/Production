@@ -64,7 +64,7 @@ namespace H1ToTitle.ProcessLibrary
 
     public enum InvolvedService
     {
-        service_fabric,
+        virtual_machines,
     }
 
     public enum ReplaceParam
@@ -346,6 +346,7 @@ namespace H1ToTitle.ProcessLibrary
 
         }
 
+
         public void ProcessConvertJson(ref string articleContent)
         {
 
@@ -430,7 +431,30 @@ namespace H1ToTitle.ProcessLibrary
                             {
                                 sH1 = sH1.Substring(sH1.IndexOf("</a>") + 4);
                             }
-                            sH1 = sH1.Trim('\r');
+                            if (sH1.IndexOf("</span>") >= 0)
+                            {
+                                sH1 = sH1.Substring(0,sH1.IndexOf("</span>"));
+                            }
+
+
+                            //sH1 = sH1.Replace(":", " - ");        // English charactor :
+                            //sH1 = sH1.Replace("：", " - ");       // Chinese charactor ：
+                            if(sH1=="")
+                            {
+                                bGlobal = false;
+                            }else
+                            {
+                                sH1 = sH1.Trim('\r');
+
+                                if (sH1.Substring(sH1.Length - 8) != " | Azure")
+                                {
+                                    sH1 = sH1 + " | Azure";
+                                }
+                            }
+
+                            
+                           
+                            
                         }
                     }
 
@@ -441,7 +465,7 @@ namespace H1ToTitle.ProcessLibrary
                         if (match.Groups.Count > 0)
                         {
                             sTitle = match.Groups["title"].ToString();
-                            if (sTitle.IndexOf('"') >= 0)
+                            if (sTitle.IndexOf('"') >= 0 || sTitle.IndexOf("'")>=0)
                             {
                                 containQuotation = true;
                                 
@@ -454,7 +478,7 @@ namespace H1ToTitle.ProcessLibrary
 
                     if (bGlobal && bMooncake)
                     {
-                        if (sH1.Trim() != sTitle.Trim())
+                        if (sH1.Trim() != sTitle.Trim('\r').Trim('"'))
                         {
                             if (containQuotation == true)
                             {

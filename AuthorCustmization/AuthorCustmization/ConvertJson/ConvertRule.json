@@ -1125,8 +1125,9 @@
     },
     {
       "service": "ALL",
-      "global": "(Get\\-AzurePublishSettingsFile|Add\\-AzureRmAccount|Add\\-AzureAccount|New\\-AzureStorageContext|Connect\\-AzureRmAccount|Connect\\-AzAccount|Login\\-AzureRmAccount)([ \\f\\t\\v]*\\-(Environment|EnvironmentName) AzureChinaCloud)?",
-      "mooncake": "$1 -Environment AzureChinaCloud"
+      "global": "(Get\\-AzurePublishSettingsFile|Add\\-AzureRmAccount|Add\\-AzureAccount|New\\-AzureStorageContext|Connect\\-AzureRmAccount|Connect\\-AzAccount|Login\\-AzureRmAccount)([ \\f\\t\\v]*\\-(Environment|EnvironmentName) AzureChinaCloud)?(?!\\s*\\))",
+      "mooncake": "$1 -Environment AzureChinaCloud",
+      "comment": "Add AzureChinaCloud parameter except end with ); for example: (https://docs.microsoft.com/powershell/module/azure.storage/New-AzureStorageContext)"
     },
     {
       "service": "ALL",
@@ -1794,7 +1795,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\[MSDN and the Stack Overflow\\]\\(https://azure\\.microsoft\\.com/support/forums/\\)",
+      "global": "\\[MSDN and the Stack Overflow\\]\\(https://azure\\.microsoft\\.com/support/forums/?\\)",
       "mooncake": "[Azure Support](https://support.azure.cn/en-us/support/contact)"
     },
     {
@@ -2564,13 +2565,13 @@
     },
     {
       "service": "ALL",
-      "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/contact/\\)",
-      "mooncake": "[Azure Support](https://support.azure.cn/zh-cn/support/contact)"
+      "global": "\\[(the )?MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/contact/?\\)",
+      "mooncake": "[Azure support](https://support.azure.cn/zh-cn/support/contact/)"
     },
     {
       "service": "ALL",
-      "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/forums/?\\)",
-      "mooncake": "[Azure Support](https://support.azure.cn/zh-cn/support/contact)"
+      "global": "\\[(the )?MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/forums/?\\)",
+      "mooncake": "[Azure support](https://support.azure.cn/zh-cn/support/contact/)"
     },
     {
       "service": "ALL",
@@ -2621,14 +2622,14 @@
     },
     {
       "service": "ALL",
-      "global": "https://support\\.windowsazure\\.cn/support/support-azure",
+      "global": "https://support\\.windowsazure\\.cn/support/support-azure/?",
       "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/",
       "comments": "Correct the Azure support link"
     },
     {
       "service": "ALL",
-      "global": "https://www\\.azure\\.cn/support/forums/",
-      "mooncake": "https://support.azure.cn/en-us/support/contact",
+      "global": "https://www\\.azure\\.cn/support/forums/?",
+      "mooncake": "https://support.azure.cn/en-us/support/contact/",
       "comments": "Correct the Azure support link"
     },
     {
@@ -2641,11 +2642,17 @@
       "service": "ALL",
       "global": "(\\n|\\r\\n|\\r)\\?view=azure-cli-latest",
       "mooncake": "?view=azure-cli-latest",
-      "comments": "Correct ?view=azure-cli-latest with break line; \\n - Linux; \\r\\n - windows' \\r - Mac", 
+      "comments": "Correct ?view=azure-cli-latest with break line; \\n - Linux; \\r\\n - windows' \\r - Mac",
+    },
+     {
+      "service": "ALL",
+      "global": "https://www.azure.cn/develop/(python|nodejs)/",
+      "mooncake": "https://docs.azure.cn/develop/$1/",
+      "comments": "Correct the python and nodejs develop document site in docs.azure.cn"
     },
     {
       "service": "ALL",
-      "global": "\\[MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/(forums|contact)/?\\) ",
+      "global": "\\[(the )?MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/(forums|contact)/?\\)",
       "mooncake": "[Azure Support](https://support.azure.cn/support/contact)",
       "comments": "Correct the wrong update"
     },
