@@ -32,7 +32,7 @@
     },
     {
       "service": "ALL",
-      "global": "([ |\\t|\\v|\\f]{1,})(title|description|services|documentationCenter|authors|manager|editor|ms\\.\\S{1,})(\\s*):(\\s*)",
+      "global": "([ |\\t|\\v|\\f]{1,})(author|cloud|documentation(C|c)enter|description|editor|manager|ms\\.\\S{1,}|origin\\.date|services|tags|title)(\\s*):(\\s*)",
       "mooncake": "$2$3:$4",
       "comments": "Remove the blank charactor before meta.data"
     }
@@ -40,11 +40,48 @@
 
   ],
   "URLReplacement": [
-     {
+    {
+      "service": "ALL",
+      "global": "\\[MSDN Azure and Stack Overflow forums\\]\\(https://azure\\.microsoft\\.com/support/forums/\\)",
+      "mooncake": "[Azure support](https://www.azure.cn/support/contact/)",
+      "comments": "Correct the wrong update"
+    },
+    {
+      "service": "ALL",
+      "global": "a few (D|d)ollars",
+      "mooncake": "a few dozen CNY",
+      "comments": "Replace dollars with CNY "
+    },
+    {
       "service": "ALL",
       "global": "(\\ +)(ASP)?\\.(N|n)(E|e)(T|t)(\\ +)",
       "mooncake": "$1$2.NET$6",
       "comments": "Replace .Net with .NET "
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/azurevirtualwanpreviewfeatures",
+      "mooncake": "https://portal.azure.cn/?feature.canmodifystamps=true&Microsoft_Azure_Network=flight16&feature.vwaner=true&feature.vwanp2s=true",
+      "comments": "Virtual WAN PREVIEW URL "
+    },
+    {
+      "service": "ALL",
+      "global": "click \\\"Try It\\\" in this article to open",
+      "mooncake": "open",
+      "comments": "Replace .Net with .NET "
+    },
+
+    {
+      "service": "ALL",
+      "global": "Click the \\*\\*TryIt\\*\\* to register this feature easily using Azure (Cloud|Local) Shell\\.",
+      "mooncake": "",
+      "comments": "Remove the TryIt feature in Azure Cloud Shell"
+    },
+    {
+      "service": "ALL",
+      "global": "After clicking \\*\\*TryIt\\*\\* to open the Azure (Cloud|Local) Shell(,)?",
+      "mooncake": "",
+      "comments": "Remove the TryIt feature in Azure Cloud Shell"
     },
     {
       "service": "ALL",
@@ -685,7 +722,13 @@
     },
     {
       "service": "ALL",
-      "global": "(\\s{1,})Microsoft(\\s{1,})(?!(\\.Net|\\.Logging|\\.Azure\\.|and\\s{1,}21Vianet|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|EXCEL|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper\\-V\\s{1,}Server|IIS|Intune|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Power\\s{1}BI|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows\\s{1,}Server|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word|Update))",
+      "global": "Microsoft-managed",
+      "mooncake": "Azure-managed",
+      "comments": "Update Microsoft to Azure."
+    },
+    {
+      "service": "ALL",
+      "global": "(\\s{1,})Microsoft(\\s{1,})(?!(\\.Net|\\.Logging|\\.Azure\\.|and\\s{1,}21Vianet|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|EXCEL|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper\\-V\\s{1,}Server|IIS|Intune|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Power\\s{1}BI|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Teams|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows|Windows\\s{1,}Server|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word|Update))",
       "mooncake": "$1Azure$2",
       "comments": "Update Microsoft to Azure except Excel/Officer/Word etc."
     },
@@ -959,7 +1002,7 @@
     },
     {
       "service": "ALL",
-      "global": "href:([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(api|biztalk|cli|dotnet|dynamics-nav|java|powershell|nuget|rest|sql|system-center|sysinternals|windows)(\\/\\S+)",
+      "global": "href:([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(api|biztalk|cli|dotnet|dynamics-nav|go|java|powershell|nuget|rest|sql|system-center|sysinternals|windows)(\\/\\S+)",
       "mooncake": "href:$1https://docs.microsoft.com$2$3$4",
       "comments": "replace the relative URL with global full URL format - Step 1"
     },
@@ -1184,7 +1227,7 @@
       "mooncake": "?view=azure-cli-latest",
       "comments": "Correction of Last Step"
     },
-    
+
     {
       "service": "ALL",
       "global": "https://aka\\.ms/skurestriction",
@@ -1261,6 +1304,11 @@
       "service": "ALL",
       "global": "https://azure\\.microsoft\\.com/(en-us/)?marketplace/([^?]*)\\?term=([^)\\s]*)",
       "mooncake": "https://market.azure.cn/zh-cn/marketplace/$2apps?search=$3"
+    },
+    {
+      "service": "ALL",
+      "global": "https://market\\.azure\\.cn/zh-cn/marketplace/apps\\?search=wan\\+optimization",
+      "mooncake": "https://market.azure.cn/zh-cn/marketplace/apps?search=wan"
     },
     {
       "service": "ALL",
@@ -1386,8 +1434,13 @@
     },
     {
       "service": "ALL",
-      "global": "(\\\"azEnvironment\\\":)?\\s*(\\\")?AZUREPUBLICCLOUD(\\\")?",
+      "global": "(\\\"azEnvironment\\\":)\\s*(\\\")?AZUREPUBLICCLOUD(\\\")?",
       "mooncake": "$1 $2AZURECHINACLOUD$3"
+    },
+    {
+      "service": "ALL",
+      "global": "AZUREPUBLICCLOUD",
+      "mooncake": "AZURECHINACLOUD"
     },
     {
       "service": "ALL",
@@ -1801,7 +1854,7 @@
     {
       "service": "ALL",
       "global": "send (an |a )?(email|mail) at \\[askcosmosdbcassandra\\@microsoft\\.com\\]\\(mailto:askcosmosdbcassandra\\@microsoft\\.com\\)",
-      "mooncake": "contact [Azure Support](https://www.azure.cn/support/support-azure/)"
+      "mooncake": "contact [Azure Support](https://support.azure.cn/zh-cn/support/support-azure/)"
     },
     {
       "service": "ALL",
@@ -1879,7 +1932,7 @@
     {
       "service": "ALL",
       "global": "https://www\\.azure\\.cn/pricing/hybrid-benefit/",
-      "mooncake": "https://www.azure.cn/pricing/hybrid-use-benefit"
+      "mooncake": "https://www.azure.cn/pricing/hybrid-use-benefit/"
     },
     {
       "service": "ALL",
@@ -2014,12 +2067,12 @@
     {
       "service": "ALL",
       "global": "https://feedback\\.azure\\.com/forums/([^ \\s\\)\\(\\[\\]]*)",
-      "mooncake": "https://www.azure.cn/support/support-azure/"
+      "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/"
     },
     {
       "service": "ALL",
       "global": "https://feedback\\.azure\\.com",
-      "mooncake": "https://www.azure.cn/support/support-azure/"
+      "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/"
     },
     {
       "service": "ALL",
@@ -2143,7 +2196,7 @@
     {
       "service": "ALL",
       "global": "https://www\\.azure\\.cn/support/support-azure//newsupportrequest",
-      "mooncake": "https://www.azure.cn/support/support-azure"
+      "mooncake": "https://support.azure.cn/zh-cn/support/support-azure/"
     },
     {
       "service": "ALL",
@@ -2586,20 +2639,20 @@
     },
     {
       "service": "ALL",
-      "global": "<br\\s*>(?!(\\s*</br>))",
+      "global": "<(br|BR)\\s*>(?!(\\s*</(br|BR)>))",
       "mooncake": "<br />",
       "comments": "replace the correct empty line with <br />"
     },
     {
       "service": "ALL",
-      "global": "</br */{0,1}>",
+      "global": "</(br|BR) */{0,1}>",
       "mooncake": "<br />",
       "comments": "replace the correct empty line with <br />"
     },
     {
-      "service": "aks",
-      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?cli/aks\\?view=azure-cli-latest",
-      "mooncake": "https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest",
+      "service": "aks|virtual-machines|includes",
+      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?cli/(aks|sig)\\?view=azure-cli-latest",
+      "mooncake": "https://docs.microsoft.com/cli/azure/$2?view=azure-cli-latest",
       "comments": "aks cli not synced with global documents."
     },
     {
@@ -2654,6 +2707,12 @@
       "service": "ALL",
       "global": "\\[(the )?MSDN Azure and CSDN Azure\\]\\(https://www\\.azure\\.cn/support/(forums|contact)/?\\)",
       "mooncake": "[Azure Support](https://support.azure.cn/support/contact)",
+      "comments": "Correct the wrong update"
+    },
+    {
+      "service": "ALL",
+      "global": "\\[Azure support site\\]\\(https://www\\.azure\\.cn/support/contact/|https://azure\\.microsoft\\.com/support/options/\\) and select Get support.",
+      "mooncake": "[Azure support site](https://support.azure.cn/zh-cn/support/support-azure/) and submit your request.",
       "comments": "Correct the wrong update"
     },
     {
