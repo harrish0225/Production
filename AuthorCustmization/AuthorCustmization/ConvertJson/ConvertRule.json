@@ -48,6 +48,12 @@
     },
     {
       "service": "ALL",
+      "global": "%3Fredirectedfrom%3DMSDN",
+      "mooncake": "",
+      "comments": "Remove ?redirectedfrom=MSDN"
+    },
+    {
+      "service": "ALL",
       "global": "a few (D|d)ollars",
       "mooncake": "a few dozen CNY",
       "comments": "Replace dollars with CNY "
@@ -1002,9 +1008,9 @@
     },
     {
       "service": "ALL",
-      "global": "href:([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(api|biztalk|cli|dotnet|dynamics-nav|go|java|powershell|nuget|rest|sql|system-center|sysinternals|windows)(\\/\\S+)",
-      "mooncake": "href:$1https://docs.microsoft.com$2$3$4",
-      "comments": "replace the relative URL with global full URL format - Step 1"
+      "global": "(href:|\\]:)([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(api|biztalk|cli|dotnet|dynamics-nav|go|java|powershell|nuget|rest|sql|system-center|sysinternals|windows)(\\/\\S+)",
+      "mooncake": "$1$2https://docs.microsoft.com$3$4$5",
+      "comments": "replace the relative URL with global full URL format - Step 1; href: OR [XXXXX]:", 
     },
     {
       "service": "ALL",
@@ -1184,7 +1190,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\([\\s ]*(\\/|\\/zh-cn\\/|\\/en-us\\/)?(api|biztalk|cli|dotnet|java|powershell|rest|sql|sysinternals|system-center|previous-versions)/([^\\. \\(\\)]*)(?!\\.md)(\\#[\\S]*)?\\)",
+      "global": "\\([\\s ]*(\\/|\\/zh-cn\\/|\\/en-us\\/)?(api|biztalk|cli|dotnet|java|previous-versions|powershell|rest|sql|sysinternals|system-center|windows)/([^\\. \\(\\)]*)(?!\\.md)(\\#[\\S]*)?\\)",
       "mooncake": "(https://docs.microsoft.com/$2/$3$4)",
       "comments": "replace the relative URL with global full URL format - Step 1"
     },
@@ -1235,7 +1241,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\(\\s*/azure-supportability/resource-manager-core-quotas-request\\)",
+      "global": "\\((\\s*|https://docs\\.microsoft\\.com/azure)/azure-supportability/resource-manager-core-quotas-request\\)",
       "mooncake": "(https://support.azure.cn/zh-cn/support/support-azure/)"
     },
     {
@@ -1588,8 +1594,8 @@
     },
     {
       "service": "ALL",
-      "global": "https://www\\.azure\\.cn/solutions/serverless/",
-      "mooncake": "https://azure.microsoft.com/solutions/serverless/",
+      "global": "https://www\\.azure\\.cn/solutions/(serverless|microservice\\-applications)/",
+      "mooncake": "https://azure.microsoft.com/solutions/$1/",
       "comments": "Replace with Cosmos bindings function"
     },
     {
@@ -2220,8 +2226,8 @@
     },
     {
       "service": "ALL",
-      "global": "([\\(|\\s|\\`]{1})https://www\\.azure\\.cn/video-center/&sort=newest([\\)|\\s|\\`]{1})",
-      "mooncake": "$1https://www.azure.cn/video-center/$2"
+      "global": "https://www\\.azure\\.cn/video-center/&sort=newest",
+      "mooncake": "https://www.azure.cn/video-center/"
     },
     {
       "service": "ALL",
@@ -2608,7 +2614,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\(/azure-supportability/(resource-manager-core-quotas-request|how-to-create-azure-support-request)/?\\)",
+      "global": "\\((https://docs\\.microsoft\\.com/azure)?/azure-supportability/(resource-manager-core-quotas-request|how-to-create-azure-support-request)/?\\)",
       "mooncake": "(https://support.azure.cn/zh-cn/support/support-azure/)"
     },
     {
@@ -2650,8 +2656,14 @@
       "comments": "replace the correct empty line with <br />"
     },
     {
+      "service": "ALL",
+      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?dotnet/(api/system\\.string|standard/base-types)(\\S*)\\?view=azure-dotnet",
+      "mooncake": "https://docs.microsoft.com/$1dotnet/$2$3",
+      "comments": "Correct the dotnet content which Mooncake did not exists."
+    },
+    {
       "service": "aks|virtual-machines|includes",
-      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?cli/(aks|sig)\\?view=azure-cli-latest",
+      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?cli/(aks|sig|identity)\\?view=azure-cli-latest",
       "mooncake": "https://docs.microsoft.com/cli/azure/$2?view=azure-cli-latest",
       "comments": "aks cli not synced with global documents."
     },

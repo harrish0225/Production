@@ -156,7 +156,7 @@ namespace CheckBrokenLink
                 FileCustomize curtFile = new FileCustomize(i, filename, directory, customizedate, category, process);
                 fileList.Add(curtFile);
                 newThreads[i] = new Thread(new ThreadStart(curtFile.ProcessFileCustomize));
-                
+                newThreads[i].Name = string.Format("{0}/{1}", directory, filename);
 
                 newThreads[i].Start();
 
@@ -173,10 +173,10 @@ namespace CheckBrokenLink
                 allThreadOver = true;
                 for (int i = 0; i < threadCount; i++)
                 {
-                    if (newThreads[i].ThreadState != ThreadState.Stopped && newThreads[i].ThreadState != ThreadState.Aborted)
+                    if (newThreads[i].ThreadState != ThreadState.Stopped && newThreads[i].ThreadState != ThreadState.Aborted && newThreads[i].ThreadState != ThreadState.AbortRequested)
                     {
                         allThreadOver = false;
-                        Console.WriteLine(string.Format("Checking status of the Thread[{0}] : {1} ", i, newThreads[i].ThreadState.ToString()));
+                        Console.WriteLine(string.Format("Checking status of the Thread[{0}] : {1} : {2} ", i, newThreads[i].ThreadState.ToString(), newThreads[i].Name));
                         fileList[i].CheckRound += 1;
 
                        
@@ -184,15 +184,16 @@ namespace CheckBrokenLink
                         if (fileList[i].CheckRound == MaxCheckRound)
                         {
                             newThreads[i].Priority = ThreadPriority.AboveNormal;
-                            Console.WriteLine(string.Format("Levelrage the porior of Thread[{0}] to {1} ", i, newThreads[i].Priority.ToString()));
+                            Console.WriteLine(string.Format("Levelrage the porior of Thread[{0}] to {1} : {2}", i, newThreads[i].Priority.ToString(), newThreads[i].Name));
                         }
                         
 
                         if (fileList[i].CheckRound > MaxCheckRound*2)
                         {
-                            fileList[i].BrokenLink += string.Format("Error : The Check Round({0}) Exceed the limit of {1}", fileList[i].CheckRound, MaxCheckRound);
-                            Console.WriteLine(string.Format("Abort the Thread[{0}] to {1} ", i, newThreads[i].Priority.ToString()));
-                            newThreads[i].Abort();
+                            fileList[i].BrokenLink += string.Format("Error : The Check Round({0}) Exceed the limit of {1} : {2}", fileList[i].CheckRound, MaxCheckRound, newThreads[i].Name);
+                            Console.WriteLine(string.Format("Discard the Thread[{0}] to {1} : {2} ", i, newThreads[i].Priority.ToString(), newThreads[i].Name));
+                            allThreadOver = true;
+                            continue;
                         }
 
                         break;

@@ -365,24 +365,35 @@ namespace CheckBrokenLink.ProcessLibrary
                 switch (filename.ToLower())
                 {
                     case "":
+                    case "16686":
+                    case "20001":
+                    case "3000":
                     case "401":
-                    case "#":
-                    case "http://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/explorer/":
-                    case "http://mycluster.region.cloudapp.chinacloudapi.cn:19080/explorer":
-                    case "ssdt":
-                    case "response.data":
-                    case "https://configuration-server-name/ip:44315":
-                    case "eventid":
-                    case "eventid=evt":
-                    case "print":
                     case "4222":
                     case "4222)`":
                     case "4222,":
                     case "4222`":
-                    case "mailto:cosmosdbtooling@microsoft.com":
-                    case "index.yml":
+                    case "9090":
                     case "deviceFile.write(\",":
+                    case "eventid":
+                    case "eventid=evt":
+                    case "https://configuration-server-name/ip:44315":
+                    case "http://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/explorer/":
+                    case "http://mycluster.region.cloudapp.chinacloudapi.cn:19080/explorer":
+                    case "https://code.visualstudio.com/":
+                    case "index.yml":
+                    case "mailto:cosmosdbtooling@microsoft.com":
+                    case "print":
                     case "PS":
+                    case "response.data":
+                    case "ssdt":
+                    case "select":
+                    case "SLF4J":
+                    case "SparkPi":
+                    case "#":
+                    case ">>":
+                    case "==":
+                    case "</span></span>":
                         continue;
                         
                 }
@@ -665,7 +676,7 @@ namespace CheckBrokenLink.ProcessLibrary
                 bool matchOK = false;
 
                 //string archPat = string.Format("<a[\\s]*(id|name)=(\'|\"){0}(\'|\")[\\s]*></a>", archor.TrimStart('#'));
-                string archPat = string.Format("<a[\\s]*(id|name)[\\s]*=[\\s]*(\'|\"){0}(\'|\")[\\s]*></a>", archor.TrimStart('#'));
+                string archPat = string.Format("<a[\\s]*(id|name)[\\s]*=[\\s]*(\'|\"){0}(\'|\")[\\s]*>[^<]*</a>", archor.TrimStart('#')); //Middle will be exist characters [^<]*
                 Match existMath = Regex.Match(articleContent, archPat, RegexOptions.IgnoreCase);
 
                 if (existMath.Length > 0)
