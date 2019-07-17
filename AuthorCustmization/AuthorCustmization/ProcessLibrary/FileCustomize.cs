@@ -276,6 +276,18 @@ namespace AuthorCustmization.ProcessLibrary
 
         }
 
+        public void PrintMatchCollection(ref string articleContent, ref string urlGlobal,ref string urlMooncake)
+        {
+
+            MatchCollection matches;
+            matches = Regex.Matches(articleContent, urlGlobal);
+
+            for(int i=0; i<matches.Count; i++)
+            {
+                Console.WriteLine(string.Format("Result: {0}  Text: ", i, matches[i].Groups.ToString()));
+            }
+        }
+
         public void ProcessConvertJson(ref string articleContent)
         {
 
@@ -386,6 +398,7 @@ namespace AuthorCustmization.ProcessLibrary
 
                     if (bGlobal && bMooncake)
                     {
+
                         reg = new Regex(urlGlobal);
                         articleContent = reg.Replace(articleContent, urlMooncake);
                     }
@@ -454,7 +467,7 @@ namespace AuthorCustmization.ProcessLibrary
                         dEnd = DateTime.Now;
                         sTakeTime = CommonFun.DateDiff(ref dEnd, ref dStart);
                         Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.MDFileCorrection.ToString(), i, urlGlobal, urlMooncake, sTakeTime));
-#endif               
+#endif
                     }
 
                 }
@@ -508,8 +521,12 @@ namespace AuthorCustmization.ProcessLibrary
 
                     bGlobal = this.GetProcessConvertRule(ref JUrl, ConvertCategory.ToolReplacement, i, ConvertItem.global, ref urlGlobal);
                     bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.ToolReplacement, i, ConvertItem.mooncake, ref urlMooncake);
+
                     if (bGlobal && bMooncake)
                     {
+#if DEBUG
+                        this.PrintMatchCollection(ref articleContent, ref urlGlobal, ref urlMooncake);
+#endif
                         reg = new Regex(urlGlobal);
                         articleContent = reg.Replace(articleContent, urlMooncake);
                     }

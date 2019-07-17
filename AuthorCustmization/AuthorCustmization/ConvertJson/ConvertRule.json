@@ -42,6 +42,12 @@
   "URLReplacement": [
     {
       "service": "ALL",
+      "global": "//login\\.microsoftonline\\.us",
+      "mooncake": "//login.chinacloudapi.cn",
+      "comments": "Correct the wrong update"
+    },
+    {
+      "service": "ALL",
       "global": "\\[MSDN Azure and Stack Overflow forums\\]\\(https://azure\\.microsoft\\.com/support/forums/\\)",
       "mooncake": "[Azure support](https://www.azure.cn/support/contact/)",
       "comments": "Correct the wrong update"
@@ -331,7 +337,7 @@
     },
     {
       "service": "ALL",
-      "global": "login\\.microsoftonline\\.com",
+      "global": "login\\.(microsoftonline|micorsoftonline)\\.com",
       "mooncake": "login.partner.microsoftonline.cn",
       "comments": "O365 Authentication URL"
     },
@@ -627,7 +633,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\(https://www\\.microsoft\\.com/download/(details|confirmation)\\.aspx\\?id=(56519|57063|57064)\\)",
+      "global": "\\(https://www\\.microsoft\\.com/download/(details|confirmation)\\.aspx\\?id=(56519|57063|57064|42064)\\)",
       "mooncake": "(https://www.microsoft.com/download/confirmation.aspx?id=57062)"
     },
     {
@@ -1010,7 +1016,7 @@
       "service": "ALL",
       "global": "(href:|\\]:)([\\s ]{1,})(\/|\/zh-cn\/|\/en-us\/)?(api|biztalk|cli|dotnet|dynamics-nav|go|java|powershell|nuget|rest|sql|system-center|sysinternals|windows)(\\/\\S+)",
       "mooncake": "$1$2https://docs.microsoft.com$3$4$5",
-      "comments": "replace the relative URL with global full URL format - Step 1; href: OR [XXXXX]:", 
+      "comments": "replace the relative URL with global full URL format - Step 1; href: OR [XXXXX]:"
     },
     {
       "service": "ALL",
@@ -1181,7 +1187,7 @@
     {
       "service": "ALL",
       "global": "^([\\s]*)(```[\\s\\S]*)(az login)([\\s\\S]*```)",
-      "mooncake": "$1$2az cloud set -n AzureChinaCloud\\n$1az login\\n$1# az cloud set -n AzureCloud   //means return to global azure$4"
+      "mooncake": "$1$2az cloud set -n AzureChinaCloud\n$1az login\n$1# az cloud set -n AzureCloud   //means return to global azure$4"
     },
     {
       "service": "ALL",
@@ -2494,6 +2500,12 @@
       "mooncake": "(https://docs.azure.cn/java/api/com.microsoft.azure.documentdb.$1.$2.$3)",
       "comments": "Replace with cosmos db java api reference links"
     },
+     {
+      "service": "ALL",
+      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?java/api/com\\.microsoft\\.azure\\.documentdb\\.",
+      "mooncake": "https://docs.microsoft.com/java/api/com.microsoft.azure.documentdb.",
+      "comments": "Replace with cosmos db library java api reference links"
+    },
     {
       "service": "ALL",
       "global": "\\(https://docs\\.azure\\.cn/java/api/com\\.microsoft\\.azure\\.cosmosdb\\.([^_\\.]*)\\._([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)_([^_\\.]*)\\.([^_\\.]*)\\)",
@@ -2603,7 +2615,7 @@
     },
     {
       "service": "ALL",
-      "global": "(Azure)? Cloud Shell",
+      "global": "(Azure)? (C|c)loud (S|s)hell",
       "mooncake": "$1 local Shell"
     },
     {
@@ -2640,7 +2652,7 @@
     {
       "service": "ALL",
       "global": "https://lamport\\.chinacloudsites\\.cn/",
-      "mooncake": "https://lamport\\.azurewebsites\\.net/",
+      "mooncake": "https://lamport.azurewebsites.net/",
       "comments": "Correct the lamport.azurewebsites.net URL"
     },
     {
@@ -2657,14 +2669,14 @@
     },
     {
       "service": "ALL",
-      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?dotnet/(api/system\\.string|standard/base-types)(\\S*)\\?view=azure-dotnet",
+      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?dotnet/(api/system\\.string|standard/base-types|standard/net-standard|articles/fsharp)(\\S*)\\?view=azure-dotnet",
       "mooncake": "https://docs.microsoft.com/$1dotnet/$2$3",
       "comments": "Correct the dotnet content which Mooncake did not exists."
     },
     {
       "service": "aks|virtual-machines|includes",
-      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?cli/(aks|sig|identity)\\?view=azure-cli-latest",
-      "mooncake": "https://docs.microsoft.com/cli/azure/$2?view=azure-cli-latest",
+      "global": "https://docs\\.azure\\.cn/(zh-cn/|en-us/)?cli/(aks|sig|identity)(/\\S*)?\\?view=azure-cli-latest",
+      "mooncake": "https://docs.microsoft.com/cli/azure/$2$3?view=azure-cli-latest",
       "comments": "aks cli not synced with global documents."
     },
     {
@@ -2697,6 +2709,12 @@
       "mooncake": "https://support.azure.cn/en-us/support/contact/",
       "comments": "Correct the Azure support link"
     },
+     {
+      "service": "ALL",
+      "global": "\\(https://support\\.azure\\.cn/en-us/support/contact/(forums)/\\S*\\)",
+      "mooncake": "(https://support.azure.cn/en-us/support/contact/)",
+      "comments": "Correct the Azure support link"
+    },
     {
       "service": "ALL",
       "global": "(Microsoft)? Azure Recovery Services Agent",
@@ -2705,14 +2723,20 @@
     },
     {
       "service": "ALL",
-      "global": "(\\n|\\r\\n|\\r)\\?view=azure-cli-latest",
+      "global": "(\\n|\\n\\r|\\r)\\?view=azure-cli-latest",
       "mooncake": "?view=azure-cli-latest",
-      "comments": "Correct ?view=azure-cli-latest with break line; \\n - Linux; \\r\\n - windows' \\r - Mac",
+      "comments": "Correct ?view=azure-cli-latest with break line; \\n - Linux; \\n\\r - windows' \\r - Mac"
     },
-     {
+    {
       "service": "ALL",
-      "global": "https://www.azure.cn/develop/(python|nodejs)/",
+      "global": "https://www.azure.cn/develop/(python|nodejs)/(azure)?",
       "mooncake": "https://docs.azure.cn/develop/$1/",
+      "comments": "Correct the python and nodejs develop document site in docs.azure.cn"
+    },
+    {
+      "service": "ALL",
+      "global": "(/nodejs/azure/?)",
+      "mooncake": "https://docs.azure.cn/develop/nodejs/",
       "comments": "Correct the python and nodejs develop document site in docs.azure.cn"
     },
     {
@@ -2727,12 +2751,19 @@
       "mooncake": "[Azure support site](https://support.azure.cn/zh-cn/support/support-azure/) and submit your request.",
       "comments": "Correct the wrong update"
     },
+     {
+      "service": "ALL",
+      "global": "<center>([\\n\\r]{1,})\\!(\\[.*\\])(\\(.*\\)|\\[.*\\])([\\n\\r]{1,})</center>",
+      "mooncake": "<center>\n\n!$2$3\n\n</center>",
+      "comments": "Correct the <center> images_URL </center> format in articles"
+    },
     {
       "service": "ALL",
-      "global": "<center>\\n!(\\[\\S*\\])(\\(\\S*\\)|\\[\\S*\\])\n</center>",
-      "mooncake": "<center>\n\n!$1$2\n</center>",
-      "comments": "Correct the <center> images_URL </center> format in articles"
+      "global": "https://docs\\.azure\\.cn/zh-cn/cli/install\\-cli\\-version\\-1\\.0",
+      "mooncake": "https://docs.azure.cn/zh-cn/cli/install-classic-cli",
+      "comments": "Correct the Azure classic cli installation path"
     }
+
   ],
   "CLIReplacement": [
      {
@@ -2743,10 +2774,11 @@
     }
   ],
   "ToolReplacement": [
-    {
+   {
       "service": "ALL",
-      "global": "<center>\\n!(\\[\\S*\\])(\\(\\S*\\)|\\[\\S*\\])\n</center>",
-      "mooncake": "<center>\n\n!$1$2\n</center>"
+      "global": "<center>([\\n\\r]{1,})\\!(\\[.*\\])(\\(.*\\)|\\[.*\\])([\\n\\r]{1,})</center>",
+      "mooncake": "<center>\n\n!$2$3\n\n</center>",
+      "comments": "Correct the <center> images_URL </center> format in articles"
     }
   ],
   "MDFileCorrection": [

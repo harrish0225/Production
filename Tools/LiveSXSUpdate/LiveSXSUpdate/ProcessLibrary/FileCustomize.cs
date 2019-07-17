@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Threading;
 
-namespace H1ToTitle.ProcessLibrary
+namespace LiveSXSUpdate.ProcessLibrary
 {
     public enum ConvertItem {
         global,
@@ -53,24 +53,20 @@ namespace H1ToTitle.ProcessLibrary
     //    virtual_network,
     //}
 
-    //public enum InvolvedService
-    //{
-    //    analysis_services,
-    //    aks,
-    //    azure_resource_manager,
-    //    cosmos_db,
-    //    container_registry,
-    //    service_fabric,
-    //    site_recovery,
-    //    traffic_manager,
-    //    virtual_machines,
-    //    virtual_network,
-    //}
-
     public enum InvolvedService
     {
+        analysis_services,
+        aks,
+        azure_resource_manager,
+        cosmos_db,
+        container_registry,
+        service_fabric,
+        site_recovery,
+        traffic_manager,
         virtual_machines,
+        virtual_network,
     }
+
 
     public enum ReplaceParam
     {
@@ -446,7 +442,7 @@ namespace H1ToTitle.ProcessLibrary
                     }
 
 
-                    if (bSource && bTarget)
+                    if (bSource && bTarget && sMasterSourceHash!=sLiveTargetHash)
                     {
 
                         bSourceReg = this.GetProcessConvertRule(ref JUrl, ConvertCategory.SXSUpdate, i, ConvertItem.SourceRegex, ref ruleSourceReg);

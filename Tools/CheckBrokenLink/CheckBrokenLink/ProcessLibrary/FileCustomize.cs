@@ -377,10 +377,14 @@ namespace CheckBrokenLink.ProcessLibrary
                     case "deviceFile.write(\",":
                     case "eventid":
                     case "eventid=evt":
+                    case "https://code.visualstudio.com/":
                     case "https://configuration-server-name/ip:44315":
+                    case "http://linux.yyz.us/nsupdate/":
+                    case "http://linux.yyz.us/dns/ddns-server.html":
                     case "http://mysftestcluster.chinaeast.cloudapp.chinacloudapi.cn:19080/explorer/":
                     case "http://mycluster.region.cloudapp.chinacloudapi.cn:19080/explorer":
-                    case "https://code.visualstudio.com/":
+                    case "https://www.eembc.org/coremark/faq.php":
+                    case "https://www.mysql.com/":
                     case "index.yml":
                     case "mailto:cosmosdbtooling@microsoft.com":
                     case "print":
@@ -393,6 +397,7 @@ namespace CheckBrokenLink.ProcessLibrary
                     case "#":
                     case ">>":
                     case "==":
+                    case "/home":
                     case "</span></span>":
                         continue;
                         
@@ -676,7 +681,7 @@ namespace CheckBrokenLink.ProcessLibrary
                 bool matchOK = false;
 
                 //string archPat = string.Format("<a[\\s]*(id|name)=(\'|\"){0}(\'|\")[\\s]*></a>", archor.TrimStart('#'));
-                string archPat = string.Format("<a[\\s]*(id|name)[\\s]*=[\\s]*(\'|\"){0}(\'|\")[\\s]*>[^<]*</a>", archor.TrimStart('#')); //Middle will be exist characters [^<]*
+                string archPat = string.Format("<a[\\s]*(id|name)[\\s]*=[\\s]*(\'|\")?{0}(\'|\")?[\\s]*>[^<]*</a>", archor.TrimStart('#')); //Middle will be exist characters [^<]*
                 Match existMath = Regex.Match(articleContent, archPat, RegexOptions.IgnoreCase);
 
                 if (existMath.Length > 0)
@@ -687,7 +692,7 @@ namespace CheckBrokenLink.ProcessLibrary
                 if (matchOK == false)
                 {
                     //archPat = string.Format("<a[\\s]*(id|name)=(\'|\"){0}(\'|\")[\\s]*/>", archor.TrimStart('#'));
-                    archPat = string.Format("<a[\\s]*(id|name)[\\s]*=[\\s]*(\'|\"){0}(\'|\")[\\s]*/>", archor.TrimStart('#'));
+                    archPat = string.Format("<a[\\s]*(id|name)[\\s]*=[\\s]*(\'|\")?{0}(\'|\")?[\\s]*/>", archor.TrimStart('#'));
                     existMath = Regex.Match(articleContent, archPat, RegexOptions.IgnoreCase);
                     if (existMath.Length > 0)
                     {
@@ -847,7 +852,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
                     //string mdfilePatSecond = "(?!(<!--[\\s\\S]*))\\[([^\\[\\]]*)\\]([\\s]*)\\:([\\s]*)(?<mdfilename>(https?:)?[^:\\s]*)(?!(\\s*-->))";
                     //string mdfilePatSecond = "(?!(<!--[\\s\\S]*))\\[([^\\[\\]])*\\]([\\s]*)\\:([\\s]*)(?<mdfilename>(http(s)?:)?[^:\\s\\[\\]]+(\\s*-->)?)";
-                    string mdfilePatSecond = "(?!(<!--[\\s\\S]*))\\[(?<labelname>[^\\[\\]]*)\\]([\\s]*)\\:([\\s]*)(?<mdfilename>(http(s)?:)?[^:\\s\\[\\]]+(\\s*-->)?)";
+                    string mdfilePatSecond = "(?!(<!--[\\s\\S]*))\\[(?<labelname>[^\\[\\]]*)\\]([\\s]*)\\:([\\s]*)(?<mdfilename>(http(s)?:)?[^:\\s\\[\\]\\<]+(\\s*-->)?)";
 
                     matches = Regex.Matches(articleContent, mdfilePatSecond);
 
@@ -1090,7 +1095,10 @@ namespace CheckBrokenLink.ProcessLibrary
                         exMsg.Contains("The underlying connection was closed") == false &&
                         exMsg.Contains("NonAuthoritativeInformation") == false &&
                         exMsg.Contains("Internal Server Error") == false &&
-                        exMsg.Contains("The Authority/Host could not be parsed") == false)
+                        exMsg.Contains("The Authority/Host could not be parsed") == false &&
+                        exMsg.Contains("Unable to connect to the remote server") == false &&
+                        exMsg.Contains("The remote server returned an error: (408) Request Timeout") == false
+                        )
                     {
                         this.BrokenLink += string.Format("Error : {0} -> {1}\n", urlList[i].ToString(), ex.Message.ToString());
                     }

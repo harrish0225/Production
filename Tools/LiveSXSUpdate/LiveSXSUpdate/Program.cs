@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.IO;
 using System.Text.RegularExpressions;
-using H1ToTitle.ProcessLibrary;
+using LiveSXSUpdate.ProcessLibrary;
 using System.Threading;
 using System.Collections;
 
-namespace H1ToTitle
+namespace LiveSXSUpdate
 {
 
     class Program

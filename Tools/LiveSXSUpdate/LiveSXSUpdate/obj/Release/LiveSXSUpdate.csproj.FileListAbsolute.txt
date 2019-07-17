@@ -1,0 +1,7 @@
+D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\bin\Release\LiveSXSUpdate.exe.config
+D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\bin\Release\LiveSXSUpdate.exe
+D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\bin\Release\LiveSXSUpdate.pdb
+D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\bin\Release\Newtonsoft.Json.dll
+D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\bin\Release\Newtonsoft.Json.xml
+D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\obj\Release\LiveSXSUpdate.exe
+D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\obj\Release\LiveSXSUpdate.pdb
