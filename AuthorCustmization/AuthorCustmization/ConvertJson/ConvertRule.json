@@ -31,8 +31,8 @@
       "comments": "Repalce ( /cli/XXXXXX)"
     },
     {
-      "service": "ALL",
-      "global": "([ |\\t|\\v|\\f]{1,})(author|cloud|documentation(C|c)enter|description|editor|manager|ms\\.\\S{1,}|origin\\.date|services|tags|title)(\\s*):(\\s*)",
+      "service": "*.md",
+      "global": "([ |\\t|\\v|\\f]{1,})(author|cloud|documentationCenter|documentationcenter|description|editor|manager|ms\\.\\S{1,}|origin\\.date|services|tags|title)(\\s*):(\\s*)",
       "mooncake": "$2$3:$4",
       "comments": "Remove the blank charactor before meta.data"
     }
@@ -44,6 +44,66 @@
       "service": "ALL",
       "global": "//login\\.microsoftonline\\.us",
       "mooncake": "//login.chinacloudapi.cn",
+      "comments": "Correct the wrong update"
+    },
+    {
+      "service": "ALL",
+      "global": "\\[User (V|v)oice\\]",
+      "mooncake": "[Azure support]"
+    },
+    {
+      "service": "ALL",
+      "global": "send mail to \\[askcosmosdbcassandra\\@microsoft\\.com\\]\\(mailto:askcosmosdbcassandra\\@microsoft\\.com\\)",
+      "mooncake": "contact [Azure support](https://www.azure.cn/support/contact/)"
+    },
+    {
+      "service": "ALL",
+      "global": "(\\(?)https?://aka\\.ms/FastVM/?(\\)?)",
+      "mooncake": "$1/virtual-network/virtual-network-optimize-network-bandwidth/$2",
+      "comments": "Replace the URL with Mooncake"
+    },
+    {
+      "service": "ALL",
+      "global": "(\\(?)https?://aka\\.ms/AzureBandwidth/?(\\)?)",
+      "mooncake": "$1/virtual-network/virtual-machine-network-throughput/$2",
+      "comments": "Replace the URL with Mooncake"
+    },
+    {
+      "service": "ALL",
+      "global": "(\\(?)https?://aka\\.ms/TestNetworkThroughput/?(\\)?)",
+      "mooncake": "$1/virtual-network/virtual-network-bandwidth-testing/$2",
+      "comments": "Replace the URL with Mooncake"
+    },
+    {
+      "service": "traffic-manager-how-it-works.md",
+      "global": "US-based",
+      "mooncake": "EAST-based"
+    },
+    {
+      "service": "traffic-manager-how-it-works.md",
+      "global": "contoso-us.chinacloudapp.cn",
+      "mooncake": "contoso-east.chinacloudapp.cn"
+    },
+    {
+      "service": "traffic-manager-how-it-works.md",
+      "global": "contoso-eu.chinacloudapp.cn",
+      "mooncake": "contoso-north.chinacloudapp.cn"
+    },
+    {
+      "service": "traffic-manager-how-it-works.md",
+      "global": "contoso-asia.chinacloudapp.cn",
+      "mooncake": "contoso-east2.chinacloudapp.cn"
+    },
+    {
+      "service": "ALL",
+      "global": "www\\.google\\.com",
+      "mooncake": "www.qq.com",
+      "comments": "Correct the wrong update"
+    },
+    {
+      "service": "ALL",
+      "global": "Google",
+      "mooncake": "QQ",
       "comments": "Correct the wrong update"
     },
     {
@@ -578,7 +638,7 @@
     },
     {
       "service": "ALL",
-      "global": "myIISVMWEurope",
+      "global": "(myIISVMWEurope|myIISVMWestEurope)",
       "mooncake": "myIISVMChinaNorth"
     },
     {
@@ -588,12 +648,12 @@
     },
     {
       "service": "ALL",
-      "global": "Australia",
+      "global": "Australia|!traffic-manager-geographic-regions.md",
       "mooncake": "China"
     },
     {
       "service": "ALL",
-      "global": "myWestEuropeEndpoint",
+      "global": "(myWestEuropeEndpoint|myWEuropeEndpoint",
       "mooncake": "myChinaNorthEndpoint"
     },
     {
@@ -633,8 +693,8 @@
     },
     {
       "service": "ALL",
-      "global": "\\(https://www\\.microsoft\\.com/download/(details|confirmation)\\.aspx\\?id=(56519|57063|57064|42064)\\)",
-      "mooncake": "(https://www.microsoft.com/download/confirmation.aspx?id=57062)"
+      "global": "(\\(?)https://www\\.microsoft\\.com/download/(details|confirmation)\\.aspx\\?id=(56519|57063|57064|42064)(\\)?)",
+      "mooncake": "$1https://www.microsoft.com/download/confirmation.aspx?id=57062$4"
     },
     {
       "service": "ALL",
@@ -740,7 +800,7 @@
     },
     {
       "service": "ALL",
-      "global": "(\\s{1,})Microsoft(\\s{1,})(?!(\\.Net|\\.Logging|\\.Azure\\.|and\\s{1,}21Vianet|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|EXCEL|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper\\-V\\s{1,}Server|IIS|Intune|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Power\\s{1}BI|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Teams|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows|Windows\\s{1,}Server|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word|Update))",
+      "global": "(\\s{1,})Microsoft(\\s{1,})(?!(\\.Net|\\.Logging|\\.Azure\\.|and\\s{1,}21Vianet|Account|Antimalware\\s{1,}Client|Antimalware\\s{1,}extension|Antimalware\\s{1,}for\\s{1,}Azure|applications|Certificate\\s{1,}Services|client\\s{1,}applications|client\\s{1,}applications\\s{1,}like|Corporation|Distributed\\s{1,}Transaction\\s{1,}Coordinator|DSM|DX|Edge|Excel|EXCEL|Forefront\\s{1,}Endpoint\\s{1,}Protection|HPC\\s{1,}Pack|Hyper\\-V\\s{1,}Server|IIS|Intune|Management\\s{1,}Console|MVP|Management\\s{1,}Console|Office|OLE|OLE\\s{1,}DB\\s{1,}Provider|Report\\s{1,}Viewer|Root\\s{1,}Certificate\\s{1,}Program|Power\\s{1}BI|Script\\s{1,}Center|Security\\s{1,}Essentials|Software\\s{1,}License\\s{1,}Terms|SQL\\s{1,}Server|Storage\\s{1,}Explorer|System\\s{1,}Center\\s{1,}Endpoint|Teams|Team\\s{1,}Foundation\\s{1,}Server|Visual\\s{1,}C\\+\\+|Visual\\s{1,}Studio|Windows|Windows\\s{1,}Server|Windows\\s{1,}Server\\s{1,}Active\\s{1,}Directory|Word|Update))",
       "mooncake": "$1Azure$2",
       "comments": "Update Microsoft to Azure except Excel/Officer/Word etc."
     },
@@ -1247,7 +1307,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\((\\s*|https://docs\\.microsoft\\.com/azure)/azure-supportability/resource-manager-core-quotas-request\\)",
+      "global": "\\((\\s*|https://docs\\.microsoft\\.com/azure)/azure\\-supportability/(resource\\-manager\\-core\\-quotas\\-request|networking\\-quota\\-requests)/?\\)",
       "mooncake": "(https://support.azure.cn/zh-cn/support/support-azure/)"
     },
     {
@@ -1381,12 +1441,12 @@
     {
       "service": "ALL",
       "global": "(\\[Ask Cosmos DB\\])?\\(mailto:askcosmosdb@microsoft\\.com\\)",
-      "mooncake": "[Azure Support](https://support.azure.cn/support/contact)"
+      "mooncake": "[Azure Support](https://support.azure.cn/support/contact/)"
     },
     {
       "service": "ALL",
       "global": "managementgroups@microsoft.com",
-      "mooncake": "https://support.azure.cn/en-us/support/contact"
+      "mooncake": "https://support.azure.cn/en-us/support/contact/"
     },
     {
       "service": "ALL",
@@ -1437,7 +1497,7 @@
     {
       "service": "ALL",
       "global": "http(s)?://feedback\\.azure\\.com",
-      "mooncake": "https://support.azure.cn/en-us/support/contact"
+      "mooncake": "https://support.azure.cn/en-us/support/contact/"
     },
     {
       "service": "ALL",
@@ -1461,7 +1521,7 @@
     },
     {
       "service": "ALL",
-      "global": "\\(\\.\\./\\.\\./azure-supportability/resource-manager-core-quotas-request\\.md\\)",
+      "global": "\\((\\.\\./){1,}azure-supportability/(resource\\-manager\\-core\\-quotas\\-request|networking\\-quota\\-requests)\\.md\\)",
       "mooncake": "(https://support.azure.cn/zh-cn/support/support-azure/)"
     },
     {
@@ -1861,7 +1921,7 @@
     {
       "service": "ALL",
       "global": "\\[MSDN and the Stack Overflow\\]\\(https://azure\\.microsoft\\.com/support/forums/?\\)",
-      "mooncake": "[Azure Support](https://support.azure.cn/en-us/support/contact)"
+      "mooncake": "[Azure Support](https://support.azure.cn/en-us/support/contact/)"
     },
     {
       "service": "ALL",
@@ -1877,6 +1937,17 @@
       "service": "ALL",
       "global": "https://www\\.azure\\.cn/pricing/details/virtual-machines/((windows)|(linux)|(sql-server-standard)|(\\#Sql))/?",
       "mooncake": "https://www.azure.cn/pricing/details/virtual-machines/"
+    },
+    {
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/pricing/details/reserved-ip-addresses/?",
+      "mooncake": "https://www.azure.cn/pricing/details/ip-addresses/"
+    },
+    {
+      "service": "ALL",
+      "global": "https://aka\\.ms/discoveryapi_cli",
+      "mooncake": "https://docs.microsoft.com/zh-cn/cli/azure/network?view=azure-cli-latest#az-network-list-service-tags",
+      "comments": "MOONCAKE did not contains az-network-list-service-tags on 07/22/2019."
     },
     {
       "service": "ALL",
@@ -2341,17 +2412,7 @@
       "mooncake": "Tian Jing"
     },
     {
-      "service": "tutorial-traffic-manager-subnet-routing.md|tutorial-traffic-manager-improve-website-response.md",
-      "global": "(User|user|My|my)VMUS",
-      "mooncake": "$1VMEastCN"
-    },
-    {
-      "service": "tutorial-traffic-manager-subnet-routing.md|tutorial-traffic-manager-improve-website-response.md",
-      "global": "(User|user|My|my)VM(Europe|WestEurope|WEurope)",
-      "mooncake": "$1VMNorthCN"
-    },
-    {
-      "service": "traffic-manager-configure-subnet-routing-method.md",
+      "service": "tutorial-traffic-manager-subnet-routing.md|traffic-manager-configure-subnet-routing-method.md|tutorial-traffic-manager-improve-website-response.md",
       "global": "(User|user|My|my|myEndpoint|MyEndpoint)VM(Europe|WestEurope|WEurope)",
       "mooncake": "$1VMChinaNorth"
     },
@@ -2626,12 +2687,18 @@
     },
     {
       "service": "ALL",
-      "global": "\\((https://docs\\.microsoft\\.com/azure)?/azure-supportability/(resource-manager-core-quotas-request|how-to-create-azure-support-request)/?\\)",
+      "global": "https://docs\\.azure\\.cn/(en-us/|zh-cn/)?dotnet/api/microsoft\\.(analysisservices)([^?#]*)(\\?view=azure-dotnet)?(#[^ ]*)?",
+      "mooncake": "https://docs.microsoft.com/dotnet/api/microsoft.$2$3$5",
+      "comments": "Correct microsoft.analysisservice api dotnet"
+    },
+    {
+      "service": "ALL",
+      "global": "\\((https://docs\\.microsoft\\.com/azure)?/azure-supportability/(resource\\-manager\\-core\\-quotas\\-request|how\\-to\\-create\\-azure\\-support\\-request|networking\\-quota\\-requests)/?\\)",
       "mooncake": "(https://support.azure.cn/zh-cn/support/support-azure/)"
     },
     {
       "service": "ALL",
-      "global": "\\(\\.\\./azure-supportability/(resource-manager-core-quotas-request|how-to-create-azure-support-request)\\.md\\)",
+      "global": "\\(\\.\\./azure-supportability/(resource\\-manager\\-core\\-quotas\\-request|how\\-to\\-create\\-azure\\-support\\-request|networking\\-quota\\-requests)\\.md\\)",
       "mooncake": "(https://support.azure.cn/zh-cn/support/support-azure/)"
     },
     {
@@ -2751,7 +2818,7 @@
       "mooncake": "[Azure support site](https://support.azure.cn/zh-cn/support/support-azure/) and submit your request.",
       "comments": "Correct the wrong update"
     },
-     {
+    {
       "service": "ALL",
       "global": "<center>([\\n\\r]{1,})\\!(\\[.*\\])(\\(.*\\)|\\[.*\\])([\\n\\r]{1,})</center>",
       "mooncake": "<center>\n\n!$2$3\n\n</center>",
@@ -2762,8 +2829,29 @@
       "global": "https://docs\\.azure\\.cn/zh-cn/cli/install\\-cli\\-version\\-1\\.0",
       "mooncake": "https://docs.azure.cn/zh-cn/cli/install-classic-cli",
       "comments": "Correct the Azure classic cli installation path"
+    },
+    {
+      "service": "ALL",
+      "global": "If you only want to allow access to [A-Za-z]{1,} in a specific \\[region\\]\\(https://www\\.azure\\.cn/support/service\\-dashboard/\\), you can specify the region in the following format [A-Za-z]{1,}\\.\\[region name\\]\\.",
+      "mooncake": "",
+      "comments": "Remove the service.[region name] which not available till 07/22/2019"
+    },
+    {
+      "service": "ALL",
+      "global": "\\[az group delete\\]\\(https://docs\\.azure\\.cn/zh-cn/cli/resource\\?view=azure-cli-latest#az-resource-delete\\)",
+      "mooncake": "[az group delete](https://docs.azure.cn/zh-cn/cli/group?view=azure-cli-latest#az-group-delete)",
+      "comments": "Remove the service.[region name] which not available till 07/22/2019"
+    },
+    {
+      "service": "ALL",
+      "global": "\\[MSDN forum\\]\\(https://support\\.azure\\.cn/support/contact/?\\)",
+      "mooncake": "[Azure support](https://support.azure.cn/support/contact/)"
+    },
+    {
+      "service": "ALL",
+      "global": "\\[Azure (S|s)upport\\]\\[Azure (S|s)upport\\]",
+      "mooncake": "[Azure support]"
     }
-
   ],
   "CLIReplacement": [
      {

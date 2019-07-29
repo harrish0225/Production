@@ -907,6 +907,21 @@ namespace AuthorCustmization.ProcessLibrary
 
         }
 
+        public bool CheckIsPatternfile(string[] fileKey, string newPattern)
+        {
+            bool isPattern = false;
+            string fileName = fileKey[fileKey.Length - 1].ToLower();
+            if (newPattern.Substring(0,1).ToLower()=="*")
+            {
+                isPattern = fileName.EndsWith(newPattern.Substring(1));
+            }
+
+            if (newPattern.Substring(0, 1).ToLower() == "!")
+            {
+                isPattern = fileName.EndsWith(newPattern.Substring(1));
+            }
+            return isPattern;
+        }
         public bool GetProcessValidService(ref JObject JConvert, ConvertCategory category, int iIndex, ConvertItem key, string[] fileKey, int iCheckStart, string fileName)
         {
             bool bProcess = false;
@@ -914,30 +929,77 @@ namespace AuthorCustmization.ProcessLibrary
 
             try
             {
+                // service="ALL"
                 valReturn = JConvert[category.ToString()][iIndex][key.ToString()].ToString().ToLower();
-                if (valReturn == "all")
-                {
-                    bProcess = true;
-                    return bProcess;
-                }
+
+                bool bCheckALLPattern = false;
+                string sFirstChar = "";
 
                 string[] invloveService = valReturn.Split('|');
+                for (int j = 0; j <= invloveService.Length - 1; j++)
+                {
+                    if(invloveService[j].ToLower().Substring(0,1)=="!")
+                    {
+                        bCheckALLPattern = true;
+                        break;
+                    }
+                }
+
 
                 for (int i = iCheckStart + 1; i <= fileKey.Length - 1; i++)
                 {
                     for (int j = 0; j <= invloveService.Length - 1; j++)
                     {
+                        sFirstChar = invloveService[j].ToLower().Substring(0, 1);
+
+                        // Take most priority 
+                        if (sFirstChar == "!")
+                        {
+                            bProcess = CheckIsPatternfile(fileKey, invloveService[j].ToLower());
+                            if (bProcess == true)
+                            {
+                                bProcess = false;
+                                return bProcess;
+                            }
+                        }
+
+                        if (sFirstChar == "*")
+                        {
+                            bProcess = CheckIsPatternfile(fileKey, invloveService[j].ToLower());
+                            if (bCheckALLPattern == false)
+                            {
+                                return bProcess;
+                            }
+                        }
+
+
+                        if (invloveService[j].ToLower() == "all")
+                        {
+                            bProcess = true;
+                            if (bCheckALLPattern == false)
+                            {
+                                return bProcess;
+                            }
+                        }
+
                         if (fileKey[i].ToLower() == invloveService[j].ToLower())
                         {
                             bProcess = true;
-                            return bProcess;
+                            if(bCheckALLPattern==false)
+                            {
+                                return bProcess;
+                            }
+                            
                         }
 
                         //for check the files in the include directory.
                         if (invloveService[j].Length < fileName.Length && invloveService[j].ToLower() == fileName.Substring(0, invloveService[j].Length))
                         {
                             bProcess = true;
-                            return bProcess;
+                            if (bCheckALLPattern == false)
+                            {
+                                return bProcess;
+                            }
                         }
                     }
 
