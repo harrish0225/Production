@@ -57,7 +57,7 @@ namespace CLIReplacement.ProcessLibrary
 
     //public enum InvolvedService
     //{
-    //    aks,
+    //    analysis_services,
     //}
 
     public enum InvolvedService
@@ -67,12 +67,14 @@ namespace CLIReplacement.ProcessLibrary
         azure_resource_manager,
         cosmos_db,
         container_registry,
+        firewall,
         service_fabric,
         site_recovery,
         sql_server_stretch_database,
         traffic_manager,
         virtual_machines,
         virtual_network,
+        virtual_wan,
     }
 
     public enum CommandPara
@@ -142,7 +144,7 @@ namespace CLIReplacement.ProcessLibrary
 
         public void GetAllFilesInDirectoryWithCustomizedate(string parentPath, string customizedate,string globalDiskPath,string customDiskPath)
         {
-            string[] curtFiles = System.IO.Directory.GetFiles(parentPath, "*.md");
+            string[] curtFiles = System.IO.Directory.GetFiles(parentPath, "*.md",SearchOption.AllDirectories);
             string filename = string.Empty;
             string directory = string.Empty;
 

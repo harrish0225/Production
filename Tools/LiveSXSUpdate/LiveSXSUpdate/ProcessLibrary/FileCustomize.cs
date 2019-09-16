@@ -157,7 +157,7 @@ namespace LiveSXSUpdate.ProcessLibrary
 
         public void GetAllFilesInDirectoryWithCustomizedate(string parentPath, string customizedate)
         {
-            string[] curtFiles = System.IO.Directory.GetFiles(parentPath, "*.md");
+            string[] curtFiles = System.IO.Directory.GetFiles(parentPath, "*.md", SearchOption.AllDirectories);
             string filename = string.Empty;
             string directory = string.Empty;
 
@@ -200,7 +200,7 @@ namespace LiveSXSUpdate.ProcessLibrary
 
 
 
-            string[] curtymlFiles = System.IO.Directory.GetFiles(parentPath, "*.yml");
+            string[] curtymlFiles = System.IO.Directory.GetFiles(parentPath, "*.yml",SearchOption.AllDirectories);
 
             if (curtFiles.Length > 0)
             {
@@ -220,12 +220,12 @@ namespace LiveSXSUpdate.ProcessLibrary
                 }
             }
 
-            string[] curtDirList = System.IO.Directory.GetDirectories(parentPath);
+            //string[] curtDirList = System.IO.Directory.GetDirectories(parentPath);
 
-            for (int i = 0; i < curtDirList.Length; i++)
-            {
-                this.GetAllFilesInDirectoryWithCustomizedate(curtDirList[i], customizedate);
-            }
+            //for (int i = 0; i < curtDirList.Length; i++)
+            //{
+            //    this.GetAllFilesInDirectoryWithCustomizedate(curtDirList[i], customizedate);
+            //}
 
         }
 

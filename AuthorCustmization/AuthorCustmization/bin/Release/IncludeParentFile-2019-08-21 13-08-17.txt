@@ -1,0 +1,181 @@
+**********************Check Process Result(IncludeParentFile)**********************
+The parent file of	aml-azure-notebooks.md	is			.
+The parent file of	aml-compute-target-deploy.md	is			.
+The parent file of	aml-create-in-portal.md	is			.
+The parent file of	aml-dsvm-server.md	is			.
+The parent file of	aml-ui-prereq.md	is			.
+The parent file of	aml-your-server.md	is			.
+The parent file of	application-insights-limits.md	is			.
+The parent file of	azure-cognitive-services-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	azure-data-factory-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	azure-resource-groups-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	azure-storage-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	azure-storage-limits-vm-disks.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	disk-scalability-targets.md	.
+The parent file of	azure-subscription-limits-azure-resource-manager.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	azure-virtual-network-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	azure-websites-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	choose-training-images.md	is			.
+The parent file of	cloud-shell-try-it.md	is	D:\gitrep\azure-docs-pr\articles\aks	kubernetes-walkthrough-rm-template.md	.
+The parent file of	commercial-marketplace-test-drive.md	is			.
+The parent file of	container-gathering-required-parameters.md	is			.
+The parent file of	container-instances-vnet-limits.md	is			.
+The parent file of	container-registry-tasks-system-id-properties.md	is	D:\gitrep\azure-docs-pr\articles\container-registry	container-registry-tasks-authentication-key-vault.md	.
+The parent file of	container-registry-tasks-user-assigned-id.md	is	D:\gitrep\azure-docs-pr\articles\container-registry	container-registry-tasks-authentication-key-vault.md	.
+The parent file of	container-registry-tasks-user-id-properties.md	is	D:\gitrep\azure-docs-pr\articles\container-registry	container-registry-tasks-authentication-key-vault.md	.
+The parent file of	cosmos-db-create-dbaccount-mongodb.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	create-mongodb-dotnet.md	.
+The parent file of	cosmos-db-create-graph.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	create-graph-dotnet.md	.
+The parent file of	cosmos-db-create-sql-api-add-sample-data.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	create-sql-api-java.md	.
+The parent file of	cosmos-db-create-table.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	create-table-dotnet.md	.
+The parent file of	cosmos-db-create-table-add-sample-data.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	create-table-dotnet.md	.
+The parent file of	cosmos-db-delete-resource-group.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	create-cassandra-dotnet.md	.
+The parent file of	create-aks-resource.md	is			.
+The parent file of	create-container-instances-resource-from-azure-cli.md	is			.
+The parent file of	create-resource.md	is			.
+The parent file of	create-text-analytics-resource.md	is			.
+The parent file of	data-box-edge-gateway-password-best-practices.md	is			.
+The parent file of	data-box-edge-monitor-troubleshoot-compute.md	is			.
+The parent file of	data-lake-storage-gen1-rename-note.md	is			.
+The parent file of	detect-csharp.md	is			.
+The parent file of	detect-go.md	is			.
+The parent file of	detect-java.md	is			.
+The parent file of	detect-nodejs.md	is			.
+The parent file of	detect-python.md	is			.
+The parent file of	dictionary-csharp.md	is			.
+The parent file of	dictionary-go.md	is			.
+The parent file of	dictionary-java.md	is			.
+The parent file of	dictionary-nodejs.md	is			.
+The parent file of	dictionary-python.md	is			.
+The parent file of	digital-twins-create-portal.md	is			.
+The parent file of	digital-twins-familiarity.md	is			.
+The parent file of	digital-twins-management-api.md	is			.
+The parent file of	digital-twins-multipart.md	is			.
+The parent file of	digital-twins-object-id-types.md	is			.
+The parent file of	digital-twins-permissions.md	is			.
+The parent file of	digital-twins-permissions-legacy.md	is			.
+The parent file of	digital-twins-rbac-best-practices.md	is			.
+The parent file of	digital-twins-roles.md	is			.
+The parent file of	digital-twins-swagger.md	is			.
+The parent file of	find-azure-resource-info.md	is			.
+The parent file of	functions-add-storage-binding-csharp-library.md	is			.
+The parent file of	functions-add-storage-binding-csharp-library-code.md	is			.
+The parent file of	functions-bindings.md	is			.
+The parent file of	functions-bindings-event-hubs.md	is			.
+The parent file of	functions-cleanup-resources.md	is			.
+The parent file of	functions-connect-new-app-insights.md	is			.
+The parent file of	functions-create-function-app-cli.md	is			.
+The parent file of	functions-create-function-app-portal.md	is			.
+The parent file of	functions-create-function-core-tools.md	is			.
+The parent file of	functions-create-resource-group.md	is			.
+The parent file of	functions-create-storage-account.md	is			.
+The parent file of	functions-enable-log-stream-vs-code.md	is			.
+The parent file of	functions-extension-bundles.md	is			.
+The parent file of	functions-install-vs-code-extension.md	is			.
+The parent file of	functions-limits.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	functions-local-settings-file.md	is			.
+The parent file of	functions-premium-create.md	is			.
+The parent file of	functions-publish-project.md	is			.
+The parent file of	functions-publish-project-vscode.md	is			.
+The parent file of	functions-python-preview-note.md	is			.
+The parent file of	functions-run-function-test-local.md	is			.
+The parent file of	functions-run-function-test-local-vs.md	is			.
+The parent file of	functions-streaming-logs-core-tools.md	is			.
+The parent file of	functions-supported-languages.md	is			.
+The parent file of	functions-update-function-code.md	is			.
+The parent file of	functions-vstools-create.md	is			.
+The parent file of	functions-vstools-publish.md	is			.
+The parent file of	get-keys.md	is			.
+The parent file of	input-requirements.md	is			.
+The parent file of	install-dev-tools.md	is			.
+The parent file of	languages-csharp.md	is			.
+The parent file of	languages-go.md	is			.
+The parent file of	languages-java.md	is			.
+The parent file of	languages-nodejs.md	is			.
+The parent file of	languages-python.md	is			.
+The parent file of	machine-learning-service-aci-deploy-config.md	is			.
+The parent file of	machine-learning-service-aks-deploy-config.md	is			.
+The parent file of	machine-learning-service-inference-config.md	is			.
+The parent file of	machine-learning-service-install-extension.md	is			.
+The parent file of	machine-learning-service-local-deploy-config.md	is			.
+The parent file of	machine-learning-service-trusted-model.md	is			.
+The parent file of	machine-learning-update-web-service.md	is			.
+The parent file of	probability-threshold.md	is			.
+The parent file of	redis-cache-access-keys.md	is			.
+The parent file of	redis-cache-configure-stackexchange-redis-nuget.md	is			.
+The parent file of	resource-manager-tags-in-templates.md	is			.
+The parent file of	sentences-csharp.md	is			.
+The parent file of	sentences-go.md	is			.
+The parent file of	sentences-java.md	is			.
+The parent file of	sentences-nodejs.md	is			.
+The parent file of	sentences-python.md	is			.
+The parent file of	signalr-quickstart-create-instance.md	is			.
+The parent file of	spatial-anchors-unity-android-build-settings.md	is			.
+The parent file of	spatial-anchors-unity-configure-scene.md	is			.
+The parent file of	spatial-anchors-unity-ios-build-settings.md	is			.
+The parent file of	spatial-anchors-unity-ios-xcode.md	is			.
+The parent file of	storage-account-types-include.md	is			.
+The parent file of	storage-app-auth-lib-include.md	is			.
+The parent file of	storage-auth-rbac-roles-include.md	is			.
+The parent file of	storage-auth-sas-intro-include.md	is			.
+The parent file of	storage-auth-user-delegation-include.md	is			.
+The parent file of	storage-blob-dotnet-resources-include.md	is			.
+The parent file of	storage-blob-rehydrate-include.md	is			.
+The parent file of	storage-common-redundancy-grs.md	is			.
+The parent file of	storage-common-redundancy-lrs.md	is			.
+The parent file of	storage-common-redundancy-options.md	is			.
+The parent file of	storage-common-redundancy-zrs.md	is			.
+The parent file of	storage-copy-account-key-portal.md	is			.
+The parent file of	storage-files-aad-auth-include.md	is			.
+The parent file of	storage-multi-protocol-access-preview.md	is			.
+The parent file of	storage-recommend-azure-ad-include.md	is			.
+The parent file of	storage-resource-id-include.md	is			.
+The parent file of	storage-sync-files-agent-update-policy.md	is			.
+The parent file of	storage-sync-files-scale-targets.md	is	D:\gitrep\azure-docs-pr\articles	azure-subscription-service-limits.md	.
+The parent file of	storsimple-8000-eol-banner.md	is			.
+The parent file of	storsimple-virtual-array-eol-banner.md	is			.
+The parent file of	time-series-insights-aad-registration.md	is			.
+The parent file of	translate-csharp.md	is			.
+The parent file of	translate-go.md	is			.
+The parent file of	translate-java.md	is			.
+The parent file of	translate-nodejs.md	is			.
+The parent file of	translate-python.md	is			.
+The parent file of	transliterate-csharp.md	is			.
+The parent file of	transliterate-go.md	is			.
+The parent file of	transliterate-java.md	is			.
+The parent file of	transliterate-nodejs.md	is			.
+The parent file of	transliterate-python.md	is			.
+The parent file of	verify-sentiment-analysis-container.md	is			.
+The parent file of	virtual-machines-common-dedicated-hosts.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	dedicated-hosts.md	.
+The parent file of	virtual-machines-common-dedicated-hosts-portal.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	dedicated-hosts-portal.md	.
+The parent file of	virtual-machines-common-dedicated-hosts-preview.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	dedicated-hosts.md	.
+The parent file of	virtual-machines-common-ephemeral.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	ephemeral-os-disks.md	.
+The parent file of	virtual-machines-common-mitigate-se.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	mitigate-se.md	.
+The parent file of	virtual-machines-common-premium-storage-performance.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	premium-storage-performance.md	.
+The parent file of	virtual-machines-common-prepay-reserved-vm-instances.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	prepay-reserved-vm-instances.md	.
+The parent file of	virtual-machines-common-reserved-vm-instance-size-flexibility.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	reserved-vm-instance-size-flexibility.md	.
+The parent file of	virtual-machines-common-shared-image-galleries.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	shared-image-galleries.md	.
+The parent file of	virtual-machines-common-sizes-general.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	sizes-general.md	.
+The parent file of	virtual-machines-common-sizes-gpu.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	sizes-gpu.md	.
+The parent file of	virtual-machines-common-sizes-memory.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	sizes-memory.md	.
+The parent file of	virtual-machines-common-sizes-older.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	sizes-previous-gen.md	.
+The parent file of	virtual-machines-common-sizes-previous-gen.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	sizes-previous-gen.md	.
+The parent file of	virtual-machines-disks-getting-started-ultra-ssd.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	disks-enable-ultra-ssd.md	.
+The parent file of	virtual-machines-faq-for-disks.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	faq-for-disks.md	.
+The parent file of	virtual-machines-image-builder-overview.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	image-builder-overview.md	.
+The parent file of	virtual-machines-linux-tutorial-wordpress.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	tutorial-lamp-stack.md	.
+The parent file of	virtual-machines-managed-disks-types-billing-and-fees.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	disks-types.md	.
+The parent file of	virtual-machines-managed-disks-types-overview.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	disks-types.md	.
+The parent file of	virtual-machines-n-series-linux-support.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	n-series-driver-setup.md	.
+The parent file of	virtual-machines-n-series-windows-support.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\windows	n-series-driver-setup.md	.
+The parent file of	virtual-machines-oracle-applications-bastion.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\workloads\oracle	oracle-oci-applications.md	.
+The parent file of	virtual-machines-oracle-applications-database.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\workloads\oracle	oracle-oci-applications.md	.
+The parent file of	virtual-machines-oracle-applications-identity.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\workloads\oracle	oracle-oci-applications.md	.
+The parent file of	virtual-machines-security-policy.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	security-policy.md	.
+The parent file of	virtual-machines-share-images-across-tenants.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	share-images-across-tenants.md	.
+The parent file of	virtual-wan-faq-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-wan	virtual-wan-about.md	.
+The parent file of	virtual-wan-partners-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-wan	virtual-wan-locations-partners.md	.
+The parent file of	virtual-wan-regions-include.md	is	D:\gitrep\azure-docs-pr\articles\virtual-wan	virtual-wan-locations-partners.md	.
+The parent file of	vm-vmss-security-attributes.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	virtual-machines-linux-security-attributes.md	.
+The parent file of	vs-install-cognitive-services-vsix.md	is			.
+The parent file of	webjobs-always-on-note.md	is			.
+The parent file of	windows-virtual-machines-sql-new-resource.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\windows\sql	virtual-machines-windows-ps-sql-keyvault.md	.
+
