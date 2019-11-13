@@ -1,0 +1,25 @@
+**********************Check Process Result(IncludeParentFile)**********************
+The parent file of	disk-storage-premium-ssd-sizes.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	tutorial-manage-disks.md	.
+The parent file of	virtual-machines-common-backup-and-disaster-recovery-for-azure-iaas-disks.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	backup-and-disaster-recovery-for-azure-iaas-disks.md	.
+The parent file of	virtual-machines-common-image-terms.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	cli-ps-findimage.md	.
+The parent file of	virtual-machines-common-infrastructure-automation.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	infrastructure-automation.md	.
+The parent file of	virtual-machines-common-marketplace-plan.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	cli-ps-findimage.md	.
+The parent file of	virtual-machines-common-premium-storage-performance.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	premium-storage-performance.md	.
+The parent file of	virtual-machines-common-shared-image-galleries.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	shared-image-galleries.md	.
+The parent file of	virtual-machines-common-sizes-general.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	sizes-general.md	.
+The parent file of	virtual-machines-common-sizes-memory.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	sizes-memory.md	.
+The parent file of	virtual-machines-common-ssh-overview.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	create-ssh-keys-detailed.md	.
+The parent file of	virtual-machines-common-ssh-support.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	create-ssh-keys-detailed.md	.
+The parent file of	virtual-machines-common-tag.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	tag.md	.
+The parent file of	virtual-machines-extensions-deprecation-statement.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\extensions	custom-script-linuxOstc.md	.
+The parent file of	virtual-machines-faq-for-disks.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	faq-for-disks.md	.
+The parent file of	virtual-machines-managed-disks-overview.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	managed-disks-overview.md	.
+The parent file of	virtual-machines-managed-disks-types-billing-and-fees.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	disks-types.md	.
+The parent file of	virtual-machines-managed-disks-types-overview.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	disks-types.md	.
+The parent file of	virtual-machines-monitor.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	monitor.md	.
+The parent file of	virtual-machines-n-series-considerations.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	sizes-gpu.md	.
+The parent file of	virtual-machines-n-series-linux-support.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	n-series-driver-setup.md	.
+The parent file of	virtual-machines-n-series-windows-support.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\windows	n-series-driver-setup.md	.
+The parent file of	virtual-machines-security-policy.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	security-policy.md	.
+The parent file of	virtual-machines-using-managed-disks-template-deployments.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	using-managed-disks-template-deployments.md	.
+

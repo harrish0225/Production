@@ -1,1 +1,4 @@
-about-disks-and-vhds.md	articles/virtual-machines/linux/classic	01/19/2019
+table-storage-cloud-service-nodejs.md	articles/cosmos-db	10/18/2019
+site-recovery-vmware-to-azure-manage-vCenter.md	articles/site-recovery	10/18/2019
+vmm-to-vmm-walkthrough-replication.md	articles/site-recovery	10/18/2019
+virtual-network-nsg-manage-log.md	articles/virtual-network	10/18/2019

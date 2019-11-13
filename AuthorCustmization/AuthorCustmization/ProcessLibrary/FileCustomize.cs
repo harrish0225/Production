@@ -290,6 +290,14 @@ namespace AuthorCustmization.ProcessLibrary
             }
         }
 
+        public bool CheckCustomizedFileIsNewFile(string gArticlepath, string cArticlePath, string gIncludepath, string cIncludepath)
+        {
+            bool isNewFile = false;
+
+            isNewFile = System.IO.File.Exists(this.Fullpath.Replace(gArticlepath, cArticlePath).Replace(gIncludepath, cIncludepath));
+
+            return isNewFile;
+        }
         public void ProcessConvertJson(ref string articleContent)
         {
 
@@ -378,6 +386,36 @@ namespace AuthorCustmization.ProcessLibrary
                     Console.WriteLine(string.Format("{0}{1} Regular Express {2} --> {3} takes\t{4}", ConvertCategory.AuthorReplacement.ToString(), i, urlGlobal, urlMooncake, sTakeTime));
 #endif
                 }
+
+
+                // Append Update_Description for all the articles
+                // New files
+                //
+                string message = "";
+
+                string gArticlediskpath = CommonFun.GetConfigurationValue("GlobalArticleDir", ref message);
+                string cArticlediskpath = CommonFun.GetConfigurationValue("ChinaArticleDir", ref message);
+                string gIncludediskpath = CommonFun.GetConfigurationValue("GlobalIncludeDir", ref message);
+                string cIncludediskpath = CommonFun.GetConfigurationValue("ChinaIncludeDir", ref message);
+
+                bool isExistFile = this.CheckCustomizedFileIsNewFile(gArticlediskpath,cArticlediskpath,gIncludediskpath,cIncludediskpath);
+
+                if(isExistFile == false )
+                {
+                    string fileDescription = this.File.Replace("-", " ");
+                    fileDescription = fileDescription.Substring(0, fileDescription.Length - 3);
+
+                    articleContent += "\n\n";
+                    articleContent += string.Format("<!-- Update_Description: new article about {0} -->", fileDescription);
+                    articleContent += "\n";
+                    articleContent += string.Format("<!--NEW.date: {0}-->", this.CustomizedDate);
+                }
+                else
+                {
+                    articleContent += "\n\n";
+                    articleContent += string.Format("<!-- Update_Description: update meta properties, wording update, update link -->");
+                }
+
             }
 
 

@@ -58,13 +58,15 @@ namespace LiveSXSUpdate.ProcessLibrary
         analysis_services,
         aks,
         azure_resource_manager,
-        cosmos_db,
         container_registry,
+        cosmos_db,
+        firewall,
         service_fabric,
         site_recovery,
         traffic_manager,
         virtual_machines,
         virtual_network,
+        virtual_wan,
     }
 
 

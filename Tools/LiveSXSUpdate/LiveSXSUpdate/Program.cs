@@ -124,6 +124,8 @@ namespace LiveSXSUpdate
 
             string[] para = new string[] { };
 
+            int iRemoveFileCount = 0;
+
             for (int i=0; i < threadCount; i++)
             {
                 para = (string[])arrFile[i];
@@ -133,13 +135,21 @@ namespace LiveSXSUpdate
 
 
                 FileCustomize curtFile = new FileCustomize(i, filename, directory, customizedate, category);
-                fileList.Add(curtFile);
-                newThreads[i] = new Thread(new ThreadStart(curtFile.ProcessFileCustomize));
-                newThreads[i].Start();
+
+                if(System.IO.File.Exists(curtFile.FullMasterPath) == true)
+                {
+                    fileList.Add(curtFile);
+                    newThreads[i - iRemoveFileCount] = new Thread(new ThreadStart(curtFile.ProcessFileCustomize));
+                    newThreads[i - iRemoveFileCount].Start();
 #if DEBUG
                 newThreads[i].Join();
 #endif
-                
+                }else
+                {
+                    iRemoveFileCount += 1;
+                }
+
+
             }
             
 
@@ -148,7 +158,7 @@ namespace LiveSXSUpdate
             {
                 Thread.Sleep(10000);
                 allThreadOver = true;
-                for (int i = 0; i < threadCount; i++)
+                for (int i = 0; i < threadCount-iRemoveFileCount; i++)
                 {
                     if (newThreads[i].ThreadState != ThreadState.Stopped)
                     {

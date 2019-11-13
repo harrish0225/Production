@@ -294,7 +294,7 @@
       "comment": "replace HashCode with Master-SXS branch", //"Title": "^\\s*---\\s*\\ntitle:\\s*(?<title>[\\S\\s]*)\\s*\\|\\s*Azure(\"?)",
       "Source": "(\\<span data-(t|s)tu-id=\\\"(?<HashCode>[a-z0-9]{5})-[0-9]{3}\\\"\\>)",
       "Target": "(\\<span data-(t|s)tu-id=\\\"(?<HashCode>[a-z0-9]{5})-[0-9]{3}\\\"\\>)",
-      "SourceRegex": "<span data-(t|s)tu-id=\\\"{0}-([0-9]{3})\\\">",
+      "SourceRegex": "<span data-(t|s)tu-id=\\\"{0}-([0-9]{3,5})\\\">",
       "TargetRegex": "<span data-$1tu-id=\"{0}-$2\">"
     }
   ],
