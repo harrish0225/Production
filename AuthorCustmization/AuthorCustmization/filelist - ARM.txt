@@ -1,0 +1,10 @@
+template-tutorial-add-functions.md	articles/azure-resource-manager	11/25/2019
+template-tutorial-add-outputs.md	articles/azure-resource-manager	11/25/2019
+template-tutorial-add-parameters.md	articles/azure-resource-manager	11/25/2019
+template-tutorial-add-resource.md	articles/azure-resource-manager	11/25/2019
+template-tutorial-add-tags.md	articles/azure-resource-manager	11/25/2019
+template-tutorial-add-variables.md	articles/azure-resource-manager	11/25/2019
+template-tutorial-create-first-template.md	articles/azure-resource-manager	11/25/2019
+template-tutorial-export-template.md	articles/azure-resource-manager	11/25/2019
+template-tutorial-quickstart-template.md	articles/azure-resource-manager	11/25/2019
+template-tutorial-use-parameter-file.md	articles/azure-resource-manager	11/25/2019

@@ -60,20 +60,90 @@
       "mooncake": "-->\n\n",
       "comments": "Repalce with two enter Key after -->"
     }
-
-
   ],
   "URLReplacement": [
+	  {
+      "service": "ALL",
+      "global": "windows\\.net",
+      "mooncake": "chinacloudapi.cn",
+      "comments": "Global endpoint double check for reference."
+    },
+	  {
+      "service": "ALL",
+      "global": "cloudapp\\.net",
+      "mooncake": "chinacloudapp.cn",
+      "comments": "Global endpoint double check for reference."
+    },
+	  {
+      "service": "ALL",
+      "global": "management\\.azure\\.com",
+      "mooncake": "management.chinacloudapi.cn",
+      "comments": "Global endpoint double check for reference."
+    },
+	  {
+      "service": "ALL",
+      "global": "azurehdinsight\\.net",
+      "mooncake": "azurehdinsight.cn",
+      "comments": "Global endpoint double check for reference."
+    },
+	  {
+      "service": "ALL",
+      "global": "onmicrosoft\\.com",
+      "mooncake": "partner.onmschina.cn",
+      "comments": "Global endpoint double check for reference."
+    },
+	  {
+      "service": "ALL",
+      "global": "login\\.microsoftonline\\.com",
+      "mooncake": "login.partner.microsoftonline.cn",
+      "comments": "Global endpoint double check for reference."
+    },
+	{
+      "service": "ALL",
+      "global": "graph\\.(microsoft\\.com|chinacloudapi\\.cn)",
+      "mooncake": "microsoftgraph.chinacloudapi.cn",
+      "comments": "Global endpoint double check for reference."
+    },
+	  {
+      "service": "ALL",
+      "global": "api\\.projectoxford\\.ai/face/v1.0",
+      "mooncake": "api.cognitive.azure.cn/face/v1.0",
+      "comments": "Global endpoint double check for reference."
+    },
+	  {
+      "service": "ALL",
+      "global": "Connect-msolservice (\\-AzureEnvironment AzureChinaCloud)? ",
+      "mooncake": "Connect-msolservice -AzureEnvironment AzureChinaCloud",
+      "comments": "Global endpoint double check for reference."
+    },
+	  {
+      "service": "ALL",
+      "global": "(youtube\\.com|vimeo\\.com|twitter\\.com|facebook\\.com|instagram\\.com)",
+      "mooncake": "$1 (THIS WEB SITE IS NOT AVAILABLE ON AZURE CHINA CLOUD) ",
+      "comments": "Warning notes in customized files."
+    },
+    {
+      "service": "ALL",
+      "global": "(login\\.microsoftonline\\.com|login\\.partner\\.microsoftonline\\.cn)/common/oauth2/(authorize|token)",
+      "mooncake": "$1/common/oauth2/$2 (AZURE AD V2.0 AUTHORIZATION AND TOKEN ENDPOINTS ARE AVAILABLE FOR THE GLOBAL SERVICE, NOT NATIONAL CLOUD DEPLOYMENT.) ",
+      "comments": "Warning notes in customized files."
+    },
+    {
+      "service": "ALL",
+      "global": "(Public|public) IP (Address|address) (Prefix|prefix)",
+      "mooncake": "$1 IP $3",
+      "comments": ""
+    },
     {
       "service": "ALL",
       "global": "https?://portal\\.azure\\.com",
       "mooncake": "https://portal.azure.cn",
       "comments": ""
     },
-	{
+    {
       "service": "ALL",
-      "global": "(Public|public) IP (Address|address) (Prefix|prefix)",
-      "mooncake": "$1 IP $3",
+      "global": "(VNET|VNet|Vnet|vent) (Gateway|GateWay|gateway)",
+      "mooncake": "VPN Gateway",
       "comments": ""
     },
     {
@@ -98,6 +168,12 @@
       "service": "analysis-services",
       "global": "West Central US",
       "mooncake": "China North",
+      "comments": ""
+    },
+    {
+      "service": "All",
+      "global": "east(\s*)us",
+      "mooncake": "china$1east",
       "comments": ""
     },
     {
@@ -144,8 +220,8 @@
     },
     {
       "service": "ALL",
-      "global": "_([A-Za-z ]{1,})_\\.",
-      "mooncake": "_$1_ .",
+      "global": "_([A-Za-z ]{1,})_( *)(\\.|,)",
+      "mooncake": "_$1_ $3",
       "comments": "Correct the word lean format _XXXX_ . in English format "
     },
     {
@@ -809,8 +885,8 @@
     },
     {
       "service": "ALL",
-      "global": "\\(PAYG\\)",
-      "mooncake": "",
+      "global": "[\\s]{1,}(\\(?)PAYG(\\)?)[\\s]{1,}",
+      "mooncake": " $1Standard Pay-in-Advance Offer$2 ",
       "comments": "We have no pay as you go license type"
     },
     {
@@ -866,7 +942,7 @@
     {
       "service": "ALL",
       "global": "\\(https://aka\\.ms/a2a-cost-estimator\\)",
-      "mooncake": "(https://www.azure.cn/zh-cn/pricing/calculator/)",
+      "mooncake": "(https://www.azure.cn/pricing/calculator/)",
       "comments": "Calculator only have zh-cn version URL"
     },
     {
@@ -1172,10 +1248,16 @@
       "global": "Microsoft (backbone|peering|peer)",
       "mooncake": "Azure $1"
     },
+	Free Azure Trial
     {
       "service": "ALL",
       "global": "free account",
       "mooncake": "trial account"
+    },
+	{
+      "service": "ALL",
+      "global": "(F|f)ree (A|a)zure (T|t)rial",
+      "mooncake": "Azure 1RMB Trial"
     },
     {
       "service": "ALL",
@@ -1541,7 +1623,7 @@
     {
       "service": "ALL",
       "global": "https://azure\\.microsoft\\.com/features/azure-portal/availability/",
-      "mooncake": "https://www.azure.cn/support/service-dashboard/"
+      "mooncake": "https://status.azure.com/status/"
     },
     {
       "service": "ALL",
@@ -1887,16 +1969,6 @@
       "service": "ALL",
       "global": "https://aka\\.ms/CosmosDotnetAPIDocs",
       "mooncake": "https://docs.microsoft.com/dotnet/api/microsoft.azure.cosmos?view=azure-dotnet-preview"
-    },
-    {
-      "service": "ALL",
-      "global": "yoursetting",
-      "mooncake": "yoursetting"
-    },
-    {
-      "service": "ALL",
-      "global": "yoursetting",
-      "mooncake": "yoursetting"
     }
   ],
   "URLCorrection": [
@@ -2097,7 +2169,7 @@
     {
       "service": "ALL",
       "global": "https://www\\.azure\\.cn/regions/",
-      "mooncake": "https://www.azure.cn/support/service-dashboard/"
+      "mooncake": "https://status.azure.com/status/"
     },
     {
       "service": "ALL",
@@ -2494,19 +2566,19 @@
     {
       "service": "ALL",
       "global": "https://www\\.azure\\.cn/support/service-dashboard/services/",
-      "mooncake": "https://www.azure.cn/support/service-dashboard/"
+      "mooncake": "https://status.azure.com/status/"
     },
     {
       "service": "ALL",
-      "global": "(\\#{1,})[ \\s]*(\\<a[ \\s]+name\\=\\\")(\\S*)(\\\"\\>\\<\\/a\\>)(\\s*)?",
-      "mooncake": "$2$3$4\n$1 ",
-      "comments": "Step1: Convert ###<a name='XXX'></a> Title TO <a name='XXX'></a>\n ### Title"
+      "global": "(\\#{1,})[ \\s]*(\\<a[ \\s]+)(name|id)(\\=)\\\"?([^\\\"\\s]*)\\\"?(\\>\\<\\/a\\>|\\s*\\/\\>)(\\s*)?",
+      "mooncake": "$2name=\"$5\"></a>\n$1 ",
+      "comments": "Step1: Convert ###<a name/id='XXX'></a> Title TO <a name='XXX'></a>\n ### Title"
     },
     {
       "service": "ALL",
-      "global": "(\\#+)([\\t\\ \\v]{1,})(\\S+)",
+      "global": "(\\#+|\\-+|\\*+)([\\t\\ \\v]{1,})(\\S+)",
       "mooncake": "$1 $3",
-      "comments": "Step2: Convert ###    Title TO ### Title"
+      "comments": "Step2: Convert ###    Title TO ### Title; and remove the multiple blank with the single blank"
     },
     {
       "service": "ALL",
@@ -2527,7 +2599,7 @@
     {
       "service": "ALL",
       "global": "https://www\\.azure\\.cn/regions",
-      "mooncake": "https://www.azure.cn/support/service-dashboard/"
+      "mooncake": "https://status.azure.com/status/"
     },
     {
       "service": "ALL",
@@ -3119,10 +3191,10 @@
       "comments": "Remove the duplicate row of ?view=azure-cli-latest"
     },
     {
-      "service": "how-to-manage-database-account.md",
+      "service": "how-to-manage-database-account.md|ipv6-dual-stack-standard-internal-load-balancer-powershell.md",
       "global": "(E|e)ast(\\s*)(US|Us|uS|us)",
       "mooncake": "China$2East",
-      "comments": "Remove the duplicate row of ?view=azure-cli-latest"
+      "comments": ""
     },
     {
       "service": "ALL",
@@ -3279,9 +3351,9 @@
     },
      {
       "service": "ALL",
-      "global": "\\s{1,}\\\"Standard_ZRS\\\",",
+      "global": "\\s{1,}\\\"(Standard_ZRS|Premium_ZRS)\\\",",
       "mooncake": "",
-      "comments": "Remove the unvalid storage accout type of Standard_ZRS "
+      "comments": "Remove the unvalid storage accout type of Standard_ZRS/Premium_ZRS "
     },
     {
       "service": "ALL",
@@ -3318,6 +3390,18 @@
       "global": "([ \\+\\t\\f]*)(\\\"protectedSettings\\\":)?(\\s*)\\{([\\r|\\n| ]*)([^\\}\\r]*)([\\r|\\n| ]*)(\\\"StorageAccountName\\\"\\:|\\\"storageAccountName\\\"\\:)",
       "mooncake": "$1$2$3{$4$5$6\"storageAccountEndPoint\": \"https://core.chinacloudapi.cn/\",\r$4$7",
       "comments": "Add StorageAccountEndPoint in protectedSetting"
+    },
+    {
+      "service": "ALL",
+      "global": "\\((https://docs\\.microsoft\\.com)?/previous-versions/(azure)?",
+      "mooncake": "(https://docs.microsoft.com/previous-versions/azure",
+      "comments": "Change previous-version of Azure with right endpoint of https://docs.microsoft.com"
+    },
+    {
+      "service": "ALL",
+      "global": "https://www\\.azure\\.cn/(en-us/|zh-cn/)?support/service-dashboard/?(#services)?",
+      "mooncake": "https://status.azure.com/status/",
+      "comments": "Add StorageAccountEndPoint in protectedSetting"
      }
 
   ],
@@ -3330,18 +3414,23 @@
     }
   ],
   "ToolReplacement": [
-  
-     {
+    {
       "service": "ALL",
-      "global": "([ \\+\\t\\f]*)(\\\"protectedSettings\\\":)?(\\s*)\\{([\\r|\\n| ]*)([^\\}\\r]*)([\\r|\\n| ]*)(\\\"StorageAccountName\\\"\\:|\\\"storageAccountName\\\"\\:)",
-      "mooncake": "$1$2$3{$4$5$6\"storageAccountEndPoint\": \"https://core.chinacloudapi.cn/\",\r$4$7",
+      "global": "https://www\\.azure\\.cn/(en-us/|zh-cn/)?support/service-dashboard/?(#services)?",
+      "mooncake": "https://status.azure.com/status/",
       "comments": "Add StorageAccountEndPoint in protectedSetting"
-     }
+    },
+    {
+      "service": "ALL",
+      "global": "(VNET|VNet|Vnet|vent) (Gateway|GateWay|gateway)",
+      "mooncake": "VPN Gateway",
+      "comments": ""
+    }
   ],
   "MDFileCorrection": [
     {
       "service": "ALL", 
-	    "global": "mysetting",
+	  "global": "mysetting",
       "mooncake": "mysetting"
     }
   ],

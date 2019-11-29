@@ -61,12 +61,14 @@ namespace LiveSXSUpdate.ProcessLibrary
         container_registry,
         cosmos_db,
         firewall,
+        //private_link,
         service_fabric,
         site_recovery,
         traffic_manager,
         virtual_machines,
         virtual_network,
         virtual_wan,
+        includes,
     }
 
 
@@ -140,7 +142,7 @@ namespace LiveSXSUpdate.ProcessLibrary
             {
                 if (curtService.ToString().ToLower() == "includes".ToLower())
                 {
-                    diskpath = CommonFun.GetConfigurationValue("GlobalTargetIncludeDir", ref message);
+                    diskpath = CommonFun.GetConfigurationValue("GlobalTaregetIncludeDir", ref message);
                     parentpath = string.Format("{0}", diskpath);
                 }
                 else
@@ -316,8 +318,8 @@ namespace LiveSXSUpdate.ProcessLibrary
             if (para[0].ToLower() == "includes")
             {
 
-                diskpath = CommonFun.GetConfigurationValue("GlobalTargetIncludeDir", ref message);
-                diskmasterpath = CommonFun.GetConfigurationValue("GlobalSourceArticleDir", ref message);
+                diskpath = CommonFun.GetConfigurationValue("GlobalTaregetIncludeDir", ref message);
+                diskmasterpath = CommonFun.GetConfigurationValue("GlobalSourceIncludeDir", ref message);
                 relativefile = GetRightFileName(para);
                 this.Fullpath = string.Format(@"{0}\{2}", diskpath, relativefile, this.File);
                 this.FullMasterPath = string.Format(@"{0}\{1}\{2}", diskmasterpath, relativefile, this.File);
@@ -357,6 +359,63 @@ namespace LiveSXSUpdate.ProcessLibrary
 
         }
 
+        public bool isNewReleaseFile(ref string articleSourceContent, ref string articleTargetContent )
+        {
+            bool isMyFile = false;
+            string ruleCheck = string.Empty;
+
+            switch (this.ArticleCategory)
+            {
+                case FileCategory.Article:
+                    isMyFile = true;
+                    break;
+                case FileCategory.Includes:
+
+                    ruleCheck = "ms\\.author:\\s*v-yeche";
+
+                    Match match;
+
+                    match = Regex.Match(articleSourceContent, ruleCheck);
+
+                    if (match.Captures.Count > 0)
+                    {
+                        isMyFile = true;
+                    }
+
+                    break;
+            }
+            
+            if(isMyFile == true)
+            {
+                Match matchSource;
+                Match matchTarget;
+                string sourceHandOff = string.Empty;
+                string targetHandOff = string.Empty;
+
+                ruleCheck = "ms.lasthandoff:\\s*(?<HandOffDate>\\S*)";
+
+                matchSource = Regex.Match(articleSourceContent, ruleCheck);
+                if (matchSource.Groups.Count > 0)
+                {
+                    sourceHandOff = matchSource.Groups["HandOffDate"].ToString();
+                }
+
+                matchTarget = Regex.Match(articleTargetContent, ruleCheck);
+                if (matchTarget.Groups.Count > 0)
+                {
+                    targetHandOff = matchTarget.Groups["HandOffDate"].ToString();
+                }
+
+                if (sourceHandOff!=targetHandOff)
+                {
+                    articleTargetContent += "\n\r";
+                }
+
+            }
+
+
+            return isMyFile;
+        }
 
         public void ProcessConvertJson(ref string articleSourceContent,ref string articleTargetContent )
         {
@@ -395,8 +454,10 @@ namespace LiveSXSUpdate.ProcessLibrary
 
             //CLIReplacment Section
 
-            if (category == ConvertCategory.SXSUpdate)
+            if (category == ConvertCategory.SXSUpdate && isNewReleaseFile(ref articleSourceContent,ref articleTargetContent) == true)
             {
+
+
                 string ruleSource = string.Empty;
                 string ruleTarget = string.Empty;
                 string ruleSourceReg = string.Empty;

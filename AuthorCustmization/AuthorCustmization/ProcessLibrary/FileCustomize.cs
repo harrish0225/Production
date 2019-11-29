@@ -72,6 +72,7 @@ namespace AuthorCustmization.ProcessLibrary
         cosmos_db,
         container_registry,
         firewall,
+        private_link,
         service_fabric,
         site_recovery,
         sql_server_stretch_database,

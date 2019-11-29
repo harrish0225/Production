@@ -142,7 +142,7 @@ namespace LiveSXSUpdate
                     newThreads[i - iRemoveFileCount] = new Thread(new ThreadStart(curtFile.ProcessFileCustomize));
                     newThreads[i - iRemoveFileCount].Start();
 #if DEBUG
-                newThreads[i].Join();
+                    newThreads[i].Join();
 #endif
                 }else
                 {
