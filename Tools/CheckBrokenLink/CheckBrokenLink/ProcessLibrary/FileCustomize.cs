@@ -58,28 +58,28 @@ namespace CheckBrokenLink.ProcessLibrary
     //    virtual_network,
     //}
 
-    public enum InvolvedService
-    {
-        aks,
-        analysis_services,
-        azure_resource_manager,
-        container_registry,
-        cosmos_db,
-        resiliency,
-        service_fabric,
-        site_recovery,
-        sql_server_stretch_database,
-        traffic_manager,
-        virtual_machines,
-        virtual_network,
-        includes,
-    }
-
     //public enum InvolvedService
     //{
     //    aks,
+    //    analysis_services,
+    //    azure_resource_manager,
+    //    container_registry,
+    //    cosmos_db,
+    //    resiliency,
+    //    service_fabric,
+    //    site_recovery,
+    //    sql_server_stretch_database,
+    //    traffic_manager,
+    //    virtual_machines,
+    //    virtual_network,
     //    includes,
     //}
+
+    public enum InvolvedService
+    {
+        aks,
+        includes,
+    }
 
     public enum ReplaceParam
     {
@@ -88,7 +88,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
     public enum FileCategory
     {
-        Article,
+        Articles,
         Includes,
     }
 
@@ -162,7 +162,7 @@ namespace CheckBrokenLink.ProcessLibrary
         public string WarningMessage { get; set; }
 
 
-        FileCategory articleCategory = FileCategory.Article;
+        FileCategory articleCategory = FileCategory.Articles;
         public FileCategory ArticleCategory { get; set; }
 
         ArrayList checkFileList = new ArrayList();
@@ -218,7 +218,7 @@ namespace CheckBrokenLink.ProcessLibrary
                 diskpath = CommonFun.GetConfigurationValue("RepositoryENUSArticleDir", ref message);
                 relativefile = GetRightFileName(para);
                 this.FullPath = string.Format(@"{0}\{1}\{2}", diskpath, relativefile, this.File);
-                this.ArticleCategory = FileCategory.Article;
+                this.ArticleCategory = FileCategory.Articles;
 
             }
 
@@ -271,6 +271,36 @@ namespace CheckBrokenLink.ProcessLibrary
             this.CheckFileList = new ArrayList();
             //this.CancelToken = cancelToken;
 
+        }
+
+        public bool isMyManagedFile(ref string articleSourceContent)
+        {
+            bool isMyFile = false;
+            string ruleCheck = string.Empty;
+
+            switch (this.ArticleCategory)
+            {
+                case FileCategory.Articles:
+                    isMyFile = true;
+                    break;
+                case FileCategory.Includes:
+
+                    ruleCheck = "ms\\.author:\\s*v-yeche";
+
+                    Match match;
+
+                    match = Regex.Match(articleSourceContent, ruleCheck);
+
+                    if (match.Captures.Count > 0)
+                    {
+                        isMyFile = true;
+                    }
+
+                    break;
+            }
+
+
+            return isMyFile;
         }
 
         public FileCustomize(int id, string filename, string directory, string customizedate, ConvertCategory category, ConvertProcess process)
@@ -835,28 +865,32 @@ namespace CheckBrokenLink.ProcessLibrary
 
                 if(filePostfix ==".md")
                 {
-                    // Part I for Links of .md file.
-                    //string mdfilePatFirst = "[^(<!--)]\\[([^\\[\\]])*\\]([\\s]*)\\((?<mdfilename>[^\\(\\)]*)\\)";
-                    //string mdfilePatFirst = "(?!(<!--[\\s\\S]*))\\[([^\\[\\]])*\\]([\\s]*)\\((?<mdfilename>[^\\(\\)\\[\\]]*)\\)(?!(\\s*-->))";
-                    string mdfilePatFirst = "(?!(<!--[\\s\\S]*))\\[(?<labelname>[^\\[\\]]*)\\]([\\s]*)\\((?<mdfilename>[^\\(\\)\\[\\]]*)\\)(?!(\\s*-->))";
-                    matches = Regex.Matches(articleContent, mdfilePatFirst);
+                    if(this.ArticleCategory==FileCategory.Articles || this.isMyManagedFile(ref articleContent) == true)
+                    {
+                        // Part I for Links of .md file.
+                        //string mdfilePatFirst = "[^(<!--)]\\[([^\\[\\]])*\\]([\\s]*)\\((?<mdfilename>[^\\(\\)]*)\\)";
+                        //string mdfilePatFirst = "(?!(<!--[\\s\\S]*))\\[([^\\[\\]])*\\]([\\s]*)\\((?<mdfilename>[^\\(\\)\\[\\]]*)\\)(?!(\\s*-->))";
+                        string mdfilePatFirst = "(?!(<!--[\\s\\S]*))\\[(?<labelname>[^\\[\\]]*)\\]([\\s]*)\\((?<mdfilename>[^\\(\\)\\[\\]]*)\\)(?!(\\s*-->))";
+                        matches = Regex.Matches(articleContent, mdfilePatFirst);
 
-                    this.CheckMatches(matches, ref lstURL, ref articleContent);
+                        this.CheckMatches(matches, ref lstURL, ref articleContent);
 
-                    // Exception the C++ method style -->  [XXX]::MethodName
-                    // Invloved Sample 
-                    // 1.[XXX]: XXXXX 
-                    // 2.[XXX]: http(s)://XXXX
-                    // 3.[XXX]: XXX
-                    // 4.[XXX]: XXXXXX -->   '--> will show us it is link no need to verify in later process. 
+                        // Exception the C++ method style -->  [XXX]::MethodName
+                        // Invloved Sample 
+                        // 1.[XXX]: XXXXX 
+                        // 2.[XXX]: http(s)://XXXX
+                        // 3.[XXX]: XXX
+                        // 4.[XXX]: XXXXXX -->   '--> will show us it is link no need to verify in later process. 
 
-                    //string mdfilePatSecond = "(?!(<!--[\\s\\S]*))\\[([^\\[\\]]*)\\]([\\s]*)\\:([\\s]*)(?<mdfilename>(https?:)?[^:\\s]*)(?!(\\s*-->))";
-                    //string mdfilePatSecond = "(?!(<!--[\\s\\S]*))\\[([^\\[\\]])*\\]([\\s]*)\\:([\\s]*)(?<mdfilename>(http(s)?:)?[^:\\s\\[\\]]+(\\s*-->)?)";
-                    string mdfilePatSecond = "(?!(<!--[\\s\\S]*))\\[(?<labelname>[^\\[\\]]*)\\]([\\s]*)\\:([\\s]*)(?<mdfilename>(http(s)?:)?[^:\\s\\[\\]\\<]+(\\s*-->)?)";
+                        //string mdfilePatSecond = "(?!(<!--[\\s\\S]*))\\[([^\\[\\]]*)\\]([\\s]*)\\:([\\s]*)(?<mdfilename>(https?:)?[^:\\s]*)(?!(\\s*-->))";
+                        //string mdfilePatSecond = "(?!(<!--[\\s\\S]*))\\[([^\\[\\]])*\\]([\\s]*)\\:([\\s]*)(?<mdfilename>(http(s)?:)?[^:\\s\\[\\]]+(\\s*-->)?)";
+                        string mdfilePatSecond = "(?!(<!--[\\s\\S]*))\\[(?<labelname>[^\\[\\]]*)\\]([\\s]*)\\:([\\s]*)(?<mdfilename>(http(s)?:)?[^:\\s\\[\\]\\<]+(\\s*-->)?)";
 
-                    matches = Regex.Matches(articleContent, mdfilePatSecond);
+                        matches = Regex.Matches(articleContent, mdfilePatSecond);
 
-                    this.CheckMatches(matches, ref lstURL, ref articleContent);
+                        this.CheckMatches(matches, ref lstURL, ref articleContent);
+                    }
+                   
 
                 }
 
@@ -877,9 +911,20 @@ namespace CheckBrokenLink.ProcessLibrary
                     this.CheckMatches(matches, ref lstURL, ref articleContent);
                 }
 
-
-
                 this.CheckAllLinks(lstURL);
+
+                if(!string.IsNullOrEmpty(this.BrokenLink))
+                {
+                    articleContent += "\n\r";
+
+                    StreamWriter sw = null;
+
+                    sw = new StreamWriter(this.FullPath, false);
+
+                    sw.Write(articleContent);
+                    sw.Flush();
+
+                }
 
 
 
@@ -1295,9 +1340,7 @@ namespace CheckBrokenLink.ProcessLibrary
                 this.ProcessConvertJson(ref fullContent);
 
                 //Check Broken Link No need to modified the content.
-                //sw = new StreamWriter(this.Fullpath,false);
-                //sw.Write(fullcontent);
-                //sw.Flush();
+              
 
             }
             catch (Exception ex)

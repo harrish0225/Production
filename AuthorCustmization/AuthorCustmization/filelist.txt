@@ -1,4 +1,1 @@
-virtual-network-cli-sample-ipv6-dual-stack.md	articles/virtual-network/scripts	12/02/2019
-virtual-network-cli-sample-ipv6-dual-stack-standard-load-balancer.md	articles/virtual-network/scripts	12/02/2019
-virtual-network-powershell-sample-ipv6-dual-stack.md	articles/virtual-network/scripts	12/02/2019
-virtual-network-powershell-sample-ipv6-dual-stack-standard-load-balancer.md	articles/virtual-network/scripts	12/02/2019
+certificate-rotation.md	articles/aks	01/13/2020

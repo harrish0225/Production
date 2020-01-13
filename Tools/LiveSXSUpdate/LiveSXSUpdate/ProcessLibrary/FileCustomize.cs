@@ -93,7 +93,7 @@ namespace LiveSXSUpdate.ProcessLibrary
 
     public enum FileCategory
     {
-        Article,
+        Articles,
         Includes,
     }
 
@@ -270,7 +270,7 @@ namespace LiveSXSUpdate.ProcessLibrary
         public string WarningMessage { get; set; }
 
 
-        FileCategory articleCategory = FileCategory.Article;
+        FileCategory articleCategory = FileCategory.Articles;
         public FileCategory ArticleCategory { get; set; }
 
         ArrayList checkFileList = new ArrayList();
@@ -311,7 +311,7 @@ namespace LiveSXSUpdate.ProcessLibrary
                 relativefile = GetRightFileName(para);
                 this.Fullpath = string.Format(@"{0}\{1}\{2}", diskpath, relativefile, this.File);
                 this.FullMasterPath = string.Format(@"{0}\{1}\{2}", diskmasterpath, relativefile, this.File);
-                this.ArticleCategory = FileCategory.Article;
+                this.ArticleCategory = FileCategory.Articles;
 
             }
 
@@ -366,7 +366,7 @@ namespace LiveSXSUpdate.ProcessLibrary
 
             switch (this.ArticleCategory)
             {
-                case FileCategory.Article:
+                case FileCategory.Articles:
                     isMyFile = true;
                     break;
                 case FileCategory.Includes:

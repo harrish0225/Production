@@ -1,0 +1,22 @@
+**********************Check Process Result(CheckBrokenLinkByFile)**********************
+1 : includes\virtual-machines-faq-for-disks.md
+F:\gitrep\mc-docs-pr.zh-cn.rockboyfor.sxs\articles\virtual-machines\windows\managed-disks-overview.md : correct.
+F:\gitrep\mc-docs-pr.zh-cn.rockboyfor.sxs\articles\virtual-machines\windows\managed-disks-overview.md : correct.
+F:\gitrep\mc-docs-pr.zh-cn.rockboyfor.sxs\articles\virtual-machines\scripts\virtual-machines-linux-cli-sample-copy-managed-disks-to-same-or-different-subscription.md : correct.
+F:\gitrep\mc-docs-pr.zh-cn.rockboyfor.sxs\articles\virtual-machines\scripts\virtual-machines-windows-powershell-sample-copy-managed-disks-to-same-or-different-subscription.md : correct.
+https://www.azure.cn/pricing/details/storage/ : OK
+https://www.azure.cn/pricing/details/storage/ : OK
+https://www.azure.cn/pricing/details/storage/ : OK
+https://www.azure.cn/pricing/details/storage/ : OK
+https://www.azure.cn/pricing/details/storage/ : OK
+https://www.azure.cn/pricing/details/storage/ : OK
+https://docs.azure.cn/zh-cn/storage/common/storage-use-azcopy : OK
+https://docs.azure.cn/zh-cn/storage/common/storage-use-azcopy : OK
+https://docs.azure.cn/zh-cn/virtual-machines/windows/convert-disk-storage : OK
+https://docs.azure.cn/zh-cn/virtual-machines/windows/convert-disk-storage : OK
+https://www.azure.cn/pricing/details/storage/ : OK
+https://www.azure.cn/pricing/details/storage/ : OK
+
+--------------Abort List in this round of Check Broken Link--------------
+Total 0 abourt thread in the round of Check Broken List.
+

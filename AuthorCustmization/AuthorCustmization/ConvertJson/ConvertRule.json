@@ -14,15 +14,15 @@
     },
     {
       "service": "ALL",
-      "global": "^([\\s]*)ms.date:([\\s ]*)(.*)",
-      "mooncake": "$1ms.date: {CustimzedDate}",
-      "comments": "change the ms.date(global) to origin.date(mooncake)"
+      "global": "^([\\s]*)ms\\.date:([\\s ]*)(.*)",
+      "mooncake": "$1ms.date: {CustimzedDate}\n$1ms.author: v-yeche",
+      "comments": "change the ms.date(global) to origin.date(mooncake); ADD MS.AUTHOR META BEFORE CUSTOMIZEDATE"
     },
     {
       "service": "ALL",
-      "global": "^([\\s]*)ms.author:([\\s ]*)(.*)",
+      "global": "^([\\s]*)ms\\.author:([\\s ]*.*)(([\\s]*)ms\\.author:([\\s ]*.*))?",
       "mooncake": "$1ms.author: v-yeche",
-      "comments": "modify the ms.author in mooncake"
+      "comments": "modify the ms.author in mooncake: add the posibility with two duplicated ms\\.author item"
     },
     {
       "service": "ALL",
@@ -59,6 +59,12 @@
       "global": "-->[\\n\\r]{3,}",
       "mooncake": "-->\n\n",
       "comments": "Repalce with two enter Key after -->"
+    },
+	  {
+      "service": "ALL",
+      "global": "( instead of using CloudShell| instead of from the Azure Cloud (s|S)hell)",
+      "mooncake": "",
+      "comments": "Remove the words of  instead of using CloudShell"
     }
   ],
   "URLReplacement": [
@@ -110,10 +116,22 @@
       "mooncake": "api.cognitive.azure.cn/face/v1.0",
       "comments": "Global endpoint double check for reference."
     },
-	  {
+    {
       "service": "ALL",
       "global": "Connect-msolservice (\\-AzureEnvironment AzureChinaCloud)? ",
       "mooncake": "Connect-msolservice -AzureEnvironment AzureChinaCloud",
+      "comments": "Global endpoint double check for reference."
+    },
+    {
+      "service": "ALL",
+      "global": "https://gallery\\.azure\\.com",
+      "mooncake": "https://gallery.chinacloudapi.cn",
+      "comments": "Global endpoint double check for reference."
+    },
+    {
+      "service": "ALL",
+      "global": "https://microsoftgraph\\.chinacloudapi\\.cn",
+      "mooncake": "https://graph.chinacloudapi.cn",
       "comments": "Global endpoint double check for reference."
     },
 	  {
@@ -172,8 +190,14 @@
     },
     {
       "service": "All",
-      "global": "east(\s*)us",
+      "global": "east(\\s*)us",
       "mooncake": "china$1east",
+      "comments": ""
+    },
+    {
+      "service": "All",
+      "global": "/active\\-directory/managed\\-service\\-identity/",
+      "mooncake": "/active-directory/managed-identities-azure-resources/",
       "comments": ""
     },
     {
@@ -184,26 +208,32 @@
     },
     {
       "service": "ALL",
-      "global": "https://aka\\.ms/aks\\-cluster\\-failed",
+      "global": "https?://aka\\.ms/aks\\-cluster\\-failed",
       "mooncake": "[aks-cluster-failed](troubleshooting.md#im-receiving-errors-that-my-cluster-is-in-failed-state-and-upgrading-or-scaling-will-not-work-until-it-is-fixed)",
       "comments": ""
     },
     {
       "service": "ALL",
-      "global": "https://aka\\.ms/aks\\-pending\\-upgrade",
+      "global": "https?://aka\\.ms/aks\\-pending\\-upgrade",
       "mooncake": "[aks-pending-upgrade](troubleshooting.md#im-receiving-errors-when-trying-to-upgrade-or-scale-that-state-my-cluster-is-being-currently-being-upgraded-or-has-failed-upgrade)",
       "comments": ""
     },
     {
       "service": "ALL",
-      "global": "(https://)?aka\\.ms/aks\\-pending\\-operation",
+      "global": "https?://aka\\.ms/aks\\-pending\\-operation",
       "mooncake": "[aks-pending-operation](troubleshooting.md#im-receiving-errors-when-trying-to-create-update-scale-delete-or-upgrade-cluster-that-operation-is-not-allowed-as-another-operation-is-in-progress)",
       "comments": ""
     },
     {
       "service": "ALL",
-      "global": "",
-      "mooncake": "",
+      "global": "https?://aka\\.ms/exportTemplateViaAdf",
+      "mooncake": "https://docs.azure.cn/data-factory/copy-clone-data-factory",
+      "comments": ""
+    },
+    {
+      "service": "ALL",
+      "global": "https?://aka\\.ms/migrateclassicresourcetoarm",
+      "mooncake": "https://docs.azure.cn/virtual-machines/windows/migration-classic-resource-manager-overview",
       "comments": ""
     },
     {
@@ -220,7 +250,7 @@
     },
     {
       "service": "ALL",
-      "global": "_([A-Za-z ]{1,})_( *)(\\.|,)",
+      "global": "_([A-Z0-9a-z ]{1,})_( *)(\\.|,|\\:)",
       "mooncake": "_$1_ $3",
       "comments": "Correct the word lean format _XXXX_ . in English format "
     },
@@ -345,13 +375,13 @@
       "mooncake": "contoso-east2.chinacloudapp.cn"
     },
     {
-      "service": "ALL",
+      "service": "deploy-cli.md|deploy-ps.md",
       "global": "www\\.google\\.com",
       "mooncake": "www.qq.com",
       "comments": "Correct the wrong update"
     },
     {
-      "service": "ALL",
+      "service": "deploy-cli.md|deploy-ps.md",
       "global": "Google",
       "mooncake": "QQ",
       "comments": "Correct the wrong update"
@@ -1248,21 +1278,26 @@
       "global": "Microsoft (backbone|peering|peer)",
       "mooncake": "Azure $1"
     },
-	Free Azure Trial
     {
       "service": "ALL",
       "global": "free account",
       "mooncake": "trial account"
     },
-	{
+    {
       "service": "ALL",
       "global": "(F|f)ree (A|a)zure (T|t)rial",
       "mooncake": "Azure 1RMB Trial"
     },
     {
       "service": "ALL",
-      "global": "```posh",
+      "global": "```([ \\s]*)posh",
       "mooncake": "```powershell",
+      "comment": "Replace the abbrevation format."
+    },
+    {
+      "service": "ALL",
+      "global": "```([ \\s]*)csharp",
+      "mooncake": "```csharp",
       "comment": "Replace the abbrevation format."
     },
     {
@@ -1275,6 +1310,12 @@
       "service": "ALL",
       "global": "```(azure|Azure|az|Az)?(-)?(cli|CLI)-?interactive",
       "mooncake": "```$1$3"
+    },
+    {
+      "service": "ALL",
+      "global": "```([ \\s]*)(xml|json|csharp|python)",
+      "mooncake": "```$2",
+      "comment": "Replace the abbrevation format."
     },
     {
       "service": "ALL",
@@ -1442,7 +1483,7 @@
     },
     {
       "service": "cosmos-db",
-      "global": "([\\s]){1}global([\\s]){1}(?!(order|consistency models))",
+      "global": "([\\s]){1}global([\\s]){1}(?!(order|consistency models|variables|unique))",
       "mooncake": " multiple-regional ",
       "comments": "It is last step to update globally single words. except for the order|consistency models."
     },
@@ -1657,6 +1698,11 @@
       "service": "ALL",
       "global": "^([\\s]*)(```[\\s\\S]*)(az login)([\\s\\S]*```)",
       "mooncake": "$1$2az cloud set -n AzureChinaCloud\n$1az login\n$1# az cloud set -n AzureCloud   //means return to global azure$4"
+    },
+    {
+      "service": "ALL",
+      "global": "^([\\s]*)(```[\\s\\S]*)(azure login)([\\s\\S]*```)",
+      "mooncake": "$1$2$1azure login -e AzureChinaCloud\n$4"
     },
     {
       "service": "ALL",
@@ -3387,7 +3433,7 @@
     },
     {
       "service": "ALL",
-      "global": "([ \\+\\t\\f]*)(\\\"protectedSettings\\\":)?(\\s*)\\{([\\r|\\n| ]*)([^\\}\\r]*)([\\r|\\n| ]*)(\\\"StorageAccountName\\\"\\:|\\\"storageAccountName\\\"\\:)",
+      "global": "([ \\+\\t\\f]*)(\\\"protectedSettings\\\":)(\\s*)\\{([\\r|\\n| ]*)([^\\}\\r]*)([\\r|\\n| ]*)(\\\"StorageAccountName\\\"\\:|\\\"storageAccountName\\\"\\:)",
       "mooncake": "$1$2$3{$4$5$6\"storageAccountEndPoint\": \"https://core.chinacloudapi.cn/\",\r$4$7",
       "comments": "Add StorageAccountEndPoint in protectedSetting"
     },
@@ -3401,8 +3447,14 @@
       "service": "ALL",
       "global": "https://www\\.azure\\.cn/(en-us/|zh-cn/)?support/service-dashboard/?(#services)?",
       "mooncake": "https://status.azure.com/status/",
-      "comments": "Add StorageAccountEndPoint in protectedSetting"
-     }
+      "comments": ""
+    },
+    {
+      "service": "ALL",
+      "global": "https://status\\.azure\\.com/status/services/",
+      "mooncake": "https://status.azure.com/status/",
+      "comments": ""
+    }
 
   ],
   "CLIReplacement": [
@@ -3415,15 +3467,9 @@
   ],
   "ToolReplacement": [
     {
-      "service": "ALL",
-      "global": "https://www\\.azure\\.cn/(en-us/|zh-cn/)?support/service-dashboard/?(#services)?",
-      "mooncake": "https://status.azure.com/status/",
-      "comments": "Add StorageAccountEndPoint in protectedSetting"
-    },
-    {
-      "service": "ALL",
-      "global": "(VNET|VNet|Vnet|vent) (Gateway|GateWay|gateway)",
-      "mooncake": "VPN Gateway",
+      "service": "All",
+      "global": "/active\\-directory/managed\\-service\\-identity/",
+      "mooncake": "/active-directory/managed-identities-azure-resources/",
       "comments": ""
     }
   ],

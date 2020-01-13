@@ -243,7 +243,15 @@ namespace AuthorCustmization.ProcessLibrary
 
                 diskpath = CommonFun.GetConfigurationValue("GlobalIncludeDir", ref message);
                 relativefile = GetRightFileName(para);
-                this.Fullpath = string.Format(@"{0}\{2}", diskpath, relativefile, this.File);
+                switch (relativefile)
+                {
+                    case "":
+                        this.Fullpath = string.Format(@"{0}\{2}", diskpath, relativefile, this.File);
+                        break;
+                    default:
+                        this.Fullpath = string.Format(@"{0}\{1}\{2}", diskpath, relativefile, this.File);
+                        break;
+                }
                 this.ArticleCategory = FileCategory.Includes;
 
             }
@@ -376,6 +384,7 @@ namespace AuthorCustmization.ProcessLibrary
                     bMooncake = this.GetProcessConvertRule(ref JUrl, ConvertCategory.AuthorReplacement, i, ConvertItem.mooncake, ref urlMooncake);
                     if (bGlobal && bMooncake)
                     {
+
                         this.RepalceParameter(ref urlMooncake);
                         reg = new Regex(urlGlobal, RegexOptions.Multiline);
                         articleContent = reg.Replace(articleContent, urlMooncake);
@@ -1066,6 +1075,14 @@ namespace AuthorCustmization.ProcessLibrary
             string error = "";
             try
             {
+                string sDirectoryName = this.Fullpath;
+                sDirectoryName= sDirectoryName.Replace(this.File, "");
+
+                if (!System.IO.Directory.Exists(sDirectoryName))
+                {
+                    System.IO.Directory.CreateDirectory(sDirectoryName);
+                }
+
                 fs = new FileStream(this.Fullpath, FileMode.OpenOrCreate);
                 sr = new StreamReader(fs);
                 string fullcontent = sr.ReadToEnd();
