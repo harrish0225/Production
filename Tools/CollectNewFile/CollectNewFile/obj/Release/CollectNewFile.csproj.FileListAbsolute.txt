@@ -1,0 +1,16 @@
+D:\gitrep\Production\Tools\CollectNewFiles\Redirect\bin\Release\Newtonsoft.Json.dll
+D:\gitrep\Production\Tools\CollectNewFiles\Redirect\bin\Release\Newtonsoft.Json.xml
+D:\gitrep\Production\Tools\CollectNewFiles\Redirect\obj\Release\CollectNewFile.csprojResolveAssemblyReference.cache
+D:\gitrep\Production\Tools\CollectNewFiles\Redirect\bin\Release\CollectNewFile.exe.config
+D:\gitrep\Production\Tools\CollectNewFiles\Redirect\bin\Release\CollectNewFile.exe
+D:\gitrep\Production\Tools\CollectNewFiles\Redirect\bin\Release\CollectNewFile.pdb
+D:\gitrep\Production\Tools\CollectNewFiles\Redirect\obj\Release\CollectNewFile.exe
+D:\gitrep\Production\Tools\CollectNewFiles\Redirect\obj\Release\CollectNewFile.pdb
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Release\CollectNewFile.exe.config
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Release\CollectNewFile.exe
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Release\CollectNewFile.pdb
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Release\CollectNewFile.exe
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Release\CollectNewFile.pdb
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Release\Newtonsoft.Json.dll
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Release\Newtonsoft.Json.xml
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Release\CollectNewFile.csprojResolveAssemblyReference.cache

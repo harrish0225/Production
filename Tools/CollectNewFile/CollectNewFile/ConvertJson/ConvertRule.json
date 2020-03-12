@@ -1,0 +1,292 @@
+﻿{
+  "AuthorReplacement": [
+    {
+      "global": "^([\\s]*)author(s)?:([\\s ]*)(.*)",
+      "mooncake": "$1author: rockboyfor",
+      "comments": "modify the author with rockboyfor"
+    },
+    {
+      "global": "^([\\s]*)manager:([\\s ]*)(.*)",
+      "mooncake": "$1manager: digimobile",
+      "comments": "modify the manager with digimobile"
+    },
+    {
+      "global": "^([\\s]*)ms.date:([\\s ]*)(.*)",
+      "mooncake": "$1ms.date: {CustimzedDate}",
+      "comments": "change the ms.date(global) to origin.date(mooncake)"
+    },
+    {
+      "global": "^ms.author: .*",
+      "mooncake": "ms.author: v-yeche",
+      "comments": "modify the ms.author in mooncake"
+    }
+
+  ],
+
+  "URLReplacement": [
+    {
+      "global": "AzureCloud",
+      "mooncake": "AzureChinaCloud"
+    },
+    {
+      "global": "free account",
+      "mooncake": "trial account"
+    },
+    {
+      "global": "management\\.azure\\.com",
+      "mooncake": "management.chinacloudapi.cn"
+    },
+    {
+      "global": "\\(/templates/\\)",
+      "mooncake": "(https://docs.microsoft.com/en-us/azure/templates/)"
+    },
+    {
+      "global": "https://azure\\.microsoft\\.com/pricing/member-offers/msdn-benefits-details/",
+      "mooncake": "https://www.azure.cn/support/legal/offer-rate-plans/",
+      "comment": "Replace the Microsoft.com member-offers link"
+    },
+    {
+      "global": "https://aka\\.ms/azure-stream-analytics-get-started-iot",
+      "mooncake": "https://github.com/Azure/azure-stream-analytics/tree/master/Samples/GettingStarted"
+    },
+    {
+      "global": "([\\S|\\s]*)\\([\\s]*\\/architecture\\/([\\S|\\s]*)",
+      "mooncake": "$1(https://docs.microsoft.com/azure/architecture/$2",
+      "comment": "repalce (/architecture/XXXX) Format URL"
+    },
+    {
+      "global": "\\[\\!INCLUDE \\[cloud-shell-try-it(\\.md)?\\]\\(((\\.\\.\\/)*)includes\\/cloud-shell-try-it\\.md\\)\\]",
+      "mooncake": "[!INCLUDE [azure-cli-2-azurechinacloud-environment-parameter]($2includes/azure-cli-2-azurechinacloud-environment-parameter.md)]",
+      "comment": "replace [!INCLUDE [cloud-shell-try-it.md](../../../includes/cloud-shell-try-it.md)] "
+    },
+    {
+      "global": "https://azure\\.microsoft\\.com/",
+      "mooncake": "https://www.azure.cn/"
+    },
+    {
+      "global": "https://azure\\.microsoft\\.com/regions/?",
+      "mooncake": "https://www.azure.cn/support/service-dashboard/"
+    },
+    {
+      "global": "Microsoft Azure Datacenter IP Ranges",
+      "mooncake": "Microsoft Azure Datacenter IP Ranges in China"
+    },
+    {
+      "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)?download/details\\.aspx\\?id=41653",
+      "mooncake": "https://www.microsoft.com/download/details.aspx?id=42064",
+      "comment": "replace IP Range with mooncake https://azure.microsoft.com/regions/"
+    },
+    {
+      "global": "https://www\\.microsoft\\.com/(en-us/|zh-cn/)?download/confirmation\\.aspx\\?id=41653",
+      "mooncake": "https://www.microsoft.com/download/details.aspx?id=42064",
+      "comment": "replace IP Range with mooncake https://azure.microsoft.com/regions/"
+    },
+    {
+      "global": "https://azure\\.microsoft\\.com/features/azure-portal/availability/",
+      "mooncake": "https://www.azure.cn/support/service-dashboard/"
+    },
+    {
+      "global": "https://msdn\\.microsoft\\.com/library/azure/hh367516.aspx",
+      "mooncake": "../service-bus-messaging/service-bus-queues-topics-subscriptions.md"
+    },
+    {
+      "global": "http://aka\\.ms/servicefabricdocs",
+      "mooncake": "..//service-fabric/index.yml"
+    },
+    {
+      "global": "^([\\s]*)(```[\\s\\S]*)(az login)([\\s\\S]*```)",
+      "mooncake": "$1$2az cloud set -n AzureChinaCloud\n$1az login\n$1#az cloud set -n AzureCloud\n$1#return to global azure$4"
+    },
+    {
+      "global": "cloudapp\\.azure\\.com",
+      "mooncake": "cloudapp.chinacloudapi.cn"
+    },
+    {
+      "global": "\\(\\s*\\/?(dotnet|powershell|cli|rest|java|sql|api)(\\/\\S+)\\)",
+      "mooncake": "(https://docs.microsoft.com/$1$2)",
+      "comment": "replace the relative URL with global full URL format - Step 1"
+    },
+    {
+      "global": "https://docs\\.microsoft\\.com/\\S*java/",
+      "mooncake": "https://docs.azure.cn/java/",
+      "comment": "replace the relative URL with global full URL format - Step 2"
+    },
+    {
+      "global": "\\(https://docs\\.microsoft\\.com/(zh-cn/|en-us/|)cli/(azure/)?([^#]*)([#]?)([\\S]*)\\)",
+      "mooncake": "(https://docs.azure.cn/zh-cn/cli/$3?view=azure-cli-latest$4$5)",
+      "comment": "replace the relative URL with global full URL format - Step 2"
+    },
+    {
+      "global": "\\?view=azure-cli-latest\\?view=azure-cli-latest",
+      "mooncake": "?view=azure-cli-latest",
+      "comment": "Correction of Last Step"
+    },
+    {
+      "global": "\\([\\s]*\\/downloads\\/[\\s]*\\)",
+      "mooncake": "(https://www.azure.cn/downloads/)",
+      "comment": "replace (/download/) with https://www.azure.cn/downloads/"
+
+    },
+    {
+      "global": "https://msdn\\.microsoft\\.com/library/azure/dn782250.aspx",
+      "mooncake": "../cosmos-db/documentdb-sql-query-reference.md"
+    },
+    {
+      "global": "https://msdn\\.microsoft\\.com/library/azure/ee336235.aspx",
+      "mooncake": "../sql-database/sql-database-manage-logins.md"
+    },
+    {
+      "global": "powerbi\\.com",
+      "mooncake": "powerbi.cn"
+    },
+    {
+      "global": "https://msdn\\.microsoft\\.com/library/azure/ff683669.aspx",
+      "mooncake": "https://docs.azure.cn/zh-cn/"
+    },
+    {
+      "global": "https://aka\\.ms/ubw007",
+      "mooncake": "https://docs.azure.cn/cosmos-db"
+    },
+    {
+      "global": "https://aka\\.ms/acdbsla",
+      "mooncake": "https://www.azure.cn/support/sla/documentdb/"
+    },
+    {
+      "global": "https://azure\\.microsoft\\.com/marketplace/",
+      "mooncake": "https://market.azure.cn/"
+    },
+    {
+      "global": "(blob|queue|table|file)(\\.core\\.windows\\.net)([\\S|\\s]*)",
+      "mooncake": "$1.core.chinacloudapi.cn$3"
+    },
+    {
+      "global": "yoursetting",
+      "mooncake": "yoursetting"
+    },
+    {
+      "global": "yoursetting",
+      "mooncake": "yoursetting"
+    }
+  ],
+
+  "URLCorrection": [
+    {
+      "global": "https://docs\\.azure\\.cn/java/azure/",
+      "mooncake": "https://docs.azure.cn/java/"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/support/service-dashboard/services/",
+      "mooncake": "https://www.azure.cn/support/service-dashboard/"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/pricing/purchase-options/",
+      "mooncake": "https://www.azure.cn/pricing/overview/"
+    },
+    {
+      "global": "\\?toc=%2fazure%2f",
+      "mooncake": "?toc=%2f"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/regions/",
+      "mooncake": "https://www.azure.cn/support/service-dashboard/"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/offers/.*\\)",
+      "mooncake": "https://www.azure.cn/pricing/1rmb-trial-full)"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/marketplace/",
+      "mooncake": "https://azure.microsoft.com/marketplace/"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/documentation/scripts/",
+      "mooncake": "../automation/automation-runbook-gallery.md"
+    },
+    {
+      "global": "http://msdn\\.microsoft\\.com/library/azure/dn643629\\.aspx",
+      "mooncake": "https://docs.azure.cn/zh-cn/automation/"
+    },
+    {
+      "global": "https://msdn\\.microsoft\\.com/library/azure/dn788799\\.aspx",
+      "mooncake": "../site-recovery/site-recovery-vmm-to-azure.md"
+    },
+    {
+      "global": "https://msdn\\.microsoft\\.com/library/azure/dn469075\\.aspx",
+      "mooncake": "site-recovery-support-matrix-to-azure.md"
+    },
+    {
+      "global": "https://msdn\\.microsoft\\.com/library/azure/dn469075\\.aspx",
+      "mooncake": "../site-recovery/site-recovery-support-matrix-to-azure.md"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/support/support-azure/{1,2}overview",
+      "mooncake": "https://www.azure.cn/support/support-ticket-form",
+      "comment": "there are two variant /overview and //overview"
+    },
+    {
+      "global": "http://support\\.microsoft\\.com/oas/default.aspx\\?prid=16146",
+      "mooncake": "https://www.azure.cn/support/support-ticket-form"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/support/trust-center/",
+      "mooncake": "https://www.trustcenter.cn/"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/home/features/storage/blobs/",
+      "mooncake": "https://www.azure.cn/home/features/storage/"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/pricing/member-offers/msdn-benefits-details/",
+      "mooncake": "https://www.azure.cn/support/legal/offer-rate-plans/"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/pricing/member-offers/",
+      "mooncake": "https://www.azure.cn/support/legal/offer-rate-plans/"
+    },
+    {
+      "global": "http://go\\.microsoft\\.com/fwlink/\\?LinkId=325362",
+      "mooncake": "https://docs.azure.cn/zh-cn/app-service/"
+    },
+    {
+      "global": "https://azure\\.microsoft\\.com/account/",
+      "mooncake": "https://www.azure.cn/pricing/1rmb-trial/"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/blog/",
+      "mooncake": "https://azure.microsoft.com/blog"
+    },
+    {
+      "global": "chinacloudapp\\.cn",
+      "mooncake": "cloudapp.chinacloudapi.cn"
+    },
+    {
+      "global": "https://www\\.azure\\.cn/blog",
+      "mooncake": "https://azure.microsoft.com/blog/"
+    },
+    {
+      "global": "https://mva\\.microsoft\\.com/(en-us/)?training-courses/",
+      "mooncake": "https://mva.microsoft.com/en-US/training-courses/"
+    },
+    {
+      "global": "yoursetting",
+      "mooncake": "yoursetting"
+    }
+  ],
+  "CLIReplacement": [
+    {
+      "global": "\\(https://docs\\.microsoft\\.com/(zh-cn/|en-us/|)cli/(azure/)?([^#]*)([#]?)([\\S]*)\\)",
+      "mooncake": "(https://docs.azure.cn/zh-cn/cli/$3?view=azure-cli-latest$4$5)",
+      "comment": "replace the relative URL with global full URL format - Step 2"
+    },
+    {
+      "global": "\\?view=azure-cli-latest\\?view=azure-cli-latest",
+      "mooncake": "?view=azure-cli-latest",
+      "comment": "Correction of Next Step"
+    },
+    {
+      "global": "\\(https://docs.microsoft.com/cli/azure/",
+      "mooncake": "(https://docs.azure.cn/zh-cn/cli/",
+      "comment": "Correction of Last Step, the Regular can not over all the aspect"
+    }
+  ]
+}

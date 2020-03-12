@@ -1,0 +1,2976 @@
+
+Mooncake Redirections
+
+------------------------
+articles/site-recovery/migrate/tutorial-migrate-on-premises-to-azure.md
+Global Redirections
+
+Mooncake Redirections
+
+------------------------
+articles/site-recovery/concepts-azure-to-azure-architecture.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/concepts-azure-to-azure-architecture.md",
+        "redirect_url": "azure-to-azure-architecture",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/concepts-azure-to-azure-architecture.md",
+        "redirect_url": "azure-to-azure-architecture",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/concepts-hyper-v-to-azure-architecture.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/concepts-hyper-v-to-azure-architecture.md",
+        "redirect_url": "hyper-v-azure-architecture",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/concepts-hyper-v-to-azure-architecture.md",
+        "redirect_url": "hyper-v-azure-architecture",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/concepts-hyper-v-to-secondary-architecture.md
+Global Redirections
+
+Mooncake Redirections
+
+------------------------
+articles/site-recovery/concepts-on-premises-to-on-premises-networking.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/concepts-on-premises-to-on-premises-networking.md",
+        "redirect_url": "hyper-v-vmm-networking",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/concepts-on-premises-to-on-premises-networking.md",
+        "redirect_url": "hyper-v-vmm-networking",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-azure-to-azure.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-azure-to-azure.md",
+        "redirect_url": "azure-to-azure-quickstart",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-azure-to-azure.md",
+        "redirect_url": "azure-to-azure-quickstart",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-azure-to-azure-networking-guidance.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-azure-to-azure-networking-guidance.md",
+        "redirect_url": "azure-to-azure-about-networking",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-azure-to-azure-networking-guidance.md",
+        "redirect_url": "azure-to-azure-about-networking",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-azure-to-azure-troubleshoot-errors.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-azure-to-azure-troubleshoot-errors.md",
+        "redirect_url": "azure-to-azure-troubleshoot-errors",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-azure-to-azure-troubleshoot-errors.md",
+        "redirect_url": "azure-to-azure-troubleshoot-errors",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-capacity-planning-for-hyper-v-replication.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-capacity-planning-for-hyper-v-replication.md",
+        "redirect_url": "hyper-v-deployment-planner-overview",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-capacity-planning-for-hyper-v-replication.md",
+        "redirect_url": "hyper-v-deployment-planner-overview",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-deploy-with-powershell-resource-manager.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-deploy-with-powershell-resource-manager.md",
+        "redirect_url": "hyper-v-powershell-resource-manager",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-deploy-with-powershell-resource-manager.md",
+        "redirect_url": "hyper-v-powershell-resource-manager",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-failback-azure-to-vmware.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-failback-azure-to-vmware.md",
+        "redirect_url": "vmware-azure-failback",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-failback-azure-to-vmware.md",
+        "redirect_url": "/site-recovery/site-recovery-how-to-failback-azure-to-vmware",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-failback-from-azure-to-hyper-v.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-failback-from-azure-to-hyper-v.md",
+        "redirect_url": "hyper-v-azure-failback",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-failback-from-azure-to-hyper-v.md",
+        "redirect_url": "hyper-v-azure-failback",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-how-to-reprotect-azure-to-azure.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-how-to-reprotect-azure-to-azure.md",
+        "redirect_url": "azure-to-azure-how-to-reprotect",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-how-to-reprotect-azure-to-azure.md",
+        "redirect_url": "azure-to-azure-how-to-reprotect",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-hyper-v-deployment-planner.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-hyper-v-deployment-planner.md",
+        "redirect_url": "hyper-v-deployment-planner-overview",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-hyper-v-deployment-planner.md",
+        "redirect_url": "hyper-v-deployment-planner-overview",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-hyper-v-deployment-planner-analyze-report.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-hyper-v-deployment-planner-analyze-report.md",
+        "redirect_url": "hyper-v-deployment-planner-analyze-report",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-hyper-v-deployment-planner-analyze-report.md",
+        "redirect_url": "hyper-v-deployment-planner-analyze-report",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-hyper-v-deployment-planner-cost-estimation.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-hyper-v-deployment-planner-cost-estimation.md",
+        "redirect_url": "hyper-v-deployment-planner-cost-estimation",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-hyper-v-deployment-planner-cost-estimation.md",
+        "redirect_url": "hyper-v-deployment-planner-cost-estimation",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-hyper-v-deployment-planner-run.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-hyper-v-deployment-planner-run.md",
+        "redirect_url": "hyper-v-deployment-planner-run",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-hyper-v-deployment-planner-run.md",
+        "redirect_url": "hyper-v-deployment-planner-run",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-hyper-v-exclude-disk.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-hyper-v-exclude-disk.md",
+        "redirect_url": "hyper-v-exclude-disk",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-hyper-v-exclude-disk.md",
+        "redirect_url": "hyper-v-exclude-disk",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-migrate-azure-to-azure.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-migrate-azure-to-azure.md",
+        "redirect_url": "azure-to-azure-tutorial-migrate",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-migrate-azure-to-azure.md",
+        "redirect_url": "tutorial-migrate-azure-to-azure",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-monitoring-and-troubleshooting.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-monitoring-and-troubleshooting.md",
+        "redirect_url": "site-recovery-monitor-and-troubleshoot",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-monitoring-and-troubleshooting.md",
+        "redirect_url": "site-recovery-monitor-and-troubleshoot",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-network-mapping.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-network-mapping.md",
+        "redirect_url": "hyper-v-vmm-network-mapping",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-network-mapping.md",
+        "redirect_url": "hyper-v-vmm-network-mapping",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-network-mapping-azure-to-azure.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-network-mapping-azure-to-azure.md",
+        "redirect_url": "azure-to-azure-network-mapping",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-network-mapping-azure-to-azure.md",
+        "redirect_url": "azure-to-azure-network-mapping",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-performance-and-scaling-testing-on-premises-to-on-premises.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-performance-and-scaling-testing-on-premises-to-on-premises.md",
+        "redirect_url": "hyper-v-vmm-performance-results",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-performance-and-scaling-testing-on-premises-to-on-premises.md",
+        "redirect_url": "hyper-v-vmm-performance-results",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-replicate-azure-to-azure.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-replicate-azure-to-azure.md",
+        "redirect_url": "azure-to-azure-how-to-enable-replication",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-replicate-azure-to-azure.md",
+        "redirect_url": "azure-to-azure-how-to-enable-replication",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-support-matrix-azure-to-azure.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-support-matrix-azure-to-azure.md",
+        "redirect_url": "azure-to-azure-support-matrix",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-support-matrix-azure-to-azure.md",
+        "redirect_url": "azure-to-azure-support-matrix",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-test-failover-vmm-to-vmm.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-test-failover-vmm-to-vmm.md",
+        "redirect_url": "hyper-v-vmm-test-failover",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-test-failover-vmm-to-vmm.md",
+        "redirect_url": "hyper-v-vmm-test-failover",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-vmm-to-vmm-powershell-resource-manager.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-vmm-to-vmm-powershell-resource-manager.md",
+        "redirect_url": "hyper-v-vmm-powershell-resource-manager",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-vmm-to-vmm-powershell-resource-manager.md",
+        "redirect_url": "hyper-v-vmm-powershell-resource-manager",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/site-recovery-vmware-to-azure.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-vmware-to-azure.md",
+        "redirect_url": "vmware-azure-tutorial",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/site-recovery-vmware-to-azure.md",
+        "redirect_url": "/site-recovery/vmware-walkthrough-overview",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/support-matrix-hyper-v-to-azure.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/support-matrix-hyper-v-to-azure.md",
+        "redirect_url": "hyper-v-azure-support-matrix",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/support-matrix-hyper-v-to-azure.md",
+        "redirect_url": "hyper-v-azure-support-matrix",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/tutorial-dr-drill-secondary.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-dr-drill-secondary.md",
+        "redirect_url": "hyper-v-vmm-test-failover",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-dr-drill-secondary.md",
+        "redirect_url": "hyper-v-vmm-test-failover",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/tutorial-hyper-v-to-azure.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-hyper-v-to-azure.md",
+        "redirect_url": "hyper-v-azure-tutorial",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-hyper-v-to-azure.md",
+        "redirect_url": "hyper-v-azure-tutorial",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/tutorial-hyper-v-to-azure-failover-failback.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-hyper-v-to-azure-failover-failback.md",
+        "redirect_url": "hyper-v-failover-failback-tutorial",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-hyper-v-to-azure-failover-failback.md",
+        "redirect_url": "hyper-v-failover-failback-tutorial",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/tutorial-hyper-v-vmm-to-azure.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-hyper-v-vmm-to-azure.md",
+        "redirect_url": "hyper-v-vmm-azure-tutorial",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-hyper-v-vmm-to-azure.md",
+        "redirect_url": "hyper-v-vmm-azure-tutorial",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/tutorial-migrate-azure-to-azure.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-migrate-azure-to-azure.md",
+        "redirect_url": "azure-to-azure-tutorial-migrate",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-migrate-azure-to-azure.md",
+        "redirect_url": "azure-to-azure-tutorial-migrate",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/tutorial-prepare-on-premises-hyper-v.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-prepare-on-premises-hyper-v.md",
+        "redirect_url": "hyper-v-prepare-on-premises-tutorial",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-prepare-on-premises-hyper-v.md",
+        "redirect_url": "hyper-v-prepare-on-premises-tutorial",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/tutorial-vmm-to-vmm.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-vmm-to-vmm.md",
+        "redirect_url": "hyper-v-vmm-disaster-recovery",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-vmm-to-vmm.md",
+        "redirect_url": "hyper-v-vmm-disaster-recovery",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/tutorial-vmm-to-vmm-failover-failback.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-vmm-to-vmm-failover-failback.md",
+        "redirect_url": "hyper-v-vmm-failover-failback",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/tutorial-vmm-to-vmm-failover-failback.md",
+        "redirect_url": "hyper-v-vmm-failover-failback",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/site-recovery/upgrade-site-recovery-vaults.md
+Global Redirections
+        {
+        "source_path": "articles/site-recovery/upgrade-site-recovery-vaults.md",
+        "redirect_url": "site-recovery-overview",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/site-recovery/upgrade-site-recovery-vaults.md",
+        "redirect_url": "site-recovery-overview",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/stream-analytics/stream-analytics-operation-logs.md
+Global Redirections
+        {
+        "source_path": "articles/stream-analytics/stream-analytics-operation-logs.md",
+        "redirect_url": "/stream-analytics/stream-analytics-job-diagnostic-logs",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/stream-analytics/stream-analytics-operation-logs.md",
+        "redirect_url": "/stream-analytics/stream-analytics-job-diagnostic-logs",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/stream-analytics/stream-analytics-run-a-job.md
+Global Redirections
+        {
+        "source_path": "articles/stream-analytics/stream-analytics-run-a-job.md",
+        "redirect_url": "/stream-analytics/stream-analytics-get-started-with-azure-stream-analytics-to-process-data-from-iot-devices",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/stream-analytics/stream-analytics-run-a-job.md",
+        "redirect_url": "/stream-analytics/stream-analytics-get-started-with-azure-stream-analytics-to-process-data-from-iot-devices",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/stream-analytics/stream-analytics-sample-data-input.md
+Global Redirections
+        {
+        "source_path": "articles/stream-analytics/stream-analytics-sample-data-input.md",
+        "redirect_url": "/stream-analytics/stream-analytics-test-query",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/stream-analytics/stream-analytics-write-queries.md
+Global Redirections
+        {
+        "source_path": "articles/stream-analytics/stream-analytics-write-queries.md",
+        "redirect_url": "/stream-analytics/stream-analytics-get-started-with-azure-stream-analytics-to-process-data-from-iot-devices#create-an-azure-stream-analytics-query",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/stream-analytics/stream-analytics-write-queries.md",
+        "redirect_url": "/stream-analytics/stream-analytics-get-started-with-azure-stream-analytics-to-process-data-from-iot-devices#create-an-azure-stream-analytics-query",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/traffic-manager/disable-enable-or-delete-a-profile.md
+Global Redirections
+        {
+        "source_path": "articles/traffic-manager/disable-enable-or-delete-a-profile.md",
+        "redirect_url": "/traffic-manager/traffic-manager-manage-profiles",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/traffic-manager/disable-or-enable-an-endpoint.md
+Global Redirections
+        {
+        "source_path": "articles/traffic-manager/disable-or-enable-an-endpoint.md",
+        "redirect_url": "/traffic-manager/traffic-manager-manage-endpoints",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/traffic-manager/traffic-manager-configure-failover-routing-method.md
+Global Redirections
+        {
+        "source_path": "articles/traffic-manager/traffic-manager-configure-failover-routing-method.md",
+        "redirect_url": "/traffic-manager/traffic-manager-configure-priority-routing-method",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/traffic-manager/traffic-manager-configure-failover-routing-method.md",
+        "redirect_url": "/traffic-manager/traffic-manager-configure-priority-routing-method",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/traffic-manager/traffic-manager-configure-round-robin-routing-method.md
+Global Redirections
+        {
+        "source_path": "articles/traffic-manager/traffic-manager-configure-round-robin-routing-method.md",
+        "redirect_url": "/traffic-manager/traffic-manager-configure-weighted-routing-method",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/traffic-manager/traffic-manager-configure-round-robin-routing-method.md",
+        "redirect_url": "/traffic-manager/traffic-manager-configure-weighted-routing-method",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/traffic-manager/traffic-manager-configure-routing-method.md
+Global Redirections
+        {
+        "source_path": "articles/traffic-manager/traffic-manager-configure-routing-method.md",
+        "redirect_url": "/traffic-manager/traffic-manager-configure-priority-routing-method",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/traffic-manager/traffic-manager-configure-routing-method.md",
+        "redirect_url": "/traffic-manager/traffic-manager-configure-priority-routing-method",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/traffic-manager/traffic-manager-endpoints.md
+Global Redirections
+        {
+        "source_path": "articles/traffic-manager/traffic-manager-endpoints.md",
+        "redirect_url": "/traffic-manager/traffic-manager-manage-endpoints",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/traffic-manager/traffic-manager-how-traffic-manager-works.md
+Global Redirections
+        {
+        "source_path": "articles/traffic-manager/traffic-manager-how-traffic-manager-works.md",
+        "redirect_url": "/traffic-manager/traffic-manager-overview",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/traffic-manager/traffic-manager-how-traffic-manager-works.md",
+        "redirect_url": "/traffic-manager/traffic-manager-overview",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/virtual-machines/linux/add-user.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/add-user.md",
+        "redirect_url": "/virtual-machines/linux/index",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/azure-vm-network-overview.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/azure-vm-network-overview.md",
+        "redirect_url": "/virtual-machines/linux/network-overview",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/azure-vm-network-overview.md",
+        "redirect_url": "/virtual-machines/linux/network-overview",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/virtual-machines/linux/azure-vm-storage-overview.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/azure-vm-storage-overview.md",
+        "redirect_url": "/virtual-machines/linux/about-disks-and-vhds",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/configure-sshd-on-azure-linux-vms.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/configure-sshd-on-azure-linux-vms.md",
+        "redirect_url": "/virtual-machines/linux/",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/create-lamp-stack.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/create-lamp-stack.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-lamp-stack",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/create-lamp-stack-nodejs.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/create-lamp-stack-nodejs.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-lamp-stack",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/creation-choices.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/creation-choices.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/creation-choices-nodejs.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/creation-choices-nodejs.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/deploy-linux-vm-into-existing-vnet-using-cli.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/deploy-linux-vm-into-existing-vnet-using-cli.md",
+        "redirect_url": "/virtual-machines/linux/create-cli-complete",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/deploy-linux-vm-into-existing-vnet-using-cli-nodejs.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/deploy-linux-vm-into-existing-vnet-using-cli-nodejs.md",
+        "redirect_url": "/virtual-machines/linux/create-cli-complete",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/deploy-linux-vm-into-existing-vnet-using-portal.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/deploy-linux-vm-into-existing-vnet-using-portal.md",
+        "redirect_url": "/virtual-machines/linux/create-cli-complete",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/dotnet-core-1-landing.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/dotnet-core-1-landing.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/dotnet-core-2-architecture.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/dotnet-core-2-architecture.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/dotnet-core-3-access-security.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/dotnet-core-3-access-security.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/dotnet-core-4-availability-scale.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/dotnet-core-4-availability-scale.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/dotnet-core-5-app-deployment.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/dotnet-core-5-app-deployment.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/extensions-configuration-samples.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/extensions-configuration-samples.md",
+        "redirect_url": "/virtual-machines/windows/template-description",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/extensions-troubleshoot.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/extensions-troubleshoot.md",
+        "redirect_url": "/virtual-machines/linux/extensions-features",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/impactful-maintenance.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/impactful-maintenance.md",
+        "redirect_url": "/virtual-machines/linux/planned-maintenance",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/infrastructure-availability-sets-guidelines.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/infrastructure-availability-sets-guidelines.md",
+        "redirect_url": "/virtual-machines/linux/infrastructure-example",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/infrastructure-naming-guidelines.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/infrastructure-naming-guidelines.md",
+        "redirect_url": "/virtual-machines/linux/infrastructure-example",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/infrastructure-networking-guidelines.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/infrastructure-networking-guidelines.md",
+        "redirect_url": "/virtual-machines/linux/infrastructure-example",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/infrastructure-resource-groups-guidelines.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/infrastructure-resource-groups-guidelines.md",
+        "redirect_url": "/virtual-machines/linux/infrastructure-example",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/infrastructure-storage-solutions-guidelines.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/infrastructure-storage-solutions-guidelines.md",
+        "redirect_url": "/virtual-machines/linux/infrastructure-example",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/infrastructure-subscription-accounts-guidelines.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/infrastructure-subscription-accounts-guidelines.md",
+        "redirect_url": "/virtual-machines/linux/infrastructure-example",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/infrastructure-virtual-machine-guidelines.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/infrastructure-virtual-machine-guidelines.md",
+        "redirect_url": "/virtual-machines/linux/infrastructure-example",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/intro-on-azure.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/intro-on-azure.md",
+        "redirect_url": "/virtual-machines/linux/overview",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/jupyter-notebook.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/jupyter-notebook.md",
+        "redirect_url": "/virtual-machines/linux/index",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/mac-create-ssh-keys.experimental.md
+Global Redirections
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/mac-disable-ssh-password-usage.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/mac-disable-ssh-password-usage.md",
+        "redirect_url": "/virtual-machines/linux/index",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/maintenance-in-place.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/maintenance-in-place.md",
+        "redirect_url": "/virtual-machines/linux/planned-maintenance",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/opensource-links.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/opensource-links.md",
+        "redirect_url": "/virtual-machines/linux/index",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/planned-maintenance.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/planned-maintenance.md",
+        "redirect_url": "/virtual-machines/linux/maintenance-and-updates",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/planned-maintenance.md",
+        "redirect_url": "/virtual-machines/linux/maintenance-and-updates",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/virtual-machines/linux/python-django-web-app.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/python-django-web-app.md",
+        "redirect_url": "/virtual-machines/linux/index",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/restart-resize-error-troubleshooting.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/restart-resize-error-troubleshooting.md",
+        "redirect_url": "/virtual-machines/linux/troubleshoot-deploy-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/restart-resize-error-troubleshooting.md",
+        "redirect_url": "/virtual-machines/linux/troubleshoot-deploy-vm",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/virtual-machines/linux/tutorial-convert-to-vmss.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/tutorial-convert-to-vmss.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-create-vmss",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/unique-vm-id.md
+Global Redirections
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/usernames.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/usernames.md",
+        "redirect_url": "/virtual-machines/linux/faq",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/use-root-privileges.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/use-root-privileges.md",
+        "redirect_url": "/virtual-machines/linux/index",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/virtual-machines-linux-reset-password.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/virtual-machines-linux-reset-password.md",
+        "redirect_url": "/virtual-machines/linux/reset-password",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/linux/vm-monitoring.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/linux/vm-monitoring.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-monitoring",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/classic/about-images.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/about-images.md",
+        "redirect_url": "/virtual-machines/windows/cli-ps-findimage",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/about-images.md",
+        "redirect_url": "/virtual-machines/windows/cli-ps-findimage",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/agents-and-extensions.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/agents-and-extensions.md",
+        "redirect_url": "/virtual-machines/windows/extensions-features",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/agents-and-extensions.md",
+        "redirect_url": "/virtual-machines/windows/extensions-features",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/attach-disk.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/attach-disk.md",
+        "redirect_url": "/virtual-machines/windows/attach-managed-disk-portal",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/attach-disk.md",
+        "redirect_url": "/virtual-machines/windows/attach-managed-disk-portal",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/capture-image.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/capture-image.md",
+        "redirect_url": "/virtual-machines/windows/capture-image-resource",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/capture-image.md",
+        "redirect_url": "/virtual-machines/windows/capture-image-resource",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/configure-availability.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/configure-availability.md",
+        "redirect_url": "/virtual-machines/windows/manage-availability",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/configure-availability.md",
+        "redirect_url": "/virtual-machines/windows/manage-availability",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/configure-oracle-data-guard.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/configure-oracle-data-guard.md",
+        "redirect_url": "/virtual-machines/workloads/oracle/configuring-oracle-dataguard",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/classic/configure-oracle-goldengate.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/configure-oracle-goldengate.md",
+        "redirect_url": "/virtual-machines/workloads/oracle/configure-oracle-golden-gate",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/classic/connect-logon.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/connect-logon.md",
+        "redirect_url": "/virtual-machines/windows/connect-logon",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/connect-logon.md",
+        "redirect_url": "/virtual-machines/windows/connect-logon",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/connect-vms.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/connect-vms.md",
+        "redirect_url": "/virtual-machines/windows/connect-logon",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/connect-vms.md",
+        "redirect_url": "/virtual-machines/windows/connect-logon",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/createportal.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/createportal.md",
+        "redirect_url": "/virtual-machines/windows/quick-create-portal",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/createportal.md",
+        "redirect_url": "/virtual-machines/windows/quick-create-portal",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/create-powershell.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/create-powershell.md",
+        "redirect_url": "/virtual-machines/windows/quick-create-powershell",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/create-powershell.md",
+        "redirect_url": "/virtual-machines/windows/quick-create-powershell",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/createupload-vhd.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/createupload-vhd.md",
+        "redirect_url": "/virtual-machines/windows/upload-generalized-managed",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/createupload-vhd.md",
+        "redirect_url": "/virtual-machines/windows/upload-generalized-managed",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/detach-disk.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/detach-disk.md",
+        "redirect_url": "/virtual-machines/windows/detach-disk",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/detach-disk.md",
+        "redirect_url": "/virtual-machines/windows/detach-disk",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/extensions-customscript.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/extensions-customscript.md",
+        "redirect_url": "/virtual-machines/windows/extensions-customscript",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/classic/faq.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/faq.md",
+        "redirect_url": "/virtual-machines/windows/faq",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/faq.md",
+        "redirect_url": "/virtual-machines/windows/faq",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/inject-custom-data.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/inject-custom-data.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-automate-vm-deployment",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/inject-custom-data.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-automate-vm-deployment",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/install-mongodb.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/install-mongodb.md",
+        "redirect_url": "/virtual-machines/windows/install-mongodb",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/install-mongodb.md",
+        "redirect_url": "/virtual-machines/windows/install-mongodb",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/manage-extensions.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/manage-extensions.md",
+        "redirect_url": "/virtual-machines/windows/extensions-features",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/classic/manage-psh.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/manage-psh.md",
+        "redirect_url": "/virtual-machines/windows/ps-common-ref",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/manage-psh.md",
+        "redirect_url": "/virtual-machines/windows/ps-common-ref",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/manage-visual-studio.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/manage-visual-studio.md",
+        "redirect_url": "/virtual-machines/windows/csharp",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/manage-visual-studio.md",
+        "redirect_url": "/virtual-machines/windows/csharp",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/planned-maintenance-schedule.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/planned-maintenance-schedule.md",
+        "redirect_url": "/virtual-machines/windows/maintenance-and-updates",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/planned-maintenance-schedule.md",
+        "redirect_url": "/virtual-machines/windows/maintenance-and-updates",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/resize-vm.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/resize-vm.md",
+        "redirect_url": "/virtual-machines/windows/resize-vm",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/classic/tutorial.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/tutorial.md",
+        "redirect_url": "/virtual-machines/windows/quick-create-portal",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/tutorial.md",
+        "redirect_url": "/virtual-machines/windows/quick-create-portal",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/classic/web-app-visual-studio.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/web-app-visual-studio.md",
+        "redirect_url": "/app-service/",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/classic/web-app-visual-studio.md",
+        "redirect_url": "/app-service/",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/windows/attach-disk-portal.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/attach-disk-portal.md",
+        "redirect_url": "/virtual-machines/windows/attach-managed-disk-portal",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/cli-manage.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/cli-manage.md",
+        "redirect_url": "/virtual-machines/linux/cli-manage",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/create-availability-set.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/create-availability-set.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-availability-sets",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/create-managed-disk-ps.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/create-managed-disk-ps.md",
+        "redirect_url": "/virtual-machines/windows/attach-disk-ps",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/creation-choices.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/creation-choices.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/dotnet-core-1-landing.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/dotnet-core-1-landing.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/dotnet-core-2-architecture.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/dotnet-core-2-architecture.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/dotnet-core-3-access-security.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/dotnet-core-3-access-security.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/dotnet-core-4-availability-scale.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/dotnet-core-4-availability-scale.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/dotnet-core-5-app-deployment.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/dotnet-core-5-app-deployment.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/expand-data-disks.md
+Global Redirections
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/extensions-configuration-samples.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/extensions-configuration-samples.md",
+        "redirect_url": "/virtual-machines/windows/template-description",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/guidance-compute-single-vm.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/guidance-compute-single-vm.md",
+        "redirect_url": "/architecture/reference-architectures/virtual-machines-windows/single-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/hero-role.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/hero-role.md",
+        "redirect_url": "/virtual-machines/windows/quick-create-portal",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/impactful-maintenance.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/impactful-maintenance.md",
+        "redirect_url": "/virtual-machines/windows/planned-maintenance",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/load-balanced-iis-tutorial.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/load-balanced-iis-tutorial.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-load-balancer",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/manage-using-azure-automation.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/manage-using-azure-automation.md",
+        "redirect_url": "/automation/index",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/multiple-vms.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/multiple-vms.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-create-vmss",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/planned-maintenance.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/planned-maintenance.md",
+        "redirect_url": "/virtual-machines/windows/maintenance-and-updates",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/planned-maintenance.md",
+        "redirect_url": "/virtual-machines/windows/maintenance-and-updates",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/virtual-machines/windows/preserving-maintenance.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/preserving-maintenance.md",
+        "redirect_url": "/virtual-machines/windows/planned-maintenance",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/ps-hybrid-cloud-test-env-lob.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/ps-hybrid-cloud-test-env-lob.md",
+        "redirect_url": "/virtual-machines/windows/index",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/ps-hybrid-cloud-test-env-sim.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/ps-hybrid-cloud-test-env-sim.md",
+        "redirect_url": "/virtual-machines/windows/index",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/sap-cal-ides-erp6-ehp7-sp3-sql.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/sap-cal-ides-erp6-ehp7-sp3-sql.md",
+        "redirect_url": "/virtual-machines/workloads/sap/sap-cal-ides-erp6-ehp7-sp3-sql.md",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/sap-dbms-guide.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/sap-dbms-guide.md",
+        "redirect_url": "/virtual-machines/workloads/sap/dbms-guide",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/sap-deployment-guide.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/sap-deployment-guide.md",
+        "redirect_url": "/virtual-machines/workloads/sap/deployment-guide",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/sap-get-started.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/sap-get-started.md",
+        "redirect_url": "/virtual-machines/workloads/sap/get-started",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/sap-planning-guide.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/sap-planning-guide.md",
+        "redirect_url": "/virtual-machines/workloads/sap/planning-guide",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/sharepoint-farm.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/sharepoint-farm.md",
+        "redirect_url": "/virtual-machines/windows/index",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/windows/vmss-powershell-creating.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/windows/vmss-powershell-creating.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-create-vmss",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/terraform-create-complete-vm.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/terraform-create-complete-vm.md",
+        "redirect_url": "/virtual-machines/linux/terraform-create-complete-vm",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/terraform-install-configure.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/terraform-install-configure.md",
+        "redirect_url": "/virtual-machines/linux/terraform-install-configure",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/virtual-machines-azure-slave-plugin-for-hudson.md
+Global Redirections
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/virtual-machines-dotnet-diagnostics.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/virtual-machines-dotnet-diagnostics.md",
+        "redirect_url": "/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines",
+        "redirect_document_id": "True"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/virtual-machines-dotnet-diagnostics.md",
+        "redirect_url": "/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines",
+        "redirect_document_id": "True"
+        },
+
+------------------------
+articles/virtual-machines/virtual-machines-freebsd-intro-on-azure.md
+Global Redirections
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/virtual-machines-scheduled-events.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/virtual-machines-scheduled-events.md",
+        "redirect_url": "/virtual-machines/windows/scheduled-events",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/virtual-machines-windows-agent-user-guide.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/virtual-machines-windows-agent-user-guide.md",
+        "redirect_url": "/virtual-machines/windows/agent-user-guide",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-machines/virtual-machines-windows-agent-user-guide.md",
+        "redirect_url": "/virtual-machines/windows/agent-user-guide",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/virtual-machines/virtual-machines-windows-index.md
+Global Redirections
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/virtual-machines-windows-sizes.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/virtual-machines-windows-sizes.md",
+        "redirect_url": "/virtual-machines/windows/sizes",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-machines/virtual-machines-windows-sizes-memory.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-machines/virtual-machines-windows-sizes-memory.md",
+        "redirect_url": "/virtual-machines/windows/sizes-memory",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-network/virtual-network-create-udr-arm-template.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-network-create-udr-arm-template.md",
+        "redirect_url": "/virtual-network/template-samples",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-network/virtual-network-deploy-multinic-arm-cli.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-network-deploy-multinic-arm-cli.md",
+        "redirect_url": "/virtual-machines/linux/multiple-nics",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-network-deploy-multinic-arm-cli.md",
+        "redirect_url": "/virtual-machines/linux/multiple-nics",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/virtual-network/virtual-network-deploy-multinic-arm-ps.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-network-deploy-multinic-arm-ps.md",
+        "redirect_url": "/virtual-machines/windows/multiple-nics",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-network-deploy-multinic-arm-ps.md",
+        "redirect_url": "/virtual-machines/windows/multiple-nics",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/virtual-network/virtual-network-deploy-multinic-arm-template.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-network-deploy-multinic-arm-template.md",
+        "redirect_url": "/virtual-network/template-samples",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-network/virtual-network-deploy-multinic-cli-nodejs.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-network-deploy-multinic-cli-nodejs.md",
+        "redirect_url": "/virtual-machines/linux/multiple-nics-nodejs",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-network-deploy-multinic-cli-nodejs.md",
+        "redirect_url": "/virtual-machines/linux/multiple-nics-nodejs",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/virtual-network/virtual-network-deploy-static-pip-arm-template.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-network-deploy-static-pip-arm-template.md",
+        "redirect_url": "/virtual-network/template-samples",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-network/virtual-network-manage-nsg-arm-cli.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-network-manage-nsg-arm-cli.md",
+        "redirect_url": "/virtual-network/manage-network-security-group",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-network/virtual-network-manage-nsg-arm-portal.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-network-manage-nsg-arm-portal.md",
+        "redirect_url": "/virtual-network/manage-network-security-group",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-network/virtual-network-manage-nsg-arm-ps.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-network-manage-nsg-arm-ps.md",
+        "redirect_url": "/virtual-network/manage-network-security-group",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-network/virtual-network-multiple-ip-addresses-template.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-network-multiple-ip-addresses-template.md",
+        "redirect_url": "/virtual-network/template-samples",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-network/virtual-networks-create-nsg-arm-cli.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-networks-create-nsg-arm-cli.md",
+        "redirect_url": "/virtual-network/tutorial-filter-network-traffic-cli",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-network/virtual-networks-create-nsg-arm-portal.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-networks-create-nsg-arm-portal.md",
+        "redirect_url": "/virtual-network/virtual-networks-create-nsg-arm-pportal",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-networks-create-nsg-arm-portal.md",
+        "redirect_url": "/virtual-network/virtual-networks-create-nsg-arm-pportal",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/virtual-network/virtual-networks-create-nsg-arm-ps.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-networks-create-nsg-arm-ps.md",
+        "redirect_url": "/virtual-network/tutorial-filter-network-traffic",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-network/virtual-networks-create-nsg-arm-template.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-networks-create-nsg-arm-template.md",
+        "redirect_url": "/virtual-network/template-samples",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-network/virtual-networks-create-vnetpeering-arm-ps.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-networks-create-vnetpeering-arm-ps.md",
+        "redirect_url": "/virtual-network/virtual-network-create-peering",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-networks-create-vnetpeering-arm-ps.md",
+        "redirect_url": "/virtual-network/virtual-network-create-peering",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/virtual-network/virtual-networks-create-vnetpeering-arm-template-click.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-networks-create-vnetpeering-arm-template-click.md",
+        "redirect_url": "/virtual-network/virtual-network-create-peering",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-networks-create-vnetpeering-arm-template-click.md",
+        "redirect_url": "/virtual-network/virtual-network-create-peering",
+        "redirect_document_id": "False"
+        },
+
+------------------------
+articles/virtual-network/virtual-network-service-endpoints-configure.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-network-service-endpoints-configure.md",
+        "redirect_url": "/virtual-network/tutorial-restrict-network-access-to-resources",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+
+------------------------
+articles/virtual-network/virtual-networks-multiple-nics.md
+Global Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-networks-multiple-nics.md",
+        "redirect_url": "/virtual-network/virtual-network-deploy-multinic-classic-ps",
+        "redirect_document_id": "False"
+        },
+
+Mooncake Redirections
+        {
+        "source_path": "articles/virtual-network/virtual-networks-multiple-nics.md",
+        "redirect_url": "/virtual-network/virtual-network-deploy-multinic-classic-ps",
+        "redirect_document_id": "False"
+        },
+
+************Result Start for Json**************
+        {
+        "source_path": "articles/azure-resource-manager/resource-manager-policy.md",
+        "redirect_url": "/azure-policy/azure-policy-introduction",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/cosmos-db/connected-service.md",
+        "redirect_url": "https://docs.microsoft.com/azure/cosmos-db/introduction",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/cosmos-db/sql-api-sql-query-cheat-sheet.md",
+        "redirect_url": "https://docs.microsoft.com/azure/cosmos-db/query-cheat-sheet",
+        "redirect_document_id": "True"
+        },
+
+        {
+        "source_path": "articles/event-hubs/event-hubs-streaming-azure-diags-data.md",
+        "redirect_url": "/monitoring-and-diagnostics/azure-diagnostics-streaming-event-hubs",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/load-balancer/load-balancer-internal-overview.md",
+        "redirect_url": "/load-balancer/load-balancer-overview#internalloadbalancer",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/load-balancer/load-balancer-internet-overview.md",
+        "redirect_url": "/load-balancer/load-balancer-overview#publicloadbalancer",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/stream-analytics/stream-analytics-sample-data-input.md",
+        "redirect_url": "/stream-analytics/stream-analytics-test-query",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/traffic-manager/disable-enable-or-delete-a-profile.md",
+        "redirect_url": "/traffic-manager/traffic-manager-manage-profiles",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/traffic-manager/disable-or-enable-an-endpoint.md",
+        "redirect_url": "/traffic-manager/traffic-manager-manage-endpoints",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/traffic-manager/traffic-manager-endpoints.md",
+        "redirect_url": "/traffic-manager/traffic-manager-manage-endpoints",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/add-user.md",
+        "redirect_url": "/virtual-machines/linux/index",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/azure-vm-storage-overview.md",
+        "redirect_url": "/virtual-machines/linux/about-disks-and-vhds",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/configure-sshd-on-azure-linux-vms.md",
+        "redirect_url": "/virtual-machines/linux/",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/create-lamp-stack.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-lamp-stack",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/create-lamp-stack-nodejs.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-lamp-stack",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/creation-choices.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/creation-choices-nodejs.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/deploy-linux-vm-into-existing-vnet-using-cli.md",
+        "redirect_url": "/virtual-machines/linux/create-cli-complete",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/deploy-linux-vm-into-existing-vnet-using-cli-nodejs.md",
+        "redirect_url": "/virtual-machines/linux/create-cli-complete",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/deploy-linux-vm-into-existing-vnet-using-portal.md",
+        "redirect_url": "/virtual-machines/linux/create-cli-complete",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/dotnet-core-1-landing.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/dotnet-core-2-architecture.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/dotnet-core-3-access-security.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/dotnet-core-4-availability-scale.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/dotnet-core-5-app-deployment.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/extensions-configuration-samples.md",
+        "redirect_url": "/virtual-machines/windows/template-description",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/extensions-troubleshoot.md",
+        "redirect_url": "/virtual-machines/linux/extensions-features",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/impactful-maintenance.md",
+        "redirect_url": "/virtual-machines/linux/planned-maintenance",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/infrastructure-availability-sets-guidelines.md",
+        "redirect_url": "/virtual-machines/linux/infrastructure-example",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/infrastructure-naming-guidelines.md",
+        "redirect_url": "/virtual-machines/linux/infrastructure-example",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/infrastructure-networking-guidelines.md",
+        "redirect_url": "/virtual-machines/linux/infrastructure-example",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/infrastructure-resource-groups-guidelines.md",
+        "redirect_url": "/virtual-machines/linux/infrastructure-example",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/infrastructure-storage-solutions-guidelines.md",
+        "redirect_url": "/virtual-machines/linux/infrastructure-example",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/infrastructure-subscription-accounts-guidelines.md",
+        "redirect_url": "/virtual-machines/linux/infrastructure-example",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/infrastructure-virtual-machine-guidelines.md",
+        "redirect_url": "/virtual-machines/linux/infrastructure-example",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/intro-on-azure.md",
+        "redirect_url": "/virtual-machines/linux/overview",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/jupyter-notebook.md",
+        "redirect_url": "/virtual-machines/linux/index",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/mac-disable-ssh-password-usage.md",
+        "redirect_url": "/virtual-machines/linux/index",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/maintenance-in-place.md",
+        "redirect_url": "/virtual-machines/linux/planned-maintenance",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/opensource-links.md",
+        "redirect_url": "/virtual-machines/linux/index",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/python-django-web-app.md",
+        "redirect_url": "/virtual-machines/linux/index",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/tutorial-convert-to-vmss.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-create-vmss",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/usernames.md",
+        "redirect_url": "/virtual-machines/linux/faq",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/use-root-privileges.md",
+        "redirect_url": "/virtual-machines/linux/index",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/virtual-machines-linux-reset-password.md",
+        "redirect_url": "/virtual-machines/linux/reset-password",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/linux/vm-monitoring.md",
+        "redirect_url": "/virtual-machines/linux/tutorial-monitoring",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/classic/configure-oracle-data-guard.md",
+        "redirect_url": "/virtual-machines/workloads/oracle/configuring-oracle-dataguard",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/classic/configure-oracle-goldengate.md",
+        "redirect_url": "/virtual-machines/workloads/oracle/configure-oracle-golden-gate",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/classic/extensions-customscript.md",
+        "redirect_url": "/virtual-machines/windows/extensions-customscript",
+        "redirect_document_id": "True"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/classic/manage-extensions.md",
+        "redirect_url": "/virtual-machines/windows/extensions-features",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/classic/resize-vm.md",
+        "redirect_url": "/virtual-machines/windows/resize-vm",
+        "redirect_document_id": "True"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/attach-disk-portal.md",
+        "redirect_url": "/virtual-machines/windows/attach-managed-disk-portal",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/cli-manage.md",
+        "redirect_url": "/virtual-machines/linux/cli-manage",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/create-availability-set.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-availability-sets",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/create-managed-disk-ps.md",
+        "redirect_url": "/virtual-machines/windows/attach-disk-ps",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/creation-choices.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/dotnet-core-1-landing.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/dotnet-core-2-architecture.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/dotnet-core-3-access-security.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/dotnet-core-4-availability-scale.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/dotnet-core-5-app-deployment.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-manage-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/extensions-configuration-samples.md",
+        "redirect_url": "/virtual-machines/windows/template-description",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/guidance-compute-single-vm.md",
+        "redirect_url": "/architecture/reference-architectures/virtual-machines-windows/single-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/hero-role.md",
+        "redirect_url": "/virtual-machines/windows/quick-create-portal",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/impactful-maintenance.md",
+        "redirect_url": "/virtual-machines/windows/planned-maintenance",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/load-balanced-iis-tutorial.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-load-balancer",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/manage-using-azure-automation.md",
+        "redirect_url": "/automation/index",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/multiple-vms.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-create-vmss",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/preserving-maintenance.md",
+        "redirect_url": "/virtual-machines/windows/planned-maintenance",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/ps-hybrid-cloud-test-env-lob.md",
+        "redirect_url": "/virtual-machines/windows/index",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/ps-hybrid-cloud-test-env-sim.md",
+        "redirect_url": "/virtual-machines/windows/index",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/sap-cal-ides-erp6-ehp7-sp3-sql.md",
+        "redirect_url": "/virtual-machines/workloads/sap/sap-cal-ides-erp6-ehp7-sp3-sql.md",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/sap-dbms-guide.md",
+        "redirect_url": "/virtual-machines/workloads/sap/dbms-guide",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/sap-deployment-guide.md",
+        "redirect_url": "/virtual-machines/workloads/sap/deployment-guide",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/sap-get-started.md",
+        "redirect_url": "/virtual-machines/workloads/sap/get-started",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/sap-planning-guide.md",
+        "redirect_url": "/virtual-machines/workloads/sap/planning-guide",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/sharepoint-farm.md",
+        "redirect_url": "/virtual-machines/windows/index",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/windows/vmss-powershell-creating.md",
+        "redirect_url": "/virtual-machines/windows/tutorial-create-vmss",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/terraform-create-complete-vm.md",
+        "redirect_url": "/virtual-machines/linux/terraform-create-complete-vm",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/terraform-install-configure.md",
+        "redirect_url": "/virtual-machines/linux/terraform-install-configure",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/virtual-machines-scheduled-events.md",
+        "redirect_url": "/virtual-machines/windows/scheduled-events",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/virtual-machines-windows-sizes.md",
+        "redirect_url": "/virtual-machines/windows/sizes",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-machines/virtual-machines-windows-sizes-memory.md",
+        "redirect_url": "/virtual-machines/windows/sizes-memory",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-network/virtual-network-create-udr-arm-template.md",
+        "redirect_url": "/virtual-network/template-samples",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-network/virtual-network-deploy-multinic-arm-template.md",
+        "redirect_url": "/virtual-network/template-samples",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-network/virtual-network-deploy-static-pip-arm-template.md",
+        "redirect_url": "/virtual-network/template-samples",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-network/virtual-network-manage-nsg-arm-cli.md",
+        "redirect_url": "/virtual-network/manage-network-security-group",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-network/virtual-network-manage-nsg-arm-portal.md",
+        "redirect_url": "/virtual-network/manage-network-security-group",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-network/virtual-network-manage-nsg-arm-ps.md",
+        "redirect_url": "/virtual-network/manage-network-security-group",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-network/virtual-network-multiple-ip-addresses-template.md",
+        "redirect_url": "/virtual-network/template-samples",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-network/virtual-networks-create-nsg-arm-cli.md",
+        "redirect_url": "/virtual-network/tutorial-filter-network-traffic-cli",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-network/virtual-networks-create-nsg-arm-ps.md",
+        "redirect_url": "/virtual-network/tutorial-filter-network-traffic",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-network/virtual-networks-create-nsg-arm-template.md",
+        "redirect_url": "/virtual-network/template-samples",
+        "redirect_document_id": "False"
+        },
+
+        {
+        "source_path": "articles/virtual-network/virtual-network-service-endpoints-configure.md",
+        "redirect_url": "/virtual-network/tutorial-restrict-network-access-to-resources",
+        "redirect_document_id": "False"
+        },
+
+************Result End for Json**************
+************Result Start for Excel**************
+articles/azure-resource-manager/resource-manager-policy.md      /azure-policy/azure-policy-introduction
+
+articles/cosmos-db/connected-service.md https://docs.microsoft.com/azure/cosmos-db/introduction
+
+articles/cosmos-db/sql-api-sql-query-cheat-sheet.md     https://docs.microsoft.com/azure/cosmos-db/query-cheat-sheet
+
+articles/event-hubs/event-hubs-streaming-azure-diags-data.md    /monitoring-and-diagnostics/azure-diagnostics-streaming-event-hubs
+
+articles/load-balancer/load-balancer-internal-overview.md       /load-balancer/load-balancer-overview#internalloadbalancer
+
+articles/load-balancer/load-balancer-internet-overview.md       /load-balancer/load-balancer-overview#publicloadbalancer
+
+articles/stream-analytics/stream-analytics-sample-data-input.md /stream-analytics/stream-analytics-test-query
+
+articles/traffic-manager/disable-enable-or-delete-a-profile.md  /traffic-manager/traffic-manager-manage-profiles
+
+articles/traffic-manager/disable-or-enable-an-endpoint.md       /traffic-manager/traffic-manager-manage-endpoints
+
+articles/traffic-manager/traffic-manager-endpoints.md   /traffic-manager/traffic-manager-manage-endpoints
+
+articles/virtual-machines/linux/add-user.md     /virtual-machines/linux/index
+
+articles/virtual-machines/linux/azure-vm-storage-overview.md    /virtual-machines/linux/about-disks-and-vhds
+
+articles/virtual-machines/linux/configure-sshd-on-azure-linux-vms.md    /virtual-machines/linux/
+
+articles/virtual-machines/linux/create-lamp-stack.md    /virtual-machines/linux/tutorial-lamp-stack
+
+articles/virtual-machines/linux/create-lamp-stack-nodejs.md     /virtual-machines/linux/tutorial-lamp-stack
+
+articles/virtual-machines/linux/creation-choices.md     /virtual-machines/linux/tutorial-manage-vm
+
+articles/virtual-machines/linux/creation-choices-nodejs.md      /virtual-machines/linux/tutorial-manage-vm
+
+articles/virtual-machines/linux/deploy-linux-vm-into-existing-vnet-using-cli.md /virtual-machines/linux/create-cli-complete
+
+articles/virtual-machines/linux/deploy-linux-vm-into-existing-vnet-using-cli-nodejs.md  /virtual-machines/linux/create-cli-complete
+
+articles/virtual-machines/linux/deploy-linux-vm-into-existing-vnet-using-portal.md      /virtual-machines/linux/create-cli-complete
+
+articles/virtual-machines/linux/dotnet-core-1-landing.md        /virtual-machines/linux/tutorial-manage-vm
+
+articles/virtual-machines/linux/dotnet-core-2-architecture.md   /virtual-machines/linux/tutorial-manage-vm
+
+articles/virtual-machines/linux/dotnet-core-3-access-security.md        /virtual-machines/linux/tutorial-manage-vm
+
+articles/virtual-machines/linux/dotnet-core-4-availability-scale.md     /virtual-machines/linux/tutorial-manage-vm
+
+articles/virtual-machines/linux/dotnet-core-5-app-deployment.md /virtual-machines/linux/tutorial-manage-vm
+
+articles/virtual-machines/linux/extensions-configuration-samples.md     /virtual-machines/windows/template-description
+
+articles/virtual-machines/linux/extensions-troubleshoot.md      /virtual-machines/linux/extensions-features
+
+articles/virtual-machines/linux/impactful-maintenance.md        /virtual-machines/linux/planned-maintenance
+
+articles/virtual-machines/linux/infrastructure-availability-sets-guidelines.md  /virtual-machines/linux/infrastructure-example
+
+articles/virtual-machines/linux/infrastructure-naming-guidelines.md     /virtual-machines/linux/infrastructure-example
+
+articles/virtual-machines/linux/infrastructure-networking-guidelines.md /virtual-machines/linux/infrastructure-example
+
+articles/virtual-machines/linux/infrastructure-resource-groups-guidelines.md    /virtual-machines/linux/infrastructure-example
+
+articles/virtual-machines/linux/infrastructure-storage-solutions-guidelines.md  /virtual-machines/linux/infrastructure-example
+
+articles/virtual-machines/linux/infrastructure-subscription-accounts-guidelines.md      /virtual-machines/linux/infrastructure-example
+
+articles/virtual-machines/linux/infrastructure-virtual-machine-guidelines.md    /virtual-machines/linux/infrastructure-example
+
+articles/virtual-machines/linux/intro-on-azure.md       /virtual-machines/linux/overview
+
+articles/virtual-machines/linux/jupyter-notebook.md     /virtual-machines/linux/index
+
+articles/virtual-machines/linux/mac-disable-ssh-password-usage.md       /virtual-machines/linux/index
+
+articles/virtual-machines/linux/maintenance-in-place.md /virtual-machines/linux/planned-maintenance
+
+articles/virtual-machines/linux/opensource-links.md     /virtual-machines/linux/index
+
+articles/virtual-machines/linux/python-django-web-app.md        /virtual-machines/linux/index
+
+articles/virtual-machines/linux/tutorial-convert-to-vmss.md     /virtual-machines/linux/tutorial-create-vmss
+
+articles/virtual-machines/linux/usernames.md    /virtual-machines/linux/faq
+
+articles/virtual-machines/linux/use-root-privileges.md  /virtual-machines/linux/index
+
+articles/virtual-machines/linux/virtual-machines-linux-reset-password.md        /virtual-machines/linux/reset-password
+
+articles/virtual-machines/linux/vm-monitoring.md        /virtual-machines/linux/tutorial-monitoring
+
+articles/virtual-machines/windows/classic/configure-oracle-data-guard.md        /virtual-machines/workloads/oracle/configuring-oracle-dataguard
+
+articles/virtual-machines/windows/classic/configure-oracle-goldengate.md        /virtual-machines/workloads/oracle/configure-oracle-golden-gate
+
+articles/virtual-machines/windows/classic/extensions-customscript.md    /virtual-machines/windows/extensions-customscript
+
+articles/virtual-machines/windows/classic/manage-extensions.md  /virtual-machines/windows/extensions-features
+
+articles/virtual-machines/windows/classic/resize-vm.md  /virtual-machines/windows/resize-vm
+
+articles/virtual-machines/windows/attach-disk-portal.md /virtual-machines/windows/attach-managed-disk-portal
+
+articles/virtual-machines/windows/cli-manage.md /virtual-machines/linux/cli-manage
+
+articles/virtual-machines/windows/create-availability-set.md    /virtual-machines/windows/tutorial-availability-sets
+
+articles/virtual-machines/windows/create-managed-disk-ps.md     /virtual-machines/windows/attach-disk-ps
+
+articles/virtual-machines/windows/creation-choices.md   /virtual-machines/windows/tutorial-manage-vm
+
+articles/virtual-machines/windows/dotnet-core-1-landing.md      /virtual-machines/windows/tutorial-manage-vm
+
+articles/virtual-machines/windows/dotnet-core-2-architecture.md /virtual-machines/windows/tutorial-manage-vm
+
+articles/virtual-machines/windows/dotnet-core-3-access-security.md      /virtual-machines/windows/tutorial-manage-vm
+
+articles/virtual-machines/windows/dotnet-core-4-availability-scale.md   /virtual-machines/windows/tutorial-manage-vm
+
+articles/virtual-machines/windows/dotnet-core-5-app-deployment.md       /virtual-machines/windows/tutorial-manage-vm
+
+articles/virtual-machines/windows/extensions-configuration-samples.md   /virtual-machines/windows/template-description
+
+articles/virtual-machines/windows/guidance-compute-single-vm.md /architecture/reference-architectures/virtual-machines-windows/single-vm
+
+articles/virtual-machines/windows/hero-role.md  /virtual-machines/windows/quick-create-portal
+
+articles/virtual-machines/windows/impactful-maintenance.md      /virtual-machines/windows/planned-maintenance
+
+articles/virtual-machines/windows/load-balanced-iis-tutorial.md /virtual-machines/windows/tutorial-load-balancer
+
+articles/virtual-machines/windows/manage-using-azure-automation.md      /automation/index
+
+articles/virtual-machines/windows/multiple-vms.md       /virtual-machines/windows/tutorial-create-vmss
+
+articles/virtual-machines/windows/preserving-maintenance.md     /virtual-machines/windows/planned-maintenance
+
+articles/virtual-machines/windows/ps-hybrid-cloud-test-env-lob.md       /virtual-machines/windows/index
+
+articles/virtual-machines/windows/ps-hybrid-cloud-test-env-sim.md       /virtual-machines/windows/index
+
+articles/virtual-machines/windows/sap-cal-ides-erp6-ehp7-sp3-sql.md     /virtual-machines/workloads/sap/sap-cal-ides-erp6-ehp7-sp3-sql.md
+
+articles/virtual-machines/windows/sap-dbms-guide.md     /virtual-machines/workloads/sap/dbms-guide
+
+articles/virtual-machines/windows/sap-deployment-guide.md       /virtual-machines/workloads/sap/deployment-guide
+
+articles/virtual-machines/windows/sap-get-started.md    /virtual-machines/workloads/sap/get-started
+
+articles/virtual-machines/windows/sap-planning-guide.md /virtual-machines/workloads/sap/planning-guide
+
+articles/virtual-machines/windows/sharepoint-farm.md    /virtual-machines/windows/index
+
+articles/virtual-machines/windows/vmss-powershell-creating.md   /virtual-machines/windows/tutorial-create-vmss
+
+articles/virtual-machines/terraform-create-complete-vm.md       /virtual-machines/linux/terraform-create-complete-vm
+
+articles/virtual-machines/terraform-install-configure.md        /virtual-machines/linux/terraform-install-configure
+
+articles/virtual-machines/virtual-machines-scheduled-events.md  /virtual-machines/windows/scheduled-events
+
+articles/virtual-machines/virtual-machines-windows-sizes.md     /virtual-machines/windows/sizes
+
+articles/virtual-machines/virtual-machines-windows-sizes-memory.md      /virtual-machines/windows/sizes-memory
+
+articles/virtual-network/virtual-network-create-udr-arm-template.md     /virtual-network/template-samples
+
+articles/virtual-network/virtual-network-deploy-multinic-arm-template.md        /virtual-network/template-samples
+
+articles/virtual-network/virtual-network-deploy-static-pip-arm-template.md      /virtual-network/template-samples
+
+articles/virtual-network/virtual-network-manage-nsg-arm-cli.md  /virtual-network/manage-network-security-group
+
+articles/virtual-network/virtual-network-manage-nsg-arm-portal.md       /virtual-network/manage-network-security-group
+
+articles/virtual-network/virtual-network-manage-nsg-arm-ps.md   /virtual-network/manage-network-security-group
+
+articles/virtual-network/virtual-network-multiple-ip-addresses-template.md      /virtual-network/template-samples
+
+articles/virtual-network/virtual-networks-create-nsg-arm-cli.md /virtual-network/tutorial-filter-network-traffic-cli
+
+articles/virtual-network/virtual-networks-create-nsg-arm-ps.md  /virtual-network/tutorial-filter-network-traffic
+
+articles/virtual-network/virtual-networks-create-nsg-arm-template.md    /virtual-network/template-samples
+
+articles/virtual-network/virtual-network-service-endpoints-configure.md /virtual-network/tutorial-restrict-network-access-to-resources
+
+************Result End for Excel**************
+Program run finished, Press <Enter> to exit....

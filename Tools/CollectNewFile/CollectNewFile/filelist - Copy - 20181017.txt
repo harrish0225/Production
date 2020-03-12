@@ -1,0 +1,2 @@
+access-control.md	articles/cosmos-db	09/30/2018
+service-fabric-get-started-standalone-cluster.md	articles/service-fabric	10/15/2018

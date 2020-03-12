@@ -1,0 +1,8 @@
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Debug\CollectNewFile.exe.config
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Debug\CollectNewFile.exe
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Debug\CollectNewFile.pdb
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Debug\Newtonsoft.Json.dll
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Debug\Newtonsoft.Json.xml
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Debug\CollectNewFile.csprojResolveAssemblyReference.cache
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Debug\CollectNewFile.exe
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Debug\CollectNewFile.pdb

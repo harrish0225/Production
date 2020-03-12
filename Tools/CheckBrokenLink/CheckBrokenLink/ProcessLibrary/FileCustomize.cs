@@ -77,7 +77,23 @@ namespace CheckBrokenLink.ProcessLibrary
 
     public enum InvolvedService
     {
+        analysis_services,
         aks,
+        azure_resource_manager,
+        connectors,
+        cosmos_db,
+        container_instances,
+        container_registry,
+        firewall,
+        logic_apps,
+        private_link,
+        service_fabric,
+        site_recovery,
+        sql_server_stretch_database,
+        traffic_manager,
+        virtual_machines,
+        virtual_network,
+        virtual_wan,
         includes,
     }
 
@@ -784,7 +800,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
                 bool matchOK = false;
 
-                string archPat = string.Format("<a[\\s]*(id|name)[\\s]*=[\\s]*(\'|\"){0}(\'|\")[\\s]*>[\\s]*</a>", archor.TrimStart('#'));
+                string archPat = string.Format("<a[\\s]*(id|name)[\\s]*=[\\s]*(\'|\"){0}(\'|\")[\\s]*>[\\s\\d]*</a>", archor.TrimStart('#'));
                 Match existMath = Regex.Match(articleContent, archPat, RegexOptions.IgnoreCase);
 
                 if (existMath.Length > 0)

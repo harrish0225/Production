@@ -1,0 +1,25 @@
+	{
+        "source_path": "articles/cosmos-db/programming.md",
+        "redirect_url": "/cosmos-db/storedprocedures-triggers-udfs",
+        "redirect_document_id": true
+    },
+    {
+        "source_path": "articles/cosmos-db/sql-api-introduction.md",
+        "redirect_url": "/cosmos-db/introduction",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "articles/cosmos-db/sql-api-partition-data.md",
+        "redirect_url": "/cosmos-db/partitioning-overview",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "articles/cosmos-db/sql-api-sql-query-metrics.md",
+        "redirect_url": "/cosmos-db/sql-api-query-metrics",
+        "redirect_document_id": true
+    },
+    {
+        "source_path": "articles/cosmos-db/sql-api-sql-query-reference.md",
+        "redirect_url": "/cosmos-db/sql-api-query-reference",
+        "redirect_document_id": true
+    },
