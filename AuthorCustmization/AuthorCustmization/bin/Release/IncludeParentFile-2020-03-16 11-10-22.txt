@@ -1,0 +1,195 @@
+**********************Check Process Result(IncludeParentFile)**********************
+The parent file of	aml-dsvm-server.md	is			.
+The parent file of	aml-studio-notebook-notice.md	is			.
+The parent file of	aml-your-server.md	is			.
+The parent file of	audio-input-format-chart.md	is			.
+The parent file of	azure-data-factory-limits.md	is	D:\gitrep\azure-docs-pr\articles\azure-resource-manager\management	azure-subscription-service-limits.md	.
+The parent file of	azure-policy-samples-policies-app-configuration.md	is			.
+The parent file of	azure-policy-samples-policies-app-platform.md	is			.
+The parent file of	azure-policy-samples-policies-app-service.md	is			.
+The parent file of	azure-policy-samples-policies-automation.md	is			.
+The parent file of	azure-policy-samples-policies-backup.md	is			.
+The parent file of	azure-policy-samples-policies-batch.md	is			.
+The parent file of	azure-policy-samples-policies-cache.md	is			.
+The parent file of	azure-policy-samples-policies-compute.md	is			.
+The parent file of	azure-policy-samples-policies-container-registry.md	is	D:\gitrep\azure-docs-pr\articles\container-registry	container-registry-azure-policy.md	.
+The parent file of	azure-policy-samples-policies-cosmos-db.md	is			.
+The parent file of	azure-policy-samples-policies-custom-provider.md	is			.
+The parent file of	azure-policy-samples-policies-data-lake.md	is			.
+The parent file of	azure-policy-samples-policies-event-hub.md	is			.
+The parent file of	azure-policy-samples-policies-general.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network	policy-samples.md	.
+The parent file of	azure-policy-samples-policies-guest-configuration.md	is			.
+The parent file of	azure-policy-samples-policies-index.md	is			.
+The parent file of	azure-policy-samples-policies-internet-of-things.md	is			.
+The parent file of	azure-policy-samples-policies-key-vault.md	is			.
+The parent file of	azure-policy-samples-policies-kubernetes.md	is			.
+The parent file of	azure-policy-samples-policies-kubernetes-service.md	is			.
+The parent file of	azure-policy-samples-policies-lighthouse.md	is			.
+The parent file of	azure-policy-samples-policies-logic-apps.md	is			.
+The parent file of	azure-policy-samples-policies-managed-application.md	is			.
+The parent file of	azure-policy-samples-policies-monitoring.md	is			.
+The parent file of	azure-policy-samples-policies-network.md	is	D:\gitrep\azure-docs-pr\articles\virtual-network	policy-samples.md	.
+The parent file of	azure-policy-samples-policies-search.md	is			.
+The parent file of	azure-policy-samples-policies-security-center.md	is			.
+The parent file of	azure-policy-samples-policies-service-bus.md	is			.
+The parent file of	azure-policy-samples-policies-service-fabric.md	is			.
+The parent file of	azure-policy-samples-policies-sql.md	is			.
+The parent file of	azure-policy-samples-policies-storage.md	is			.
+The parent file of	azure-policy-samples-policies-stream-analytics.md	is			.
+The parent file of	azure-policy-samples-policies-tags.md	is	D:\gitrep\azure-docs-pr\articles\azure-resource-manager\management	tag-resources.md	.
+The parent file of	azure-policy-samples-policyset-guest-configuration.md	is			.
+The parent file of	azure-policy-samples-policyset-monitoring.md	is			.
+The parent file of	azure-policy-samples-policyset-regulatory-compliance.md	is			.
+The parent file of	azure-policy-samples-policyset-security-center.md	is			.
+The parent file of	azure-storage-account-limits-standard.md	is	D:\gitrep\azure-docs-pr\articles\azure-resource-manager\management	azure-subscription-service-limits.md	.
+The parent file of	azure-websites-limits.md	is	D:\gitrep\azure-docs-pr\articles\azure-resource-manager\management	azure-subscription-service-limits.md	.
+The parent file of	bastion-faq-include.md	is			.
+The parent file of	bastion-regions-include.md	is			.
+The parent file of	cleanup-resources-preview-portal.md	is			.
+The parent file of	container-registry-limits.md	is	D:\gitrep\azure-docs-pr\articles\azure-resource-manager\management	azure-subscription-service-limits.md	.
+The parent file of	cosmos-db-create-dbaccount.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	create-cosmosdb-resources-portal.md	.
+The parent file of	cosmos-db-create-sql-api-query-data.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	create-cosmosdb-resources-portal.md	.
+The parent file of	cosmos-db-emulator-docdb-api.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	create-cosmosdb-resources-portal.md	.
+The parent file of	custom-dns-web-site-enable-on-traffic-manager.md	is			.
+The parent file of	custom-dns-web-site-intro-notes.md	is			.
+The parent file of	custom-dns-web-site-intro-traffic-manager.md	is			.
+The parent file of	custom-dns-web-site-modes-traffic-manager.md	is			.
+The parent file of	custom-dns-web-site-traffic-manager-notes.md	is			.
+The parent file of	custom-dns-web-site-understanding-dns-traffic-manager.md	is			.
+The parent file of	data-box-edge-gateway-deactivate-device.md	is			.
+The parent file of	digital-twins-preview-limit-alert.md	is			.
+The parent file of	functions-extension-bundles-json.md	is			.
+The parent file of	functions-storage-account-set-cli.md	is			.
+The parent file of	functions-supported-languages.md	is			.
+The parent file of	more.md	is			.
+The parent file of	speech-to-text-basics-cpp.md	is			.
+The parent file of	speech-to-text-basics-csharp.md	is			.
+The parent file of	speech-to-text-basics-java.md	is			.
+The parent file of	speech-to-text-basics-python.md	is			.
+The parent file of	examples.md	is			.
+The parent file of	prerequisites.md	is			.
+The parent file of	examples.md	is			.
+The parent file of	prerequisites.md	is			.
+The parent file of	examples.md	is			.
+The parent file of	prerequisites.md	is			.
+The parent file of	examples.md	is			.
+The parent file of	prerequisites.md	is			.
+The parent file of	jenkins-install-solution-template-steps.md	is			.
+The parent file of	key-phrase-extraction-kubernetes-config-deploy.md	is			.
+The parent file of	language-detection-kubernetes-config-deploy.md	is			.
+The parent file of	csharp-sdk.md	is			.
+The parent file of	custom-search-client-library-csharp.md	is			.
+The parent file of	custom-search-client-library-java.md	is			.
+The parent file of	custom-search-client-library-python.md	is			.
+The parent file of	entity-search-client-library-csharp.md	is			.
+The parent file of	entity-search-client-library-java.md	is			.
+The parent file of	entity-search-client-library-javascript.md	is			.
+The parent file of	entity-search-client-library-python.md	is			.
+The parent file of	windows.md	is			.
+The parent file of	dotnet.md	is			.
+The parent file of	header.md	is			.
+The parent file of	jre.md	is			.
+The parent file of	more.md	is			.
+The parent file of	python.md	is			.
+The parent file of	linux.md	is			.
+The parent file of	macos.md	is			.
+The parent file of	windows.md	is			.
+The parent file of	dotnet.md	is			.
+The parent file of	jre.md	is			.
+The parent file of	more.md	is			.
+The parent file of	python.md	is			.
+The parent file of	linux.md	is			.
+The parent file of	macos.md	is			.
+The parent file of	windows.md	is			.
+The parent file of	dotnet.md	is			.
+The parent file of	unity.md	is			.
+The parent file of	uwp.md	is			.
+The parent file of	xamarin.md	is			.
+The parent file of	jre.md	is			.
+The parent file of	more.md	is			.
+The parent file of	python.md	is			.
+The parent file of	image-search-client-library-csharp.md	is			.
+The parent file of	image-search-client-library-java.md	is			.
+The parent file of	image-search-client-library-javascript.md	is			.
+The parent file of	image-search-client-library-python.md	is			.
+The parent file of	windows.md	is			.
+The parent file of	dotnet.md	is			.
+The parent file of	jre.md	is			.
+The parent file of	python.md	is			.
+The parent file of	java-sdk.md	is			.
+The parent file of	windows.md	is			.
+The parent file of	dotnet.md	is			.
+The parent file of	nodejs-sdk.md	is			.
+The parent file of	cpp-linux.md	is			.
+The parent file of	csharp-dotnetcore-windows.md	is			.
+The parent file of	csharp-dotnet-windows.md	is			.
+The parent file of	csharp-uwp.md	is			.
+The parent file of	csharp-xamarin.md	is			.
+The parent file of	java-jre.md	is			.
+The parent file of	python.md	is			.
+The parent file of	python-sdk.md	is			.
+The parent file of	windows.md	is			.
+The parent file of	dotnet.md	is			.
+The parent file of	dotnetcore.md	is			.
+The parent file of	uwp.md	is			.
+The parent file of	jre.md	is			.
+The parent file of	python.md	is			.
+The parent file of	windows.md	is			.
+The parent file of	dotnet.md	is			.
+The parent file of	dotnetcore.md	is			.
+The parent file of	uwp.md	is			.
+The parent file of	jre.md	is			.
+The parent file of	python.md	is			.
+The parent file of	windows.md	is			.
+The parent file of	dotnet.md	is			.
+The parent file of	dotnetcore.md	is			.
+The parent file of	jre.md	is			.
+The parent file of	python.md	is			.
+The parent file of	linux.md	is			.
+The parent file of	windows.md	is			.
+The parent file of	dotnet.md	is			.
+The parent file of	dotnetcore.md	is			.
+The parent file of	unity.md	is			.
+The parent file of	uwp.md	is			.
+The parent file of	android.md	is			.
+The parent file of	jre.md	is			.
+The parent file of	python.md	is			.
+The parent file of	windows.md	is			.
+The parent file of	dotnet.md	is			.
+The parent file of	jre.md	is			.
+The parent file of	python.md	is			.
+The parent file of	web-search-client-library-csharp.md	is			.
+The parent file of	web-search-client-library-java.md	is			.
+The parent file of	web-search-client-library-javascript.md	is			.
+The parent file of	web-search-client-library-python.md	is			.
+The parent file of	relay-hybrid-connections-http-requests-dotnet-get-started-client.md	is			.
+The parent file of	resource-manager-quickstart-introduction.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db	quick-create-template.md	.
+The parent file of	sentiment-analysis-kubernetes-config-deploy.md	is			.
+The parent file of	speech-devices-sdk-android-quickstart.md	is			.
+The parent file of	speech-devices-sdk-linux-quickstart.md	is			.
+The parent file of	speech-devices-sdk-windows-quickstart.md	is			.
+The parent file of	storage-account-types-include.md	is			.
+The parent file of	storage-blob-concepts-include.md	is			.
+The parent file of	storage-blob-dotnet-resources-include.md	is			.
+The parent file of	storage-data-lake-gen2-support.md	is			.
+The parent file of	storage-files-aad-permissions-and-mounting.md	is			.
+The parent file of	storage-tables-scale-targets.md	is	D:\gitrep\azure-docs-pr\articles\azure-resource-manager\management	azure-subscription-service-limits.md	.
+The parent file of	supported-audio-formats.md	is			.
+The parent file of	virtual-machines-common-classic-resource-manager-migration-faq.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	migration-classic-resource-manager-faq.md	.
+The parent file of	virtual-machines-common-cli-manage.md	is			.
+The parent file of	virtual-machines-common-dedicated-hosts.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	dedicated-hosts.md	.
+The parent file of	virtual-machines-common-dedicated-hosts-portal.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	dedicated-hosts-portal.md	.
+The parent file of	virtual-machines-disks-encryption-portal.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	disk-encryption.md	.
+The parent file of	virtual-machines-disks-encryption-regions.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	disk-encryption.md	.
+The parent file of	virtual-machines-disks-incremental-snapshot.md	is			.
+The parent file of	virtual-machines-disks-incremental-snapshot-cli.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	disks-incremental-snapshots.md	.
+The parent file of	virtual-machines-disks-incremental-snapshot-powershell.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\windows	disks-incremental-snapshots.md	.
+The parent file of	virtual-machines-disks-incremental-snapshots-description.md	is			.
+The parent file of	virtual-machines-disks-incremental-snapshots-portal.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	disks-incremental-snapshots-portal.md	.
+The parent file of	virtual-machines-disks-incremental-snapshots-regions.md	is			.
+The parent file of	virtual-machines-disks-incremental-snapshots-restrictions.md	is			.
+The parent file of	virtual-machines-managed-disks-types-overview.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	disks-types.md	.
+The parent file of	virtual-machines-security-policy.md	is	D:\gitrep\azure-docs-pr\articles\virtual-machines\linux	security-policy.md	.
+The parent file of	virtual-networks-create-new.md	is	D:\gitrep\azure-docs-pr\articles\private-link	create-private-endpoint-cosmosdb-portal.md	.
+The parent file of	websites-custom-domain-selector.md	is			.
+
