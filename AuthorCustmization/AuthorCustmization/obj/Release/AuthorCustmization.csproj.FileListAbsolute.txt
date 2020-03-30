@@ -20,3 +20,4 @@ H:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Release\AuthorCus
 H:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Release\AuthorCustmization.pdb
 H:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Release\Newtonsoft.Json.dll
 H:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Release\Newtonsoft.Json.xml
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\obj\Release\AuthorCustmization.csprojResolveAssemblyReference.cache

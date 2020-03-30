@@ -1,5 +1,0 @@
-1. Install the GitHub for desktop application 
-	source: github-windwos.s3.anazonaws.com site.
-2. Set the tokenID
-	Open SmartGit -> Edit -> Preference ->
-	in left panel, select Hosting Providers

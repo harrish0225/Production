@@ -92,8 +92,8 @@
     },
     {
       "service": "ALL",
-      "global": "^    (\\d{1,}\\.|\\-|\\*)(\\s{1,}))([^\\n\\r]*)",
-      "mooncake": "$1$2",
+      "global": "^    (\\d{1,}\\.|\\-|\\*|\\#{2,})(\\s{1,})([^\\n\\r]*)",
+      "mooncake": "$1$2$3",
       "comments": "Add the Tab key below the Order/Unorder "
     }
 
