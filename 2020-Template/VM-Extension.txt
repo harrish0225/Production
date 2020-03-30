@@ -1,0 +1,543 @@
+MoonCake 
+
+az vm extension image list --location chinaeast -o table
+Name                                Publisher                                       Version
+----------------------------------  ----------------------------------------------  ------------
+AsiaInfoDSA                         AsiaInfo.DeepSecurity                           9.5.3.103
+Compute.AKS-Engine.Linux.Billing    Microsoft.AKS                                   1.0.0
+IaaSDiagnostics                     Microsoft.Azure.Diagnostics                     1.2.0.0
+IaaSDiagnostics                     Microsoft.Azure.Diagnostics                     1.3.1.7
+IaaSDiagnostics                     Microsoft.Azure.Diagnostics                     1.4.2.1
+IaaSDiagnostics                     Microsoft.Azure.Diagnostics                     1.7.4.0
+CustomScript                        Microsoft.Azure.Extensions                      2.0.1
+CustomScript                        Microsoft.Azure.Extensions                      2.0.2
+CustomScript                        Microsoft.Azure.Extensions                      2.0.6
+KeyVaultForWindows                  Microsoft.Azure.KeyVault                        0.2.0.898
+AquariusLinux                       Microsoft.Azure.Networking.SDN                  1.5.0.0
+Compute.AKS-Engine.Windows.Billing  Microsoft.AKS                                   1.0.0
+LinuxDiagnostic                     Microsoft.Azure.Diagnostics                     3.0.119
+DockerExtension                     Microsoft.Azure.Extensions                      1.2.1
+Compute.AKS.Linux.Billing           Microsoft.AKS                                   1.0.0
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.270.0
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.306.5
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.306.6
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.493.1
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.526.2
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.585.2
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.905.3
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.22.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.23.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.26.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.27.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.40.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.41.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.42.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.43.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.54.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.55.0
+Compute.AKS.Windows.Billing         Microsoft.AKS                                   1.0.0
+Linux                               Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9111
+Linux                               Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+Linux                               Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+LinuxDEBIAN7                        Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9109
+LinuxDEBIAN7                        Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9113
+LinuxDEBIAN7                        Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9114
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.270.0
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.306.5
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.411.1
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.493.1
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.526.2
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.585.2
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.861.1
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.905.3
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9111.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9112.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9117.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9118.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9128.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9131.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9133.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9143.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9147.0
+LinuxOL6                            Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+LinuxOL6                            Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxOL6                            Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+LinuxDEBIAN8                        Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9109
+LinuxDEBIAN8                        Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9113
+LinuxDEBIAN8                        Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9114
+AzureDiskEncryption                 Microsoft.Azure.Security                        1.1.0.2
+AzureDiskEncryption                 Microsoft.Azure.Security                        1.1.0.4
+AzureDiskEncryption                 Microsoft.Azure.Security                        2.2.0.10
+AzureDiskEncryption                 Microsoft.Azure.Security                        2.2.0.3
+LinuxOL7                            Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+LinuxOL7                            Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxOL7                            Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+LinuxSLES12                         Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9111
+LinuxSLES12                         Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9113
+LinuxSLES12                         Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9114
+DSMSForWindows                      Microsoft.Azure.Security.Dsms                   2.17.869.0
+DSMSForWindows                      Microsoft.Azure.Security.Dsms                   2.17.869.1
+DSMSForWindows                      Microsoft.Azure.Security.Dsms                   3.1.977.0
+AzureCATExtensionHandler            Microsoft.AzureCAT.AzureEnhancedMonitoring      2.2.0.48
+AzureCATExtensionHandler            Microsoft.AzureCAT.AzureEnhancedMonitoring      2.2.0.68
+AzureDiskEncryptionForLinux         Microsoft.Azure.Security                        0.1.0.999283
+AzureDiskEncryptionForLinux         Microsoft.Azure.Security                        0.1.0.999297
+AzureDiskEncryptionForLinux         Microsoft.Azure.Security                        0.1.0.999322
+AzureDiskEncryptionForLinux         Microsoft.Azure.Security                        0.1.0.999333
+AzureDiskEncryptionForLinux         Microsoft.Azure.Security                        1.1.0.17
+AzureDiskEncryptionForLinux         Microsoft.Azure.Security                        1.1.0.30
+LinuxRHEL6                          Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+LinuxRHEL6                          Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxRHEL6                          Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+IaaSAntimalware                     Microsoft.Azure.Security                        1.3.0.0
+IaaSAntimalware                     Microsoft.Azure.Security                        1.5.4.4
+LinuxRHEL7                          Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+LinuxRHEL7                          Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxRHEL7                          Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+VMJITAccessExtension                Microsoft.AzureSecurity.JITAccess               1.0.0.0
+VMJITAccessExtension                Microsoft.AzureSecurity.JITAccess               1.0.1.0
+VMBackupForLinuxExtension           Microsoft.Azure.Security                        0.1.0.995
+BGInfo                              Microsoft.Compute                               2.1
+LinuxSLES11SP3                      Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+LinuxSLES11SP3                      Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxSLES11SP3                      Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+RunCommandLinux                     Microsoft.CPlat.Core                            1.0.0
+CustomScriptExtension               Microsoft.Compute                               1.0
+CustomScriptExtension               Microsoft.Compute                               1.3
+CustomScriptExtension               Microsoft.Compute                               1.4
+CustomScriptExtension               Microsoft.Compute                               1.7
+CustomScriptExtension               Microsoft.Compute                               1.8
+CustomScriptExtension               Microsoft.Compute                               1.9.1
+CustomScriptExtension               Microsoft.Compute                               1.9.2
+CustomScriptExtension               Microsoft.Compute                               1.9.3
+RunCommandWindows                   Microsoft.CPlat.Core                            1.1.0
+MicrosoftMonitoringAgent            Microsoft.EnterpriseCloud.Monitoring            1.0.9.91
+MicrosoftMonitoringAgent            Microsoft.EnterpriseCloud.Monitoring            1.0.9.92
+JsonADDomainExtension               Microsoft.Compute                               1.3
+JsonADDomainExtension               Microsoft.Compute                               1.3.2
+LinuxSLES11SP4                      Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+LinuxSLES11SP4                      Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxSLES11SP4                      Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+OmsAgentForLinux                    Microsoft.EnterpriseCloud.Monitoring            1.8.14
+LinuxUBUNTU1404                     Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9111
+LinuxUBUNTU1404                     Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxUBUNTU1404                     Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+LinuxNodeAgent                      Microsoft.HpcPack                               1.6.18.3
+VMAccessAgent                       Microsoft.Compute                               2.0
+VMAccessAgent                       Microsoft.Compute                               2.0.2
+VMAccessAgent                       Microsoft.Compute                               2.3
+VMAccessAgent                       Microsoft.Compute                               2.4.2
+VMAccessAgent                       Microsoft.Compute                               2.4.4
+AzureEnhancedMonitorForLinux        Microsoft.OSTCExtensions                        3.0.1.0
+LinuxUBUNTU1604                     Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9111
+LinuxUBUNTU1604                     Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxUBUNTU1604                     Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+CustomScriptForLinux                Microsoft.OSTCExtensions                        1.1
+CustomScriptForLinux                Microsoft.OSTCExtensions                        1.2.2.0
+CustomScriptForLinux                Microsoft.OSTCExtensions                        1.3.0.0
+CustomScriptForLinux                Microsoft.OSTCExtensions                        1.4.1.0
+CustomScriptForLinux                Microsoft.OSTCExtensions                        1.5.1.0
+CustomScriptForLinux                Microsoft.OSTCExtensions                        1.5.2.0
+Windows                             Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9110
+Windows                             Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+Windows                             Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+DSC                                 Microsoft.Powershell                            2.19.0.0
+DSC                                 Microsoft.Powershell                            2.22.0.0
+DSC                                 Microsoft.Powershell                            2.23.0.0
+DSC                                 Microsoft.Powershell                            2.26.0.0
+DSC                                 Microsoft.Powershell                            2.26.1.0
+DSC                                 Microsoft.Powershell                            2.71.0.0
+DSC                                 Microsoft.Powershell                            2.72.0.0
+DSC                                 Microsoft.Powershell                            2.76.0.0
+DSC                                 Microsoft.Powershell                            2.77.0.0
+DSCForLinux                         Microsoft.OSTCExtensions                        2.0.0.0
+DSCForLinux                         Microsoft.OSTCExtensions                        2.70.0.4
+DSC                                 Microsoft.Powershell.Test                       2.19.2.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.13.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.15.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.16.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.17.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.18.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.26.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.30.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.5.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  2.0.10.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  2.0.3.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  2.0.5.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  2.0.6.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  2.0.9.0
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.2.0
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.3.9009
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.3.9011
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.3.9013
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.3.9015
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.3.9017
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.3.9021
+VSRemoteDebugger                    Microsoft.VisualStudio.Azure.RemoteDebug        1.1.2.0
+OSPatchingForLinux                  Microsoft.OSTCExtensions                        2.0.0.1
+VMAccessForLinux                    Microsoft.OSTCExtensions                        1.0
+VMAccessForLinux                    Microsoft.OSTCExtensions                        1.4.0.0
+VMAccessForLinux                    Microsoft.OSTCExtensions                        1.4.5.0
+DockerExtension                     MSOpenTech.Extensions                           0.3.2.0
+
+az vm extension image list --location chinanorth -o table
+Name                                Publisher                                       Version
+----------------------------------  ----------------------------------------------  --------------
+AsiaInfoDSA                         AsiaInfo.DeepSecurity                           9.5.3.103
+Compute.AKS-Engine.Linux.Billing    Microsoft.AKS                                   1.0.0
+IaaSDiagnostics                     Microsoft.Azure.Diagnostics                     1.2.0.0
+IaaSDiagnostics                     Microsoft.Azure.Diagnostics                     1.3.1.7
+IaaSDiagnostics                     Microsoft.Azure.Diagnostics                     1.4.1.1
+IaaSDiagnostics                     Microsoft.Azure.Diagnostics                     1.4.2.1
+IaaSDiagnostics                     Microsoft.Azure.Diagnostics                     1.6.4.0
+IaaSDiagnostics                     Microsoft.Azure.Diagnostics                     1.7.4.0
+CustomScript                        Microsoft.Azure.Extensions                      2.0.1
+CustomScript                        Microsoft.Azure.Extensions                      2.0.2
+CustomScript                        Microsoft.Azure.Extensions                      2.0.6
+LinuxDiagnostic                     Microsoft.Azure.Diagnostics                     3.0.119
+Compute.AKS-Engine.Windows.Billing  Microsoft.AKS                                   1.0.0
+DockerExtension                     Microsoft.Azure.Extensions                      1.0.1508121604
+DockerExtension                     Microsoft.Azure.Extensions                      1.2.1
+KeyVaultForWindows                  Microsoft.Azure.KeyVault                        0.2.0.898
+AquariusLinux                       Microsoft.Azure.Networking.SDN                  1.5.0.0
+Compute.AKS.Linux.Billing           Microsoft.AKS                                   1.0.0
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.270.0
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.306.5
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.306.6
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.411.1
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.493.1
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.526.2
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.585.2
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher                  1.4.905.3
+Compute.AKS.Windows.Billing         Microsoft.AKS                                   1.0.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.22.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.23.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.26.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.27.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.40.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.41.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.42.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.43.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.54.0
+VMSnapshot                          Microsoft.Azure.RecoveryServices                1.0.55.0
+Linux                               Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+Linux                               Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9111
+Linux                               Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+Linux                               Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.270.0
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.306.5
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.411.1
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.493.1
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.526.2
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.585.2
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.861.1
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher                  1.4.905.3
+LinuxDEBIAN7                        Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9109
+LinuxDEBIAN7                        Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9113
+LinuxDEBIAN7                        Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9114
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9111.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9112.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9117.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9118.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9128.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9131.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9133.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9143.0
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices                1.0.9147.0
+LinuxDEBIAN8                        Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9109
+LinuxDEBIAN8                        Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9113
+LinuxDEBIAN8                        Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9114
+AzureDiskEncryption                 Microsoft.Azure.Security                        1.1.0.2
+AzureDiskEncryption                 Microsoft.Azure.Security                        1.1.0.4
+AzureDiskEncryption                 Microsoft.Azure.Security                        2.2.0.10
+AzureDiskEncryption                 Microsoft.Azure.Security                        2.2.0.3
+LinuxSLES12                         Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9109
+LinuxSLES12                         Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9111
+LinuxSLES12                         Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9113
+LinuxSLES12                         Microsoft.Azure.RecoveryServices.SiteRecovery2  1.0.0.9114
+DSMSForWindows                      Microsoft.Azure.Security.Dsms                   2.17.869.0
+DSMSForWindows                      Microsoft.Azure.Security.Dsms                   2.17.869.1
+DSMSForWindows                      Microsoft.Azure.Security.Dsms                   3.1.977.0
+AzureDiskEncryptionForLinux         Microsoft.Azure.Security                        0.1.0.999283
+AzureDiskEncryptionForLinux         Microsoft.Azure.Security                        0.1.0.999297
+AzureDiskEncryptionForLinux         Microsoft.Azure.Security                        0.1.0.999322
+AzureDiskEncryptionForLinux         Microsoft.Azure.Security                        0.1.0.999333
+AzureDiskEncryptionForLinux         Microsoft.Azure.Security                        1.1.0.17
+AzureDiskEncryptionForLinux         Microsoft.Azure.Security                        1.1.0.30
+AzureCATExtensionHandler            Microsoft.AzureCAT.AzureEnhancedMonitoring      2.2.0.48
+AzureCATExtensionHandler            Microsoft.AzureCAT.AzureEnhancedMonitoring      2.2.0.68
+LinuxOL6                            Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+LinuxOL6                            Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxOL6                            Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+IaaSAntimalware                     Microsoft.Azure.Security                        1.3.0.0
+IaaSAntimalware                     Microsoft.Azure.Security                        1.5.4.4
+LinuxOL7                            Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+LinuxOL7                            Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxOL7                            Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+BGInfo                              Microsoft.Compute                               2.1
+VMBackupForLinuxExtension           Microsoft.Azure.Security                        0.1.0.995
+LinuxRHEL6                          Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+LinuxRHEL6                          Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxRHEL6                          Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+VMJITAccessExtension                Microsoft.AzureSecurity.JITAccess               1.0.0.0
+VMJITAccessExtension                Microsoft.AzureSecurity.JITAccess               1.0.1.0
+CustomScriptExtension               Microsoft.Compute                               1.0
+CustomScriptExtension               Microsoft.Compute                               1.3
+CustomScriptExtension               Microsoft.Compute                               1.4
+CustomScriptExtension               Microsoft.Compute                               1.7
+CustomScriptExtension               Microsoft.Compute                               1.8
+CustomScriptExtension               Microsoft.Compute                               1.9.1
+CustomScriptExtension               Microsoft.Compute                               1.9.2
+CustomScriptExtension               Microsoft.Compute                               1.9.3
+RunCommandLinux                     Microsoft.CPlat.Core                            1.0.0
+JsonADDomainExtension               Microsoft.Compute                               1.3
+JsonADDomainExtension               Microsoft.Compute                               1.3.2
+RunCommandWindows                   Microsoft.CPlat.Core                            1.1.0
+MicrosoftMonitoringAgent            Microsoft.EnterpriseCloud.Monitoring            1.0.9.91
+MicrosoftMonitoringAgent            Microsoft.EnterpriseCloud.Monitoring            1.0.9.92
+LinuxRHEL7                          Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+LinuxRHEL7                          Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxRHEL7                          Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+VMAccessAgent                       Microsoft.Compute                               2.0
+VMAccessAgent                       Microsoft.Compute                               2.0.2
+VMAccessAgent                       Microsoft.Compute                               2.3
+VMAccessAgent                       Microsoft.Compute                               2.4.2
+VMAccessAgent                       Microsoft.Compute                               2.4.4
+ConfigurationforWindows             Microsoft.GuestConfiguration                    1.8.0.0
+OmsAgentForLinux                    Microsoft.EnterpriseCloud.Monitoring            1.8.14
+LinuxSLES11SP3                      Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+LinuxSLES11SP3                      Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxSLES11SP3                      Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+LinuxSLES11SP4                      Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+LinuxSLES11SP4                      Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxSLES11SP4                      Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+LinuxNodeAgent                      Microsoft.HpcPack                               1.6.18.3
+AzureEnhancedMonitorForLinux        Microsoft.OSTCExtensions                        3.0.1.0
+LinuxUBUNTU1404                     Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+LinuxUBUNTU1404                     Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9111
+LinuxUBUNTU1404                     Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxUBUNTU1404                     Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+DSC                                 Microsoft.Powershell                            2.19.0.0
+DSC                                 Microsoft.Powershell                            2.22.0.0
+DSC                                 Microsoft.Powershell                            2.23.0.0
+DSC                                 Microsoft.Powershell                            2.26.0.0
+DSC                                 Microsoft.Powershell                            2.26.1.0
+DSC                                 Microsoft.Powershell                            2.71.0.0
+DSC                                 Microsoft.Powershell                            2.72.0.0
+DSC                                 Microsoft.Powershell                            2.76.0.0
+DSC                                 Microsoft.Powershell                            2.77.0.0
+CustomScriptForLinux                Microsoft.OSTCExtensions                        1.1
+CustomScriptForLinux                Microsoft.OSTCExtensions                        1.2.2.0
+CustomScriptForLinux                Microsoft.OSTCExtensions                        1.3.0.0
+CustomScriptForLinux                Microsoft.OSTCExtensions                        1.4.1.0
+CustomScriptForLinux                Microsoft.OSTCExtensions                        1.5.1.0
+CustomScriptForLinux                Microsoft.OSTCExtensions                        1.5.2.0
+LinuxUBUNTU1604                     Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9109
+LinuxUBUNTU1604                     Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9111
+LinuxUBUNTU1604                     Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+LinuxUBUNTU1604                     Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.13.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.15.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.16.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.17.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.18.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.26.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.30.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  1.2.5.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  2.0.1.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  2.0.10.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  2.0.3.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  2.0.5.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  2.0.6.0
+SqlIaaSAgent                        Microsoft.SqlServer.Management                  2.0.9.0
+DSC                                 Microsoft.Powershell.Test                       2.19.2.0
+DSC.Edp                             Microsoft.Powershell                            2.19.1337
+DSCForLinux                         Microsoft.OSTCExtensions                        2.0.0.0
+DSCForLinux                         Microsoft.OSTCExtensions                        2.70.0.4
+Windows                             Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9110
+Windows                             Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9113
+Windows                             Microsoft.Azure.RecoveryServices.SiteRecovery   1.0.0.9114
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.2.0
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.3.9009
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.3.9011
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.3.9013
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.3.9015
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.3.9017
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.3.9019
+LinuxDiagnostic                     Microsoft.OSTCExtensions                        2.3.9021
+OSPatchingForLinux                  Microsoft.OSTCExtensions                        2.0.0.1
+VSRemoteDebugger                    Microsoft.VisualStudio.Azure.RemoteDebug        1.1.2.0
+VMAccessForLinux                    Microsoft.OSTCExtensions                        1.0
+VMAccessForLinux                    Microsoft.OSTCExtensions                        1.4.0.0
+VMAccessForLinux                    Microsoft.OSTCExtensions                        1.4.5.0
+DockerExtension                     MSOpenTech.Extensions                           0.3.2.0
+TrendMicroDSA                       TrendMicro.DeepSecurity                         9.5.3.1
+
+Global Description
+
+Type                                PublisherName
+----                                -------------
+AADLoginForLinux                    Microsoft.Azure.ActiveDirectory.LinuxSSH
+AcronisBackup                       Acronis.Backup
+AcronisBackupLinux                  Acronis.Backup
+ADEForLinuxTest                     Microsoft.Azure.Security
+ADETest                             Microsoft.Azure.Security
+ADETest                             Microsoft.Azure.Security.Edp
+ADETestWire                         Microsoft.Azure.Security
+AgentWinExt                         bmc.ctm
+AlertLogicLM                        AlertLogic.Extension
+AlertLogicLM                        alertlogic
+AzureBackupLinuxWorkload            Microsoft.Azure.RecoveryServices.WorkloadBackup.Edp
+AzureBackupWindowsWorkload          Microsoft.Azure.RecoveryServices.WorkloadBackup.Edp
+AzureBackupWindowsWorkload          Microsoft.Azure.RecoveryServices.WorkloadBackup
+AzureCATExtensionHandler            Microsoft.AzureCAT.AzureEnhancedMonitoring
+AzureDiagnosticsLinuxExtIaaS7.Test  Microsoft.OSTCExtensions.Test
+AzureDiskEncryption                 Microsoft.Azure.Security
+AzureDiskEncryption                 Microsoft.Azure.Security.Edp
+AzureDiskEncryptionForLinux         Microsoft.OSTCExtensions
+AzureDiskEncryptionForLinux         Microsoft.Azure.Security.Edp
+AzureDiskEncryptionForLinux         Microsoft.Azure.Security
+AzureEnhancedMonitorForLinux        Microsoft.OSTCExtensions
+AzureLogCollector                   Microsoft.WindowsAzure.Compute
+AzurePerformanceDiagnostics         Microsoft.Azure.Performance.Diagnostics
+AzureRemoteAppTestAgentV2           Microsoft.Windows.AzureRemoteApp.Test
+BGInfo                              Microsoft.Compute
+Blah                                Microsoft.OSTCExtensions
+BmcCtmAgentLinux                    ctm.bmc.com
+ChefClient                          Chef.Bootstrap.WindowsAzure
+CloudLinkSecureVMLinuxAgent         CloudLinkEMC.SecureVM
+CloudLinkSecureVMWindowsAgent       CloudLinkEMC.SecureVM
+ConferForAzure                      Confer
+ConfigurationforWindows             Microsoft.GuestConfiguration.Test
+CustomScript                        Microsoft.Azure.Extensions
+CustomScriptExtension               Microsoft.Compute
+CustomScriptForLinux                Microsoft.OSTCExtensions
+DatadogLinuxAgent                   Datadog.Agent
+DatadogWindowsAgent                 Datadog.Agent
+DependencyAgentLinux                Microsoft.Azure.Monitoring.DependencyAgent
+DependencyAgentWindows              Microsoft.Azure.Monitoring.DependencyAgent
+DockerExtension                     Microsoft.Azure.Extensions
+DotnetAgent                         HPE.Security.ApplicationDefender
+DSC                                 Microsoft.Powershell.Test
+DSC                                 Microsoft.Powershell
+DSC                                 Microsoft.GuestConfig.Test
+DSC                                 Microsoft.DscPolicy2.Test
+DSC                                 Microsoft.Powershell.Test01
+DSCForLinux                         Microsoft.OSTCExtensions
+dtmanaged                           dynatrace.ruxit
+FileSecurity                        ESET
+FixEmulatedIO                       Microsoft.Azure.Extensions
+FixLinuxDiagnostic                  Microsoft.Azure.Extensions
+HpcVmDrivers                        Microsoft.HpcCompute
+IaaS47C6E03DTest                    Microsoft.Azure.Applications
+IaaSAntimalware                     Microsoft.Azure.Security
+IaaSAntimalware                     Microsoft.Azure.Security.Test
+IaaSDiagnostics                     WAD2EventHub.Diagnostics.Test
+IaaSDiagnostics                     StatusReport.Diagnostics.Test
+IaaSDiagnostics                     WAD2AI.Diagnostics.Test
+IaaSDiagnostics                     Microsoft.Azure.Diagnostics
+InsightAgentLinux                   Rapid7.InsightPlatform
+InsightAgentWindows                 Rapid7.InsightPlatform
+JsonADDomainExtension               Microsoft.Compute
+KeyVaultForWindows                  Microsoft.Azure.KeyVault.Edp
+Linux                               Microsoft.Azure.RecoveryServices.SiteRecovery
+Linux                               Microsoft.Azure.SiteRecovery.Test
+LinuxAsm                            Microsoft.Azure.Extensions
+LinuxChefClient                     Chef.Bootstrap.WindowsAzure
+LinuxDEBIAN7                        Microsoft.Azure.SiteRecovery2.Test
+LinuxDEBIAN7                        Microsoft.Azure.RecoveryServices.SiteRecovery2
+LinuxDEBIAN8                        Microsoft.Azure.SiteRecovery2.Test
+LinuxDEBIAN8                        Microsoft.Azure.RecoveryServices.SiteRecovery2
+LinuxDiagnostic                     Microsoft.OSTCExtensions
+LinuxDiagnostic                     Microsoft.Azure.Diagnostics
+LinuxNodeAgent                      Microsoft.HpcPack
+LinuxNodeAgent2016                  Microsoft.HpcPack
+LinuxNodeAgent2016U1                Microsoft.HpcPack
+LinuxOL6                            Microsoft.Azure.RecoveryServices.SiteRecovery
+LinuxOL6                            Microsoft.Azure.SiteRecovery.Test
+LinuxRHEL6                          Microsoft.Azure.SiteRecovery.Test
+LinuxRHEL6                          Microsoft.Azure.RecoveryServices.SiteRecovery
+LinuxRHEL7                          Microsoft.Azure.SiteRecovery.Test
+LinuxRHEL7                          Microsoft.Azure.RecoveryServices.SiteRecovery
+LinuxSLES11SP3                      Microsoft.Azure.SiteRecovery.Test
+LinuxSLES11SP3                      Microsoft.Azure.RecoveryServices.SiteRecovery
+LinuxSLES11SP4                      Microsoft.Azure.RecoveryServices.SiteRecovery
+LinuxSLES11SP4                      Microsoft.Azure.SiteRecovery.Test
+LinuxSLES12                         Microsoft.Azure.RecoveryServices.SiteRecovery2
+LinuxSLES12                         Microsoft.Azure.SiteRecovery2.Test
+LinuxUBUNTU1404                     Microsoft.Azure.RecoveryServices.SiteRecovery
+LinuxUBUNTU1404                     Microsoft.Azure.SiteRecovery.Test
+LinuxUBUNTU1604                     Microsoft.Azure.SiteRecovery.Test
+LinuxUBUNTU1604                     Microsoft.Azure.RecoveryServices.SiteRecovery
+ManagedIdentityExtensionForLinux    Microsoft.ManagedIdentity
+ManagedIdentityExtensionForWindows  Microsoft.ManagedIdentity
+McAfeeEndpointSecurity              McAfee.EndpointSecurity
+MicrosoftMonitoringAgent            Microsoft.EnterpriseCloud.Monitoring
+MicrosoftMonitoringAgent            Microsoft.EnterpriseCloud.Monitoring.Test
+MSEnterpriseApplication             Microsoft.SystemCenter
+MyBackupTest                        Microsoft.Azure.Backup.Test
+MyBackupTestLinuxInt                Microsoft.Azure.Backup.Test
+NetworkWatcherAgentLinux            Microsoft.Azure.NetworkWatcher
+NetworkWatcherAgentWindows          Microsoft.Azure.NetworkWatcher
+Null                                Microsoft.OSTCExtensions
+NullLinux                           Microsoft.CPlat.Core
+OctopusDeployWindowsTentacle        OctopusDeploy.Tentacle
+OmsAgentForLinux                    Microsoft.EnterpriseCloud.Monitoring
+oneAgentLinux                       dynatrace.ruxit
+oneAgentManagedWindows              dynatrace.ruxit
+oneAgentWindows                     dynatrace.ruxit
+OSPatchingForLinux                  Microsoft.OSTCExtensions
+PortalProtectExtension              TrendMicro.PortalProtect
+ProtectVClientLinuxExtension        Gemalto.SafeNet.ProtectV
+ProtectVClientWindowsExtension      Gemalto.SafeNet.ProtectV
+PuppetAgent                         puppet
+PuppetEnterpriseAgent               PuppetLabs.Test
+PuppetEnterpriseAgent               PuppetLabs
+QualysAgent                         Qualys
+QualysAgentLinux                    Qualys
+RDMAUpdateForLinux                  Microsoft.OSTCExtensions
+RunCommandLinux                     Microsoft.CPlat.Core
+RunCommandWindows                   Microsoft.CPlat.Core
+SCWPAgentForLinux                   Symantec.CloudWorkloadProtection
+SCWPAgentForLinuxTestOnStage        Symantec.CloudWorkloadProtection.TestOnStage
+SCWPAgentForWindows                 Symantec.CloudWorkloadProtection
+ServiceProfilerAgent                Microsoft.VisualStudio.ServiceProfiler
+Site24x7ApmInsightExtn              Site24x7
+Site24x7LinuxServerExtn             Site24x7
+Site24x7WindowsServerExtn           Site24x7
+SiteRecovery                        Microsoft.Azure.RecoveryServices.SiteRecovery
+SiteRecoveryLinux                   Microsoft.Azure.RecoveryServices.SiteRecovery
+SqlIaaSAgent                        Microsoft.SqlServer.Management
+StackifyLinuxAgentExtension         Stackify.LinuxAgent.Extension
+SymantecEndpointProtection          Symantec
+TeamServicesAgent                   Microsoft.VisualStudio.Services
+TeamServicesAgentLinux              Microsoft.VisualStudio.Services
+TeamServicesAgentLinux1             Test.Microsoft.VisualStudio.Services
+TestGenevaMonitoringExtension       Microsoft.Azure.Security
+TestGenevaMonitoringExtension       Microsoft.Azure.Security.Edp
+TestMSILinuxExtension               Microsoft.Azure.Test.Identity
+TestMSIWindowsExtension             Microsoft.Azure.Test.Identity
+TestSqlIaaSAgent                    Microsoft.TestSqlServer.Edp
+TestSqlIaaSAgentLinux               Microsoft.TestSqlServer.Edp
+TrendMicroDSA                       Test.TrendMicro.DeepSecurity
+TrendMicroDSA                       TrendMicro.DeepSecurity
+TrendMicroDSALinux                  Test.TrendMicro.DeepSecurity
+TrendMicroDSALinux                  TrendMicro.DeepSecurity
+VMAccessAgent                       Microsoft.Compute
+VMAccessForLinux                    Microsoft.OSTCExtensions
+VMBackupForLinuxExtension           Microsoft.Azure.Security
+VMBackupForLinuxExtension           Microsoft.OSTCExtensions
+VMJITAccessExtension                Microsoft.AzureSecurity.JITAccess
+VMSnapshot                          Microsoft.Azure.RecoveryServices
+VMSnapshot                          Microsoft.Azure.RecoveryServices.Edp
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices
+VMSnapshotLinux                     Microsoft.Azure.RecoveryServices.Edp
+VormetricTransparentEncryptionAgent Vormetric
+VSETWTraceListenerService           Microsoft.VisualStudio.Azure.ETWTraceListenerService
+VSRemoteDebugger                    Microsoft.VisualStudio.Azure.RemoteDebug
+Windows                             Microsoft.Azure.RecoveryServices.SiteRecovery
+WindowsTest                         Microsoft.Azure.SiteRecovery.Test
+WorkloadBackup                      Microsoft.CloudBackup.Workload.Extension
+WorkloadBackup                      Microsoft.CloudBackup.Workload.Extension.Edp
+WorkloadBackupLinux                 Microsoft.CloudBackup.Workload.Extension
+WorkloadBackupLinux                 Microsoft.CloudBackup.Workload.Extension.Edp

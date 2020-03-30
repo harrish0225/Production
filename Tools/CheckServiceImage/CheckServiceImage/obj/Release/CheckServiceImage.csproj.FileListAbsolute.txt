@@ -6,3 +6,11 @@ D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\bin\Release\Check
 D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\obj\Release\CheckServiceImage.exe
 D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\obj\Release\CheckServiceImage.pdb
 D:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\obj\Release\CheckServiceImage.csprojResolveAssemblyReference.cache
+H:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\bin\Release\CheckServiceImage.exe.config
+H:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\obj\Release\CheckServiceImage.exe
+H:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\obj\Release\CheckServiceImage.pdb
+H:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\bin\Release\CheckServiceImage.exe
+H:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\bin\Release\CheckServiceImage.pdb
+H:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\bin\Release\Newtonsoft.Json.dll
+H:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\bin\Release\Newtonsoft.Json.xml
+H:\gitrep\Production\Tools\CheckServiceImage\CheckServiceImage\obj\Release\CheckServiceImage.csprojResolveAssemblyReference.cache

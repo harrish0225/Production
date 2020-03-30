@@ -1,0 +1,4 @@
+**********************Check Process Result(IncludeParentFile)**********************
+The parent file of	cosmos-db-create-azure-service-account.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\table-storage-cloud-service-nodejs.md	.
+The parent file of	cosmos-db-create-sql-api-add-sample-data.md	is	D:\gitrep\azure-docs-pr\articles\cosmos-db\create-sql-api-dotnet.md	.
+

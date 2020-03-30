@@ -1,0 +1,49 @@
+
+
+
+$cert = New-SelfSignedCertificate -CertStoreLocation "cert:\CurrentUser\My" `
+  -Subject "CN=chenyeexampleappScriptCert" `
+  -KeySpec KeyExchange
+$keyValue = [System.Convert]::ToBase64String($cert.GetRawCertData())
+
+$sp = New-AzureRMADServicePrincipal -DisplayName chenyeresturl `
+  -CertValue $keyValue `
+  -EndDate $cert.NotAfter `
+  -StartDate $cert.NotBefore
+Sleep 20
+New-AzureRmRoleAssignment -RoleDefinitionName Contributor -ServicePrincipalName $sp.ApplicationId
+
+
+
+$CertPlainPassword="Ryan=Lindsayc5"
+$CertPath="D:\ChenYe\Project\Weekly Work\Compare\Global Azure TO Moon Cake\articles"
+$CertPassword = ConvertTo-SecureString $CertPlainPassword -AsPlainText -Force
+
+
+$PFXCert = New-Object `
+  -TypeName System.Security.Cryptography.X509Certificates.X509Certificate `
+  -ArgumentList @($CertPath, $CertPassword)
+
+
+az ad sp create-for-rbac --name ChenYeGoRole --password Ryan=Lindsayc5
+
+{
+  "appId": "fc2c40bb-babf-445e-8a68-4340f0e808e7",
+  "displayName": "ChenYeGoRole",
+  "name": "http://ChenYeGoRole",
+  "password": "Ryan=Lindsayc5",
+  "tenant": "22842faf-29ea-4a6b-8483-af2ad35cd607"
+}
+
+
+$env:AZURE_CLIENT_ID="fc2c40bb-babf-445e-8a68-4340f0e808e7"
+$env:AZURE_CLIENT_SECRET="Ryan=Lindsayc5"
+$env:AZURE_TENANT_ID="22842faf-29ea-4a6b-8483-af2ad35cd607"
+$env:AZURE_SUBSCRIPTION_ID="a6e61b82-d18b-45b6-a448-7eeebb74af48"
+
+
+
+$env:AZURE_CLIENT_ID="fc2c40bb-babf-445e-8a68-4340f0e808e7"
+$env:AZURE_CLIENT_SECRET="Ryan=Lindsayc5"
+$env:AZURE_TENANT_ID="22842faf-29ea-4a6b-8483-af2ad35cd607"
+$env:AZURE_SUBSCRIPTION_ID="a6e61b82-d18b-45b6-a448-7eeebb74af48"

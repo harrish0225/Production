@@ -1,0 +1,55 @@
+Warning:  certmgr.msc 必须以run as administrator,否则出来的是 当时sing in 的账号。
+
+1. Powershell 控制台一直打开
+$cert = New-SelfSignedCertificate -Type Custom -KeySpec Signature `
+-Subject "CN=P2SRootCert" -KeyExportPolicy Exportable `
+-HashAlgorithm sha256 -KeyLength 2048 `
+-CertStoreLocation "Cert:\CurrentUser\My" -KeyUsageProperty Sign -KeyUsage CertSign
+
+
+```output
+ PSParentPath: Microsoft.PowerShell.Security\Certificate::CurrentUser\My
+
+Thumbprint                                Subject
+----------                                -------
+BA3F43E995369009DE76056826412656069458B1  CN=P2SRootCert
+```
+
+New-SelfSignedCertificate -Type Custom -DnsName P2SChildCert -KeySpec Signature `
+-Subject "CN=P2SChildCert" -KeyExportPolicy Exportable `
+-HashAlgorithm sha256 -KeyLength 2048 `
+-CertStoreLocation "Cert:\CurrentUser\My" `
+-Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")
+
+
+```output
+   PSParentPath: Microsoft.PowerShell.Security\Certificate::CurrentUser\My
+
+Thumbprint                                Subject
+----------                                -------
+C457D6166B68DC44C259EC29103FB0C73028445D  CN=P2SChildCert
+```
+
+2. 如果Powershell打开后又关闭了。可以采用以下步骤。
+
+Get-ChildItem -Path "Cert:\CurrentUser\My"
+
+
+```output
+  PSParentPath: Microsoft.PowerShell.Security\Certificate::CurrentUser\My
+
+Thumbprint                                Subject
+----------                                -------
+BA3F43E995369009DE76056826412656069458B1  CN=P2SRootCert
+```
+
+THUMBPRINT 是RootCert的对应的
+$cert = Get-ChildItem -Path "Cert:\CurrentUser\My\THUMBPRINT"
+
+$cert = Get-ChildItem -Path "Cert:\CurrentUser\My\BA3F43E995369009DE76056826412656069458B1"
+
+New-SelfSignedCertificate -Type Custom -DnsName P2SChildCert -KeySpec Signature `
+-Subject "CN=P2SChildCert" -KeyExportPolicy Exportable `
+-HashAlgorithm sha256 -KeyLength 2048 `
+-CertStoreLocation "Cert:\CurrentUser\My" `
+-Signer $cert -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.2")

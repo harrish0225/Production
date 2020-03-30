@@ -1,0 +1,26 @@
+1. Install the VM Windows Server 2012 R2 or windows 8 or above.
+2. Connect to the VM.
+3. Find-Module -Name VMware.PowerCLI
+4. Install-Module -Name VMware.PowerCLI -Scope AllUsers
+5. 关闭CEIP（ Customer Experience Improvement Program 客户体验改进计划）
+	Set-PowerCLIConfiguration -Scope User -ParticipateInCEIP $false
+6.忽略证书验证
+	Set-PowerCLIConfiguration -InvalidCertificateAction Ignore
+7. Connect-VIServer -Protocol https -User ‘administrator@vsphere.local’ -Password ‘yourpass’ -Server 192.168.x.x
+	获取主机：Get-VMHost
+	获取虚拟机：Get-VM
+
+8.Enable the Adobe Flash player
+Windows Server 2012
+	https://blogs.vmware.com/PowerCLI/2017/04/powercli-install-process-powershell-gallery.html
+
+2016 Windows server enable Flash player with following powershell cmdlet:
+	dism /online /add-package /packagepath:"C:\Windows\servicing\Packages\Adobe-Flash-For-Windows-Package~31bf3856ad364e35~amd64~~10.0.14393.0.mum"
+
+9. Install vCenter Server application
+https://www.cnblogs.com/yangjianbo/articles/9565338.html
+
+https://blogs.technet.microsoft.com/bernhard_frank/2016/11/24/add-flash-player-to-server-2016/
+
+Connect-VIServer -Server chenyevm -User azureadmin -Password Ryan=Lindsayc5 
+Get-VM |  Select Name | Sort-Object -Property Name >  <outputfile.txt>

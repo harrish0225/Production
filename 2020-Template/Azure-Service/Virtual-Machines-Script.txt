@@ -1,0 +1,96 @@
+$keyvault_name="chenyenewkey"
+az keyvault create `
+    --name $keyvault_name `
+    --resource-group ChenYeRG `
+    --location chinanoth `
+    --enabled-for-disk-encryption True
+	
+	
+az keyvault key create --vault-name $keyvault_name --name myKey --protection software
+
+
+read $sp_id $sp_password <<< $(az ad sp create-for-rbac --query [appId,password] -o tsv)
+
+az keyvault set-policy --name $keyvault_name --spn $sp_id `
+  --key-permissions wrapKey `
+  --secret-permissions set
+  
+az vm encryption enable `
+    --resource-group ChenYeRG `
+    --name myVM `
+    --aad-client-id $sp_id `
+    --aad-client-secret $sp_password `
+    --disk-encryption-keyvault $keyvault_name `
+    --key-encryption-key myKey `
+    --volume-type all
+	
+	
+	
+az vm encryption show --resource-group ChenYeRG --name myVM
+
+az vm restart --resource-group ChenYeRG --name myVM
+
+$RANDOM="110"
+$STORAGEACCT=$(az storage account create `
+    --resource-group "ChenYeRG" `
+    --name "mystorageacct$RANDOM" `
+    --location chinanorth `
+    --sku Standard_LRS `
+    --query "name" --output tsv)
+	
+	
+	STORAGEKEY=$(az storage account keys list `
+    --resource-group "c" `
+    --account-name mystorageacct `
+    --query "[0].value" --output tsv)
+	
+$STORAGEKEY=$(az storage account keys list `
+    --resource-group "ChenYeRG" `
+    --account-name $STORAGEACCT `
+    --query "[0].value" --output tsv)
+	
+AZ_REPO=$(lsb_release -cs)
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | \
+     sudo tee /etc/apt/sources.list.d/azure-cli.list
+	 
+curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+
+sudo apt-get install apt-transport-https
+sudo apt-get update && sudo apt-get install azure-cli
+
+STORAGEACCT2=$(az storage account create \
+    --resource-group "ChenYeRG" \
+    --name "mystorageacct$RANDOM" \
+    --location chinanorth \
+    --sku Standard_LRS \
+    --query "name" )
+	
+VNET-BJMOSES-01
+	
+STORAGEKEY=$(az storage account keys list \
+    --resource-group "ChenYeRG" \
+    --account-name $STORAGEACCT \
+    --query "[0].value" | tr -d '"')
+	
+az storage share create --name myshare \
+    --quota 10 \
+    --account-name $STORAGEACCT \
+    --account-key $STORAGEKEY
+	
+	
+az vm create --resource-group ChenYeRG `
+   --name myVM `
+   --image openSUSE-Leap `
+   --size Standard_A2 `
+   --generate-ssh-keys
+   
+az vm open-port --port 3306 --resource-group ChenYeRG --name myVM
+
+
+az group deployment create --resource-group ChenYeRG --name ChenYeDeployment \
+  --parameters '{"osDiskVhdUri": {"value": "https://mystorageaccount.blob.core.windows.net/vhds/myVM.vhd"},
+    "osType": {"value": "Linux"},
+    "vmSize": {"value": "Standard_DS1_v2"},
+    "vmName": {"value": "ChenYeDeployedVM"}}' \
+    --template-uri https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/201-vm-specialized-vhd/azuredeploy.json
+

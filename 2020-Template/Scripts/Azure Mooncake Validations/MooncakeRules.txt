@@ -1,0 +1,31 @@
+Azure (in general);windows.net;chinacloudapi.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure compute;cloudapp.net;chinacloudapp.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure storage;blob.core.windows.net;blob.core.chinacloudapi.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure storage;queue.core.windows.net;queue.core.chinacloudapi.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure storage;table.core.windows.net;table.core.chinacloudapi.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure service management;management.core.windows.net;management.core.chinacloudapi.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure Resource Manager;management.azure.com;management.chinacloudapi.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure portal;portal.azure.com;portal.azure.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+SQL Database;database.windows.net;database.chinacloudapi.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+SQL Azure DB management API;management.database.windows.net;management.database.chinacloudapi.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure Service Bus;servicebus.windows.net;servicebus.chinacloudapi.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure Access Control Service;accesscontrol.windows.net;accesscontrol.chinacloudapi.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure HDInsight;azurehdinsight.net;azurehdinsight.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure Service Fabric cluster;cloudapp.azure.com;chinaeast.chinacloudapp.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure Active Directory (Azure AD);onmicrosoft.com;partner.onmschina.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure AD logon;login.microsoftonline.com;login.partner.microsoftonline.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure AD Graph API;graph.windows.net;graph.chinacloudapi.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Microsoft Graph;graph.microsoft.com;microsoftgraph.chinacloudapi.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure Cognitive Services;api.projectoxford.ai/face/v1.0;api.cognitive.azure.cn/face/v1.0;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Azure Key Vault API;vault.azure.net;vault.azure.cn;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Sign in with PowerShell;Add-AzureAccount;Add-AzureAccount -Environment AzureChinaCloud;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Sign in with PowerShell;Connect-AzureRmAccount;Connect-AzureRmAccount -Environment AzureChinaCloud;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Sign in with PowerShell;Connect-msolservice;Connect-msolservice -AzureEnvironment AzureChinaCloud;For more info, see https://docs.microsoft.com/azure/china/resources-developer-guide#check-endpoints-in-azure.
+Social site;google.com; ; For more information see https://docs.microsoft.com/azure/china/resources-developer-guide#use-social-sites-and-media-services-in-china.
+Social site;youtube.com; ; For more information see https://docs.microsoft.com/azure/china/resources-developer-guide#use-social-sites-and-media-services-in-china.
+Social site;vimeo.com; ; For more information see https://docs.microsoft.com/azure/china/resources-developer-guide#use-social-sites-and-media-services-in-china.
+Social site;twitter.com; ; For more information see https://docs.microsoft.com/azure/china/resources-developer-guide#use-social-sites-and-media-services-in-china.
+Social site;facebook.com; ; For more information see https://docs.microsoft.com/azure/china/resources-developer-guide#use-social-sites-and-media-services-in-china.
+Social site;instagram.com; ; For more information see https://docs.microsoft.com/azure/china/resources-developer-guide#use-social-sites-and-media-services-in-china.
+Azure AD v2.0 authorization and token endpoints;login.microsoftonline.com/common/oauth2/authorize; ;Azure AD v2.0 authorization and token endpoints are available only for the global service, not national cloud deployments. For more info, see https://docs.microsoft.com/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints
+Azure AD v2.0 authorization and token endpoints;login.microsoftonline.com/common/oauth2/token; ;Azure AD v2.0 authorization and token endpoints are available only for the global service, not national cloud deployments. For more info, see https://docs.microsoft.com/azure/active-directory/develop/authentication-national-cloud#azure-ad-authentication-endpoints

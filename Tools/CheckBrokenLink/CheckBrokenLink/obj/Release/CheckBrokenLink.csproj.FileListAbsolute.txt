@@ -12,3 +12,11 @@ D:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\CheckBrok
 D:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\CheckBrokenLink.pdb
 D:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\Newtonsoft.Json.dll
 D:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\Newtonsoft.Json.xml
+H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\CheckBrokenLink.exe.config
+H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Release\CheckBrokenLink.exe
+H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Release\CheckBrokenLink.pdb
+H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\CheckBrokenLink.exe
+H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\CheckBrokenLink.pdb
+H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\Newtonsoft.Json.dll
+H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\Newtonsoft.Json.xml
+H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Release\CheckBrokenLink.csprojResolveAssemblyReference.cache

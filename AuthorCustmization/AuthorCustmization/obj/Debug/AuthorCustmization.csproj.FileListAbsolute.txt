@@ -21,3 +21,10 @@ D:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\AuthorCustm
 D:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\AuthorCustmization.pdb
 D:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\Newtonsoft.Json.dll
 D:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\Newtonsoft.Json.xml
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\AuthorCustmization.exe.config
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\obj\Debug\AuthorCustmization.exe
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\obj\Debug\AuthorCustmization.pdb
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\AuthorCustmization.exe
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\AuthorCustmization.pdb
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\Newtonsoft.Json.dll
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Debug\Newtonsoft.Json.xml

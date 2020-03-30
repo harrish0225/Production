@@ -1,0 +1,73 @@
+
+az provider list 
+
+{
+    "id": "/subscriptions/eb8fe1ea-4a26-432d-9110-9531e4b9fd0f/providers/Microsoft.Resources",
+    "namespace": "Microsoft.Resources",
+    "registrationState": "Registered",
+    "resourceTypes": [
+      {
+        "aliases": null,
+        "apiVersions": [
+          "2018-02-01",
+          "2018-01-01",
+          "2017-08-01",
+          "2017-06-01",
+          "2017-05-10",
+          "2017-05-01",
+          "2017-03-01",
+          "2016-09-01",
+          "2016-07-01",
+          "2016-06-01",
+          "2016-02-01",
+          "2015-11-01",
+          "2015-01-01",
+          "2014-04-01-preview"
+        ],
+        "locations": [],
+        "properties": null,
+        "resourceType": "tenants"
+      },
+      {
+        "aliases": null,
+        "apiVersions": [
+          "2018-02-01",
+          "2018-01-01",
+          "2017-08-01",
+          "2017-06-01",
+          "2017-05-10",
+          "2017-05-01",
+          "2017-03-01",
+          "2016-09-01",
+          "2016-07-01",
+          "2016-06-01",
+          "2016-02-01",
+          "2015-11-01",
+          "2015-01-01",
+          "2014-04-01-preview"
+        ],
+'''''''''''''''''''''''''
+Correct verify
+
+pass
+az provider show --namespace Microsoft.Resources
+pass
+az provider list --query "[].{ID:id, Provider:namespace, Status:registrationState, resourceType: resourceTypes[0].resourceType, APIVersion:resourceTypes[0].apiVersions[*] | join(', ', @)}" --out table
+pass
+az provider list --query "[].{ Provider:namespace, Status:registrationState, resourceType: sort(resourceTypes[*].resourceType) | join(', ',@)}" --out table
+pass
+az provider list --query "[].{ID:id, Provider:namespace, Status:registrationState, resourceType: resourceTypes[*].resourceType | join(', ',@), APIVersion:resourceTypes[*].apiVersions[] | join('|| ', @)}" --out table
+
+Get-AzureRmResourceProvider | select-object ProviderNamespace -ExpandProperty ResourceTypes | ft ProviderNamespace, ResourceTypeName, ApiVersions
+
+az provider list --expand --query "[].{namespace:namespace, resourceType:resourceType[]}"
+
+
+az network watcher list --query "[].{name:name,location:location}"
+Pass
+az network watcher list --query "[?location=='chinanorth'].{name:name,location:location}"
+
+
+az network watcher list --resource-group NetworkwatcherRG --name NetworkWatcher_chinanorth
+Testing
+az provider list --query "[].{ID:id, Provider:namespace, Status:registrationState, APIVersion: resourceTypes[0].resourceType & resourceTypes[0].apiVersions[*] | join(', ', @)}" --out table

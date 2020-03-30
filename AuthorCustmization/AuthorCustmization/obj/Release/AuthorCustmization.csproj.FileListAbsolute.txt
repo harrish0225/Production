@@ -13,3 +13,10 @@ D:\gitrep\Production\AuthorCustmization\AuthorCustmization\obj\Release\AuthorCus
 D:\gitrep\Production\AuthorCustmization\AuthorCustmization\obj\Release\AuthorCustmization.pdb
 D:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Release\AuthorCustmization.pdb
 D:\gitrep\Production\AuthorCustmization\AuthorCustmization\obj\Release\AuthorCustmization.csprojResolveAssemblyReference.cache
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Release\AuthorCustmization.exe.config
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\obj\Release\AuthorCustmization.exe
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\obj\Release\AuthorCustmization.pdb
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Release\AuthorCustmization.exe
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Release\AuthorCustmization.pdb
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Release\Newtonsoft.Json.dll
+H:\gitrep\Production\AuthorCustmization\AuthorCustmization\bin\Release\Newtonsoft.Json.xml
