@@ -6,3 +6,11 @@ D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Debug\Newtonsoft.Js
 D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Debug\CollectNewFile.csprojResolveAssemblyReference.cache
 D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Debug\CollectNewFile.exe
 D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Debug\CollectNewFile.pdb
+H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Debug\CollectNewFile.exe.config
+H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Debug\CollectNewFile.exe
+H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Debug\CollectNewFile.pdb
+H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Debug\CollectNewFile.exe
+H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Debug\CollectNewFile.pdb
+H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Debug\Newtonsoft.Json.dll
+H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Debug\Newtonsoft.Json.xml
+H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Debug\CollectNewFile.csprojResolveAssemblyReference.cache

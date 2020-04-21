@@ -2,14 +2,14 @@
   "AuthorReplacement": [
     {
       "service": "ALL",
-      "global": "^(\\s*---\\s*)title:(\\s*)(\\'|\\\")?([A-Za-z ]*)(\\:{1})([A-Za-z ]*)(\\'|\\\")?",
-      "mooncake": "$1title:$2$4-$6",
+      "global": "^(\\s*---\\s*)(author|cloud|documentationCenter|documentationcenter|description|editor|manager|ms\\.\\S{1,}|origin\\.date|service|services|tags|title):(\\s*)(\\'|\\\")?([A-Za-z ]*)(\\:{1})([A-Za-z ]*)(\\'|\\\")?",
+      "mooncake": "$1$2:$3$5-$7",
       "comments": "Remove the title mete propeties container ' or double '"
     },
     {
       "service": "ALL",
-      "global": "^(\\s*---\\s*)title:(\\s*)(\\'|\\\")?([A-Za-z \\-]*)(\\'|\\\")?",
-      "mooncake": "$1title:$2$4",
+      "global": "^(\\s*---\\s*)(author|cloud|documentationCenter|documentationcenter|description|editor|manager|ms\\.\\S{1,}|origin\\.date|service|services|tags|title):(\\s*)(\\'|\\\")?([A-Za-z \\-]*)(\\'|\\\")?",
+      "mooncake": "$1$2:$3$5",
       "comments": "Remove the title mete propeties container ' or double '"
     },
     {
@@ -28,7 +28,7 @@
       "service": "ALL",
       "global": "^([\\s]*)ms\\.date:([\\s ]*)(.*)",
       "mooncake": "$1ms.date: {CustimzedDate}\n$1ms.author: v-yeche",
-      "comments": "change the ms.date(global) to origin.date(mooncake); ADD MS.AUTHOR META BEFORE CUSTOMIZEDATE"
+      "comments": "1. change the ms.date(global) to origin.date(mooncake); ADD MS.AUTHOR META BEFORE CUSTOMIZEDATE. 2. Add ms.testscope and ms.testdate meta properties"
     },
     {
       "service": "ALL",
@@ -83,22 +83,22 @@
       "global": "ms\\.author: v\\-yeche([\\s\\S]*)?ms\\.author: v\\-yeche",
       "mooncake": "$1ms.author: v-yeche",
       "comments": "keep the ms.author display only once"
-    },
-    {
-      "service": "ALL",
-      "global": "^(\\d{1,}\\.|\\-|\\*)(\\s{1,})([^\\n\\r]*)([\\n|\\r]*)(\\s*)([^\\d\\-\\*\\#]*)",
-      "mooncake": "$1 $3$4    $6",
-      "comments": "Add the Tab key below the Order/Unorder "
-    },
-    {
-      "service": "ALL",
-      "global": "^    (\\d{1,}\\.|\\-|\\*|\\#{2,})(\\s{1,})([^\\n\\r]*)",
-      "mooncake": "$1$2$3",
-      "comments": "Add the Tab key below the Order/Unorder "
     }
 
   ],
   "URLReplacement": [
+    {
+      "service": "ALL",
+      "global": "^\\[([a-zA-Z0-9\\-]{1,})\\]:(https|http)://",
+      "mooncake": "[$1]: $2://",
+      "comments": "Add empty character botwee : and https://"
+    },
+    {
+      "service": "ALL",
+      "global": "(https://\\s*){2,}",
+      "mooncake": "https://",
+      "comments": "Global endpoint double check for reference."
+    },
 	  {
       "service": "ALL",
       "global": "windows\\.net",
@@ -135,7 +135,7 @@
       "mooncake": "login.partner.microsoftonline.cn",
       "comments": "Global endpoint double check for reference."
     },
-	{
+	  {
       "service": "ALL",
       "global": "graph\\.(microsoft\\.com|chinacloudapi\\.cn)",
       "mooncake": "microsoftgraph.chinacloudapi.cn",
@@ -233,6 +233,12 @@
     },
     {
       "service": "All",
+      "global": "\\(\\.\\./azure-functions/functions-create-first-function-powershell\\.md\\)",
+      "mooncake": "(/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-powershell)",
+      "comments": ""
+    },
+    {
+      "service": "All",
       "global": "australia(\\s*)east",
       "mooncake": "china$1east2",
       "comments": ""
@@ -317,8 +323,8 @@
     },
     {
       "service": "ALL",
-      "global": "_([A-Z0-9a-z ]{1,})_( *)(\\.|,|\\:)",
-      "mooncake": "_$1_ $3",
+      "global": "[ ]{1,}(\\(?)_([A-Z0-9a-z ]{1,})_( *)(\\.|,|\\:|\\))",
+      "mooncake": "$1 _$2_ $4",
       "comments": "Correct the word lean format _XXXX_ssssssss . in English format "
     },
     {
@@ -2111,13 +2117,18 @@
     },
     {
       "service": "ALL",
-      "global": "\\(/(azure\\-supportability|azure\\-portal/supportability)/(resource\\-manager\\-core\\-quotas\\-request|networking\\-quota\\-requests|how\\-to\\-create\\-azure\\-support\\-request)/?\\)",
+      "global": "\\(\\s*(https://docs\\.microsoft\\.com/azure|https://docs\\.azure\\.cn)?/(azure\\-supportability|azure\\-portal/supportability)/(resource\\-manager\\-core\\-quotas\\-request|networking\\-quota\\-requests|how\\-to\\-create\\-azure\\-support\\-request)/?\\)",
       "mooncake": "(https://support.azure.cn/support/support-azure/)"
     },
     {
       "service": "ALL",
       "global": "\\.azurecr\\.io",
       "mooncake": ".azurecr.cn"
+    },
+    {
+      "service": "container-registry-tasks-logs.md",
+      "global": "azurecr\\.io/samples",
+      "mooncake": ".azurecr.cn/samples"
     },
     {
       "service": "ALL",
@@ -2434,6 +2445,11 @@
     },
     {
       "service": "ALL",
+      "global": "[Create one for free](https://azure\\.microsoft\\.com/account/)",
+      "mooncake": "[Create a trial account](https://www.azure.cn/pricing/1rmb-trial/)"
+    },
+    {
+      "service": "ALL",
       "global": "https://azure\\.microsoft\\.com/account/",
       "mooncake": "https://www.azure.cn/pricing/1rmb-trial/"
     },
@@ -2634,8 +2650,8 @@
     },
     {
       "service": "ALL",
-      "global": "https://www\\.azure\\.cn/pricing/details/managed-disks/",
-      "mooncake": "https://www.azure.cn/pricing/details/storage/"
+      "global": "https://www\\.azure\\.cn/pricing/details/managed\\-disks/",
+      "mooncake": "https://www.azure.cn/pricing/details/storage/managed-disks/"
     },
     {
       "service": "ALL",
@@ -3385,7 +3401,7 @@
     },
     {
       "service": "ALL",
-      "global": "https://docs\\.azure\\.cn(/|zh\\-cn/|en\\-us/)?dotnet/(api/system\\.string|standard/base-types|standard/net-standard|articles/fsharp)(\\S*)\\?view=azure-dotnet",
+      "global": "https://docs\\.azure\\.cn(/|zh\\-cn/|en\\-us/)?dotnet/(api/system\\.string|standard/base\\-types|standard/net\\-standard|standard/parallel\\-programming|articles/fsharp)(\\S*)\\?view=azure-dotnet",
       "mooncake": "https://docs.microsoft.com/$1dotnet/$2$3",
       "comments": "Correct the dotnet content which Mooncake did not exists."
     },
@@ -3405,6 +3421,30 @@
       "service": "AKS",
       "global": "(E|e)ast(\\s*)(US|Us|uS|us)",
       "mooncake": "China$2East$2 2",
+      "comments": ""
+    },
+    {
+      "service": "ALL",
+      "global": "(C|c)hina(E|e)ast 2",
+      "mooncake": "$1hina$2ast2",
+      "comments": ""
+    },
+    {
+      "service": "ALL",
+      "global": "Intel Software Guard Extensions (Intel SGX),?",
+      "mooncake": "",
+      "comments": "Remove the SGX feature"
+    },
+    {
+      "service": "ALL",
+      "global": "(C|c)hina(N|n)orth 2",
+      "mooncake": "$1hina$2orth2",
+      "comments": ""
+    },
+    {
+      "service": "ALL",
+      "global": "(C|c)hina(\\s{1,})(East|east|North|north)2",
+      "mooncake": "$1hina $3 2",
       "comments": ""
     },
     {
@@ -3623,8 +3663,8 @@
     },
     {
       "service": "ALL",
-      "global": "https://azuremarketplace\\.microsoft\\.com/marketplace/apps/category/([A-Za-z0-9]{1,})\\?([a-zA-z\\&=0-9]*)",
-      "mooncake": "https://market.azure.cn/marketplace/apps?search=$1&$2",
+      "global": "https://(azuremarketplace\\.microsoft\\.com|market\\.azure\\.cn)/(en-us/)?marketplace/apps/category/([A-Za-z0-9]{1,})\\?([a-zA-z\\&=0-9]*)",
+      "mooncake": "https://market.azure.cn/marketplace/apps?search=$3&$4",
       "comments": "Change https://azuremarketplace.microsoft.com URL"
     },
     {
@@ -3653,20 +3693,20 @@
     },
     {
       "service": "ALL",
-      "global": "https://(azure\\.microsoft\\.com|www\\.azure\\.cn)/global\\-infrastructure/services/?",
-      "mooncake": "https://azure.microsoft.com/global-infrastructure/services/",
-      "comments": ""
-    },
-    {
-      "service": "ALL",
-      "global": "https://www\\.azure\\.cn/global\\-infrastructure/geographies/?",
-      "mooncake": "https://azure.microsoft.com/en-us/global-infrastructure/geographies/",
-      "comments": "Restore the global infrastructure geographies"
+      "global": "https://(azure\\.microsoft\\.com|www\\.azure\\.cn)/global\\-infrastructure/(services|locations|geographies)/?",
+      "mooncake": "https://azure.microsoft.com/global-infrastructure/$2/",
+      "comments": "Restore the global infrastructure service, locations, and geographies"
     },
     {
       "service": "private-link",
-      "global": "(china|China)(\\s*)?(north|North|east|East)(\\s*)2?",
-      "mooncake": "$1$2east$42",
+      "global": "(china|China)(\\s{1,})(north|North|east|East)(\\s*)2?",
+      "mooncake": "$1$2east 2",
+      "comments": ""
+    },
+    {
+      "service": "private-link",
+      "global": "(china|China)(north|North|east|East)(\\s*)2?",
+      "mooncake": "$1east2",
       "comments": ""
     },
     {
@@ -3745,6 +3785,12 @@
     }
   ],
   "Backup": [
+    {
+      "service": "ALL",
+      "global": "^([\\s]*)ms\\.date:([\\s ]*)(.*)",
+      "mooncake": "$1ms.date: {CustimzedDate}\nms.testscope: no\nms.testdate: {CustimzedDate}\n$1ms.author: v-yeche",
+      "comments": "1. change the ms.date(global) to origin.date(mooncake); ADD MS.AUTHOR META BEFORE CUSTOMIZEDATE. 2. Add ms.testscope and ms.testdate meta properties"
+    },
     {
       "service": "ALL",
       "global": "([\\s]*)(\\n)",
@@ -3853,6 +3899,18 @@
       "global": "<center>([\\n\\r]{1,})\\!(\\[.*\\])(\\(.*\\)|\\[.*\\])([\\n\\r]{1,})</center>",
       "mooncake": "<center>\n\n!$2$3\n\n</center>",
       "comments": "Correct the <center> images_URL </center> format in articles"
+    },
+    {
+      "service": "ALL",
+      "global": "^(\\d{1,}\\.|\\-|\\*)(\\s{1,})([^\\n\\r]*)([\\n|\\r]*)(\\s*)([^\\d\\-\\*\\#]*)",
+      "mooncake": "$1 $3$4    $6",
+      "comments": "Add the Tab key below the Order/Unorder "
+    },
+    {
+      "service": "ALL",
+      "global": "^    (\\d{1,}\\.|\\-|\\*|\\#{2,})(\\s{1,})([^\\n\\r]*)",
+      "mooncake": "$1$2$3",
+      "comments": "Add the Tab key below the Order/Unorder "
     }
 
   ]

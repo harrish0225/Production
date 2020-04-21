@@ -359,7 +359,7 @@ namespace CheckBrokenLink.ProcessLibrary
             return correctName;
         }
 
-        public void CheckMatches(MatchCollection matches, ref List<string> lstURL, ref string articleContent)
+        public void CheckMatches(MatchCollection matches, ref Hashtable htbURL,ref List<string> lstURL, ref string articleContent)
         {
             string originalFileName = string.Empty;
 
@@ -471,8 +471,13 @@ namespace CheckBrokenLink.ProcessLibrary
                 if (filename.StartsWith("http://") || filename.StartsWith("https://"))
                 {
                     //lstURL.Add(filename);
-                    lstURL.Add(originalFileName);
-                    continue;
+                    if(htbURL.ContainsKey(originalFileName)==false)
+                    {
+                        lstURL.Add(originalFileName);
+                        htbURL.Add(originalFileName,originalFileName);
+                        continue;
+                    }
+                    
                 }
 
                 //Step 2: Select inner Archor tag
@@ -623,8 +628,12 @@ namespace CheckBrokenLink.ProcessLibrary
                         }
 
 
-
-                        lstURL.Add(originalFileName);
+                        if (htbURL.ContainsKey(originalFileName) == false)
+                        {
+                            lstURL.Add(originalFileName);
+                            htbURL.Add(originalFileName, originalFileName);
+                        }
+                            
                     }
                     else
                     {
@@ -702,7 +711,12 @@ namespace CheckBrokenLink.ProcessLibrary
                     originalFileName = string.Format("https://docs.azure.cn/zh-cn/{0}/{1}", checkdirectory, originalFileName);
                 }
 
-                lstURL.Add(originalFileName);
+                if(htbURL.ContainsKey(originalFileName)==false)
+                {
+                    lstURL.Add(originalFileName);
+                    htbURL.Add(originalFileName, originalFileName);
+                }
+                
 
 
             }
@@ -873,6 +887,8 @@ namespace CheckBrokenLink.ProcessLibrary
 
 
                 List<string> lstURL = new List<string>();
+                Hashtable htbURL = new Hashtable();
+
 
                 MatchCollection matches;
 
@@ -889,7 +905,7 @@ namespace CheckBrokenLink.ProcessLibrary
                         string mdfilePatFirst = "(?!(<!--[\\s\\S]*))\\[(?<labelname>[^\\[\\]]*)\\]([\\s]*)\\((?<mdfilename>[^\\(\\)\\[\\]]*)\\)(?!(\\s*-->))";
                         matches = Regex.Matches(articleContent, mdfilePatFirst);
 
-                        this.CheckMatches(matches, ref lstURL, ref articleContent);
+                        this.CheckMatches(matches, ref htbURL, ref lstURL, ref articleContent);
 
                         // Exception the C++ method style -->  [XXX]::MethodName
                         // Invloved Sample 
@@ -904,7 +920,7 @@ namespace CheckBrokenLink.ProcessLibrary
 
                         matches = Regex.Matches(articleContent, mdfilePatSecond);
 
-                        this.CheckMatches(matches, ref lstURL, ref articleContent);
+                        this.CheckMatches(matches, ref htbURL, ref lstURL, ref articleContent);
                     }
                    
 
@@ -918,13 +934,13 @@ namespace CheckBrokenLink.ProcessLibrary
 
                     matches = Regex.Matches(articleContent, ymlfilePatFirst);
 
-                    this.CheckMatches(matches, ref lstURL, ref articleContent);
+                    this.CheckMatches(matches, ref htbURL, ref lstURL, ref articleContent);
 
                     string ymlfilePatSecond = "href(\\:|\\=)([\\s| ]*)([\\'|\\\"| ]?)(?<mdfilename>[^ \\'\\\"\\r\\n]*)(\\3)[\\s]*(-->)*";     // (\\3) implement of ([\\'|\\\"| ]?) equal the 3rd element of groups 
                     // mdfilename should also not be equal to \r\n, or will be append \r\n and next row's character.
                     matches = Regex.Matches(articleContent, ymlfilePatSecond);
 
-                    this.CheckMatches(matches, ref lstURL, ref articleContent);
+                    this.CheckMatches(matches, ref htbURL, ref lstURL, ref articleContent);
                 }
 
                 this.CheckAllLinks(lstURL);

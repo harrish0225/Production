@@ -21,4 +21,3 @@ H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Release\CollectNewF
 H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Release\CollectNewFile.pdb
 H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Release\Newtonsoft.Json.dll
 H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Release\Newtonsoft.Json.xml
-H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Release\CollectNewFile.csprojResolveAssemblyReference.cache

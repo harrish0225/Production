@@ -20,4 +20,3 @@ H:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Redirect.exe
 H:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Redirect.pdb
 H:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Newtonsoft.Json.dll
 H:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Newtonsoft.Json.xml
-H:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.csprojResolveAssemblyReference.cache

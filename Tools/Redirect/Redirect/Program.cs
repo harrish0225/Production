@@ -271,7 +271,7 @@ namespace CLIReplacement
                 {
                     if (curtFile.RedirectGContent.Length == 0 && curtFile.RedirectMContent.Length == 0)
                     {
-                        Console.WriteLine(curtFile.FullPath);
+                        Console.WriteLine(curtFile.RelativeFile);
                     }
                 }
                 Console.WriteLine("************Delete File List End for Excel**************");
