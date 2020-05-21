@@ -1,0 +1,7 @@
+H:\gitrep\Production\AuthorCustomization\AuthorCustomization\bin\Release\Newtonsoft.Json.dll
+H:\gitrep\Production\AuthorCustomization\AuthorCustomization\bin\Release\Newtonsoft.Json.xml
+H:\gitrep\Production\AuthorCustomization\AuthorCustomization\bin\Release\AuthorCustomization.exe.config
+H:\gitrep\Production\AuthorCustomization\AuthorCustomization\bin\Release\AuthorCustomization.exe
+H:\gitrep\Production\AuthorCustomization\AuthorCustomization\bin\Release\AuthorCustomization.pdb
+H:\gitrep\Production\AuthorCustomization\AuthorCustomization\obj\Release\AuthorCustomization.exe
+H:\gitrep\Production\AuthorCustomization\AuthorCustomization\obj\Release\AuthorCustomization.pdb

@@ -183,8 +183,8 @@ fileconnect=""
 
 # Step 5-6: Append the parent files form edward reviewed file list.
 
-edwardcustfile=/d/gitrep/Production/AuthorCustmization/AuthorCustmization/filelist.txt
-edwardapppath=/d/gitrep/Production/AuthorCustmization/AuthorCustmization/bin/Release
+edwardcustfile=/d/gitrep/Production/AuthorCustomization/AuthorCustomization/filelist.txt
+edwardapppath=/d/gitrep/Production/AuthorCustomization/AuthorCustomization/bin/Release
 
 iappend=0
 
@@ -321,15 +321,15 @@ sleep 5
 
 cd $edwardapppath
 
-./AuthorCustmization.exe --Service F --Customize A
+./AuthorCustomization.exe --Service F --Customize A
 
 sleep 5
 
-./AuthorCustmization.exe --Service F --Customize U
+./AuthorCustomization.exe --Service F --Customize U
 
 sleep 5
 
-./AuthorCustmization.exe --Service F --Customize C
+./AuthorCustomization.exe --Service F --Customize C
 
 sleep 5
 

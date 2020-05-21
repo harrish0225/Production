@@ -3,8 +3,8 @@ pythondir=/c/Python34/
 
 cd $pythondir
 
-edwardcustfile=/d/gitrep/Production/AuthorCustmization/AuthorCustmization/filelist.txt
-edwardapppath=/d/gitrep/Production/AuthorCustmization/AuthorCustmization/bin/Release
+edwardcustfile=/d/gitrep/Production/AuthorCustomization/AuthorCustomization/filelist.txt
+edwardapppath=/d/gitrep/Production/AuthorCustomization/AuthorCustomization/bin/Release
 
 winsourcetreedir="D:\\gitrep\\SourceTreeScript\\SourceTreeScript\\"
 winrepodirnodash="D:\\gitrep\\azure-docs-pr"
@@ -31,14 +31,14 @@ echo "filefullname is ${filefullname}"
 	
 cd $edwardapppath
 
-./AuthorCustmization.exe -S F -C A
+./AuthorCustomization.exe -S F -C A
 
 sleep 2
 
-./AuthorCustmization.exe -S F -C U
+./AuthorCustomization.exe -S F -C U
 
 sleep 2
 
-./AuthorCustmization.exe -S F -C C
+./AuthorCustomization.exe -S F -C C
 
 sleep 2

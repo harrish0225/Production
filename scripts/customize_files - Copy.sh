@@ -225,20 +225,20 @@ git stach apply
 sleep 15
 
 
-edwardcustfile=/d/gitrep/Production/AuthorCustmization/AuthorCustmization/filelist.txt
-edwardapppath=/d/gitrep/Production/AuthorCustmization/AuthorCustmization/bin/Release
+edwardcustfile=/d/gitrep/Production/AuthorCustomization/AuthorCustomization/filelist.txt
+edwardapppath=/d/gitrep/Production/AuthorCustomization/AuthorCustomization/bin/Release
 
 cd $edwardapppath
 
-./AuthorCustmization.exe -S F -C A
+./AuthorCustomization.exe -S F -C A
 
 sleep 10
 
-./AuthorCustmization.exe -S F -C U
+./AuthorCustomization.exe -S F -C U
 
 sleep 10
 
-./AuthorCustmization.exe -S F -C C
+./AuthorCustomization.exe -S F -C C
 
 sleep 10
 

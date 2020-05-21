@@ -3,7 +3,7 @@ pythondir=/c/Python34/
 
 cd $pythondir
 
-edwardcustfile=/d/gitrep/Production/AuthorCustmization/AuthorCustmization/filelist.txt
+edwardcustfile=/d/gitrep/Production/AuthorCustomization/AuthorCustomization/filelist.txt
 
 winsourcetreedir="D:\\gitrep\\SourceTreeScript\\SourceTreeScript\\"
 winrepodirnodash="D:\\gitrep\\mc-docs-pr.en-us\\"

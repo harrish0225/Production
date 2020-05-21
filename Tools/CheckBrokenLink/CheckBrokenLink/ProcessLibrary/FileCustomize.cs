@@ -399,7 +399,7 @@ namespace CheckBrokenLink.ProcessLibrary
                 //Exclude the following sample
                 //[Azure 门户](http://portal.azure.cn "Azure 门户")
 
-                if(filename.IndexOf(' ')>0)
+                if (filename.IndexOf(' ')>0)
                 {
                     //idxSeq = filename.IndexOf(' ') - 1;   Correct the Sequence of Sample.
                     idxSeq = filename.IndexOf(' ');    
@@ -475,9 +475,10 @@ namespace CheckBrokenLink.ProcessLibrary
                     {
                         lstURL.Add(originalFileName);
                         htbURL.Add(originalFileName,originalFileName);
-                        continue;
+                        
                     }
-                    
+                    continue;
+
                 }
 
                 //Step 2: Select inner Archor tag
@@ -664,7 +665,8 @@ namespace CheckBrokenLink.ProcessLibrary
                 }
                 else
                 {
-                    checkfile = string.Format("{0}\\{1}", checkdirectory, filename.Replace("/", "\\"));
+
+                     checkfile = string.Format("{0}\\{1}", checkdirectory, filename.Replace("/", "\\"));
                 }
 
                 bool isRedirect = false;
@@ -921,6 +923,13 @@ namespace CheckBrokenLink.ProcessLibrary
                         matches = Regex.Matches(articleContent, mdfilePatSecond);
 
                         this.CheckMatches(matches, ref htbURL, ref lstURL, ref articleContent);
+
+                        //Part III the bare https://xxxxxxxx style
+
+                        string mdfilePatThird = "(?!(<!--[\\s\\S]*))(?<labelname>[\\s]{1,})(?<mdfilename>https://[^\\(\\)\\[\\]\\s]*)(?!(\\s*-->))";
+                        matches = Regex.Matches(articleContent, mdfilePatThird);
+
+                        this.CheckMatches(matches, ref htbURL, ref lstURL, ref articleContent);
                     }
                    
 
@@ -1121,10 +1130,11 @@ namespace CheckBrokenLink.ProcessLibrary
 
                     req = (HttpWebRequest)WebRequest.Create(sURL);
                     req.Method = "GET";
-                    //req.KeepAlive = true;
+                    req.KeepAlive = true;
                     req.ContentType = "application/x-www-form-urlencoded; charset=UTF-8";
                     req.UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36";
                     req.Timeout = iTimeOut;
+                    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3;
                     req.AllowAutoRedirect = true;
 
 
@@ -1164,8 +1174,11 @@ namespace CheckBrokenLink.ProcessLibrary
                 {
                     //Console.WriteLine(string.Format("{0}:{1}\n", urlList[i].ToString(), ex.Message.ToString()));
                     string exMsg = ex.Message.ToString();
+
                     if (exMsg.Contains("(403) Forbidden") == false &&
-                        exMsg.Contains("The request was aborted: Could not create SSL/ TLS secure channel") == false &&
+                        exMsg.Contains("The request was aborted: Could not create SSL/TLS secure channel") == false &&
+                        exMsg.Contains("The remote server returned an error: (429) too many requests") == false &&
+                        exMsg.Contains("The remote server returned an error: (308) redirect") == false &&
                         exMsg.Contains("The request was aborted") == false &&
                         exMsg.Contains("The operation has timed out") == false &&
                         exMsg.Contains("Too many automatic redirections were attempted") == false &&
