@@ -66,9 +66,29 @@ namespace AuthorCustomization.ProcessLibrary
 
     public enum InvolvedService
     {
+<<<<<<< Updated upstream
 
         azure_resource_manager,
 
+=======
+/*        analysis_services,
+        aks,*/
+        azure_resource_manager,
+/*        connectors,
+        cosmos_db,
+        container_instances,
+        container_registry,
+        firewall,
+        logic_apps,
+        private_link,
+        service_fabric,
+        site_recovery,
+        sql_server_stretch_database,
+        traffic_manager,
+        virtual_machines,
+        virtual_network,
+        virtual_wan,*/
+>>>>>>> Stashed changes
         includes,
         articles,
     }

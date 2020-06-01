@@ -6,3 +6,13 @@ H:\gitrep\Production\AuthorCustomization\AuthorCustomization\bin\Debug\Newtonsof
 H:\gitrep\Production\AuthorCustomization\AuthorCustomization\obj\Debug\AuthorCustomization.csprojResolveAssemblyReference.cache
 H:\gitrep\Production\AuthorCustomization\AuthorCustomization\obj\Debug\AuthorCustomization.exe
 H:\gitrep\Production\AuthorCustomization\AuthorCustomization\obj\Debug\AuthorCustomization.pdb
+C:\Users\harrish\Documents\GitHub\Production\AuthorCustomization\AuthorCustomization\obj\Debug\AuthorCustomization.csprojAssemblyReference.cache
+C:\Users\harrish\Documents\GitHub\Production\AuthorCustomization\AuthorCustomization\obj\Debug\AuthorCustomization.csproj.CoreCompileInputs.cache
+C:\Users\harrish\Documents\GitHub\Production\AuthorCustomization\AuthorCustomization\bin\Debug\AuthorCustomization.exe.config
+C:\Users\harrish\Documents\GitHub\Production\AuthorCustomization\AuthorCustomization\bin\Debug\AuthorCustomization.exe
+C:\Users\harrish\Documents\GitHub\Production\AuthorCustomization\AuthorCustomization\bin\Debug\AuthorCustomization.pdb
+C:\Users\harrish\Documents\GitHub\Production\AuthorCustomization\AuthorCustomization\bin\Debug\Newtonsoft.Json.dll
+C:\Users\harrish\Documents\GitHub\Production\AuthorCustomization\AuthorCustomization\bin\Debug\Newtonsoft.Json.xml
+C:\Users\harrish\Documents\GitHub\Production\AuthorCustomization\AuthorCustomization\obj\Debug\AuthorCustomization.csproj.CopyComplete
+C:\Users\harrish\Documents\GitHub\Production\AuthorCustomization\AuthorCustomization\obj\Debug\AuthorCustomization.exe
+C:\Users\harrish\Documents\GitHub\Production\AuthorCustomization\AuthorCustomization\obj\Debug\AuthorCustomization.pdb
