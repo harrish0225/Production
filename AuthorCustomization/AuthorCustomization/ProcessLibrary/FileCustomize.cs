@@ -68,13 +68,10 @@ namespace AuthorCustomization.ProcessLibrary
     {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 
         azure_resource_manager,
 
 =======
-=======
->>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 /*        analysis_services,
@@ -95,9 +92,6 @@ namespace AuthorCustomization.ProcessLibrary
         virtual_network,
         virtual_wan,*/
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
