@@ -19,13 +19,3 @@ H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\CheckBrok
 H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\CheckBrokenLink.pdb
 H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\Newtonsoft.Json.dll
 H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\Newtonsoft.Json.xml
-C:\Users\harrish\Documents\GitHub\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\CheckBrokenLink.exe.config
-C:\Users\harrish\Documents\GitHub\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\CheckBrokenLink.exe
-C:\Users\harrish\Documents\GitHub\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\CheckBrokenLink.pdb
-C:\Users\harrish\Documents\GitHub\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\Newtonsoft.Json.dll
-C:\Users\harrish\Documents\GitHub\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\Newtonsoft.Json.xml
-C:\Users\harrish\Documents\GitHub\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Release\CheckBrokenLink.csprojAssemblyReference.cache
-C:\Users\harrish\Documents\GitHub\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Release\CheckBrokenLink.csproj.CoreCompileInputs.cache
-C:\Users\harrish\Documents\GitHub\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Release\CheckBrokenLink.csproj.CopyComplete
-C:\Users\harrish\Documents\GitHub\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Release\CheckBrokenLink.exe
-C:\Users\harrish\Documents\GitHub\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Release\CheckBrokenLink.pdb

@@ -77,9 +77,23 @@ namespace CheckBrokenLink.ProcessLibrary
 
     public enum InvolvedService
     {
-
+        analysis_services,
+        aks,
         azure_resource_manager,
-
+        connectors,
+        cosmos_db,
+        container_instances,
+        container_registry,
+        firewall,
+        logic_apps,
+        private_link,
+        service_fabric,
+        site_recovery,
+        sql_server_stretch_database,
+        traffic_manager,
+        virtual_machines,
+        virtual_network,
+        virtual_wan,
         includes,
     }
 
