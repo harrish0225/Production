@@ -14,3 +14,5 @@ H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Debug\CollectNewFil
 H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Debug\Newtonsoft.Json.dll
 H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\bin\Debug\Newtonsoft.Json.xml
 H:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Debug\CollectNewFile.csprojResolveAssemblyReference.cache
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Debug\CollectNewFile.csprojAssemblyReference.cache
+D:\gitrep\Production\Tools\CollectNewFile\CollectNewFile\obj\Debug\CollectNewFile.csproj.CoreCompileInputs.cache

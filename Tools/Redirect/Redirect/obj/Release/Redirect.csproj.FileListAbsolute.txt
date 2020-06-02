@@ -12,7 +12,6 @@ D:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Newtonsoft.Json.dll
 D:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Newtonsoft.Json.xml
 D:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.exe
 D:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.pdb
-D:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.csprojResolveAssemblyReference.cache
 H:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Redirect.exe.config
 H:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.exe
 H:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.pdb
@@ -20,3 +19,6 @@ H:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Redirect.exe
 H:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Redirect.pdb
 H:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Newtonsoft.Json.dll
 H:\gitrep\Production\Tools\Redirect\Redirect\bin\Release\Newtonsoft.Json.xml
+D:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.csprojAssemblyReference.cache
+D:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.csproj.CoreCompileInputs.cache
+D:\gitrep\Production\Tools\Redirect\Redirect\obj\Release\Redirect.csproj.CopyComplete

@@ -5,7 +5,6 @@ D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\bin\Release\Newtonsoft.Js
 D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\bin\Release\Newtonsoft.Json.xml
 D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\obj\Release\LiveSXSUpdate.exe
 D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\obj\Release\LiveSXSUpdate.pdb
-D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\obj\Release\LiveSXSUpdate.csprojResolveAssemblyReference.cache
 H:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\bin\Release\LiveSXSUpdate.exe.config
 H:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\obj\Release\LiveSXSUpdate.exe
 H:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\obj\Release\LiveSXSUpdate.pdb
@@ -14,3 +13,6 @@ H:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\bin\Release\LiveSXSUpdate
 H:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\bin\Release\Newtonsoft.Json.dll
 H:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\bin\Release\Newtonsoft.Json.xml
 H:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\obj\Release\LiveSXSUpdate.csprojResolveAssemblyReference.cache
+D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\obj\Release\LiveSXSUpdate.csprojAssemblyReference.cache
+D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\obj\Release\LiveSXSUpdate.csproj.CoreCompileInputs.cache
+D:\gitrep\Production\Tools\LiveSXSUpdate\LiveSXSUpdate\obj\Release\LiveSXSUpdate.csproj.CopyComplete
