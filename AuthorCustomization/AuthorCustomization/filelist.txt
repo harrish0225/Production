@@ -1,0 +1,1 @@
+articles/azure-resource-manager/managed-applications/existing-vnet-integration.md
