@@ -1,4 +1,0 @@
-**********************Check Process Result(CheckBrokenLinkByFile)**********************
---------------Abort List in this round of Check Broken Link--------------
-Total 0 abourt thread in the round of Check Broken List.
-

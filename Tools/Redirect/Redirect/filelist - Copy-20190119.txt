@@ -1,5 +1,0 @@
-programming.md	articles/cosmos-db	01/19/2019
-sql-api-introduction.md	articles/cosmos-db	01/19/2020
-sql-api-partition-data.md	articles/cosmos-db	01/19/2021
-sql-api-sql-query-metrics.md	articles/cosmos-db	01/19/2022
-sql-api-sql-query-reference.md	articles/cosmos-db	01/19/2023

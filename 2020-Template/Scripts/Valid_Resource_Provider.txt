@@ -1,3 +1,0 @@
-microsoft.aadiam	12/04/2019
-microsoft.insights	12/04/2019
-Microsoft.Sql	12/04/2019

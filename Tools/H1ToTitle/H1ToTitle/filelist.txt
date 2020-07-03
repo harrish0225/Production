@@ -1,3 +1,0 @@
-disks-types.md	articles/virtual-machines/windows	03/25/2019
-change-drive-letter.md	articles/virtual-machines/windows	03/25/2019
-csharp-template.md	articles/virtual-machines/windows	03/25/2019

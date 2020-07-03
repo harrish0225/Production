@@ -1,1 +1,0 @@
-Read the instructions at http://go.microsoft.com/fwlink/?LinkId=785411 for setting up a service fabric cluster.

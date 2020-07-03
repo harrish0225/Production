@@ -1,3 +1,0 @@
-tutorial-connect-virtual-networks-cli.md	articles/virtual-network	03/25/2019
-virtual-wan-ipsec-include.md	includes	03/25/2019
-active-directory-b2c-appreg-ropc.md	includes	03/25/2019

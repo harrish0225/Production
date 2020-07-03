@@ -1,8 +1,0 @@
-H:\gitrep\Production\AuthorCustomization\AuthorCustomization\bin\Debug\AuthorCustomization.exe.config
-H:\gitrep\Production\AuthorCustomization\AuthorCustomization\bin\Debug\AuthorCustomization.exe
-H:\gitrep\Production\AuthorCustomization\AuthorCustomization\bin\Debug\AuthorCustomization.pdb
-H:\gitrep\Production\AuthorCustomization\AuthorCustomization\bin\Debug\Newtonsoft.Json.dll
-H:\gitrep\Production\AuthorCustomization\AuthorCustomization\bin\Debug\Newtonsoft.Json.xml
-H:\gitrep\Production\AuthorCustomization\AuthorCustomization\obj\Debug\AuthorCustomization.csprojResolveAssemblyReference.cache
-H:\gitrep\Production\AuthorCustomization\AuthorCustomization\obj\Debug\AuthorCustomization.exe
-H:\gitrep\Production\AuthorCustomization\AuthorCustomization\obj\Debug\AuthorCustomization.pdb

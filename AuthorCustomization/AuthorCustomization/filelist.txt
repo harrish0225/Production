@@ -1,1 +1,0 @@
-limit-egress-traffic.md	articles/aks	05/25/2020

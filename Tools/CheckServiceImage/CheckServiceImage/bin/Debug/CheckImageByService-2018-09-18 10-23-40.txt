@@ -1,3 +1,0 @@
-**********************Check Process Result(CheckImageByService)**********************
-Index	Service	File Path	Total Screenshots	Adapted Screenshots	Image File Name
-

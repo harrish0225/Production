@@ -1,7 +1,0 @@
-resource-manager-create-first-template.md	articles/azure-resource-manager	09/03/2018
-resource-manager-vscode-extension.md	articles/azure-resource-manager	09/03/2018
-service-fabric-cluster-upgrade-primary-nodetype-vm.md	articles/service-fabric	09/03/2018
-stream-analytics-tools-for-visual-studio.md	articles/stream-analytics	09/03/2018
-traffic-manager-create-profile.md	articles/traffic-manager	09/03/2018
-index.md	articles/virtual-machines	09/03/2018
-table-powershell.md	articles/cosmos-db	09/03/2018
