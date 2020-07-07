@@ -1,0 +1,10 @@
+**********************Check Process Result(CheckBrokenLinkByFile)**********************
+1 : articles\service-fabric\toc.yml
+Error : https://docs.azure.cn/zh-cn/service-fabric/service-fabric-diagnostics-oms-containers -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/zh-cn/service-fabric/service-fabric-diagnostics-oms-setup -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/zh-cn/service-fabric/service-fabric-diagnostics-event-analysis-oms -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/zh-cn/service-fabric/service-fabric-diagnostics-oms-syslog -> The remote server returned an error: (404) Not Found.
+
+--------------Abort List in this round of Check Broken Link--------------
+Total 0 abourt thread in the round of Check Broken List.
+

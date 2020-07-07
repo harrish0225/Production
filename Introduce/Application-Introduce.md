@@ -1,12 +1,58 @@
 # Application Introduction
 
-There are two category application, main application and customize tool, to help us customize the Azure Global documents during our daily work. 
-
-It will promote our effect and reduce the unessary mistakes.
+There are two category application, ***main application*** and ***tool application***, to help us customize the Azure Global documents during our daily work. It will promote our effect and reduce the unessary mistakes.
 
 ## Application List
 
-We have selected four application to show its function and usage with following matrix.
+We have selected four applications and demostrate the function and result.
+* Main Application
+    * AuthorCustomization
+* Tools
+    * CheckBrokenLink
+    * Redirect
+    * H1ToTitle
+
+### Main Application
+
+The AuthorCustomization is main application to customize the global document. 
+
+In the first day of each sync cycle, We will collect the customized articles list by using the `git diff` in shell scripts, and make a job schedule in next month.
+
+
+|Category|Function | Useage |
+|--------|---------|--------|
+|Main | <ol><li>update the meta properties such as ms.date, ms.author, </li><li>Replace the Endpoint and Refrence Link </li><li>Correct the wrong Endpoint and Refrence Link in second step. </li> </ol>| <ol><li>Update the configuration in the file of App.config.</li><li>./AuthorCustomization --help</li></ol> |
+
+### Tool Application
+
+We have list the selected 3 tool application.
+
+1. CheckBrokenLink
+
+    |Category|Function | Useage |
+    |--------|---------|--------|
+    |Tool |<ol><li>Check the images in the corresponding repo in local PC. </li><li>Check the reference link such as https://docs.azure.cn, and external URL. </li><li>Generate the text file in local PC, which help user to correct the broken link in later.</li> </ol> |  <ol><li>Update the configuration in the file of App.config.</li><li>./CheckBrokenLink.exe --help</li><li>./CheckBrokenLink.exe --Service S --Customize R <br/>It is the function to scan the articles based on the service and generate the broken result in local file.</li></ol> |
+
+    The following image show the process in the 
+
+2. Redirect
+
+    |Category|Function | Useage |
+    |--------|---------|--------|
+    |Tool |<ol><li>Check the images in the corresponding repo in local PC. </li><li>Check the reference link such as https://docs.azure.cn, and external URL. </li><li>Generate the text file in local PC, which help user to correct the broken link in later.</li> </ol> |  <ol><li>Update the configuration in the file of App.config.</li><li>./CheckBrokenLink.exe --help</li><li>./CheckBrokenLink.exe --Service S --Customize R <br/>It is the function to scan the articles based on the service and generate the broken result in local file.</li></ol> |
+
+3. H1ToTitle
+
+    |Category|Function | Useage |
+    |--------|---------|--------|
+    |Tool| H1ToTitle | <ol>Update the title property in meta data collection with article's H1 content. /ol>| refer to the --help usage. |
+
+
+### CheckBrokenLink
+
+### Redirect
+
+### H1ToTitle
 
 |Category|Application Name|Function | Useage |
 |------|-------|-------|---|

@@ -3,8 +3,8 @@ pythondir=/c/Python34/
 
 cd $pythondir
 
-edwardcustfile=/d/gitrep/Production/AuthorCustomization/AuthorCustomization/filelist.txt
-edwardapppath=/d/gitrep/Production/AuthorCustomization/AuthorCustomization/bin/Release
+edwardcustfile=/h/gitrep/Production/AuthorCustomization/AuthorCustomization/filelist.txt
+edwardapppath=/h/gitrep/Production/AuthorCustomization/AuthorCustomization/bin/Release
 
 winsourcetreedir="D:\\gitrep\\SourceTreeScript\\SourceTreeScript\\"
 winrepodirnodash="D:\\gitrep\\azure-docs-pr"

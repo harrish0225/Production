@@ -1,0 +1,42 @@
+**********************Check Process Result(CheckBrokenLinkByFile)**********************
+1 : articles\container-registry\security-baseline.md
+Error : https://docs.azure.cn/zh-cn/security/benchmarks/security-baselines-overview -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/zh-cn/security/benchmarks/security-control-network-security -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/zh-cn/security/benchmarks/security-control-logging-monitoring -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/zh-cn/security/benchmarks/security-control-identity-access-control -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/zh-cn/security/benchmarks/security-control-data-protection -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/zh-cn/security/benchmarks/security-control-vulnerability-management -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/zh-cn/security/benchmarks/security-control-inventory-asset-management -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/zh-cn/security/benchmarks/security-control-secure-configuration -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/zh-cn/security/benchmarks/security-control-malware-defense -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/zh-cn/security/benchmarks/security-control-data-recovery -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/zh-cn/security/benchmarks/security-control-incident-response -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/zh-cn/security/benchmarks/security-control-penetration-tests-red-team-exercises -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/container-registry/container-registry-vnet -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/container-registry/container-registry-firewall-access-rules -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/virtual-network/manage-ddos-protection -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/container-registry/container-registry-firewall-access-rules#allow-access-by-service-tag -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/governance/blueprints/create-blueprint-portal -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/active-directory/manage-apps/what-is-single-sign-on -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/active-directory/reports-monitoring/concept-user-at-risk -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/active-directory/reports-monitoring/quickstart-configure-named-locations -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/active-directory/reports-monitoring/concept-risky-sign-ins -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/active-directory/identity-protection/howto-identity-protection-configure-risk-policies -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/security/fundamentals/customer-lockbox-overview#supported-services-and-scenarios-in-general-availability -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/billing/billing-create-subscription -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/security/fundamentals/protection-customer-data -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/security/fundamentals/encryption-overview#encryption-of-data-in-transit -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/security/fundamentals/encryption-atrest -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/role-based-access-control/conditional-access-azure-management -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/devops/repos/git/gitworkflow?view=azure-devops​ -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/devops/repos/index?view=azure-devops -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/azure-app-configuration/howto-integrate-azure-managed-service-identity -> The remote server returned an error: (404) Not Found.
+Error : https://secdevtools.chinacloudsites.cn/helpcredscan.html -> The remote name could not be resolved: 'secdevtools.chinacloudsites.cn'
+Error : https://docs.azure.cn/security-center/continuous-export -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/sentinel/connect-azure-security-center -> The remote server returned an error: (404) Not Found.
+Error : https://docs.azure.cn/security-center/workflow-automation -> The remote server returned an error: (404) Not Found.
+
+--------------Abort List in this round of Check Broken Link--------------
+Total 0 abourt thread in the round of Check Broken List.
+

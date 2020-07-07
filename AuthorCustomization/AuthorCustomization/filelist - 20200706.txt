@@ -1,14 +1,3 @@
-nat-gateway-resource.md	articles/virtual-network	07/13/2020
-nat-metrics.md	articles/virtual-network	07/13/2020
-nat-overview.md	articles/virtual-network	07/13/2020
-quickstart-create-nat-gateway-cli.md	articles/virtual-network	07/13/2020
-quickstart-create-nat-gateway-portal.md	articles/virtual-network	07/13/2020
-quickstart-create-nat-gateway-powershell.md	articles/virtual-network	07/13/2020
-quickstart-create-nat-gateway-template.md	articles/virtual-network	07/13/2020
-troubleshoot-nat.md	articles/virtual-network	07/13/2020
-tutorial-create-validate-nat-gateway-cli.md	articles/virtual-network	07/13/2020
-tutorial-create-validate-nat-gateway-portal.md	articles/virtual-network	07/13/2020
-tutorial-create-validate-nat-gateway-powershell.md	articles/virtual-network	07/13/2020
 api-server-authorized-ip-ranges.md	articles/aks	07/13/2020
 availability-zones.md	articles/aks	07/13/2020
 azure-ad-integration.md	articles/aks	07/13/2020
@@ -792,6 +781,8 @@ tutorial-custom-images.md	articles/virtual-machines/windows	07/13/2020
 using-visual-studio-vm.md	articles/virtual-machines/windows	07/13/2020
 create-peering-different-deployment-models-subscriptions.md	articles/virtual-network	07/13/2020
 create-vm-accelerated-networking-powershell.md	articles/virtual-network	07/13/2020
+nat-gateway-resource.md	articles/virtual-network	07/13/2020
+nat-overview.md	articles/virtual-network	07/13/2020
 policy-samples.md	articles/virtual-network	07/13/2020
 routing-preference-overview.md	articles/virtual-network	07/13/2020
 service-tags-overview.md	articles/virtual-network	07/13/2020

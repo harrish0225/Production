@@ -4,8 +4,8 @@ echo -e "\n\rCurrent application path is ${basedir}"
 
 
 echo "Select the repository No with following option:"
-echo "1. /d/gitrep/azure-docs-pr/"
-echo "2. /d/gitrep/mc-docs-pr.en-us/"
+echo "1. /h/gitrep/azure-docs-pr/"
+echo "2. /h/gitrep/mc-docs-pr.en-us/"
 echo "3. /f/gitrep/mc-docs-pr.zh-cn.rockboyfor.sxs/"
 echo "    "
 echo "    "
@@ -18,10 +18,10 @@ do
 	read -p "Enter the repository index digital= " repoIdx
 
 	if [ ${repoIdx} == "1" ]; then
-		cd /d/gitrep/azure-docs-pr/
+		cd /h/gitrep/azure-docs-pr/
 		receiveRepo="yes"
 	elif [ ${repoIdx} == "2" ]; then
-		cd /d/gitrep/mc-docs-pr.en-us/
+		cd /h/gitrep/mc-docs-pr.en-us/
 		receiveRepo="yes"
 	elif [ ${repoIdx} == "3" ]; then
 		cd /f/gitrep/mc-docs-pr.zh-cn.rockboyfor.sxs/

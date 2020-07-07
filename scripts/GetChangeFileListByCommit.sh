@@ -3,9 +3,9 @@
 basedir=$(cd `dirname $0`; pwd)
 echo -e "\n\rCurrent application path is ${basedir}"
 
-repodir=/d/gitrep/azure-docs-pr/
-# custrepodir=/d/gitrep/mc-docs-pr.en-us/
-# sourcetreedir=/d/gitrep/SourceTreeScript/SourceTreeScript/
+repodir=/h/gitrep/azure-docs-pr/
+# custrepodir=/h/gitrep/mc-docs-pr.en-us/
+# sourcetreedir=/h/gitrep/SourceTreeScript/SourceTreeScript/
 
 # Step 1: Go to the global azure-docs-pr repostory and generate file to save the change files list.
 cd ${repodir}

@@ -3,9 +3,9 @@
 basedir=$(cd `dirname $0`; pwd)
 echo -e "\n\rCurrent application path is ${basedir}"
 
-repodir=/d/gitrep/azure-docs-pr/
-custrepodir=/d/gitrep/mc-docs-pr.en-us/
-sourcetreedir=/d/gitrep/SourceTreeScript/SourceTreeScript/
+repodir=/h/gitrep/azure-docs-pr/
+custrepodir=/h/gitrep/mc-docs-pr.en-us/
+sourcetreedir=/h/gitrep/SourceTreeScript/SourceTreeScript/
 
 # Step 1: Go to the global azure-docs-pr repostory and generate file to save the change files list.
 cd ${repodir}
@@ -104,7 +104,7 @@ echo -e "\n\rCheckout the branch $branchThisMonth successfully!"
 winsourcetreedir="D:\\gitrep\\SourceTreeScript\\SourceTreeScript\\"
 winrepodirnodash="D:\\gitrep\\azure-docs-pr"
 
-repodirnodash="/d/gitrep/azure-docs-pr/"
+repodirnodash="/h/gitrep/azure-docs-pr/"
 pythondir=/c/Python34/
 
 changestatusfile="${basedir}/changeFileList_status.txt"
@@ -225,8 +225,8 @@ git stach apply
 sleep 15
 
 
-edwardcustfile=/d/gitrep/Production/AuthorCustomization/AuthorCustomization/filelist.txt
-edwardapppath=/d/gitrep/Production/AuthorCustomization/AuthorCustomization/bin/Release
+edwardcustfile=/h/gitrep/Production/AuthorCustomization/AuthorCustomization/filelist.txt
+edwardapppath=/h/gitrep/Production/AuthorCustomization/AuthorCustomization/bin/Release
 
 cd $edwardapppath
 

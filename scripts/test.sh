@@ -1,12 +1,12 @@
-cd /d/gitrep/azure-source-code/azure-docs-cli-python-samples
+cd /h/gitrep/azure-source-code/azure-docs-cli-python-samples
 git pull origin master
 
-cd /d/gitrep/azure-source-code/azure-docs-powershell-samples
+cd /h/gitrep/azure-source-code/azure-docs-powershell-samples
 git pull origin master
 
-cd /d/gitrep/azure-source-code
+cd /h/gitrep/azure-source-code
 
-dirparents=/d/gitrep/azure-source-code
+dirparents=/h/gitrep/azure-source-code
 for directory in $dirparents/*;
 do
 	cd $directory

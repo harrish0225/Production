@@ -1,1 +1,1 @@
-TOC.yml	articles/logic-apps	07/08/2019
+toc.yml	articles/service-fabric	06/01/2020
