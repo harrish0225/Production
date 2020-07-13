@@ -36,7 +36,7 @@ namespace AuthorCustomization.ProcessLibrary
 
                 string downloadPath = AppDomain.CurrentDomain.BaseDirectory;
 
-                string curtTime = string.Format(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")).Replace(":", "-");
+                string curtTime = string.Format(DateTime.Now.ToString("yyyy-MM-dd HD:mm:ss")).Replace(":", "-");
 
                 string sFilePath = string.Format("{0}\\{1}-{2}.txt", downloadPath, category.ToString(), curtTime);
 
@@ -82,7 +82,7 @@ namespace AuthorCustomization.ProcessLibrary
 
                 string downloadPath = AppDomain.CurrentDomain.BaseDirectory;
 
-                string curtTime = string.Format(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")).Replace(":", "-");
+                string curtTime = string.Format(DateTime.Now.ToString("yyyy-MM-dd HD:mm:ss")).Replace(":", "-");
 
                 string sFilePath = string.Format("{0}\\{1}-{2}.txt", downloadPath, "ERROR", curtTime);
 
