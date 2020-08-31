@@ -19,3 +19,6 @@ H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\CheckBrok
 H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\CheckBrokenLink.pdb
 H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\Newtonsoft.Json.dll
 H:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\bin\Release\Newtonsoft.Json.xml
+D:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Release\CheckBrokenLink.csprojAssemblyReference.cache
+D:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Release\CheckBrokenLink.csproj.CoreCompileInputs.cache
+D:\gitrep\Production\Tools\CheckBrokenLink\CheckBrokenLink\obj\Release\CheckBrokenLink.csproj.CopyComplete
